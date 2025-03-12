@@ -1,0 +1,305 @@
+﻿@{
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model IEnumerable<Live_ConsultingKSP.Models.MasterUserMenuRight>
+
+@{
+	var userMenuRights = ViewBag.UserMenuRights as List<Live_ConsultingKSP.Models.MasterUserMenuRight>;
+	var roles = ViewBag.Roles as SelectList;
+	var menus = ViewBag.Menus as string;
+	var userClaims = User.Claims;
+}
+
+@section Stylecss {
+	<style>
+		.level-one {
+			padding-left: 2%;
+		}
+
+		.level-two {
+			padding-left: 4%;
+		}
+
+		.level-three {
+			padding-left: 6%;
+		}
+		/* Overlay Styles */
+		.overlay {
+			display: none; /* Hidden by default */
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+			z-index: 9999;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+			color: white;
+			font-size: 24px;
+			font-weight: bold;
+			display: flex; /* Flexbox to center the content */
+		}
+
+		/* Center the content inside the overlay */
+		.overlay-content {
+			background-color: rgba(0, 0, 0, 0.7);
+			padding: 20px;
+			border-radius: 5px;
+			position: relative; /* Relative to its container */
+			max-width: 90%; /* Optional, to ensure content doesn't overflow */
+			max-height: 90%; /* Optional, to prevent overflow */
+			box-sizing: border-box; /* Ensure padding is included in width/height */
+		}
+	</style>
+}
+
+<div class="page-content">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-12">
+				<div class="page-title-box d-sm-flex align-items-center justify-content-between">
+					<h4 class="mb-sm-0">Add Roles and Rights</h4>
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="card" id="frmCreate">
+					<div class="card-body">
+						<div class="live-preview">
+							<form method="post" asp-action="SaveMenuRights">
+								<div class="row gx-3 gy-2 align-items-center">
+									<div class="col-lg-3 col-sm-6 col-xs-12">
+										<label class="form-label">Role<span class="start-lable" style="color: red">*</span></label>
+										<select class="form-select2 js-example-basic-single" data-choices data-choices-sorting="true" id="role">
+											<option value="@ViewBag.Roles">- Select Role -</option>
+											@if (roles != null && roles.Any())
+											{
+												foreach (var role in roles)
+												{
+													<option value="@role.Value">@role.Text</option>
+												}
+											}
+											else
+											{
+												<option>No roles available</option>
+											}
+										</select>
+									</div>
+									<div class="col-lg-9">
+										<button type="submit" id="save-rights-btn" class="btn btn-primary" style="float:right;">Submit</button>
+										<a href="@Url.Action("ManageRights", new { roleUuid = ViewBag.RoleUuid })" class="btn btn-danger" style="float:right; margin-right:10px;">Cancel</a>
+									</div>
+									<div class="col-md-12"><span id="newusr" style="color:red"></span> </div>
+								</div>
+
+								@if (menus != null && menus.Any())
+								{
+									<div class="row gx-3 gy-2 align-items-center mt-5">
+										<div class="col-lg-12">
+											<ul style="list-style:none; padding: 0;">
+
+												@Html.Raw(menus)
+
+
+											</ul>
+										</div>
+									</div>
+								}
+							</form>
+						</div>
+					</div>
+				</div>
+				<div class="card" id="CardAccessDenied" style="display:none">
+					<div class="w3-display-middle" style="margin-top:100px;">
+						<h1 class="w3-jumbo w3-animate-top w3-center"><span style="color:#38454a">Access Denied</span></h1>
+						<hr class="w3-border-white w3-animate-left" style="margin:auto;width:50%">
+						<h3 class="w3-center w3-animate-right">You don't have Rights to Access this Page</h3>
+						<h3 class="w3-center w3-animate-right">Kindly Contact Administrative</h3>
+						<h3 class="w3-center w3-animate-zoom">🚫🚫🚫🚫</h3>
+						<h6 class="w3-center w3-animate-zoom">error code:403 forbidden</h6>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+</div>
+<div id="overlay" class="overlay" style="display:none">
+	<div class="overlay-content">Please Wait...</div>
+</div>
+@section Scripts {
+	<script>
+				$(document).ready(function () {
+						$("#role").on("change", function () {
+
+						 $.ajax({
+									  type: "GET",
+									  url: '/CompanySetup/GetMenuRightslsty',
+									  data: { roleUuid:  $("#role").val() },
+									  success: function (data)
+									  {  debugger;
+										  if(data!='tst'){
+											  $('input[type=checkbox]').prop('checked', false); // Reset all checkboxes
+
+									data.forEach(function (right) {
+										$('#menu_' + right.uuid).prop('checked', true);
+										if (right.isRead) $('#read_' + right.uuid).prop('checked', true);
+										if (right.isWrite) $('#write_' + right.uuid).prop('checked', true);
+										if (right.isEdit) $('#edit_' + right.uuid).prop('checked', true);
+										if (right.isDelete) $('#delete_' + right.uuid).prop('checked', true);
+									});
+										  }
+										   else{
+
+											   $('#newusr').text('new role, assign applicable roles');
+											   $('input[type=checkbox]').prop('checked', true);
+
+
+										   }
+									  }
+								  });
+
+						 // location.reload();
+					});
+					// $('#role').change(function () {
+					//     fetchRightsForRole();
+					// });
+
+					// function fetchRightsForRole() {
+					//     var roleUuid = $('#role').val();
+
+					//     if (roleUuid !== "- Select Role -") {
+					//         $.ajax({
+					//             url: '/CompanySetup/GetMenuRights',
+					//             type: 'GET',
+					//             data: { roleUuid: roleUuid },
+					//             success: function (data) {
+					//                 $('input[type=checkbox]').prop('checked', false); // Reset all checkboxes
+
+					//                 data.forEach(function (right) {
+					//                     $('#menu_' + right.uuid).prop('checked', true);
+					//                     if (right.isRead) $('#read_' + right.uuid).prop('checked', true);
+					//                     if (right.isWrite) $('#write_' + right.uuid).prop('checked', true);
+					//                     if (right.isEdit) $('#edit_' + right.uuid).prop('checked', true);
+					//                     if (right.isDelete) $('#delete_' + right.uuid).prop('checked', true);
+					//                 });
+					//             },
+					//             error: function () {
+					//                 alert('Error fetching rights for the selected role.');
+					//             }
+					//         });
+					//     }
+					// }
+					// fetchRightsForRole();
+
+					 $('#save-rights-btn').click(function (e) {
+						e.preventDefault();
+						saveMenuRights();
+					});
+					 $('input[type="checkbox"]').change(function () {
+						 debugger;
+						// Get the class of the checked/unchecked checkbox
+						//const checkboxClass = $(this).attr('class');
+						const allClasses = $(this).attr('class').split(' ');
+						const mchkClass = allClasses.find(className => className.includes('Mchk'));
+						// Check if the checkbox is checked or unchecked
+						const isChecked = $(this).is(':checked');
+
+						const tetcl = allClasses.find(className => className.includes('riht'));
+								 if (!tetcl) {
+						const SSMchkClass = allClasses.find(className => className.includes('SSMchk'));
+								  if (SSMchkClass) {
+									  $(`.${SSMchkClass}`).each(function () {
+									  if (isChecked) {
+										// Action for when the checkbox is checked
+									   $(this).prop('checked', true); // Example: check all in the same class
+									   } else {
+										// Action for when the checkbox is unchecked
+									   $(this).prop('checked', false); // Example: uncheck all in the same class
+										}
+									   });
+								  }
+								  else{
+									  const SMchkClass = allClasses.find(className => className.includes('SMchk'));
+							 if (SMchkClass) {
+								  $(`.${SMchkClass}`).each(function () {
+									  if (isChecked) {
+										// Action for when the checkbox is checked
+									   $(this).prop('checked', true); // Example: check all in the same class
+									   } else {
+										// Action for when the checkbox is unchecked
+									   $(this).prop('checked', false); // Example: uncheck all in the same class
+										}
+									   });
+							 }
+							 else{
+								 if (mchkClass) {
+							 $(`.${mchkClass}`).each(function () {
+									  if (isChecked) {
+										// Action for when the checkbox is checked
+									   $(this).prop('checked', true); // Example: check all in the same class
+									   } else {
+										// Action for when the checkbox is unchecked
+									   $(this).prop('checked', false); // Example: uncheck all in the same class
+										}
+									   });
+						}
+						else{
+
+
+						}
+							 }
+								   }
+		}
+
+
+					});
+					function saveMenuRights() {
+						var roleUuid = $('#role').val();
+						var rights = [];
+
+						$('input[type="checkbox"]:checked').each(function () {
+							var checkboxId = $(this).attr('id');
+							var [action, uuid] = checkboxId.split('_');
+
+							var right = rights.find(r => r.uuid === uuid);
+							if (!right) {
+								right = { uuid: uuid, isRead: false, isWrite: false, isEdit: false, isDelete: false };
+								rights.push(right);
+							}
+
+							if (action === 'menu') right.isAssigned = true;
+							if (action === 'read') right.isRead = true;
+							if (action === 'write') right.isWrite = true;
+							if (action === 'edit') right.isEdit = true;
+							if (action === 'delete') right.isDelete = true;
+						});
+
+						$.ajax({
+							url: '@Url.Action("SaveMenuRights", "CompanySetup")',
+							type: 'POST',
+							contentType: 'application/json',
+							data: JSON.stringify({ RoleUuid: roleUuid, Rights: rights }),
+							 beforeSend: function () {
+								// Show overlay when the request is about to start
+								$('#overlay').show();
+							},
+							complete: function () {
+								// Hide overlay when the request completes
+								$('#overlay').hide();
+							},
+							success: function (response) {
+								alert('Rights saved successfully!');
+							},
+							error: function (response) {
+								alert('Error saving rights.');
+							}
+						});
+					}
+				});
+	</script>
+}

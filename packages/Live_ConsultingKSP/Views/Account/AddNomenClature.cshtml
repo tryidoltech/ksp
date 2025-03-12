@@ -1,0 +1,89 @@
+﻿<div id="layout-wrapper">
+        <div w3-include-html="/View/Shared/header.cshtml"></div>
+        <!-- Vertical Overlay-->
+        <div class="vertical-overlay"></div>
+        <!-- ============================================================== -->
+        <!-- Start right Content here -->
+        <!-- ============================================================== -->
+        <div class="main-content">
+            <div class="page-content">
+                <div class="container-fluid">
+                    <!-- start page title -->
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="page-title-box d-sm-flex align-items-center justify-content-between">
+                                <h4 class="mb-sm-0">Add Nomen Clature</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="card" id="CardData">
+
+                                <div class="card-body">
+                                    <div class="live-preview">
+
+                                        <div class="row gx-3 gy-2 align-items-center">
+                                            <div class="col-lg-3 col-sm-6 col-xs-12">
+                                                <label class="form-label">UUID<span class="start-lable" style="color: red">*</span></label>
+                                                <input type="text" class="form-control" placeholder="12b7266d-783d-4245-ada8-2f99dbda7508" disabled>
+                                            </div>
+                                            <div class="col-lg-3 col-sm-6 col-xs-12">
+                                                <label class="form-label">Select Financial Year<span class="start-lable" style="color: red">*</span></label>
+                                                <select class="form-select2 js-example-basic-single" data-choices data-choices-sorting="true" id="financialyear">
+                                                    <option selected>- Select Financial Year -</option>
+                                                    <option value="">2024-25</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-lg-3 col-sm-6 col-xs-12">
+                                                <label class="form-label">Prefix<span class="start-lable" style="color: red">*</span></label>
+                                                <input type="text" class="form-control" placeholder="eg.">
+                                            </div>
+                                            <div class="col-lg-3 col-sm-6 col-xs-12">
+                                                <label class="form-label">Start No.<span class="start-lable" style="color: red">*</span></label>
+                                                <input type="text" class="form-control" placeholder="eg.">
+                                            </div>
+                                            <div class="col-lg-3 col-sm-6 col-xs-12">
+                                                <label class="form-label">Document Type<span class="start-lable" style="color: red">*</span></label>
+                                                <select class="form-select2 js-example-basic-single" data-choices data-choices-sorting="true" id="document">
+                                                    <option selected>- Select Document -</option>
+                                                    <option value="">Sales Order</option>
+                                                    <option value="">Sales Invoice</option>
+                                                    <option value="">Purchase Order</option>
+                                                    <option value="">Purchase Invoice</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-lg-3">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" id="autoSizingCheck2" checked>
+                                                    <label class="form-check-label" for="autoSizingCheck2">
+                                                        Is Display
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6 mt-5">
+                                                <a href="#" class="btn btn-primary " style="float:right;"> Submit</a>
+                                                <a href="#" class="btn btn-danger " style="float:right;margin-right:10px;"> Cancel</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div w3-include-html="/View/Shared/footer.cshtml"></div>
+
+        </div>
+    </div>
+    <button onclick="topFunction()" class="btn btn-danger btn-icon" id="back-to-top">
+        <i class="ri-arrow-up-line"></i>
+    </button>
+    <div id="preloader">
+        <div id="status">
+            <div class="spinner-border text-primary avatar-sm" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+        </div>
+    </div>

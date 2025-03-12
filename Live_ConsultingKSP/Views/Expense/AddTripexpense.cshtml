@@ -1,0 +1,444 @@
+﻿<div class="page-content">
+    <div class="container-fluid">
+        <!-- start page title -->
+        <div class="row">
+            <div class="col-8">
+                <div class="page-title-box d-sm-flex align-items-center justify-content-between">
+                    <h4 class="mb-sm-0">Add Trip Expense Reimbursement</h4>
+                </div>
+            </div>
+
+        </div>
+        <!-- end page title -->
+
+
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="card" id="CardData">
+
+                    <div class="card-body">
+                        <div class="live-preview">
+
+                            <div class="row gx-3 gy-2 align-items-center">
+                                <div class="col-lg-3 col-sm-6 col-xs-12">
+                                    <div class="page-title-box d-sm-flex align-items-center justify-content-between">
+                                        <h4 class="mb-sm-0">Voucher Information</h4>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2 col-sm-6 col-xs-12">
+                                    <div style="padding-left:25px;">
+                                        <div class="form-check float-end">
+                                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="Projectexpense">
+                                            <label class="form-check-label" for="flexRadioDefault2">
+                                                Project Expense
+                                            </label>
+
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                                <div class="col-lg-2 col-sm-6 col-xs-12">
+                                    <div style="padding-left:25px;">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="otherexpense">
+                                            <label class="form-check-label" for="flexRadioDefault2">
+                                                Other Expense
+                                            </label>
+
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                                <div class="col-lg-3">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="hassubexpensetype">
+                                        <label class="form-check-label" for="autoSizingCheck2">
+                                            Is Foreign Expense
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-2 col-sm-4 col-xs-12">
+                                    <label class="form-label float-end" style="font-size:15px; font-weight:500;">Total &nbsp; 0 ₹</label>
+                                </div>
+                                <hr />
+
+
+                                <div class="col-lg-3 col-sm-6 col-xs-12" id="projectdiv" style="display:none;">
+                                    <label class="form-label">Project Name<span class="start-lable" style="color: red">*</span></label>
+                                    <select class="form-select2 js-example-basic-single" data-choices data-choices-sorting="true" id="project">
+                                        <option selected>- Select Project -</option>
+                                        <option value="1">Project 1</option>
+
+                                    </select>
+                                </div>
+                                <div class="col-lg-3 col-sm-6 col-xs-12" id="taskdiv" style="display:none;">
+                                    <label class="form-label">Task Name<span class="start-lable" style="color: red">*</span></label>
+                                    <select class="form-select2 js-example-basic-single" data-choices data-choices-sorting="true" id="task">
+                                        <option selected>- Select Task -</option>
+                                        <option value="1"> Task 1</option>
+
+                                    </select>
+                                </div>
+
+                                <div class="col-lg-3 col-sm-6 col-xs-12">
+                                    <label class="form-label">Trip Name<span class="start-lable" style="color: red">*</span></label>
+                                    <input type="text" class="form-control" placeholder="eg. Tour Expenses">
+                                </div>
+                                <div class="col-lg-3 col-sm-6 col-xs-12">
+                                    <label class="form-label">From Place<span class="start-lable" style="color: red">*</span></label>
+                                    <input type="text" class="form-control" placeholder="eg. Vadodara">
+                                </div>
+                                <div class="col-lg-3 col-sm-6 col-xs-12">
+                                    <label class="form-label">To Place<span class="start-lable" style="color: red">*</span></label>
+                                    <input type="text" class="form-control" placeholder="eg. Surat">
+                                </div>
+                                <div class="col-lg-3 col-sm-6 col-xs-12">
+                                    <label class="form-label">Departure Date<span class="start-lable" style="color: red">*</span></label>
+                                    <input name="daterange" class="form-control" placeholder="">
+                                </div>
+
+                            </div>
+
+
+                        </div>
+
+                    </div>
+                </div>
+            </div> <!-- end col -->
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="card" id="CardData">
+
+                    <div class="card-body">
+                        <div class="live-preview">
+
+                            <div class="row gx-3 gy-2 align-items-center">
+                                <div class="col-lg-9 col-sm-9 col-xs-12">
+                                    <div class="page-title-box d-sm-flex align-items-center justify-content-between">
+                                        <h4 class="mb-sm-0">Location Parameter</h4>
+                                    </div>
+                                </div>
+
+                                <hr />
+                                <div class="col-lg-4 col-sm-6 col-xs-12" id="selectfromcountry">
+                                    <label class="form-label">From Country<span class="start-lable" style="color: red">*</span></label>
+                                    <a href="#"><i class="bx bx-reset float-end" style="border:1px solid #000;margin-right:5px;font-size:18px;padding:2px;border-radius:5px;color:#000;font-weight:500"></i></a>
+                                    <a href="MasterAddCountryName.html" target="_blank">
+                                        <i class="bx bx-plus float-end" style="border:1px solid #000;margin-right:5px;font-size:18px;padding:2px;border-radius:5px;color:#000;font-weight:500"></i>
+                                    </a>
+                                    <select class="form-select2 js-example-basic-single" data-choices data-choices-sorting="true" id="Country">
+                                        <option selected>- Select Country -</option>
+                                        <option>India</option>
+
+                                    </select>
+                                </div>
+                                <div class="col-lg-4 col-sm-6 col-xs-12" id="selectfromstate">
+                                    <label class="form-label">From State<span class="start-lable" style="color: red">*</span></label>
+                                    <a href="#"><i class="bx bx-reset float-end" style="border:1px solid #000;margin-right:5px;font-size:18px;padding:2px;border-radius:5px;color:#000;font-weight:500"></i></a>
+                                    <a href="MasterAddStateName.html" target="_blank">
+                                        <i class="bx bx-plus float-end" style="border:1px solid #000;margin-right:5px;font-size:18px;padding:2px;border-radius:5px;color:#000;font-weight:500"></i>
+                                    </a>
+                                    <select class="form-select2 js-example-basic-single" data-choices data-choices-sorting="true" id="State">
+                                        <option selected>- Select State -</option>
+                                        <option>Gujarat</option>
+                                    </select>
+                                </div>
+                                <div class="col-lg-4 col-sm-6 col-xs-12" id="selectfromcity">
+                                    <label class="form-label">From City<span class="start-lable" style="color: red">*</span></label>
+                                    <a href="#"><i class="bx bx-reset float-end" style="border:1px solid #000;margin-right:5px;font-size:18px;padding:2px;border-radius:5px;color:#000;font-weight:500"></i></a>
+                                    <a href="MasterAddCityName.html" target="_blank">
+                                        <i class="bx bx-plus float-end" style="border:1px solid #000;margin-right:5px;font-size:18px;padding:2px;border-radius:5px;color:#000;font-weight:500"></i>
+                                    </a>
+                                    <select class="form-select2 js-example-basic-single" data-choices data-choices-sorting="true" id="City">
+                                        <option selected>- Select City -</option>
+                                        <option>Vadodara</option>
+                                    </select>
+                                </div>
+
+                                <!--end col-->
+                            </div>
+
+
+                        </div>
+
+                    </div>
+                </div>
+            </div> <!-- end col -->
+        </div>
+        <!--end row-->
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="card" id="CardData">
+
+                    <div class="card-body">
+                        <div class="live-preview">
+
+                            <div class="row gx-3 gy-2 align-items-center">
+                                <div class="col-lg-12 col-sm-12 col-xs-12">
+                                    <div class="page-title-box d-sm-flex align-items-center justify-content-between">
+                                        <h4 class="mb-sm-0">Expense Parameter</h4>
+                                    </div>
+                                </div>
+
+                                <hr />
+                                <div class="col-lg-3 col-sm-6 col-xs-12">
+                                    <label class="form-label">Currency<span class="start-lable" style="color: red">*</span></label>
+                                    <a href="#"><i class="bx bx-reset float-end" style="border:1px solid #000;margin-right:5px;font-size:18px;padding:2px;border-radius:5px;color:#000;font-weight:500"></i></a>
+                                    <a href="AddAccountCurrency.html" target="_blank">
+                                        <i class="bx bx-plus float-end" style="border:1px solid #000;margin-right:5px;font-size:18px;padding:2px;border-radius:5px;color:#000;font-weight:500"></i>
+                                    </a>
+                                    <select class="form-select2 js-example-basic-single" data-choices data-choices-sorting="true" id="Currency">
+                                        <option selected>India (₹)</option>
+
+                                    </select>
+                                </div>
+                                <div class="col-lg-3 col-sm-6 col-xs-12">
+                                    <label class="form-label">Document Date<span class="start-lable" style="color: red">*</span></label>
+                                    <input type="date" class="form-control" placeholder="">
+                                </div>
+                                <div class="col-lg-3 col-sm-6 col-xs-12">
+                                    <label class="form-label">Expense Type<span class="start-lable" style="color: red">*</span></label>
+                                    <a href="#"><i class="bx bx-reset float-end" style="border:1px solid #000;margin-right:5px;font-size:18px;padding:2px;border-radius:5px;color:#000;font-weight:500"></i></a>
+                                    <a href="AddExpenseTypeMaster.html" target="_blank">
+                                        <i class="bx bx-plus float-end" style="border:1px solid #000;margin-right:5px;font-size:18px;padding:2px;border-radius:5px;color:#000;font-weight:500"></i>
+                                    </a>
+                                    <select class="form-select2 js-example-basic-single" data-choices data-choices-sorting="true" id="ExpenseType">
+                                        <option selected>- Select Expense Type -</option>
+                                        <option>Air Ticket</option>
+                                        <option>Hotel Booking</option>
+                                    </select>
+                                </div>
+                                <div class="col-lg-3 col-sm-6 col-xs-12">
+                                    <label class="form-label">Expense Sub Type<span class="start-lable" style="color: red">*</span></label>
+                                    <a href="#"><i class="bx bx-reset float-end" style="border:1px solid #000;margin-right:5px;font-size:18px;padding:2px;border-radius:5px;color:#000;font-weight:500"></i></a>
+                                    <a href="AddExpenseSubTypeMaster.html" target="_blank">
+                                        <i class="bx bx-plus float-end" style="border:1px solid #000;margin-right:5px;font-size:18px;padding:2px;border-radius:5px;color:#000;font-weight:500"></i>
+                                    </a>
+                                    <select class="form-select2 js-example-basic-single" data-choices data-choices-sorting="true" id="ExpenseSubType">
+                                        <option selected>- Select Expense Sub Type -</option>
+                                        <option>Business Class Air Ticket</option>
+                                    </select>
+                                </div>
+                                <div class="col-lg-3 col-sm-6 col-xs-12">
+                                    <label class="form-label">Quantity<span class="start-lable" style="color: red">*</span></label>
+                                    <input type="text" class="form-control" placeholder="eg. 50 ">
+                                </div>
+                                <div class="col-lg-3 col-sm-6 col-xs-12">
+                                    <label class="form-label">Unit Type<span class="start-lable" style="color: red">*</span></label>
+                                    <a href="#"><i class="bx bx-reset float-end" style="border:1px solid #000;margin-right:5px;font-size:18px;padding:2px;border-radius:5px;color:#000;font-weight:500"></i></a>
+                                    <a href="AddUnitMaster.html" target="_blank">
+                                        <i class="bx bx-plus float-end" style="border:1px solid #000;margin-right:5px;font-size:18px;padding:2px;border-radius:5px;color:#000;font-weight:500"></i>
+                                    </a>
+                                    <select class="form-select2 js-example-basic-single" data-choices data-choices-sorting="true" id="UnitType">
+                                        <option selected>- Select Unit Type -</option>
+                                        <option>Per Person</option>
+
+                                    </select>
+                                </div>
+                                <div class="col-lg-3 col-sm-6 col-xs-12">
+                                    <label class="form-label">Unit Cost<span class="start-lable" style="color: red">*</span></label>
+                                    <input type="text" class="form-control" placeholder="eg.">
+                                </div>
+                                <div class="col-lg-3 col-sm-6 col-xs-12">
+                                    <label class="form-label">Total Cost<span class="start-lable" style="color: red">*</span></label>
+                                    <input type="text" class="form-control" placeholder="eg." disabled>
+                                </div>
+                                <div class="col-lg-3 col-sm-6 col-xs-12">
+                                    <label class="form-label">Tax Amount</label>
+                                    <input type="text" class="form-control" placeholder="eg.">
+                                </div>
+                                <div class="col-lg-3 col-sm-6 col-xs-12">
+                                    <label class="form-label">Bill Amount<span class="start-lable" style="color: red">*</span></label>
+                                    <input type="text" class="form-control" placeholder="eg." disabled>
+                                </div>
+
+
+                            </div>
+
+
+                            <div class="row gx-3 gy-2 align-items-center mt-3">
+                                <div class="col-lg-8 col-sm-9 col-xs-12">
+                                    <div class="page-title-box d-sm-flex align-items-center justify-content-between">
+                                        <h4 class="mb-sm-0">General Infromation</h4>
+                                    </div>
+                                </div>
+
+                                <hr />
+
+
+                                <div class="col-lg-3 col-sm-6 col-xs-12">
+                                    <label class="form-label">Customer </label>
+                                    <input type="text" class="form-control" placeholder="eg.">
+                                </div>
+
+
+
+
+                                <div class="col-lg-3 col-sm-6 col-xs-12">
+                                    <label class="form-label">Upload Bill / Slip</label>
+                                    <input type="file" class="form-control" placeholder="eg.">
+                                </div>
+                                <div class="col-lg-6 col-sm-6 col-xs-12">
+                                    <label class="form-label">Purpose Of Expense ( Remarks )</label>
+                                    <textarea type="file" class="form-control" placeholder="eg."></textarea>
+                                </div>
+                                <div class="row gx-3 gy-2 align-items-center">
+                                    <div class="col-lg-9" style="text-align:center">
+                                        <span class="badge bg-danger">This Message is for Warnings</span>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <a href="#" class="btn btn-primary " style="float:right;"> Add</a>
+                                    </div>
+                                    <!--end col-->
+                                </div>
+
+                                <!--end col-->
+                            </div>
+
+
+                        </div>
+
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+
+                            <table id="buttons-datatables" class="display table table-bordered"
+                                   style="width:100%">
+                                <thead>
+                                    <tr>
+                                        <th>Sr.No</th>
+                                        <th>Unit</th>
+                                        <th>
+                                            Unit Type
+                                        </th>
+                                        <th>
+                                            Unit Cost
+                                        </th>
+                                        <th>
+                                            Total Expense Amount
+                                        </th>
+                                        <th>
+                                            Expense Info
+                                        </th>
+
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+
+                                        <td>Per Person</td>
+                                        <td>₹ 440</td>
+                                        <td>₹ 0</td>
+                                        <td>₹ 440</td>
+                                        <td>
+                                            <ul>
+                                                <li>Document Date : 15-12-2024</li>
+                                                <li>From Country : India</li>
+                                                <li>From State : Maharastra</li>
+                                                <li>From City : Vasai Virar</li>
+                                                <li>From Date : 15-12-2024</li>
+                                                <li>From To : 15-12-2024</li>
+
+                                            </ul>
+                                        </td>
+
+
+                                        <td>
+                                            <a id="AnchorAdd" runat="server" href="#"
+                                               class="btn btn-danger custom-class">
+                                                Edit
+                                            </a>
+
+                                            <a id="AnchorAdd" runat="server" href="#"
+                                               class="btn btn-danger custom-class">
+                                                Delete
+                                            </a>
+                                        </td>
+                                    </tr>
+
+
+                                </tbody>
+                            </table>
+
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-3">
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="applymultiplelocation">
+                                    <label class="form-check-label" for="autoSizingCheck2">
+                                        Is Apply for Approval
+                                    </label>
+                                </div>
+
+                            </div>
+                            <div class="col-lg-9">
+
+                                <a id="AnchorAdd" runat="server" href="#"
+                                   class="btn btn-primary float-end">
+                                    Submit
+                                </a>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div> <!-- container-fluid -->
+</div>
+
+<!-- JAVASCRIPT -->
+<script src="~/assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="~/assets/libs/simplebar/simplebar.min.js"></script>
+<script src="~/assets/libs/node-waves/waves.min.js"></script>
+<script src="~/assets/libs/feather-icons/feather.min.js"></script>
+<script src="~/assets/js/pages/plugins/lord-icon-2.1.0.js"></script>
+<script src="~/assets/js/plugins.js"></script>
+<!-- prismjs plugin -->
+<script src="~/assets/libs/prismjs/prism.js"></script>
+<script src="~/assets/js/app.js"></script>
+<script src="~/assets/js/jquery-3.6.0.min.js"></script>
+<!--select2 cdn-->
+<script src="~/assets/js/select2.min.js"></script>
+<script src="~/assets/js/pages/select2.init.js"></script>
+<script src="~/assets/js/moment.min.js"></script>
+<script src="~/assets/js/daterangepicker.min.js"></script>
+<script>
+    $(function () {
+        $('input[name="daterange"]').daterangepicker({
+            opens: 'left'
+        }, function (start, end, label) {
+            console.log("A new date selection was made: " + start.format('DD-MM-YYYY') + ' to ' + end.format('DD-MM-YYYY'));
+        });
+    });
+</script>
+
+
+<script>
+    document.getElementById('Projectexpense').addEventListener('change', handleExpenseChange);
+    document.getElementById('otherexpense').addEventListener('change', handleExpenseChange);
+
+    function handleExpenseChange() {
+        const projectDiv = document.getElementById('projectdiv');
+        const taskDiv = document.getElementById('taskdiv');
+        const isProjectChecked = document.getElementById('Projectexpense').checked;
+
+        if (isProjectChecked) {
+            projectDiv.style.display = 'block';
+            taskDiv.style.display = 'block';
+        } else {
+            projectDiv.style.display = 'none';
+            taskDiv.style.display = 'none';
+        }
+    }
+</script>

@@ -1,0 +1,542 @@
+﻿<div id="layout-wrapper">
+    <div w3-include-html="/Views/Shared/header.html"> </div>
+    <!-- Left Sidebar End -->
+    <!-- Vertical Overlay-->
+    <div class="vertical-overlay"></div>
+    <!-- ============================================================== -->
+    <!-- Start right Content here -->
+    <!-- ============================================================== -->
+    <div class="main-content">
+        <div class="page-content">
+            <div class="container-fluid">
+                <!-- start page title -->
+                <div class="row">
+                    <div class="col-12">
+                        <div class="page-title-box d-sm-flex align-items-center justify-content-between">
+                            <h4 class="mb-sm-0">Employee Dashboard</h4>
+                        </div>
+                    </div>
+                </div>
+                <!-- end page title -->
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="card" id="CardData">
+                            <div class="card-header">
+                                <div class="row g-4 align-items-center">
+                                    <div class="col-sm-auto">
+                                        <div>
+                                            <h4 class="card-title mb-0 flex-grow-1">
+                                                List of Task assigned with Daybook Status
+                                            </h4>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm">
+                                        <div class="d-flex justify-content-sm-end">
+                                            <div class="search-box ms-2">
+                                                <input type="text" class="form-control" id="searchResultList" placeholder="Search for jobs...">
+                                                <i class="ri-search-line search-icon"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="table-responsive table-card">
+                                    <table class="table table-borderless table-centered align-middle table-nowrap mb-0">
+                                        <thead class="text-muted table-light">
+                                            <tr>
+                                                <th scope="col">No.</th>
+                                                <th scope="col">Project Name</th>
+                                                <th scope="col">Assign To</th>
+                                                <th scope="col">Hour</th>
+                                                <th scope="col">Status</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>Project One</td>
+                                                <td>Employee One</td>
+                                                <td>8</td>
+                                                <td>
+                                                    <span class="badge bg-success-subtle text-success">Active</span>
+                                                </td>
+                                            </tr><!-- end tr -->
+                                            <tr>
+                                                <td>2</td>
+                                                <td>Project Two</td>
+                                                <td>Employee Two</td>
+                                                <td>20</td>
+                                                <td>
+                                                    <span class="badge bg-danger-subtle text-danger">In Active</span>
+                                                </td>
+                                            </tr><!-- end tr -->
+                                            <tr>
+                                                <td>3</td>
+                                                <td>Project Three</td>
+                                                <td>Employee Three</td>
+                                                <td>8</td>
+                                                <td>
+                                                    <span class="badge bg-success-subtle text-success">Active</span>
+                                                </td>
+                                            </tr><!-- end tr -->
+                                            <tr>
+                                                <td>4</td>
+                                                <td>Project Four</td>
+                                                <td>Employee Four</td>
+                                                <td>50</td>
+                                                <td>
+                                                    <span class="badge bg-danger-subtle text-danger">In Active</span>
+                                                </td>
+                                            </tr><!-- end tr -->
+                                            <tr>
+                                                <td>5</td>
+                                                <td>Project Five</td>
+                                                <td>Employee Five</td>
+                                                <td>8</td>
+                                                <td>
+                                                    <span class="badge bg-success-subtle text-success">Active</span>
+                                                </td>
+                                            </tr><!-- end tr -->
+                                            <tr>
+                                                <td>6</td>
+                                                <td>Project Six</td>
+                                                <td>Employee Six</td>
+                                                <td>10</td>
+                                                <td>
+                                                    <span class="badge bg-danger-subtle text-danger">In Active</span>
+                                                </td>
+                                            </tr><!-- end tr -->
+                                        </tbody><!-- end tbody -->
+                                    </table><!-- end table -->
+                                </div>
+                            </div>
+                        </div>
+                    </div><!--end col-->
+                    <div class="col-lg-6">
+                        <div class="card" id="CardData">
+                            <div class="card-header">
+                                <div class="row g-4 align-items-center">
+                                    <div class="col-sm-auto">
+                                        <div>
+                                            <h4 class="card-title mb-0 flex-grow-1">
+                                                Calculated hours Project &amp; Task Wise
+
+                                            </h4>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm">
+                                        <div class="d-flex justify-content-sm-end">
+                                            <div class="search-box ms-2">
+                                                <input type="text" class="form-control" id="searchResultList" placeholder="Search for jobs...">
+                                                <i class="ri-search-line search-icon"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="table-responsive table-card">
+                                    <table class="table table-borderless table-centered align-middle table-nowrap mb-0">
+                                        <thead class="text-muted table-light">
+                                            <tr>
+                                                <th scope="col">No.</th>
+                                                <th scope="col">Project Name</th>
+                                                <th scope="col">Task Name</th>
+                                                <th scope="col">Project Hour</th>
+                                                <th scope="col">Status</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>Project One</td>
+                                                <td>Employee One</td>
+                                                <td>8</td>
+                                                <td>
+                                                    <span class="badge bg-success-subtle text-success">Active</span>
+                                                </td>
+                                            </tr><!-- end tr -->
+                                            <tr>
+                                                <td>2</td>
+                                                <td>Project Two</td>
+                                                <td>Employee Two</td>
+                                                <td>20</td>
+                                                <td>
+                                                    <span class="badge bg-danger-subtle text-danger">In Active</span>
+                                                </td>
+                                            </tr><!-- end tr -->
+                                            <tr>
+                                                <td>3</td>
+                                                <td>Project Three</td>
+                                                <td>Employee Three</td>
+                                                <td>8</td>
+                                                <td>
+                                                    <span class="badge bg-success-subtle text-success">Active</span>
+                                                </td>
+                                            </tr><!-- end tr -->
+                                            <tr>
+                                                <td>4</td>
+                                                <td>Project Four</td>
+                                                <td>Employee Four</td>
+                                                <td>50</td>
+                                                <td>
+                                                    <span class="badge bg-danger-subtle text-danger">In Active</span>
+                                                </td>
+                                            </tr><!-- end tr -->
+                                            <tr>
+                                                <td>5</td>
+                                                <td>Project Five</td>
+                                                <td>Employee Five</td>
+                                                <td>8</td>
+                                                <td>
+                                                    <span class="badge bg-success-subtle text-success">Active</span>
+                                                </td>
+                                            </tr><!-- end tr -->
+                                            <tr>
+                                                <td>6</td>
+                                                <td>Project Six</td>
+                                                <td>Employee Six</td>
+                                                <td>10</td>
+                                                <td>
+                                                    <span class="badge bg-danger-subtle text-danger">In Active</span>
+                                                </td>
+                                            </tr><!-- end tr -->
+
+                                        </tbody><!-- end tbody -->
+                                    </table><!-- end table -->
+                                </div>
+                            </div>
+                        </div>
+                    </div><!--end col-->
+                </div>
+                <div class="row">
+                    <div class="col-xl-6">
+                        <div class="card card-height-100">
+                            <div class="card-header align-items-center d-flex">
+                                <h4 class="card-title mb-0 flex-grow-1">
+                                    Project wise Latest Backups
+                                </h4>
+                                <div class="flex-shrink-0">
+                                    <div class="dropdown card-header-dropdown">
+                                        <a class="text-reset dropdown-btn" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <span class="text-muted fs-16"><i class="mdi mdi-dots-vertical align-middle"></i></span>
+                                        </a>
+                                        <div class="dropdown-menu dropdown-menu-end">
+                                            <a class="dropdown-item" href="#">Today</a>
+                                            <a class="dropdown-item" href="#">Last Week</a>
+                                            <a class="dropdown-item" href="#">Last Month</a>
+                                            <a class="dropdown-item" href="#">Current Year</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!-- end card header -->
+                            <div class="card-body" style="overflow-x:scroll;">
+                                <div class="table-responsive table-card" style="max-height: 300px;">
+                                    <table class="table align-middle table-borderless table-centered table-nowrap mb-0  ">
+                                        <thead class="text-muted table-light">
+                                            <tr>
+                                                <th scope="col" style="width: 62;">EMP. Name</th>
+                                                <th scope="col">Project Name</th>
+                                                <th scope="col">Task Back Up Path</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    Emplyee One
+                                                </td>
+                                                <td>Project One</td>
+                                                <td> <a href="javascript:void(0);">/CommomFolder/Manan/Project Name 1</a></td>
+                                            </tr><!-- end -->
+                                            <tr>
+                                                <td>
+                                                    Emplyee One
+                                                </td>
+                                                <td>Project Two</td>
+                                                <td> <a href="javascript:void(0);">/CommomFolder/Manan/Project Name 2</a></td>
+                                            </tr><!-- end -->
+                                            <tr>
+                                                <td>
+                                                    Emplyee One
+                                                </td>
+                                                <td>Project Three</td>
+                                                <td> <a href="javascript:void(0);">/CommomFolder/Manan/Project Name 3</a></td>
+                                            </tr><!-- end -->
+                                            <tr>
+                                                <td>
+                                                    Emplyee One
+                                                </td>
+                                                <td>Project Four</td>
+                                                <td> <a href="javascript:void(0);">/CommomFolder/Manan/Project Name 4</a></td>
+                                            </tr><!-- end -->
+                                            <tr>
+                                                <td>
+                                                    Emplyee One
+                                                </td>
+                                                <td>Project Five</td>
+                                                <td> <a href="javascript:void(0);">/CommomFolder/Manan/Project Name 5</a></td>
+                                            </tr><!-- end -->
+                                            <tr>
+                                                <td>
+                                                    Emplyee One
+                                                </td>
+                                                <td>Project Six</td>
+                                                <td> <a href="javascript:void(0);">/CommomFolder/Manan/Project Name 6</a></td>
+                                            </tr><!-- end -->
+                                            <tr>
+                                                <td>
+                                                    Emplyee One
+                                                </td>
+                                                <td>Project Seven</td>
+                                                <td> <a href="javascript:void(0);">/CommomFolder/Manan/Project Name 7</a></td>
+                                            </tr><!-- end -->
+                                            <tr>
+                                                <td>
+                                                    Emplyee One
+                                                </td>
+                                                <td>Project Eight</td>
+                                                <td> <a href="javascript:void(0);">/CommomFolder/Manan/Project Name 8</a></td>
+                                            </tr><!-- end -->
+                                            <tr>
+                                                <td>
+                                                    Emplyee One
+                                                </td>
+                                                <td>Project Nine</td>
+                                                <td> <a href="javascript:void(0);">/CommomFolder/Manan/Project Name 9</a></td>
+                                            </tr><!-- end -->
+
+                                        </tbody><!-- end tbody -->
+                                    </table><!-- end table -->
+                                </div><!-- end -->
+                            </div><!-- end cardbody -->
+                        </div><!-- end card -->
+                    </div><!-- end col -->
+                    <div class="col-xl-6">
+                        <div class="card" id="CardData">
+                            <div class="card-header align-items-center d-flex">
+                                <h4 class="card-title mb-0 flex-grow-1">
+                                    Achievements
+                                </h4>
+                                <div class="flex-shrink-0">
+                                    <button type="button" class="btn btn-soft-info btn-sm">
+                                        <i class="ri-file-list-3-line align-middle"></i> Generate Report
+                                    </button>
+                                </div>
+                            </div><!-- end card header -->
+
+                            <div class="card-body">
+                                <div class="table-responsive table-card">
+                                    <table class="table table-borderless table-centered align-middle table-nowrap mb-0">
+                                        <thead class="text-muted table-light">
+                                            <tr>
+                                                <th scope="col">Emp ID</th>
+                                                <th scope="col">Name</th>
+                                                <th scope="col">Project</th>
+                                                <th scope="col">Start Date</th>
+                                                <th scope="col">End Date</th>
+
+                                                <th scope="col">Rating</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <a href="#" class="fw-medium link-primary">1</a>
+                                                </td>
+                                                <td>
+                                                    <div class="d-flex align-items-center">
+                                                        <div class="flex-grow-1">Emplyee One</div>
+                                                    </div>
+                                                </td>
+                                                <td>Project One</td>
+                                                <td>
+                                                    <span class="text-success">10-01-2023</span>
+                                                </td>
+                                                <td>
+                                                    <span class="text-success">10-01-2023</span>
+                                                </td>
+
+                                                <td>
+                                                    <h5 class="fs-14 fw-medium mb-0">
+                                                        5.0<span class="text-muted fs-11 ms-1">
+
+                                                        </span>
+                                                    </h5>
+                                                </td>
+                                            </tr><!-- end tr -->
+                                            <tr>
+                                                <td>
+                                                    <a href="#" class="fw-medium link-primary">2</a>
+                                                </td>
+                                                <td>
+                                                    <div class="d-flex align-items-center">
+                                                        <div class="flex-grow-1">Emplyee One</div>
+                                                    </div>
+                                                </td>
+                                                <td>Project Two</td>
+                                                <td>
+                                                    <span class="text-success">10-01-2023</span>
+                                                </td>
+                                                <td>
+                                                    <span class="text-success">10-01-2023</span>
+                                                </td>
+
+                                                <td>
+                                                    <h5 class="fs-14 fw-medium mb-0">
+                                                        5.0<span class="text-muted fs-11 ms-1">
+
+                                                        </span>
+                                                    </h5>
+                                                </td>
+                                            </tr><!-- end tr -->
+                                            <tr>
+                                                <td>
+                                                    <a href="#" class="fw-medium link-primary">3</a>
+                                                </td>
+                                                <td>
+                                                    <div class="d-flex align-items-center">
+                                                        <div class="flex-grow-1">Emplyee One</div>
+                                                    </div>
+                                                </td>
+                                                <td>Project Three</td>
+                                                <td>
+                                                    <span class="text-success">10-01-2023</span>
+                                                </td>
+                                                <td>
+                                                    <span class="text-success">10-01-2023</span>
+                                                </td>
+
+                                                <td>
+                                                    <h5 class="fs-14 fw-medium mb-0">
+                                                        5.0<span class="text-muted fs-11 ms-1">
+
+                                                        </span>
+                                                    </h5>
+                                                </td>
+                                            </tr><!-- end tr -->
+                                            <tr>
+                                                <td>
+                                                    <a href="#" class="fw-medium link-primary">4</a>
+                                                </td>
+                                                <td>
+                                                    <div class="d-flex align-items-center">
+                                                        <div class="flex-grow-1">Emplyee One</div>
+                                                    </div>
+                                                </td>
+                                                <td>Project Four</td>
+                                                <td>
+                                                    <span class="text-success">10-01-2023</span>
+                                                </td>
+                                                <td>
+                                                    <span class="text-success">10-01-2023</span>
+                                                </td>
+
+                                                <td>
+                                                    <h5 class="fs-14 fw-medium mb-0">
+                                                        5.0<span class="text-muted fs-11 ms-1">
+
+                                                        </span>
+                                                    </h5>
+                                                </td>
+                                            </tr><!-- end tr -->
+                                            <tr>
+                                                <td>
+                                                    <a href="#" class="fw-medium link-primary">5</a>
+                                                </td>
+                                                <td>
+                                                    <div class="d-flex align-items-center">
+                                                        <div class="flex-grow-1">Emplyee One</div>
+                                                    </div>
+                                                </td>
+                                                <td>Project Five</td>
+                                                <td>
+                                                    <span class="text-success">10-01-2023</span>
+                                                </td>
+                                                <td>
+                                                    <span class="text-success">10-01-2023</span>
+                                                </td>
+
+                                                <td>
+                                                    <h5 class="fs-14 fw-medium mb-0">
+                                                        5.0<span class="text-muted fs-11 ms-1">
+
+                                                        </span>
+                                                    </h5>
+                                                </td>
+                                            </tr><!-- end tr -->
+                                            <tr>
+                                                <td>
+                                                    <a href="#" class="fw-medium link-primary">5</a>
+                                                </td>
+                                                <td>
+                                                    <div class="d-flex align-items-center">
+                                                        <div class="flex-grow-1">Emplyee One</div>
+                                                    </div>
+                                                </td>
+                                                <td>Project Six</td>
+                                                <td>
+                                                    <span class="text-success">10-01-2023</span>
+                                                </td>
+                                                <td>
+                                                    <span class="text-success">10-01-2023</span>
+                                                </td>
+                                                <td>
+                                                    <h5 class="fs-14 fw-medium mb-0">
+                                                        5.0<span class="text-muted fs-11 ms-1">
+                                                        </span>
+                                                    </h5>
+                                                </td>
+                                            </tr><!-- end tr -->
+                                        </tbody><!-- end tbody -->
+                                    </table><!-- end table -->
+                                </div>
+                            </div>
+                        </div> <!-- .card-->
+                    </div><!-- end col -->
+                </div>
+            </div>
+            <!-- container-fluid -->
+        </div>
+        <!-- End Page-content -->
+
+        <div w3-include-html="/Views/Shared/header.html"> </div>
+    </div>
+    <!-- end main content-->
+</div>
+<!-- END layout-wrapper -->
+<!--start back-to-top-->
+<button onclick="topFunction()" class="btn btn-danger btn-icon" id="back-to-top">
+    <i class="ri-arrow-up-line"></i>
+</button>
+<!--end back-to-top-->
+<!--preloader-->
+<div id="preloader">
+    <div id="status">
+        <div class="spinner-border text-primary avatar-sm" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+    </div>
+</div>
+
+<!-- JAVASCRIPT -->
+<script src="~/assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="~/assets/libs/simplebar/simplebar.min.js"></script>
+<script src="~/assets/libs/node-waves/waves.min.js"></script>
+<script src="~/assets/libs/feather-icons/feather.min.js"></script>
+<script src="~/assets/js/pages/plugins/lord-icon-2.1.0.js"></script>
+<script src="~/assets/js/plugins.js"></script>
+<!-- apexcharts -->
+<script src="~/assets/libs/apexcharts/apexcharts.min.js"></script>
+<!-- Dashboard init -->
+<script src="~/assets/js/pages/dashboard-job.init.js"></script>
+<!-- projects js -->
+<script src="~/assets/js/pages/dashboard-projects.init.js"></script>
+<!-- Dashboard init -->
+<script src="~/assets/js/pages/dashboard-crm.init.js"></script>
+<!-- Chart JS -->
+<script src="~?assets/libs/chart.js/chart.umd.js"></script>
+<!-- chartjs init -->
+<script src="~/assets/js/pages/chartjs.init.js"></script>
+<!-- App js -->
+<script src="~/assets/js/app.js"></script>

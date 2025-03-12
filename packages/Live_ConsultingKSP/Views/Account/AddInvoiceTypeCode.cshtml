@@ -1,0 +1,90 @@
+﻿<div class="page-content">
+    <div class="container-fluid">
+        <!-- start page title -->
+        <div class="row">
+            <div class="col-12">
+                <div class="page-title-box d-sm-flex align-items-center justify-content-between">
+                    <h4 class="mb-sm-0">Add Invoice Type Code</h4>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="live-preview">
+                            <div class="row gx-3 gy-2 align-items-center">
+                                <div class="col-lg-3 col-sm-6 col-xs-12">
+                                    <label class="form-label">UUID<span class="start-lable" style="color: red">*</span></label>
+                                    <input type="text" class="form-control" placeholder="12b7266d-783d-4245-ada8-2f99dbda7508" disabled>
+                                </div>
+                                <div class="col-lg-3 col-sm-6 col-xs-12">
+                                    <label class="form-label">Invoice Type<span class="start-lable" style="color: red">*</span></label>
+                                    <a href="#"><i class="bx bx-reset float-end" style="border:1px solid #000;margin-right:5px;font-size:18px;padding:2px;border-radius:5px;color:#000;font-weight:500"></i></a>
+                                    <a href="AddInvoiceType.html" target="_blank">
+                                        <i class="bx bx-plus float-end" style="border:1px solid #000;margin-right:5px;font-size:18px;padding:2px;border-radius:5px;color:#000;font-weight:500"></i>
+                                    </a>
+                                    <select class="form-select" data-choices data-choices-sorting="true" id="level">
+                                        <option selected>- Select Invoice Type -</option>
+                                        <option value="1">Standard</option>
+                                        <option value="2">Simplified</option>
+                                    </select>
+                                </div>
+                                <div class="col-lg-3 col-sm-6 col-xs-12">
+                                    <label class="form-label">Invoice Sub Type<span class="start-lable" style="color: red">*</span></label>
+                                    <a href="#"><i class="bx bx-reset float-end" style="border:1px solid #000;margin-right:5px;font-size:18px;padding:2px;border-radius:5px;color:#000;font-weight:500"></i></a>
+                                    <a href="AddInvoiceSubType.html" target="_blank">
+                                        <i class="bx bx-plus float-end" style="border:1px solid #000;margin-right:5px;font-size:18px;padding:2px;border-radius:5px;color:#000;font-weight:500"></i>
+                                    </a>
+                                    <select class="form-select" data-choices data-choices-sorting="true" id="level">
+                                        <option selected>- Select Invoice Sub Type -</option>
+                                        <option value="1">Tax Invoice</option>
+                                        <option value="2">Credit Note</option>
+                                        <option value="2">Debit Note</option>
+                                    </select>
+                                </div>
+                                <div class="col-lg-3 col-sm-6 col-xs-12">
+                                    <label class="form-label">Title<span class="start-lable" style="color: red">*</span></label>
+                                    <input type="text" class="form-control" placeholder="eg. ">
+                                </div>
+                                <div class="col-lg-3 col-sm-6 col-xs-12">
+                                    <label class="form-label">Code<span class="start-lable" style="color: red">*</span></label>
+                                    <input type="text" class="form-control" placeholder="eg. Normal Invoice">
+                                </div>
+                                <div class="col-lg-3">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="" checked>
+                                        <label class="form-check-label" for="">
+                                            Is Display
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <a href="#" class="btn btn-primary " style="float:right;"> Submit</a>
+                                    <a href="#" class="btn btn-danger " style="float:right;margin-right:10px;"> Cancel</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- JAVASCRIPT -->
+<script src="~/assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="~/assets/libs/simplebar/simplebar.min.js"></script>
+<script src="~/assets/libs/node-waves/waves.min.js"></script>
+<script src="~/assets/libs/feather-icons/feather.min.js"></script>
+<script src="~/assets/js/pages/plugins/lord-icon-2.1.0.js"></script>
+<script src="~/assets/js/plugins.js"></script>
+<!-- prismjs plugin -->
+<script src="~/assets/libs/prismjs/prism.js"></script>
+             
+<script src="~/assets/js/jquery-3.6.0.min.js"></script>
+<!--select2 cdn-->
+<script src="~/assets/js/select2.min.js"></script>
+             
+<script src="~/assets/js/pages/select2.init.js"></script>
+<script src="~/assets/js/app.js"></script>

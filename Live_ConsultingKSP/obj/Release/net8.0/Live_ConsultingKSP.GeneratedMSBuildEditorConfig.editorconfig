@@ -1,0 +1,559 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = Live_ConsultingKSP
+build_property.RootNamespace = Live_ConsultingKSP
+build_property.ProjectDir = C:\Users\hp\Downloads\ksp(01-03-25)\Live_ConsultingKSP\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\hp\Downloads\ksp(01-03-25)\Live_ConsultingKSP
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/hp/Downloads/ksp(01-03-25)/Live_ConsultingKSP/Views/Account/AddModeofDelivery.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxBZGRNb2Rlb2ZEZWxpdmVyeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hp/Downloads/ksp(01-03-25)/Live_ConsultingKSP/Views/Account/AddPurchaseInquiry.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxBZGRQdXJjaGFzZUlucXVpcnkuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hp/Downloads/ksp(01-03-25)/Live_ConsultingKSP/Views/Account/AddPurchaseInvoice.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxBZGRQdXJjaGFzZUludm9pY2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hp/Downloads/ksp(01-03-25)/Live_ConsultingKSP/Views/Account/AddPurchaseOrder.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxBZGRQdXJjaGFzZU9yZGVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hp/Downloads/ksp(01-03-25)/Live_ConsultingKSP/Views/Account/AddPurchasePerformaInvoice.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxBZGRQdXJjaGFzZVBlcmZvcm1hSW52b2ljZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hp/Downloads/ksp(01-03-25)/Live_ConsultingKSP/Views/Account/AddPurchaseQuotation.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxBZGRQdXJjaGFzZVF1b3RhdGlvbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hp/Downloads/ksp(01-03-25)/Live_ConsultingKSP/Views/Account/AddSaleInvoice.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxBZGRTYWxlSW52b2ljZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hp/Downloads/ksp(01-03-25)/Live_ConsultingKSP/Views/Account/AddSalesCustomerInquiry.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxBZGRTYWxlc0N1c3RvbWVySW5xdWlyeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hp/Downloads/ksp(01-03-25)/Live_ConsultingKSP/Views/Account/AddSalesOrder.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxBZGRTYWxlc09yZGVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hp/Downloads/ksp(01-03-25)/Live_ConsultingKSP/Views/Account/AddSalesPerfomaInvoice.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxBZGRTYWxlc1BlcmZvbWFJbnZvaWNlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hp/Downloads/ksp(01-03-25)/Live_ConsultingKSP/Views/Account/PDF_commercial_invoice.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxQREZfY29tbWVyY2lhbF9pbnZvaWNlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hp/Downloads/ksp(01-03-25)/Live_ConsultingKSP/Views/Account/PDF_credit_note.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxQREZfY3JlZGl0X25vdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hp/Downloads/ksp(01-03-25)/Live_ConsultingKSP/Views/Account/PDF_debit_note.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxQREZfZGViaXRfbm90ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hp/Downloads/ksp(01-03-25)/Live_ConsultingKSP/Views/Account/PDF_delievery_note.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxQREZfZGVsaWV2ZXJ5X25vdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hp/Downloads/ksp(01-03-25)/Live_ConsultingKSP/Views/Account/PDF_journal_voucher.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxQREZfam91cm5hbF92b3VjaGVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hp/Downloads/ksp(01-03-25)/Live_ConsultingKSP/Views/Account/PDF_material_transfer_voucher.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxQREZfbWF0ZXJpYWxfdHJhbnNmZXJfdm91Y2hlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hp/Downloads/ksp(01-03-25)/Live_ConsultingKSP/Views/Account/PDF_packing_slip.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxQREZfcGFja2luZ19zbGlwLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hp/Downloads/ksp(01-03-25)/Live_ConsultingKSP/Views/Account/PDF_payment_vaoucher_template.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxQREZfcGF5bWVudF92YW91Y2hlcl90ZW1wbGF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hp/Downloads/ksp(01-03-25)/Live_ConsultingKSP/Views/Account/PDF_proforma_invoice.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxQREZfcHJvZm9ybWFfaW52b2ljZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hp/Downloads/ksp(01-03-25)/Live_ConsultingKSP/Views/Account/PDF_purchase_order.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxQREZfcHVyY2hhc2Vfb3JkZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hp/Downloads/ksp(01-03-25)/Live_ConsultingKSP/Views/Account/PDF_sales_day_book.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxQREZfc2FsZXNfZGF5X2Jvb2suY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hp/Downloads/ksp(01-03-25)/Live_ConsultingKSP/Views/Account/PDF_sales_order.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxQREZfc2FsZXNfb3JkZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hp/Downloads/ksp(01-03-25)/Live_ConsultingKSP/Views/Account/PDF_SteelBear_Purchase_Order.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxQREZfU3RlZWxCZWFyX1B1cmNoYXNlX09yZGVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hp/Downloads/ksp(01-03-25)/Live_ConsultingKSP/Views/Account/PDF_tax_invoice.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxQREZfdGF4X2ludm9pY2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hp/Downloads/ksp(01-03-25)/Live_ConsultingKSP/Views/Account/ViewModeofDelivery.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxWaWV3TW9kZW9mRGVsaXZlcnkuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hp/Downloads/ksp(01-03-25)/Live_ConsultingKSP/Views/Account/ViewPurchaseInquiry.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxWaWV3UHVyY2hhc2VJbnF1aXJ5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hp/Downloads/ksp(01-03-25)/Live_ConsultingKSP/Views/Account/ViewPurchaseInvoice.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxWaWV3UHVyY2hhc2VJbnZvaWNlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hp/Downloads/ksp(01-03-25)/Live_ConsultingKSP/Views/Account/ViewPurchaseOrder.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxWaWV3UHVyY2hhc2VPcmRlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hp/Downloads/ksp(01-03-25)/Live_ConsultingKSP/Views/Account/ViewPurchasePerformaInvoice.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxWaWV3UHVyY2hhc2VQZXJmb3JtYUludm9pY2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hp/Downloads/ksp(01-03-25)/Live_ConsultingKSP/Views/Account/ViewPurchaseQuotation.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxWaWV3UHVyY2hhc2VRdW90YXRpb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hp/Downloads/ksp(01-03-25)/Live_ConsultingKSP/Views/Account/ViewSaleInvoice.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxWaWV3U2FsZUludm9pY2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hp/Downloads/ksp(01-03-25)/Live_ConsultingKSP/Views/Account/ViewSalePerfomaInvoice.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxWaWV3U2FsZVBlcmZvbWFJbnZvaWNlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hp/Downloads/ksp(01-03-25)/Live_ConsultingKSP/Views/Account/ViewSalesCustomerInquiry.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxWaWV3U2FsZXNDdXN0b21lcklucXVpcnkuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hp/Downloads/ksp(01-03-25)/Live_ConsultingKSP/Views/Account/ViewSalesOrder.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxWaWV3U2FsZXNPcmRlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hp/Downloads/ksp(01-03-25)/Live_ConsultingKSP/Views/BusinessDevelopment/AddMiningData.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQnVzaW5lc3NEZXZlbG9wbWVudFxBZGRNaW5pbmdEYXRhLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hp/Downloads/ksp(01-03-25)/Live_ConsultingKSP/Views/BusinessDevelopment/AddResearchGroup.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQnVzaW5lc3NEZXZlbG9wbWVudFxBZGRSZXNlYXJjaEdyb3VwLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hp/Downloads/ksp(01-03-25)/Live_ConsultingKSP/Views/BusinessDevelopment/ManageFiltrationData.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQnVzaW5lc3NEZXZlbG9wbWVudFxNYW5hZ2VGaWx0cmF0aW9uRGF0YS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hp/Downloads/ksp(01-03-25)/Live_ConsultingKSP/Views/BusinessDevelopment/ManagePositiveLead.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQnVzaW5lc3NEZXZlbG9wbWVudFxNYW5hZ2VQb3NpdGl2ZUxlYWQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hp/Downloads/ksp(01-03-25)/Live_ConsultingKSP/Views/BusinessDevelopment/UpdatePositiveData.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQnVzaW5lc3NEZXZlbG9wbWVudFxVcGRhdGVQb3NpdGl2ZURhdGEuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hp/Downloads/ksp(01-03-25)/Live_ConsultingKSP/Views/BusinessDevelopment/ViewDataFiltration.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQnVzaW5lc3NEZXZlbG9wbWVudFxWaWV3RGF0YUZpbHRyYXRpb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hp/Downloads/ksp(01-03-25)/Live_ConsultingKSP/Views/BusinessDevelopment/ViewResearchGroup.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQnVzaW5lc3NEZXZlbG9wbWVudFxWaWV3UmVzZWFyY2hHcm91cC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hp/Downloads/ksp(01-03-25)/Live_ConsultingKSP/Views/BusinessDevelopment/ViewResearchGrpData.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQnVzaW5lc3NEZXZlbG9wbWVudFxWaWV3UmVzZWFyY2hHcnBEYXRhLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hp/Downloads/ksp(01-03-25)/Live_ConsultingKSP/Views/CompanySetup/dashboardcrm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcGFueVNldHVwXGRhc2hib2FyZGNybS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hp/Downloads/ksp(01-03-25)/Live_ConsultingKSP/Views/CompanySetup/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcGFueVNldHVwXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hp/Downloads/ksp(01-03-25)/Live_ConsultingKSP/Views/CompanySetup/ManageRights.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcGFueVNldHVwXE1hbmFnZVJpZ2h0cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hp/Downloads/ksp(01-03-25)/Live_ConsultingKSP/Views/Dashboard/dashboardaccount.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXGRhc2hib2FyZGFjY291bnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hp/Downloads/ksp(01-03-25)/Live_ConsultingKSP/Views/Dashboard/dashboardemployee.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXGRhc2hib2FyZGVtcGxveWVlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hp/Downloads/ksp(01-03-25)/Live_ConsultingKSP/Views/Dashboard/dashboardexpense.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXGRhc2hib2FyZGV4cGVuc2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hp/Downloads/ksp(01-03-25)/Live_ConsultingKSP/Views/Dashboard/dashboardhr.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXGRhc2hib2FyZGhyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hp/Downloads/ksp(01-03-25)/Live_ConsultingKSP/Views/Dashboard/dashboardlead.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXGRhc2hib2FyZGxlYWQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hp/Downloads/ksp(01-03-25)/Live_ConsultingKSP/Views/Dashboard/dashboardleave.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXGRhc2hib2FyZGxlYXZlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hp/Downloads/ksp(01-03-25)/Live_ConsultingKSP/Views/Dashboard/dashboardlibrary.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXGRhc2hib2FyZGxpYnJhcnkuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hp/Downloads/ksp(01-03-25)/Live_ConsultingKSP/Views/Dashboard/dashboardproject.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXGRhc2hib2FyZHByb2plY3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hp/Downloads/ksp(01-03-25)/Live_ConsultingKSP/Views/Expense/AddCostCategoryMaster.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhwZW5zZVxBZGRDb3N0Q2F0ZWdvcnlNYXN0ZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hp/Downloads/ksp(01-03-25)/Live_ConsultingKSP/Views/Expense/AddCostCityDetail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhwZW5zZVxBZGRDb3N0Q2l0eURldGFpbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hp/Downloads/ksp(01-03-25)/Live_ConsultingKSP/Views/Expense/AddEmployeeMaster.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhwZW5zZVxBZGRFbXBsb3llZU1hc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hp/Downloads/ksp(01-03-25)/Live_ConsultingKSP/Views/Expense/AddExpenseEligibilityMaster.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhwZW5zZVxBZGRFeHBlbnNlRWxpZ2liaWxpdHlNYXN0ZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hp/Downloads/ksp(01-03-25)/Live_ConsultingKSP/Views/Expense/AddExpenseLimitMaster.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhwZW5zZVxBZGRFeHBlbnNlTGltaXRNYXN0ZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hp/Downloads/ksp(01-03-25)/Live_ConsultingKSP/Views/Expense/AddReportingDesignation.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhwZW5zZVxBZGRSZXBvcnRpbmdEZXNpZ25hdGlvbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hp/Downloads/ksp(01-03-25)/Live_ConsultingKSP/Views/Expense/AddSoleExpense.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhwZW5zZVxBZGRTb2xlRXhwZW5zZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hp/Downloads/ksp(01-03-25)/Live_ConsultingKSP/Views/Expense/AddTimeZoneMaster.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhwZW5zZVxBZGRUaW1lWm9uZU1hc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hp/Downloads/ksp(01-03-25)/Live_ConsultingKSP/Views/Expense/AddTripexpense.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhwZW5zZVxBZGRUcmlwZXhwZW5zZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hp/Downloads/ksp(01-03-25)/Live_ConsultingKSP/Views/Expense/Approvedbyme.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhwZW5zZVxBcHByb3ZlZGJ5bWUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hp/Downloads/ksp(01-03-25)/Live_ConsultingKSP/Views/Expense/Myapprovedexpenses.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhwZW5zZVxNeWFwcHJvdmVkZXhwZW5zZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hp/Downloads/ksp(01-03-25)/Live_ConsultingKSP/Views/Expense/Myrejectedexpenses.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhwZW5zZVxNeXJlamVjdGVkZXhwZW5zZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hp/Downloads/ksp(01-03-25)/Live_ConsultingKSP/Views/Expense/Mytripapprovedexpenses.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhwZW5zZVxNeXRyaXBhcHByb3ZlZGV4cGVuc2VzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hp/Downloads/ksp(01-03-25)/Live_ConsultingKSP/Views/Expense/Mytriprejectedexpenses.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhwZW5zZVxNeXRyaXByZWplY3RlZGV4cGVuc2VzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hp/Downloads/ksp(01-03-25)/Live_ConsultingKSP/Views/Expense/Pendingapprovals.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhwZW5zZVxQZW5kaW5nYXBwcm92YWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hp/Downloads/ksp(01-03-25)/Live_ConsultingKSP/Views/Expense/Pendingtripapprovals.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhwZW5zZVxQZW5kaW5ndHJpcGFwcHJvdmFscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hp/Downloads/ksp(01-03-25)/Live_ConsultingKSP/Views/Expense/SoleExpenseApproval.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhwZW5zZVxTb2xlRXhwZW5zZUFwcHJvdmFsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hp/Downloads/ksp(01-03-25)/Live_ConsultingKSP/Views/Expense/SoleExpenseSlip.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhwZW5zZVxTb2xlRXhwZW5zZVNsaXAuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hp/Downloads/ksp(01-03-25)/Live_ConsultingKSP/Views/Expense/Tripapprovedbyme.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhwZW5zZVxUcmlwYXBwcm92ZWRieW1lLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hp/Downloads/ksp(01-03-25)/Live_ConsultingKSP/Views/Expense/TripExpenseApproval.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhwZW5zZVxUcmlwRXhwZW5zZUFwcHJvdmFsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hp/Downloads/ksp(01-03-25)/Live_ConsultingKSP/Views/Expense/TripExpenseSlip.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhwZW5zZVxUcmlwRXhwZW5zZVNsaXAuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hp/Downloads/ksp(01-03-25)/Live_ConsultingKSP/Views/Expense/ViewCostCategoryDetail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhwZW5zZVxWaWV3Q29zdENhdGVnb3J5RGV0YWlsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hp/Downloads/ksp(01-03-25)/Live_ConsultingKSP/Views/Expense/ViewCostCityDetail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhwZW5zZVxWaWV3Q29zdENpdHlEZXRhaWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hp/Downloads/ksp(01-03-25)/Live_ConsultingKSP/Views/Expense/ViewEmployeeMaster.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhwZW5zZVxWaWV3RW1wbG95ZWVNYXN0ZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hp/Downloads/ksp(01-03-25)/Live_ConsultingKSP/Views/Expense/ViewExpenseEligibilityMaster.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhwZW5zZVxWaWV3RXhwZW5zZUVsaWdpYmlsaXR5TWFzdGVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hp/Downloads/ksp(01-03-25)/Live_ConsultingKSP/Views/Expense/ViewExpenseLimitMaster.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhwZW5zZVxWaWV3RXhwZW5zZUxpbWl0TWFzdGVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hp/Downloads/ksp(01-03-25)/Live_ConsultingKSP/Views/Expense/ViewReportingDesignation.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhwZW5zZVxWaWV3UmVwb3J0aW5nRGVzaWduYXRpb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hp/Downloads/ksp(01-03-25)/Live_ConsultingKSP/Views/Expense/ViewSoleExpenses.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhwZW5zZVxWaWV3U29sZUV4cGVuc2VzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hp/Downloads/ksp(01-03-25)/Live_ConsultingKSP/Views/Expense/ViewTripExpense.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhwZW5zZVxWaWV3VHJpcEV4cGVuc2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hp/Downloads/ksp(01-03-25)/Live_ConsultingKSP/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hp/Downloads/ksp(01-03-25)/Live_ConsultingKSP/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hp/Downloads/ksp(01-03-25)/Live_ConsultingKSP/Views/HRA/AddSalaryParameter.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSFJBXEFkZFNhbGFyeVBhcmFtZXRlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hp/Downloads/ksp(01-03-25)/Live_ConsultingKSP/Views/HRA/BankStatementReport.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSFJBXEJhbmtTdGF0ZW1lbnRSZXBvcnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hp/Downloads/ksp(01-03-25)/Live_ConsultingKSP/Views/HRA/CompanyWiseAttendanceReport.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSFJBXENvbXBhbnlXaXNlQXR0ZW5kYW5jZVJlcG9ydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hp/Downloads/ksp(01-03-25)/Live_ConsultingKSP/Views/HRA/ECRReport.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSFJBXEVDUlJlcG9ydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hp/Downloads/ksp(01-03-25)/Live_ConsultingKSP/Views/HRA/EmployeeBankDetilsReport.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSFJBXEVtcGxveWVlQmFua0RldGlsc1JlcG9ydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hp/Downloads/ksp(01-03-25)/Live_ConsultingKSP/Views/HRA/EmployeePayrollReport.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSFJBXEVtcGxveWVlUGF5cm9sbFJlcG9ydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hp/Downloads/ksp(01-03-25)/Live_ConsultingKSP/Views/HRA/EmployeePFReport.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSFJBXEVtcGxveWVlUEZSZXBvcnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hp/Downloads/ksp(01-03-25)/Live_ConsultingKSP/Views/HRA/EmployeeWiseAttendanceReport.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSFJBXEVtcGxveWVlV2lzZUF0dGVuZGFuY2VSZXBvcnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hp/Downloads/ksp(01-03-25)/Live_ConsultingKSP/Views/HRA/FuelStatementReport.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSFJBXEZ1ZWxTdGF0ZW1lbnRSZXBvcnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hp/Downloads/ksp(01-03-25)/Live_ConsultingKSP/Views/HRA/JoiningReport.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSFJBXEpvaW5pbmdSZXBvcnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hp/Downloads/ksp(01-03-25)/Live_ConsultingKSP/Views/HRA/LeaveApproval.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSFJBXExlYXZlQXBwcm92YWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hp/Downloads/ksp(01-03-25)/Live_ConsultingKSP/Views/HRA/ManageAttendence.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSFJBXE1hbmFnZUF0dGVuZGVuY2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hp/Downloads/ksp(01-03-25)/Live_ConsultingKSP/Views/HRA/ProfesionalTaxReport.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSFJBXFByb2Zlc2lvbmFsVGF4UmVwb3J0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hp/Downloads/ksp(01-03-25)/Live_ConsultingKSP/Views/HRA/SalaryPaySlipGeneration.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSFJBXFNhbGFyeVBheVNsaXBHZW5lcmF0aW9uLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hp/Downloads/ksp(01-03-25)/Live_ConsultingKSP/Views/HRA/SalarySlipReport.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSFJBXFNhbGFyeVNsaXBSZXBvcnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hp/Downloads/ksp(01-03-25)/Live_ConsultingKSP/Views/HRA/SalaryStatementReport.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSFJBXFNhbGFyeVN0YXRlbWVudFJlcG9ydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hp/Downloads/ksp(01-03-25)/Live_ConsultingKSP/Views/HRA/ViewSalaryParameter.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSFJBXFZpZXdTYWxhcnlQYXJhbWV0ZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hp/Downloads/ksp(01-03-25)/Live_ConsultingKSP/Views/Library/AddDocument.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGlicmFyeVxBZGREb2N1bWVudC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hp/Downloads/ksp(01-03-25)/Live_ConsultingKSP/Views/Library/AddDocumentCategory.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGlicmFyeVxBZGREb2N1bWVudENhdGVnb3J5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hp/Downloads/ksp(01-03-25)/Live_ConsultingKSP/Views/Library/AddDocumentCategoryTag.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGlicmFyeVxBZGREb2N1bWVudENhdGVnb3J5VGFnLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hp/Downloads/ksp(01-03-25)/Live_ConsultingKSP/Views/Library/AddLibraryCategory.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGlicmFyeVxBZGRMaWJyYXJ5Q2F0ZWdvcnkuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hp/Downloads/ksp(01-03-25)/Live_ConsultingKSP/Views/Library/AddLibraryCategoryTag.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGlicmFyeVxBZGRMaWJyYXJ5Q2F0ZWdvcnlUYWcuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hp/Downloads/ksp(01-03-25)/Live_ConsultingKSP/Views/Library/DocumentTreeView.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGlicmFyeVxEb2N1bWVudFRyZWVWaWV3LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hp/Downloads/ksp(01-03-25)/Live_ConsultingKSP/Views/Library/ManageLibrarySearch.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGlicmFyeVxNYW5hZ2VMaWJyYXJ5U2VhcmNoLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hp/Downloads/ksp(01-03-25)/Live_ConsultingKSP/Views/Library/ManageRenewableDocument.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGlicmFyeVxNYW5hZ2VSZW5ld2FibGVEb2N1bWVudC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hp/Downloads/ksp(01-03-25)/Live_ConsultingKSP/Views/Library/MyProfile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGlicmFyeVxNeVByb2ZpbGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hp/Downloads/ksp(01-03-25)/Live_ConsultingKSP/Views/Library/ViewDocument.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGlicmFyeVxWaWV3RG9jdW1lbnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hp/Downloads/ksp(01-03-25)/Live_ConsultingKSP/Views/Library/ViewDocumentCategory.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGlicmFyeVxWaWV3RG9jdW1lbnRDYXRlZ29yeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hp/Downloads/ksp(01-03-25)/Live_ConsultingKSP/Views/Library/ViewDocumentCategoryTag.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGlicmFyeVxWaWV3RG9jdW1lbnRDYXRlZ29yeVRhZy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hp/Downloads/ksp(01-03-25)/Live_ConsultingKSP/Views/Library/ViewLibraryCategory.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGlicmFyeVxWaWV3TGlicmFyeUNhdGVnb3J5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hp/Downloads/ksp(01-03-25)/Live_ConsultingKSP/Views/Library/ViewLibraryCategoryTag.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGlicmFyeVxWaWV3TGlicmFyeUNhdGVnb3J5VGFnLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hp/Downloads/ksp(01-03-25)/Live_ConsultingKSP/Views/Library/ViewRenewableDocumentHistory.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGlicmFyeVxWaWV3UmVuZXdhYmxlRG9jdW1lbnRIaXN0b3J5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hp/Downloads/ksp(01-03-25)/Live_ConsultingKSP/Views/Library/ViewRenewableDocumentsListReminder.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGlicmFyeVxWaWV3UmVuZXdhYmxlRG9jdW1lbnRzTGlzdFJlbWluZGVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hp/Downloads/ksp(01-03-25)/Live_ConsultingKSP/Views/Project/AddProjectClosure.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvamVjdFxBZGRQcm9qZWN0Q2xvc3VyZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hp/Downloads/ksp(01-03-25)/Live_ConsultingKSP/Views/Project/AddProjectPhaseClosure.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvamVjdFxBZGRQcm9qZWN0UGhhc2VDbG9zdXJlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hp/Downloads/ksp(01-03-25)/Live_ConsultingKSP/Views/Project/AddProjectTaskClosure.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvamVjdFxBZGRQcm9qZWN0VGFza0Nsb3N1cmUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hp/Downloads/ksp(01-03-25)/Live_ConsultingKSP/Views/Project/ViewProjectClosure.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvamVjdFxWaWV3UHJvamVjdENsb3N1cmUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hp/Downloads/ksp(01-03-25)/Live_ConsultingKSP/Views/Project/ViewProjectPhaseClosure.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvamVjdFxWaWV3UHJvamVjdFBoYXNlQ2xvc3VyZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hp/Downloads/ksp(01-03-25)/Live_ConsultingKSP/Views/Project/ViewProjectTaskClosure.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvamVjdFxWaWV3UHJvamVjdFRhc2tDbG9zdXJlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hp/Downloads/ksp(01-03-25)/Live_ConsultingKSP/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hp/Downloads/ksp(01-03-25)/Live_ConsultingKSP/Views/Shared/Footer.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEZvb3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hp/Downloads/ksp(01-03-25)/Live_ConsultingKSP/Views/Shared/header.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXGhlYWRlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hp/Downloads/ksp(01-03-25)/Live_ConsultingKSP/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hp/Downloads/ksp(01-03-25)/Live_ConsultingKSP/Views/Timesheet/ManageMyWorkList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGltZXNoZWV0XE1hbmFnZU15V29ya0xpc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hp/Downloads/ksp(01-03-25)/Live_ConsultingKSP/Views/Timesheet/ManageTimesheet.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGltZXNoZWV0XE1hbmFnZVRpbWVzaGVldC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hp/Downloads/ksp(01-03-25)/Live_ConsultingKSP/Views/Timesheet/ManageTimeSheetApproval.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGltZXNoZWV0XE1hbmFnZVRpbWVTaGVldEFwcHJvdmFsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hp/Downloads/ksp(01-03-25)/Live_ConsultingKSP/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hp/Downloads/ksp(01-03-25)/Live_ConsultingKSP/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hp/Downloads/ksp(01-03-25)/Live_ConsultingKSP/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-zwhj0ilvpi

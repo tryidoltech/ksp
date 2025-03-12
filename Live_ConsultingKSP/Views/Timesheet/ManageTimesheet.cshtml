@@ -1,0 +1,887 @@
+﻿@{
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model IEnumerable<Live_ConsultingKSP.Models.TimesheetMdl>
+
+@{
+	var TmSt = ViewBag.TmSt as Live_ConsultingKSP.Models.TimesheetMdl;
+	var Tblstr = ViewBag.Tbl as string;
+}
+@section Stylecss {
+	<style>
+		/*  .overlay {
+									display: none;
+									position: fixed;
+									top: 0;
+									left: 0;
+									width: 100%;
+									height: 100%;
+									background-color: rgba(0, 0, 0, 0.5);
+									z-index: 9999;
+									justify-content: center;
+									align-items: center;
+									text-align: center;
+									color: white;
+									font-size: 24px;
+									font-weight: bold;
+									display: flex;
+								}
+
+								.overlay-content {
+									background-color: rgba(0, 0, 0, 0.7);
+									padding: 20px;
+									border-radius: 5px;
+									position: relative;
+									max-width: 90%;
+									max-height: 90%;
+									box-sizing: border-box;
+								} */
+		.table-th-weekday {
+			width: 8%;
+			text-align: center;
+		}
+
+		.cleave-time-format {
+			text-align: center;
+		}
+
+		.text-border.active {
+			border: 2px solid;
+			border-color: Yellow; /* Change to your preferred color */
+		}
+
+
+		/*Tool Tip*/
+		.salesorder {
+			position: relative;
+			display: inline-block;
+			border-bottom: 1px dotted black;
+		}
+
+		.tooltiptext {
+			visibility: hidden;
+			width: 120px;
+			background-color: #38454a;
+			color: #fff;
+			text-align: center;
+			padding: 5px 0;
+			border-radius: 6px;
+			/* Position the tooltip text - see examples below! */
+			position: absolute;
+			z-index: 20;
+			top: 30px;
+			left: 5px;
+		}
+
+		.salesorder:hover .tooltiptext {
+			visibility: visible;
+		}
+	</style>
+}
+
+@section Scripts {
+	<script>
+		console.log("Inside MVC View");
+
+	</script>
+}
+
+
+<div class="page-content">
+	<div class="container-fluid">
+		<!-- start page title -->
+		<div class="row mb-2">
+			<div class="col-8">
+				<div class="page-title-box d-sm-flex align-items-center justify-content-between">
+					<h4 class="mb-sm-0">Manage Timesheet</h4>
+				</div>
+			</div>
+			<div class="col-lg-4">
+				<div class="form-check float-end">
+					<a href="@Url.Action("ApplyforLeave", "HRA")" target="_blank" class="btn btn-primary ">Apply for Leave</a>
+				</div>
+			</div>
+
+		</div>
+		<!-- end page title -->
+
+
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="card" id="CardData">
+
+					<div class="card-body">
+						<div class="live-preview">
+
+							<div class="row gx-3 gy-2 align-items-center">
+
+
+								<div class="col-lg-3 col-sm-6 col-xs-12">
+									<label class="form-label">Employee Name<span class="start-lable" style="color: red">*</span></label>
+									<input type="hidden" name="TmStUUID" value="@TmSt.HeaderUUID">
+									<input type="hidden" name="HFEmpUUID" value="@TmSt.EmpUUID">
+
+									<select class="form-select2 js-example-basic-single" data-choices data-choices-sorting="true" id="project" disabled>
+										<option selected>@TmSt.EmpName</option>
+
+									</select>
+								</div>
+
+								<div class="col-lg-2 col-sm-6 col-xs-12">
+									<label class="form-label">From Date<span class="start-lable" style="color: red">*</span></label>
+									<!--<input type="text" class="form-control" data-provider="flatpickr" data-date-format="d M, Y" data-range-date="true">-->
+
+									<input type="date" name="daterange" class="form-control" value="@TmSt.From_Date">
+								</div>
+								<div class="col-lg-2 col-sm-6 col-xs-12">
+									<label class="form-label">To Date<span class="start-lable" style="color: red">*</span></label>
+									<!--<input type="text" class="form-control" data-provider="flatpickr" data-date-format="d M, Y" data-range-date="true">-->
+									<input type="date" name="dateend" class="form-control" value="@TmSt.To_Date" readonly>
+								</div>
+
+								<div class="col-lg-2 col-sm-6 col-xs-12" style="text-align:center">
+									<h4 class="mb-sm-0"><i class="ri-timer-line" style="margin-top:5px;padding-right:5px;"></i>Timesheet Total</h4>
+									<div>
+										<h4 class="mb-sm-0 mt-2" style="font-weight:600">@TmSt.Total_Hours</h4>
+									</div>
+								</div>
+								<div class="col-lg-3 col-sm-6 col-xs-12" style="text-align:center">
+									<h4 class="mb-sm-0"><i class="bx bxs-dashboard" style="margin-top:5px;padding-right:5px;"></i>Timesheet Status</h4>
+									<div>
+										<h5 class="mb-sm-0 mt-2" style="font-weight:600">  <span class="badge bg-warning">@TmSt.Timesheet_Status</span></h5>
+									</div>
+								</div>
+
+								<!--end col-->
+							</div>
+
+
+						</div>
+
+					</div>
+
+
+
+				</div>
+				<div class="row">
+					<div class="col-3">
+						<div class="page-title-box d-sm-flex align-items-center justify-content-between">
+							<h4 class="mb-sm-0">Timesheet</h4>
+						</div>
+					</div>
+				</div>
+				<div class="card">
+					<div class="card-body">
+						<div class="row">
+							<div class="col-lg-8">
+								<a class="btn btn-primary " onclick="getprj('stbl')"><span style="font-weight:600; font-size:15px;">+</span> Add Time Item Row</a>
+							</div>
+							<div class="col-4">
+								<div class="page-title-box">
+									<a href="#" class="btn btn-primary float-end" id="submitTimeSheet">Submit</a>
+									<a href="#" class="btn btn-dark float-end" style="margin-right:5px;">Save</a>
+
+								</div>
+							</div>
+						</div>
+
+						<div class="table-responsive mt-3">
+							@Html.Raw(Tblstr)
+							
+						</div>
+					</div>
+
+				</div>
+
+
+				<div class="card" id="CardAccessDenied" style="display:none">
+					<div class="w3-display-middle" style="margin-top:100px;">
+						<h1 class="w3-jumbo w3-animate-top w3-center"><span style="color:#38454a">Access Denied</span></h1>
+						<hr class="w3-border-white w3-animate-left" style="margin:auto;width:50%">
+						<h3 class="w3-center w3-animate-right">You don't have Rights to Access this Page</h3>
+						<h3 class="w3-center w3-animate-right">Kindly Contact Administrative</h3>
+						<h3 class="w3-center w3-animate-zoom">🚫🚫🚫🚫</h3>
+						<h6 class="w3-center w3-animate-zoom">error code:403 forbidden</h6>
+					</div>
+				</div>
+			</div>
+		</div> <!-- end col -->
+	</div>
+	<!--end row-->
+
+</div>
+
+//creation of the timesheetlines for the week
+<div id="flipModal" class="modal fade flip" tabindex="-1" aria-labelledby="flipModalLabel" aria-hidden="true" style="display: none;">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="flipModalLabel"> Select Project and Task Detail</h5>
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			</div>
+			<div class="modal-body">
+				<div class="live-preview">
+
+					<div class="row gx-3 gy-2 align-items-center">
+
+
+						<div class="col-12">
+							<label class="form-label">Select Project<span class="start-lable" style="color: red">*</span></label>
+							<select class="form-select" data-choices data-choices-sorting="true" id="drpproject">
+							</select>
+						</div>
+
+						<div class="col-12">
+							<label class="form-label">Select Task<span class="start-lable" style="color: red">*</span></label>
+							<select class="form-select" data-choices data-choices-sorting="true" id="projecttask">
+								<option selected>- Select Task -</option>
+
+							</select>
+							<input type="hidden" id="hiddenTimesheetHeaderUUID" value="@ViewBag.TmSt.HeaderUUID" />
+
+						</div>
+
+
+
+						<!--end col-->
+					</div>
+
+
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
+				<button type="button" class="btn btn-primary " onclick="saveTimesheetLine()">Save</button>
+			</div>
+
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<div id="flipModal2" class="modal fade flip" tabindex="-1" aria-labelledby="flipModalLabel" aria-hidden="true" style="display: none;">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="flipModalLabel"> Work Description</h5>
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			</div>
+			<div class="modal-body">
+				<div class="live-preview">
+					<div class="row gx-3 gy-2 align-items-center">
+						<div class="col-12">
+							<label class="form-label">Description<span class="start-lable" style="color: red">*</span></label>
+							<textarea class="form-control" placeholder="eg."></textarea>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
+				<button type="button" class="btn btn-primary ">Save</button>
+			</div>
+
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal-dialog -->
+</div>
+
+@*
+<div id="overlay" class="overlay">
+    <div class="overlay-content">Please Wait...</div>
+</div> *@
+<!-- JAVASCRIPT -->
+<script src="~/assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="~/assets/libs/simplebar/simplebar.min.js"></script>
+<script src="~/assets/libs/node-waves/waves.min.js"></script>
+<script src="~/assets/libs/feather-icons/feather.min.js"></script>
+<script src="~/assets/js/pages/plugins/lord-icon-2.1.0.js"></script>
+<script src="~/assets/js/plugins.js"></script>
+<!-- prismjs plugin -->
+<script src="~/assets/libs/prismjs/prism.js"></script>
+<!-- Sweet Alerts js -->
+<script src="~/assets/libs/sweetalert2/sweetalert2.min.js"></script>
+
+<!-- Sweet alert init js-->
+<script src="~/assets/js/pages/sweetalerts.init.js"></script>
+<script src="~/assets/libs/cleave.js/cleave.min.js"></script>
+<!-- form masks init -->
+<script src="~/assets/js/pages/form-masks.init.js"></script>
+
+<script src="~/assets/js/app.js"></script>
+
+<script src="~/assets/js/jquery-3.6.0.min.js"></script>
+<!--select2 cdn-->
+<script src="~/assets/js/select2.min.js"></script>
+<script src="~/assets/js/pages/select2.init.js"></script>
+<script src="~/assets/js/moment.min.js"></script>
+
+@* <script src="~/assets/js/daterangepicker.min.js"></script> *@
+<!-- init js -->
+<!--<script src="assets/js/pages/form-pickers.init.js"></script>-->
+
+<script>
+
+	$(document).ready(function () {
+
+		// When the "Select All" checkbox is clicked
+		$('#selectAll').on('change', function () {
+			$('.check').prop('checked', $(this).prop('checked'));
+		});
+		// getprj();
+		$("#drpproject").on("change", function () {
+			getprjTsk();
+			});
+		// When any individual checkbox is clicked
+		$('.check').on('change', function () {
+			// Check if all checkboxes are checked
+			const allChecked = $('.check:checked').length === $('.check').length;
+			$('#selectAll').prop('checked', allChecked);
+		});
+
+
+		 $("input[name='daterange']").on("change", function () {
+				const selectedDate = new Date(this.value); // Get the selected date
+				const dayOfWeek = selectedDate.getDay();  // Get the day (0=Sunday, 1=Monday, ..., 6=Saturday)
+
+				// Check if the selected day is not Monday
+				if (dayOfWeek !== 1) {
+					alert("Only Mondays are allowed!");
+					$(this).val(""); // Clear the invalid date
+				}
+				else{
+
+				}
+			});
+
+			// Optional: Set the default value to the nearest Monday
+			function getNearestMonday() {
+				const today = new Date();
+				const dayOfWeek = today.getDay();
+				const daysUntilMonday = (8 - dayOfWeek) % 7; // Calculate days to the next Monday
+				today.setDate(today.getDate() + daysUntilMonday);
+				return today.toISOString().split("T")[0]; // Format date as yyyy-MM-dd
+			}
+
+
+	});
+</script>
+<script>
+
+	function saveTimesheetLine() {
+		var selectedProject = $("#drpproject").val();
+		var selectedTask = $("#projecttask").val();
+		var timesheetHeaderUUID = $("#hiddenTimesheetHeaderUUID").val(); // Assuming this is set in the DOM
+
+		if (!selectedProject || !selectedTask || !timesheetHeaderUUID) {
+			alert("Please select a valid project and task.");
+			return;
+		}
+
+		$.ajax({
+			type: "POST",
+			url: "/Timesheet/SaveTimesheetLine",
+			data: {
+				projectUUID: selectedProject,
+				taskUUID: selectedTask,
+				timesheetHeaderUUID: timesheetHeaderUUID
+			},
+			success: function (response) {
+				if (response.success) {
+					alert("Timesheet line added successfully!");
+
+					console.log("Received Timesheet Lines:", response.timesheetLines);
+
+					updateTimesheetTable(response.timesheetLines);
+
+					var modal = bootstrap.Modal.getInstance(document.getElementById('flipModal'));
+					modal.hide();
+					location.reload()
+				} else {
+					alert("Error: " + response.message);
+				}
+			},
+			error: function () {
+				alert("An error occurred while saving the timesheet line.");
+			}
+		});
+	}
+
+
+
+	// $(document).ready(function () {
+	// 	let activeTimesheetInput = null; 
+
+	// 	$(".time-input").dblclick(function () {
+	// 		activeTimesheetInput = $(this); 
+	// 		var uuid = activeTimesheetInput.data("timesheet-line-uuid"); 
+
+	// 		$("#save-work-description").data("uuid", uuid);
+
+	// 		$("#work-description-popup").show();
+	// 	});
+
+	// 	$(".save-btn").click(function () {
+	// 		if (!activeTimesheetInput) {
+	// 			console.log("No active time input found.");
+	// 			return;
+	// 		}
+
+	// 		var uuid = $(this).data("uuid"); // Get Timesheet Line UUID from button
+	// 		var enteredHours = activeTimesheetInput.val(); // Get entered hours
+	// 		var workDescription = $("#work-description-text").val(); // Get work description
+
+	// 		// Print captured data
+	// 		console.log("Timesheet Line UUID:", uuid);
+	// 		console.log("Entered Hours:", enteredHours);
+	// 		console.log("Work Description:", workDescription);
+
+	// 		// Hide popup after saving
+	// 		$("#work-description-popup").hide();
+	// 	});
+	// });
+
+
+
+	function getprj(_id){
+
+
+		 $.ajax({
+							  type: "GET",
+							  url: '/Timesheet/GetProjectLst',
+							  data: { id:  _id },
+							  success: function (states)
+							  { 	var myModal1 = new bootstrap.Modal(document.getElementById('flipModal'));
+		myModal1.show();
+								  debugger;
+								   $("#drpproject").html('');
+
+						if(_id!='stbl')
+						{
+									   $("#drpproject").append('<option value="0">-- Select Project --</option>'); // Default option
+										 for (let i = 0; i < states.length; i++)
+										 { if(_id == states[i].value)
+											{
+												   $('#drpproject').append($('<option seleted value='+states[i].value+'>'+states[i].text+'</option>'));
+											}
+											else
+											{
+											 $('#drpproject').append(
+											$('<option>', {
+												value: states[i].value,
+												text: states[i].text
+											})
+										 );
+											}
+										 }
+						 }
+						 else
+						 {
+							   $("#drpproject").append('<option selected value="0">-- Select Project --</option>'); // Default option
+								 for (let i = 0; i < states.length; i++)
+								 {
+										 $('#drpproject').append(
+											$('<option>', {
+												value: states[i].value,
+												text: states[i].text
+											})
+										 );
+								 }
+						   }
+
+
+
+
+							  }
+						  });
+	}
+</script>
+<script>
+	function getprjTsk(){
+		 $.ajax({
+							  type: "GET",
+							  url: '/Timesheet/GetProjectTskLst',
+							  data: { id: $('#drpproject').val() },
+							  success: function (states)
+							  {  debugger;
+
+						  $("#projecttask").html('');
+
+						   $("#projecttask").append('<option selected value="0">-- Select Task --</option>'); // Default option
+
+
+						   for (let i = 0; i < states.length; i++) {
+						$('#projecttask').append(
+							$('<option>', {
+								value: states[i].value,
+								text: states[i].text
+							})
+						);
+						   }
+
+
+
+
+							  }
+						  });
+	}
+</script>
+<script>
+	$('.cleave-time-format').toArray().forEach(function (field) {
+		new Cleave(field, {
+			time: !0, timePattern: ["h", "m"]
+		});
+
+	});
+
+	 $('.cleave-time-format').on('blur', function () {
+				let timeValue = $(this).val(); // Get current input value
+				const timeParts = timeValue.split(':'); // Split into hours and minutes
+
+				if (timeParts.length === 2) {
+					let minutes = timeParts[1];
+
+					// Allow only :00 or :30 for minutes
+					if (minutes !== '00' && minutes !== '30') {
+						timeParts[1] = '00'; // Default to :00 if invalid
+					}
+
+					// Update the input value
+					$(this).val(timeParts.join(':'));
+				}
+			});
+	//var cleaveTimeFormat;
+	//document.querySelector(".cleave-time-format") && (cleaveTimeFormat = new Cleave(".cleave-time-format", { time: !0, timePattern: ["h", "m"] }))
+</script>
+
+
+<script>
+	// $(document).ready(function () {
+	// 	$(document).on("dblclick", ".time-input", function () {
+	// 		var parentTd = $(this).closest("td");
+	// 		var timesheetId = parentTd.find(".timesheet-id").val();
+	// 		var timesheetUuid = parentTd.find(".timesheet-uuid").val();
+	// 		var timesheetHeaderUuid = @Html.Raw(Json.Serialize(TmSt.HeaderUUID)); // Ensure actual value is sent
+	// 		var currentHours = $(this).val();
+	// 		var remark = parentTd.find(".timesheet-remark").val();
+
+	// 		var modal = new bootstrap.Modal(document.getElementById("flipModal2"));
+	// 		modal.show();
+
+	// 		var remarkInput = $("#flipModal2").find("textarea");
+	// 		remarkInput.val(remark);
+			
+	// 		var clickedInput = $(this);
+
+	// 		$("#flipModal2 .btn-primary").off("click").on("click", function () {
+	// 			var updatedRemark = remarkInput.val();
+	// 			var updatedHours = clickedInput.val(); 
+
+	// 			console.log("Updating Timesheet:");
+	// 			console.log("Timesheet ID:", timesheetId);
+	// 			console.log("Timesheet UUID:", timesheetUuid);
+	// 			console.log("Timesheet Header UUID:", timesheetHeaderUuid);
+	// 			console.log("Updated Hours:", updatedHours);
+	// 			console.log("Updated Work Description:", updatedRemark);
+
+	// 			$.ajax({
+	// 				url: "/Timesheet/UpdateTimesheetLine",
+	// 				type: "POST",
+	// 				contentType: "application/json",
+	// 				data: JSON.stringify({
+	// 					Id: timesheetId,
+	// 					UUID: timesheetUuid,
+	// 					Hours: updatedHours,
+	// 					Remark: updatedRemark,
+	// 					HeaderUUID: timesheetHeaderUuid
+	// 				}),
+	// 				success: function (response) {
+	// 					console.log("Update Success:", response);
+	// 					modal.hide();
+	// 					$(".modal-backdrop").remove(); 
+	// 					location.reload(); 
+	// 				},
+	// 				error: function (xhr, status, error) {
+	// 					console.error("Update Error:", error);
+	// 					alert("Failed to update timesheet. Please try again.");
+	// 				}
+	// 			});
+	// 		});
+	// 	});
+
+	// 	$("#flipModal2").on("hidden.bs.modal", function () {
+	// 		$(".modal-backdrop").remove(); 
+	// 		$("body").removeClass("modal-open"); 
+	// 	});
+	// });
+
+	$(document).ready(function () {
+		$("#submitTimeSheet").on("click", function (e) {
+			e.preventDefault();
+
+			var timesheetHeaderUUID = $("#hiddenTimesheetHeaderUUID").val(); 
+
+			if (!timesheetHeaderUUID) {
+				alert("Error: Timesheet Header UUID is missing!");
+				return;
+			}
+
+			$.ajax({
+				url: "/Timesheet/UpdateTimesheetStatus",
+				type: "POST",
+				contentType: "application/json",
+				data: JSON.stringify(timesheetHeaderUUID), 
+				success: function (response) {
+					console.log("Timesheet Submitted Successfully:", response);
+					alert("Timesheet submitted successfully!");
+					location.reload();
+				},
+				error: function (xhr, status, error) {
+					console.error("Error submitting timesheet:", error);
+					alert("Failed to submit timesheet. Please try again.");
+				}
+			});
+		});
+	});
+
+	$(document).ready(function () {
+		$(document).on("dblclick", ".time-input", function () {
+			var parentTd = $(this).closest("td");
+			var timesheetId = parentTd.find(".timesheet-id").val();
+			var timesheetUuid = parentTd.find(".timesheet-uuid").val();
+			var timesheetHeaderUuid = $("#TimesheetHeaderUUID").val(); // Ensure actual value is sent
+			var currentHours = $(this).val();
+			var remark = parentTd.find(".timesheet-remark").val();
+
+			var modal = new bootstrap.Modal(document.getElementById("flipModal2"));
+			modal.show();
+
+			var remarkInput = $("#flipModal2").find("textarea");
+			remarkInput.val(remark);
+
+			var clickedInput = $(this);
+
+			$("#flipModal2 .btn-primary").off("click").on("click", function () {
+				var updatedRemark = remarkInput.val();
+				var updatedHours = clickedInput.val();
+
+				console.log("Updating Timesheet:", {
+					Id: timesheetId,
+					UUID: timesheetUuid,
+					HeaderUUID: timesheetHeaderUuid,
+					UpdatedHours: updatedHours,
+					UpdatedWorkDescription: updatedRemark
+				});
+
+				$.ajax({
+					url: "/Timesheet/UpdateTimesheetLine",
+					type: "POST",
+					contentType: "application/json",
+					data: JSON.stringify({
+						Id: timesheetId,
+						UUID: timesheetUuid,
+						Hours: updatedHours,
+						Remark: updatedRemark,
+						HeaderUUID: timesheetHeaderUuid
+					}),
+					success: function (response) {
+						console.log("Update Success:", response);
+						modal.hide();
+						$(".modal-backdrop").remove();
+						location.reload();
+					},
+					error: function (xhr) {
+						console.error("Update Error:", xhr.responseText);
+						alert("Failed to update timesheet. Please try again.");
+					}
+				});
+			});
+		});
+
+		$("#flipModal2").on("hidden.bs.modal", function () {
+			$(".modal-backdrop").remove();
+			$("body").removeClass("modal-open");
+		});
+	});
+
+	$(document).on("click", ".forward-task", function () {
+		var headerUuid = $(this).data("header");
+		var projectUuid = $(this).data("project");
+		var taskUuid = $(this).data("task");
+
+		console.log("Forwarding Task:", { headerUuid, projectUuid, taskUuid });
+
+		if (!headerUuid || !projectUuid || !taskUuid) {
+			alert("Missing required data attributes.");
+			return;
+		}
+
+		$.ajax({
+			url: "/Timesheet/ForwardTimesheet",
+			type: "POST",
+			contentType: "application/json",
+			data: JSON.stringify({
+				TimesheetHeaderUUID: headerUuid,
+				ProjectUUID: projectUuid,
+				TaskUUID: taskUuid
+			}),
+			success: function (response) {
+				alert(response.message);
+				location.reload();
+			},
+			error: function (xhr) {
+				alert("Error: " + xhr.responseText);
+			}
+		});
+	});
+
+
+	// $(document).on("click", ".forward-task", function () {
+	// 	var headerUuid = $(this).data("header"); // Corrected from data("header-uuid")
+	// 	var projectUuid = $(this).data("project"); // Corrected from data("project-uuid")
+	// 	var taskUuid = $(this).data("task"); // Corrected from data("task-uuid")
+
+	// 	console.log(headerUuid + " " + projectUuid + " " + taskUuid);
+
+	// 	if (!headerUuid || !projectUuid || !taskUuid) {
+	// 		alert("Missing required data attributes.");
+	// 		return;
+	// 	}
+
+	// 	$.ajax({
+	// 		url: "Timesheet/ForwardTimesheet",
+	// 		type: "POST",
+	// 		contentType: "application/json",
+	// 		data: JSON.stringify({
+	// 			TimesheetHeaderUUID: headerUuid,
+	// 			ProjectUUID: projectUuid,
+	// 			TaskUUID: taskUuid
+	// 		}),
+	// 		success: function (response) {
+	// 			alert(response.message);
+	// 			location.reload(); // Refresh the table after forwarding
+	// 		},
+	// 		error: function (xhr) {
+	// 			alert("Error: " + xhr.responseText);
+	// 		}
+	// 	});
+	// });
+
+
+
+
+	// $(document).ready(function () {
+	// 	// Double click event on hour input fields
+	// 	$(document).on("dblclick", ".time-input", function () {
+	// 		var parentTd = $(this).closest("td"); // Get the parent TD element
+	// 		var timesheetId = parentTd.find(".timesheet-id").val();
+	// 		var timesheetUuid = parentTd.find(".timesheet-uuid").val();
+	// 		var hours = $(this).val(); // Current hours input
+	// 		var remarkInput = $("#flipModal2").find("textarea"); // Work description textarea
+
+	// 		// Show the modal
+	// 		var modal = new bootstrap.Modal(document.getElementById("flipModal2"));
+	// 		modal.show();
+
+	// 		// When user clicks 'Save' button inside the modal
+	// 		$("#flipModal2 .btn-primary").off("click").on("click", function () {
+	// 			var workDescription = remarkInput.val();
+
+	// 			// Log all values to console
+	// 			console.log("Timesheet ID:", timesheetId);
+	// 			console.log("Timesheet UUID:", timesheetUuid);
+	// 			console.log("Hours:", hours);
+	// 			console.log("Work Description:", workDescription);
+
+	// 			// Close the modal
+	// 			modal.hide();
+	// 		});
+	// 	});
+	// });
+
+
+	// Function to show modal
+	function openModal() {
+		var myModal = new bootstrap.Modal(document.getElementById('flipModal2'));
+		myModal.show();
+	}
+	function openModal1() {
+		var myModal1 = new bootstrap.Modal(document.getElementById('flipModal'));
+		myModal1.show();
+
+	}
+	// Trigger modal on double click of text box
+	document.querySelectorAll('.text-border').forEach(input => {
+		input.addEventListener('dblclick', function () {
+			openModal();
+		});
+	});
+
+	// Add 'active' class when input has value
+	const inputs = document.querySelectorAll('.text-border');
+	inputs.forEach(input => {
+		input.addEventListener('input', () => {
+			if (input.value) {
+				input.classList.add('active');
+			} else {
+				input.classList.remove('active');
+			}
+
+
+		});
+	});
+</script>
+
+@* <script>
+	$(function () {
+		// Initialize the datepicker
+		$("input[name="daterange"]").datepicker({
+			beforeShowDay: function (date) {
+				// Get the day of the week (0 = Sunday, 1 = Monday, ..., 6 = Saturday)
+				const day = date.getDay();
+
+				// Return [true/false, className, tooltipText]
+				if (day === 1) { // Allow Mondays only
+					return [true, "", "Available"];
+				} else {
+					return [false, "", "Only Mondays are allowed"];
+				}
+			},
+			dateFormat: "dd/mm/yy" // Format the date as dd/MM/yyyy
+		});
+	});
+</script> *@
+@* <script>
+	$(function () {
+		$("input[name='daterange']"").datepicker({
+			opens: 'left',
+
+			isInvalidDate: function (date) {
+
+				return date.day() !== 1;
+			},
+			// Set the initial date format
+			locale: {
+				format: 'DD-MM-YYYY'
+			},
+
+			startDate: moment().day(1),
+			endDate: moment().day(7)
+		}, function (start, end, label) {
+
+			var selectedDate = start;
+
+
+			if (selectedDate.day() === 0) {
+
+				start = selectedDate.clone().subtract(1, 'days').startOf('week');
+			} else if (selectedDate.day() === 1) {
+				start = selectedDate.clone().startOf('week');
+			}
+			var end = selectedDate.clone().add(6, 'days'); // Add 6 days to get the following Sunday
+
+			//var end = start.clone().endOf('week');
+			$('input[name="daterange"]').val(start.format('DD-MM-YYYY'));
+
+		});
+	});
+</script> *@

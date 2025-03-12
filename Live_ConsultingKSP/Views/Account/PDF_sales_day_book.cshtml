@@ -1,0 +1,254 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sales Order Print</title>
+    <style>
+        font-face {
+            font-family: SohoGothicProBold;
+            src: url("Print/Font/SohoGothicPro-Bold.otf") format("opentype");
+        }
+
+        font-face {
+            font-family: SohoGothicProBoldItalic;
+            src: url("Print/Font/SohoGothicPro-BoldItalic.otf") format("opentype");
+        }
+
+        font-face {
+            font-family: SohoGothicProExtraBold;
+            src: url("Print/Font/SohoGothicPro-ExtraBold.otf") format("opentype");
+        }
+
+        font-face {
+            font-family: SohoGothicProExtraBoldIt;
+            src: url("Print/Font/SohoGothicPro-ExtraBoldIt.otf") format("opentype");
+        }
+
+        font-face {
+            font-family: SohoGothicProItalic;
+            src: url("Print/Font/SohoGothicPro-Italic.otf") format("opentype");
+        }
+
+        font-face {
+            font-family: SohoGothicProLight;
+            src: url("Print/Font/SohoGothicPro-Light.otf") format("opentype");
+        }
+
+        font-face {
+            font-family: SohoGothicProLightItalic;
+            src: url("Print/Font/SohoGothicPro-LightItalic.otf") format("opentype");
+        }
+
+        font-face {
+            font-family: SohoGothicProMedium;
+            src: url("Print/Font/SohoGothicPro-Medium.otf") format("opentype");
+        }
+
+        font-face {
+            font-family: SohoGothicProMediumIt;
+            src: url("Print/Font/SohoGothicPro-MediumIt.otf") format("opentype");
+        }
+
+        font-face {
+            font-family: SohoGothicProRegular;
+            src: url("Print/Font/SohoGothicPro-Regular.otf") format("opentype");
+        }
+
+        font-face {
+            font-family: SohoGothicProThin;
+            src: url("Print/Font/SohoGothicPro-Thin.otf") format("opentype");
+        }
+
+        font-face {
+            font-family: SohoGothicProThinItalic;
+            src: url("Print/Font/SohoGothicPro-ThinItalic.otf") format("opentype");
+        }
+
+        font-face {
+            font-family: SohoGothicProUltra;
+            src: url("Print/Font/SohoGothicPro-Ultra.otf") format("opentype");
+        }
+
+        font-face {
+            font-family: SohoGothicProUltraItalic;
+            src: url("Print/Font/SohoGothicPro-UltraItalic.otf") format("opentype");
+        }
+
+        .FontSGPBH1Title {
+            font-family: 'Rubik', sans-serif;
+            font-size: 12.5px;
+            color: #000000;
+        }
+
+        .FontSGPBH1Data {
+            font-family: 'Rubik', sans-serif;
+            font-size: 12.5px;
+            color: #000000;
+        }
+
+        .FontSGPBHeadTitle {
+            font-family: 'Rubik', sans-serif;
+            font-size: 15px;
+            color: #000000;
+        }
+
+        p, td {
+            margin: 0;
+            padding: 0;
+        }
+
+        .tblPay {
+            text-align: left;
+            padding-left: 5px;
+        }
+
+
+    </style>
+
+</head>
+<body style=" width: 793.7007874px;">
+    <div id="MultiPageSO">
+        <table style="width: 793.7007874px; /*border: 1px solid black; */">
+
+            <tr>
+                <td style="height: 50.913385827px; vertical-align: baseline;">
+                    <table style="width: 718.11023622px; margin-left: 1cm;border:1px solid #000" cellpadding="0" cellspacing="0">
+                        <tr style="height: 10.236220472px;text-align: center;width:80px;background-color:#fff;">
+                            <td class="FontSGPBH1Data" colspan="2" style="border:none;text-align:left;padding-left:10px">
+                                <img src="~/assets/images/new-logo/ksp-logo.png" style="width:auto;height:80px" />
+                            </td>
+                            <td class="FontSGPBH1Data" colspan="5" style="border:none;padding-right:10px;">
+                                <h3 class="FontSGPBHeadTitle" style="text-align:right;font-size:18px;color:#000;font-weight:600;padding-right:10px;">Sales Journal or Sales Day Book</h3>
+                            </td>
+                        </tr>
+                    </table>
+                    <table style="width: 718.11023622px; margin-left: 1cm;border: 1px solid #7aacb5;" cellpadding="0" cellspacing="0">
+                        <tr style="height: 30.236220472px">
+                            <td class="FontSGPBH1Data" style="text-align: left; padding-left: 5px;border: 1px solid #000" colspan="4">
+                                Sales Journal
+                            </td>
+                            <td class="FontSGPBH1Data" style="text-align: left; padding-left: 5px;border: 1px solid #000">
+                                Sheet No: 21
+                            </td>
+                        </tr>
+                        <tr style="height: 30.236220472px">
+                            <td class="FontSGPBH1Data" style="text-align: left; padding-left: 5px;border: 1px solid #000" colspan="4"></td>
+                            <td class="FontSGPBH1Data" style="text-align: left; padding-left: 5px;border: 1px solid #000"></td>
+                        </tr>
+                        <tr class="custome-bg" style="height: 22.677165354px;background-color: #e34e25;color:#fff">
+                            <th class="FontSGPBH1Title" style="text-align: left; padding-left: 5px;border: 1px solid #000;color:#fff">Date</th>
+                            <th class="FontSGPBH1Title" style="text-align: left; padding-left: 5px;border: 1px solid #000;color:#fff">Customer</th>
+                            <th class="FontSGPBH1Title" style="text-align: left; padding-left: 5px;border: 1px solid #000;color:#fff">Ledger Folio</th>
+                            <th class="FontSGPBH1Title" style="text-align: center;border: 1px solid #000;color:#fff">Invoice No.</th>
+                            <th class="FontSGPBH1Title" style="text-align: left; padding-left: 5px;border: 1px solid #000;color:#fff">Amount</th>
+                        </tr>
+                        <tr style="height: 30.236220472px">
+                            <td class="FontSGPBH1Data" style="text-align: left; padding-left: 5px;border: 1px solid #000">
+                                20XX
+                            </td>
+                            <td class="FontSGPBH1Data" style="text-align: left; padding-left: 5px;border: 1px solid #000"></td>
+                            <td class="FontSGPBH1Data" style="text-align: left; padding-left: 5px;border: 1px solid #000"></td>
+                            <td class="FontSGPBH1Data" style="text-align: center;border: 1px solid #000"></td>
+                            <td class="FontSGPBH1Data" style="text-align: left; padding-left: 5px;border: 1px solid #000"></td>
+                        </tr>
+                        <tr class="custome-bg" style="height: 30.236220472px">
+                            <td class="FontSGPBH1Data" style="text-align: left; padding-left: 5px;border: 1px solid #000">
+                                Mar 1
+                            </td>
+                            <td class="FontSGPBH1Data" style="text-align: left; padding-left: 5px;border: 1px solid #000">
+                                Customer A
+                            </td>
+                            <td class="FontSGPBH1Data" style="text-align: left; padding-left: 5px;border: 1px solid #000">
+                                SL 15
+                            </td>
+                            <td class="FontSGPBH1Data" style="text-align: center;border: 1px solid #000">
+                                03/278
+                            </td>
+                            <td class="FontSGPBH1Data" style="text-align: left; padding-left: 5px;border: 1px solid #000">
+                                1,200
+                            </td>
+                        </tr>
+                        <tr style="height: 30.236220472px">
+                            <td class="FontSGPBH1Data" style="text-align: left; padding-left: 5px;border: 1px solid #000">
+                                Mar 10
+                            </td>
+                            <td class="FontSGPBH1Data" style="text-align: left; padding-left: 5px;border: 1px solid #000">
+                                Customer B
+                            </td>
+                            <td class="FontSGPBH1Data" style="text-align: left; padding-left: 5px;border: 1px solid #000">
+                                SL 40
+                            </td>
+                            <td class="FontSGPBH1Data" style="text-align: center;border: 1px solid #000">
+                                03/279
+                            </td>
+                            <td class="FontSGPBH1Data" style="text-align: left; padding-left: 5px;border: 1px solid #000">
+                                1,500
+                            </td>
+                        </tr>
+                        <tr style="height: 30.236220472px">
+                            <td class="FontSGPBH1Data" style="text-align: left; padding-left: 5px;border: 1px solid #000">
+                                Mar 22
+                            </td>
+                            <td class="FontSGPBH1Data" style="text-align: left; padding-left: 5px;border: 1px solid #000">
+                                Customer A
+                            </td>
+                            <td class="FontSGPBH1Data" style="text-align: left; padding-left: 5px;border: 1px solid #000">
+                                SL 15
+                            </td>
+                            <td class="FontSGPBH1Data" style="text-align: center;border: 1px solid #000">
+                                03/280
+                            </td>
+                            <td class="FontSGPBH1Data" style="text-align: left; padding-left: 5px;border: 1px solid #000">
+                                1,470
+                            </td>
+                        </tr>
+                        <tr style="height: 30.236220472px">
+                            <td class="FontSGPBH1Data" style="text-align: left; padding-left: 5px;border: 1px solid #000">
+                                Mar 31
+                            </td>
+                            <td class="FontSGPBH1Data" style="text-align: left; padding-left: 5px;border: 1px solid #000">
+                                Customer C
+                            </td>
+                            <td class="FontSGPBH1Data" style="text-align: left; padding-left: 5px;border: 1px solid #000">
+                                SL 96
+                            </td>
+                            <td class="FontSGPBH1Data" style="text-align: center;border: 1px solid #000">
+                                03/281
+                            </td>
+                            <td class="FontSGPBH1Data" style="text-align: left; padding-left: 5px;border: 1px solid #000">
+                                750
+                            </td>
+                        </tr>
+                        <tr style="height: 30.236220472px;">
+                            <td class="FontSGPBH1Data" style="text-align: left; padding-left: 5px;border: 1px solid #000">
+                                Mar 20XX
+                            </td>
+                            <td class="FontSGPBH1Data" style="text-align: left; padding-left: 5px;border: 1px solid #000">
+                                Total to Sales Account
+                            </td>
+                            <td class="FontSGPBH1Data" style="text-align: left; padding-left: 5px;border: 1px solid #000">
+                                GL 92
+                            </td>
+                            <td class="FontSGPBH1Data" style="text-align: center;border: 1px solid #000"></td>
+                            <td class="FontSGPBH1Data" style="text-align: left; padding-left: 5px;border: 1px solid #000">
+                                4,920
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+
+        </table>
+        <div class="modal-footer no-print">
+            <button type="button" class="btn btn-light " data-bs-dismiss="modal" style="margin-left:80%; margin-top:1%;   background-color: #e6e7e9; margin-bottom:5%;  ">Close</button>
+            <button type="button" class="btn btn-primary custome-bg ">Download</button>
+        </div>
+    </div>
+</body>
+</html>

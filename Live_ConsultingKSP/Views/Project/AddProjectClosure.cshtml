@@ -1,0 +1,194 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    bool isEdit = !string.IsNullOrEmpty(Model.UUID);
+}
+@model Live_ConsultingKSP.Models.ProjectCreateProject
+@section Stylecss {
+
+   
+}
+<div class="page-content">
+    <div class="container-fluid">
+        <!-- start page title -->
+        <div class="row">
+            <div class="col-12">
+                <div class="page-title-box d-sm-flex align-items-center justify-content-between">
+                    <h4 class="mb-sm-0">Manage Project Status</h4>
+                </div>
+            </div>
+        </div>
+        <!-- end page title -->
+
+
+        <div class="row">
+            <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12">
+
+                <div class="card" id="CardData">
+                    <div class="card-body">
+                        <h5 class="card-title mb-3">Project Info</h5>
+                        <div class="table-responsive">
+                            <table class="table mb-0">
+                                <tbody>
+                                    <tr>
+                                        <th class="ps-0" scope="row" style="width: 50%;">Project Name :</th>
+                                        <td class="text-muted">Project 1</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="ps-0" scope="row">Customer Name :</th>
+                                        <td class="text-muted">Customer 1</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="ps-0" scope="row">Project Manager :</th>
+                                        <td class="text-muted">Employee 1</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="ps-0" scope="row">Project Description :</th>
+                                        <td class="text-muted">-</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="ps-0" scope="row">Start Date :</th>
+                                        <td class="text-muted">
+                                            05-10-2024
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="ps-0" scope="row">End Date :</th>
+                                        <td class="text-muted">
+                                            15-12-2024
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="ps-0" scope="row">Expected Total Hours :</th>
+                                        <td class="text-muted">
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div><!-- end card body -->
+                </div><!-- end card -->
+                <!--end card-->
+            </div>
+
+            <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12">
+
+                <div class="card" id="frmCreate">
+                    <div class="card-body">
+                        <h5 class="card-title mb-3">Update Project Status</h5>
+                        <div class="live-preview">
+                            <form method="post" asp-action="AddCreateProject" >
+                                 <input type="hidden" asp-for="UUID" />
+                            <div class="row gx-3 gy-2 align-items-center">
+
+                                <div class="col-lg-6 col-sm-6 col-xs-12">
+                                    <label class="form-label">Actual Start Date<span class="start-lable" style="color: red">*</span></label>
+                                        <span asp-validation-for="Actual_Start_Date" class="text-danger"></span>
+                                    <input asp-for="Actual_Start_Date" type="date" class="form-control">
+                                </div>
+                                <div class="col-lg-6 col-sm-6 col-xs-12">
+                                    <label class="form-label">Actual End Date<span class="start-lable" style="color: red">*</span></label>
+                                        <span asp-validation-for="Actual_End_Date" class="text-danger"></span>
+                                    <input asp-for="Actual_End_Date" type="date" class="form-control">
+                                </div>
+
+                                <div class="col-lg-6 col-sm-6 col-xs-12">
+                                    <label class="form-label">Actual Total Hours<span class="start-lable" style="color: red">*</span></label>
+                                        <span asp-validation-for="Actual_Total_Hours" class="text-danger"></span>
+                                    <input asp-for="Actual_Total_Hours" type="text" class="form-control">
+                                </div>
+
+                                <div class="col-lg-6 col-sm-6 col-xs-12">
+                                    <label class="form-label">Project Status<span class="start-lable" style="color: red">*</span></label>
+                                        <span asp-validation-for="Project_Status_UUID" class="text-danger"></span>
+                                    <select asp-for="Project_Status_UUID" class="form-select2 js-example-basic-single" data-choices data-choices-sorting="true" id="exp" asp-items="@ViewBag.Status">
+                                        <option value="">- Select Project Status -</option>
+                                        
+
+                                    </select>
+                                </div>
+
+
+                                <div class="col-lg-12">
+                                    <button type="submit" class="btn btn-primary" id="btn" @* Onclick="disablebutton()" *@ style="float:right;">Update</button>
+
+                                    
+                                    <a href="@Url.Action("ViewProjectClosure")" class="btn btn-danger " style="float:right;margin-right:10px;"> Cancel</a>
+                                </div>
+                                <!--end col-->
+                            </div>
+                            </form>
+
+                        </div>
+                    </div><!-- end card body -->
+                </div>
+                <div class="card" id="CardAccessDenied" style="display:none">
+                    <div class="w3-display-middle" style="margin-top:100px;">
+                        <h1 class="w3-jumbo w3-animate-top w3-center"><span style="color:#38454a">Access Denied</span></h1>
+                        <hr class="w3-border-white w3-animate-left" style="margin:auto;width:50%">
+                        <h3 class="w3-center w3-animate-right">You don't have Rights to Access this Page</h3>
+                        <h3 class="w3-center w3-animate-right">Kindly Contact Administrative</h3>
+                        <h3 class="w3-center w3-animate-zoom">🚫🚫🚫🚫</h3>
+                        <h6 class="w3-center w3-animate-zoom">error code:403 forbidden</h6>
+                    </div>
+                </div>
+                <!--end card-->
+            </div>
+        </div>
+        <!--end row-->
+
+    </div> <!-- container-fluid -->
+</div>
+
+
+
+<!-- JAVASCRIPT -->
+<script src="~/assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="~/assets/libs/simplebar/simplebar.min.js"></script>
+<script src="~/assets/libs/node-waves/waves.min.js"></script>
+<script src="~/assets/libs/feather-icons/feather.min.js"></script>
+<script src="~/assets/js/pages/plugins/lord-icon-2.1.0.js"></script>
+<script src="~/assets/js/plugins.js"></script>
+<!-- prismjs plugin -->
+<script src="~/assets/libs/prismjs/prism.js"></script>
+<script src="~/assets/js/jquery-3.6.0.min.js"></script>
+<!--select2 cdn-->
+<script src="~/assets/js/select2.min.js"></script>
+             
+<script src="~/assets/js/pages/select2.init.js"></script>
+<script src="~/assets/js/app.js"></script>
+@section Scripts{
+<script>
+    function disablebutton() {
+        var button = document.getElementById("btn");
+
+        // Disable the button
+        button.innerHTML = "Please Wait..";
+        button.disabled = true;
+
+        // Check if the button has the 'btn-primary' class and change it to 'btn-dark'
+        if (button.classList.contains("btn-primary")) {
+            button.classList.remove("btn-primary");
+            button.classList.add("btn-dark");
+        }
+    }
+
+</script>
+    <script>
+        function isNumberKey(evt) {
+            var charCode = evt.which ? evt.which : evt.keyCode;
+            if (charCode < 48 || charCode > 57) {
+                return false;
+            }
+            return true;
+        }
+    </script>
+    <script>
+        function validateDecimalInput(input) {
+            input.value = input.value.replace(/[^0-9.]/g, '');
+            if ((input.value.match(/\./g) || []).length > 1) {
+                input.value = input.value.substring(0, input.value.lastIndexOf("."));
+            }
+        }
+    </script>
+}

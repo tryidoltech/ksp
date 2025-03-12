@@ -1,0 +1,386 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sales Order Print</title>
+    <style>
+        font-face {
+            font-family: SohoGothicProBold;
+            src: url("Print/Font/SohoGothicPro-Bold.otf") format("opentype");
+        }
+
+        font-face {
+            font-family: SohoGothicProBoldItalic;
+            src: url("Print/Font/SohoGothicPro-BoldItalic.otf") format("opentype");
+        }
+
+        font-face {
+            font-family: SohoGothicProExtraBold;
+            src: url("Print/Font/SohoGothicPro-ExtraBold.otf") format("opentype");
+        }
+
+        font-face {
+            font-family: SohoGothicProExtraBoldIt;
+            src: url("Print/Font/SohoGothicPro-ExtraBoldIt.otf") format("opentype");
+        }
+
+        font-face {
+            font-family: SohoGothicProItalic;
+            src: url("Print/Font/SohoGothicPro-Italic.otf") format("opentype");
+        }
+
+        font-face {
+            font-family: SohoGothicProLight;
+            src: url("Print/Font/SohoGothicPro-Light.otf") format("opentype");
+        }
+
+        font-face {
+            font-family: SohoGothicProLightItalic;
+            src: url("Print/Font/SohoGothicPro-LightItalic.otf") format("opentype");
+        }
+
+        font-face {
+            font-family: SohoGothicProMedium;
+            src: url("Print/Font/SohoGothicPro-Medium.otf") format("opentype");
+        }
+
+        font-face {
+            font-family: SohoGothicProMediumIt;
+            src: url("Print/Font/SohoGothicPro-MediumIt.otf") format("opentype");
+        }
+
+        font-face {
+            font-family: SohoGothicProRegular;
+            src: url("Print/Font/SohoGothicPro-Regular.otf") format("opentype");
+        }
+
+        font-face {
+            font-family: SohoGothicProThin;
+            src: url("Print/Font/SohoGothicPro-Thin.otf") format("opentype");
+        }
+
+        font-face {
+            font-family: SohoGothicProThinItalic;
+            src: url("Print/Font/SohoGothicPro-ThinItalic.otf") format("opentype");
+        }
+
+        font-face {
+            font-family: SohoGothicProUltra;
+            src: url("Print/Font/SohoGothicPro-Ultra.otf") format("opentype");
+        }
+
+        font-face {
+            font-family: SohoGothicProUltraItalic;
+            src: url("Print/Font/SohoGothicPro-UltraItalic.otf") format("opentype");
+        }
+
+        .FontSGPBH1Title {
+            font-family: 'Rubik', sans-serif;
+            font-size: 12.5px;
+            color: #000000;
+        }
+
+        .FontSGPBH1Data {
+            font-family: 'Rubik', sans-serif;
+            font-size: 12.5px;
+            color: #000000;
+        }
+
+        .FontSGPBHeadTitle {
+            font-family: 'Rubik', sans-serif;
+            font-size: 15px;
+            color: #000000;
+        }
+
+        p, td {
+            margin: 0;
+            padding: 0;
+        }
+
+        .tblPay {
+            text-align: left;
+            padding-left: 5px;
+        }
+
+        .custome-bg {
+            background-color: #e6e7e9 !important;
+        }
+
+       
+    </style>
+
+</head>
+<body style="height: 622.519685px; width: 793.7007874px;">
+    <div id="MultiPageSO">
+
+        <table style="min-height: 622.519685px; width: 793.7007874px; /*border: 1px solid black; */">
+
+            <tr>
+                <td style="height: 50.913385827px; vertical-align: baseline;">
+                    <table style="width: 718.11023622px; margin-left: 1cm;border:1px solid #000" cellpadding="0" cellspacing="0">
+                        <tr style="height: 30.236220472px;">
+                            <td class="FontSGPBH1Data" style="text-align: left; padding-left: 5px;border-right:none;width:80px;border-bottom:none;padding-bottom:10px;" rowspan="3" colspan="2">
+                                <h5 style="font-size:13px;margin-bottom:5px;margin-top:5px;padding-top:0px;">Seller</h5>
+                                <h5 style="font-size:13px;margin-bottom:0px;margin-top:0px">KSP Consulting</h5>
+                                <p>
+                                    B-209, Park Plaza,<br />
+                                    Krishna Nagar<br />
+                                    Lucknow<br />
+                                    GSTIN/UIN: 09AABCS1429B1ZS<br />
+                                    State Name: Uttar Pradesh, Code : 09<br />
+                                    Mobile No.: +919483746290<br />
+                                </p>
+                            </td>
+                            <td class="FontSGPBH1Data" style="text-align: center;vertical-align:baseline;padding-top:10px; width:30px;border:1px solid #000;border-left:none;border-top:none;border-bottom:none;padding-right:10px;" rowspan="3" colspan="1">
+                                <img src="~/assets/images/new-logo/ksp-logo.png"  style="width:auto;height:80px"/>
+                            </td>
+                            <td class="FontSGPBH1Data" style="text-align: right;vertical-align:middle; padding-right: 5px;padding-bottom:5px;border-bottom:1px solid #000;height:20px;" colspan="4">
+                                <h2 style="text-align:center;margin-top:3px;margin-bottom:0px;">COMMERCIAL INVOICE</h2>
+                            </td>
+                        </tr>
+                        <tr style="height: 30.236220472px;border:1px solid #000">
+                            <td class="FontSGPBH1Data" style="text-align: left;padding-left: 5px;border-bottom:1px solid #000;border-right:1px solid #000;vertical-align:top;padding-top:5px;height:40px;" colspan="2">
+                                <h5 style="font-size:13px;margin-top:3px;margin-bottom:0px;">Invoice No. & Date</h5>
+                                <p style="margin-top:0px;">234 - 30 Jan 2018</p>
+                            </td>
+                            <td class="FontSGPBH1Data" style="text-align: left; padding-left: 5px;border-bottom:1px solid #000;vertical-align:top;padding-top:5px;height:40px;" colspan="2">
+                                <h5 style="font-size:13px;margin-top:3px;margin-bottom:0px;">Bill of Landing Number</h5>
+                            </td>
+                        </tr>
+                        <tr style="height: 30.236220472px;border:1px solid #000">
+                            <td class="FontSGPBH1Data" style="text-align: left;padding-left: 5px;border-bottom:1px solid #000;border-right:1px solid #000;vertical-align:top;padding-top:5px;height:40px;" colspan="2">
+                                <h5 style="font-size:13px;margin-top:3px;margin-bottom:0px;">Reference</h5>
+                            </td>
+                            <td class="FontSGPBH1Data" style="text-align: left; padding-left: 5px;border-bottom:1px solid #000;vertical-align:top;padding-top:5px;height:40px;" colspan="2">
+                                <h5 style="font-size:13px;margin-top:3px;margin-bottom:0px;">Buyer Reference</h5>
+                            </td>
+                        </tr>
+                        <tr style="height: 30.236220472px;">
+                            <td class="FontSGPBH1Data" style="text-align: left; padding-left: 5px;border-right:1px solid #000;border-top:1px solid #000;border-left:none;border-bottom:none;width:80px;padding-bottom:10px;" colspan="3">
+                                <h5 style="font-size:13px;margin-bottom:5px;margin-top:5px;padding-top:0px;">Consignee</h5>
+                                <h5 style="font-size:13px;margin-bottom:0px;margin-top:0px">KSP Consulting</h5>
+                                <p>
+                                    B-209, Park Plaza,<br />
+                                    Krishna Nagar<br />
+                                    Lucknow<br />
+                                    GSTIN/UIN: 09AABCS1429B1ZS<br />
+                                    State Name: Uttar Pradesh, Code : 09<br />
+                                    Mobile No.: +919483746290<br />
+                                </p>
+                            </td>
+                            <td class="FontSGPBH1Data" style="text-align: left; padding-left: 5px;border-right:none;width:80px;border-bottom:none;padding-top:10px;vertical-align:top;" colspan="4">
+                                <h5 style="font-size:13px;margin-top:3px;margin-bottom:0px;">Buyer (If not Consignee)</h5>
+                            </td>
+                        </tr>
+                        <tr style="height: 30.236220472px;">
+                            <td class="FontSGPBH1Data" style="text-align: left; padding-left: 5px;border-right:1px solid #000;border-top:none;width:140px;border-top:1px solid #000;border-bottom:1px solid #000;padding-top:10px;vertical-align:top;" colspan="1">
+                                <h5 style="font-size:13px;margin-bottom:0px;margin-top:0px">Method of Dispatch</h5>
+                                <p>Sea</p>
+                            </td>
+                            <td class="FontSGPBH1Data" style="text-align: left; padding-left: 5px;border-right:1px solid #000;border-top:none;width:140px;border-top:1px solid #000;border-bottom:1px solid #000;padding-top:10px;vertical-align:top;" colspan="2">
+                                <h5 style="font-size:13px;margin-bottom:0px;margin-top:0px">Type of Shipment</h5>
+                                <p>FCL</p>
+                            </td>
+                            <td class="FontSGPBH1Data" style="text-align: left; padding-left: 5px;border-right:1px solid #000;border-top:none;width:140px;border-top:1px solid #000;border-bottom:1px solid #000;padding-top:10px;vertical-align:top;" colspan="2">
+                                <h5 style="font-size:13px;margin-bottom:0px;margin-top:0px">Country Origin of Goods</h5>
+                                <p>China</p>
+                            </td>
+                            <td class="FontSGPBH1Data" style="text-align: left; padding-left: 5px;border-right:none;border-top:none;width:140px;border-top:1px solid #000;border-bottom:1px solid #000;padding-top:10px;vertical-align:top;" colspan="2">
+                                <h5 style="font-size:13px;margin-bottom:0px;margin-top:0px">Country of Final Destination</h5>
+                                <p>United States</p>
+                            </td>
+                        </tr>
+                        <tr style="height: 30.236220472px;">
+                            <td class="FontSGPBH1Data" style="width:50px; text-align: left; padding-left: 5px;border-top:1px solid #000;border-left:1px solid #000;border-bottom:1px solid #000;" colspan="1">
+                                <h5 style="font-size:13px;margin-bottom:0px;margin-top:0px">Vessal/Aircraft</h5>
+                                <p>MAERSK PHOENIX</p>
+                            </td>
+                            <td class="FontSGPBH1Data" style="width:50px; text-align: left; padding-left: 5px;border-top:1px solid #000;border-left:1px solid #000;border-bottom:1px solid #000;" colspan="2">
+                                <h5 style="font-size:13px;margin-top:3px;margin-bottom:0px;">Voyage No.</h5>
+                                <p style="margin-top:0px;">160W</p>
+                            </td>
+                            <td class="FontSGPBH1Data" style="text-align: left; padding-left: 5px;width:80px;border-left:1px solid #000;border-top:1px solid #000;vertical-align:top;border-bottom:1px solid #000;" rowspan="2" colspan="4">
+                                <h5 style="font-size:13px;margin-bottom:0px;margin-top:0px">Terms/Method of Payment</h5>
+                                <p style="margin-top:0px;">30% Deposite, 70% BALANCE BEFORE SHIPMENT</p>
+                            </td>
+                        </tr>
+                        <tr style="height: 30.236220472px;">
+                            <td class="FontSGPBH1Data" style="width:50px; text-align: left; padding-left: 5px;border-top:1px solid #000;border-left:1px solid #000;border-bottom:1px solid #000;" colspan="1">
+                                <h5 style="font-size:13px;margin-bottom:0px;margin-top:0px">Port of Loading</h5>
+                                <p>China Shanghai</p>
+                            </td>
+                            <td class="FontSGPBH1Data" style="width:50px; text-align: left; padding-left: 5px;border-top:1px solid #000;border-left:1px solid #000;border-bottom:1px solid #000;" colspan="2">
+                                <h5 style="font-size:13px;margin-top:3px;margin-bottom:0px;">Date of Departure</h5>
+                                <p style="margin-top:0px;">26 Oct 2018</p>
+                            </td>
+                        </tr>
+                        <tr style="height: 30.236220472px;">
+                            <td class="FontSGPBH1Data" style="text-align: left; padding-left: 5px;border-right:none;border-top:none;width:140px;border-top:1px solid #000;border-bottom:1px solid #000;padding-top:5px;vertical-align:top;" colspan="1">
+                                <h5 style="font-size:13px;margin-bottom:0px;margin-top:0px">Port of Discharge</h5>
+                                <p>
+                                    USA<br />
+                                    Brooklyn/New York
+                                </p>
+                            </td>
+                            <td class="FontSGPBH1Data" style="width:50px; text-align: left; padding-left: 5px;border-top:1px solid #000;border-left:1px solid #000;border-bottom:1px solid #000;padding-top:5px;vertical-align:top;" colspan="2">
+                                <h5 style="font-size:13px;margin-top:0px;margin-bottom:0px;">Final Destination</h5>
+                                <p style="margin-top:0px;">LONG BEACH</p>
+                            </td>
+                            <td class="FontSGPBH1Data" style="text-align: left; padding-left: 5px;width:80px;border-left:1px solid #000;border-top:1px solid #000;vertical-align:top;border-bottom:1px solid #000;" colspan="2">
+                                <h5 style="font-size:13px;margin-top:3px;margin-bottom:0px;">Marine Cover Policy No.</h5>
+                            </td>
+                            <td class="FontSGPBH1Data" style="text-align: left; padding-left: 5px;width:80px;border-left:1px solid #000;border-top:1px solid #000;vertical-align:top;border-bottom:1px solid #000;" colspan="2">
+                                <h5 style="font-size:13px;margin-top:3px;margin-bottom:0px;">Letter of Credit No.</h5>
+                            </td>
+                        </tr>
+                        <tr style="height: 30.236220472px; background-color: #e34e25;color:#fff">
+                            <th class="FontSGPBH1Data" style="text-align: center;width:80px;border:1px solid #000;color:#fff">
+                                Product Code
+                            </th>
+                            <th class="FontSGPBH1Data" style="text-align: center;width:80px;border:1px solid #000;color:#fff" colspan="2">
+                                Description of Code
+                            </th>
+                            <th class="FontSGPBH1Data" style="text-align: center;width:80px;border:1px solid #000;color:#fff">
+                                Unit Quantity
+                            </th>
+                            <th class="FontSGPBH1Data" style="text-align: center;width:80px;border:1px solid #000;color:#fff">
+                                Unit Type
+                            </th>
+                            <th class="FontSGPBH1Data" style="text-align: center;width:80px;border:1px solid #000;color:#fff">
+                                Price
+                            </th>
+                            <th class="FontSGPBH1Data" style="text-align: center;width:80px;border:1px solid #000;color:#fff">
+                                Amount
+                            </th>
+                        </tr>
+                        <tr style="height: 30.236220472px;">
+                            <td class="FontSGPBH1Data" style="text-align: center;width:80px;border:1px solid #000;">
+                                BIKE-M450G
+                            </td>
+                            <td class="FontSGPBH1Data" style="text-align: center; padding-left: 5px;width:80px;border:1px solid #000;" colspan="2">
+                                Mountain Bike, ALuminium, 15 INCH-GREEN
+                            </td>
+                            <td class="FontSGPBH1Data" style="text-align: center; padding-left: 5px;width:80px;border:1px solid #000;">
+                                500
+                            </td>
+                            <td class="FontSGPBH1Data" style="text-align: center; padding-left: 5px;width:80px;border:1px solid #000;">
+                                Each
+                            </td>
+                            <td class="FontSGPBH1Data" style="text-align: center; padding-left: 5px;width:80px;border:1px solid #000;">
+                                92.40
+                            </td>
+                            <td class="FontSGPBH1Data" style="text-align: center; padding-left: 5px;width:80px;border:1px solid #000;">
+                                46200.00
+                            </td>
+                        </tr>
+                        <tr style="height: 30.236220472px;">
+                            <td class="FontSGPBH1Data" style="text-align: center;width:80px;border:1px solid #000;">
+                                BIKE-M450G
+                            </td>
+                            <td class="FontSGPBH1Data" style="text-align: center; padding-left: 5px;width:80px;border:1px solid #000;" colspan="2">
+                                Mountain Bike, ALuminium, 15 INCH-GREEN
+                            </td>
+                            <td class="FontSGPBH1Data" style="text-align: center; padding-left: 5px;width:80px;border:1px solid #000;">
+                                500
+                            </td>
+                            <td class="FontSGPBH1Data" style="text-align: center; padding-left: 5px;width:80px;border:1px solid #000;">
+                                Each
+                            </td>
+                            <td class="FontSGPBH1Data" style="text-align: center; padding-left: 5px;width:80px;border:1px solid #000;">
+                                92.40
+                            </td>
+                            <td class="FontSGPBH1Data" style="text-align: center; padding-left: 5px;width:80px;border:1px solid #000;">
+                                46200.00
+                            </td>
+                        </tr>
+                        <tr style="height: 30.236220472px;">
+                            <td class="FontSGPBH1Data" style="text-align: right;width:80px;border:1px solid #000;border-left:none;border-right:none;" colspan="3">
+                                Total This Page
+                            </td>
+                            <td class="FontSGPBH1Data" style="text-align: left; padding-left: 10px;width:80px;border:1px solid #000;border-left:none;border-right:none;" colspan="2">
+                                550
+                            </td>
+                            <td class="FontSGPBH1Data" style="text-align: right; padding-right: 5px;width:80px;border:1px solid #000;border-left:none;border-right:none;" colspan="3">
+                                50825.00
+                            </td>
+                        </tr>
+                        <tr style="height: 30.236220472px;">
+                            <td class="FontSGPBH1Data" style="text-align: right;width:80px;border:1px solid #000;border-left:none;border-right:none;" colspan="3">
+                                Consignment Total
+                            </td>
+                            <td class="FontSGPBH1Data" style="text-align: left; padding-left: 10px;width:80px;border:1px solid #000;border-left:none;border-right:none;" colspan="2">
+                                550
+                            </td>
+                            <td class="FontSGPBH1Data" style="text-align: right; padding-right: 5px;width:80px;border:1px solid #000;border-left:none;border-right:none;" colspan="3">
+                                50825.00
+                            </td>
+                        </tr>
+                        <tr style="height: 30.236220472px;">
+                            <td class="FontSGPBH1Data" style="text-align: left;width:80px;border:1px solid #000;border-left:none;border-right:none;vertical-align:top;padding-top:5px;padding-left:5px;" colspan="3" rowspan="2">
+                                <h5 style="font-size:13px;margin-top:3px;margin-bottom:0px;">Additional Information</h5>
+                                <p style="margin-top:0px;">ETD 22ND February</p>
+                            </td>
+                            <td class="FontSGPBH1Data" style="text-align: left;width:80px;border:1px solid #000;padding-left:5px; border-right:none;" colspan="3">
+                                <h5 style="font-size:13px;margin-top:3px;margin-bottom:0px;">MOULD CHARGES</h5>
+                            </td>
+                            <td class="FontSGPBH1Data" style="text-align: center;width:80px;border:1px solid #000;border-left:none;border-right:none;">
+                                900.00
+                            </td>
+                        </tr>
+                        <tr style="height: 30.236220472px;">
+                            <td class="FontSGPBH1Data" style="text-align: left;width:80px;border:1px solid #000;border-right:none;padding-left:5px;" colspan="4">
+                                <h5 style="font-size:13px;margin-top:3px;margin-bottom:0px;">Invoice Total</h5>
+                                <p style="margin-top:0px;">FOB SHANGHAI USD $51725.00</p>
+                            </td>
+                        </tr>
+                        <tr style="height: 30.236220472px;">
+                            <td class="FontSGPBH1Data" style="text-align: left;width:80px;height:200px; border:1px solid #000;border-right:none;padding-left:5px;vertical-align:top" colspan="4" rowspan="4">
+                                <h5 style="font-size:13px;margin-top:3px;margin-bottom:0px;">Bank Details</h5>
+                                <p style="margin-top:0px;">
+                                    Beneficary's Name: KSP Consulting<br />
+                                    Beneficary Bank Name: HSBC Hong Kong<br />
+                                    Swift Code: HSBC-XXXX<br />
+                                    Bank Account No.:XXXX-XXXX-XXXX
+                                </p>
+                            </td>
+                            <td class="FontSGPBH1Data" style="text-align: left;width:80px;border:1px solid #000;border-right:none;padding-left:5px;" colspan="4">
+                                <h5 style="font-size:13px;margin-top:3px;margin-bottom:0px;">Place nad Date Issue</h5>
+                                <p style="margin-top:0px;">SHANGHAI - 26 Oct 2018</p>
+                            </td>
+                        </tr>
+                        <tr style="height: 30.236220472px;">
+                            <td class="FontSGPBH1Data" style="text-align: left;width:80px;border:1px solid #000;border-right:none;padding-left:5px;" colspan="4">
+                                <h5 style="font-size:13px;margin-top:3px;margin-bottom:0px;">Signatory Compay</h5>
+                                <p style="margin-top:0px;">KSP COnsulting</p>
+                            </td>
+                        </tr>
+                        <tr style="height: 30.236220472px;">
+                            <td class="FontSGPBH1Data" style="text-align: left;width:80px;border:1px solid #000;border-right:none;padding-left:5px;" colspan="4">
+                                <h5 style="font-size:13px;margin-top:3px;margin-bottom:0px;">Name of Authorized Signatory</h5>
+                                <p style="margin-top:0px;">KSP Consulting</p>
+                            </td>
+                        </tr>
+                        <tr style="height: 30.236220472px;">
+                            <td class="FontSGPBH1Data" style="text-align: left;width:80px;height:80px; border:1px solid #000;border-right:none;padding-left:5px;vertical-align:top" colspan="4">
+                                <h5 style="font-size:13px;margin-top:3px;margin-bottom:0px;">Signature</h5>
+                                <img src="~/assets/images/signature.png" style="width:auto;height:80px;" />
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <h4 class="FontSGPBHeadTitle" style="text-align:center;">Post Shipment</h4>
+        <div class="modal-footer no-print">
+            <button type="button" class="btn btn-light custome-bg" data-bs-dismiss="modal" style="margin-left:80%; margin-top:2%;   background-color: #e6e7e9 ">Close</button>
+            <button type="button" class="btn btn-primary custome-bg ">Download</button>
+        </div>
+    </div>
+</body>
+</html>

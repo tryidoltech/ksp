@@ -1,0 +1,704 @@
+﻿   <!-- Begin page -->
+<div id="layout-wrapper">
+    <div w3-include-html="/Views/Shared/header.html"> </div>
+    <!-- Left Sidebar End -->
+    <!-- Vertical Overlay-->
+    <div class="vertical-overlay"></div>
+    <!-- ============================================================== -->
+    <!-- Start right Content here -->
+    <!-- ============================================================== -->
+    <div class="main-content">
+        <div class="page-content">
+            <div class="container-fluid">
+                <!-- start page title -->
+                <div class="row">
+                    <div class="col-12">
+                        <div class="page-title-box d-sm-flex align-items-center justify-content-between">
+                            <h4 class="mb-sm-0">Project Dashboard</h4>
+                        </div>
+                    </div>
+                </div>
+                <!-- end page title -->
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="d-flex flex-column h-100">
+                            <div class="row">
+                                <div class="col-xl-3 col-md-6">
+                                    <div class="card card-animate overflow-hidden">
+                                        <div class="position-absolute start-0" style="z-index: 0;">
+                                            <svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 120" width="200" height="120">
+                                                <style>
+                                                    .s0 {
+                                                        opacity: .05;
+                                                        fill: var(--vz-success);
+                                                    }
+                                                </style>
+                                                <path id="Shape 8" class="s0" d="m189.5-25.8c0 0 20.1 46.2-26.7 71.4 0 0-60 15.4-62.3 65.3-2.2 49.8-50.6 59.3-57.8 61.5-7.2 2.3-60.8 0-60.8 0l-11.9-199.4z" />
+                                            </svg>
+                                        </div>
+                                        <div class="card-body" style="z-index:1 ;">
+                                            <div class="d-flex align-items-center">
+                                                <div class="flex-grow-1 overflow-hidden">
+                                                    <p class="text-uppercase fw-medium text-muted text-truncate mb-3">Total Projects</p>
+                                                    <h4 class="fs-22 fw-semibold ff-secondary mb-0"><span class="counter-value" data-target="36894">10</span></h4>
+                                                </div>
+                                                <div class="flex-shrink-0">
+                                                    <div id="total_jobs" data-colors='["--vz-success"]' class="apex-charts" dir="ltr"></div>
+                                                </div>
+                                            </div>
+                                        </div><!-- end card body -->
+                                    </div><!-- end card -->
+                                </div><!--end col-->
+                                <div class="col-xl-3 col-md-6">
+                                    <!-- card -->
+                                    <div class="card card-animate overflow-hidden">
+                                        <div class="position-absolute start-0" style="z-index: 0;">
+                                            <svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 120" width="200" height="120">
+                                                <style>
+                                                    .s0 {
+                                                        opacity: .05;
+                                                        fill: var(--vz-success);
+                                                    }
+                                                </style>
+                                                <path id="Shape 8" class="s0" d="m189.5-25.8c0 0 20.1 46.2-26.7 71.4 0 0-60 15.4-62.3 65.3-2.2 49.8-50.6 59.3-57.8 61.5-7.2 2.3-60.8 0-60.8 0l-11.9-199.4z" />
+                                            </svg>
+                                        </div>
+                                        <div class="card-body" style="z-index:1 ;">
+                                            <div class="d-flex align-items-center">
+                                                <div class="flex-grow-1 overflow-hidden">
+                                                    <p class="text-uppercase fw-medium text-muted text-truncate mb-3">Running Projects</p>
+                                                    <h4 class="fs-22 fw-semibold ff-secondary mb-0"><span class="counter-value" data-target="28410">20</span></h4>
+                                                </div>
+                                                <div class="flex-shrink-0">
+                                                    <div id="apply_jobs" data-colors='["--vz-success"]' class="apex-charts" dir="ltr"></div>
+                                                </div>
+                                            </div>
+                                        </div><!-- end card body -->
+                                    </div><!-- end card -->
+                                </div><!-- end col -->
+                                <div class="col-xl-3 col-md-6">
+                                    <!-- card -->
+                                    <div class="card card-animate overflow-hidden">
+                                        <div class="position-absolute start-0" style="z-index: 0;">
+                                            <svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 120" width="200" height="120">
+                                                <style>
+                                                    .s0 {
+                                                        opacity: .05;
+                                                        fill: var(--vz-success);
+                                                    }
+                                                </style>
+                                                <path id="Shape 8" class="s0" d="m189.5-25.8c0 0 20.1 46.2-26.7 71.4 0 0-60 15.4-62.3 65.3-2.2 49.8-50.6 59.3-57.8 61.5-7.2 2.3-60.8 0-60.8 0l-11.9-199.4z" />
+                                            </svg>
+                                        </div>
+                                        <div class="card-body" style="z-index:1 ;">
+                                            <div class="d-flex align-items-center">
+                                                <div class="flex-grow-1 overflow-hidden">
+                                                    <p class="text-uppercase fw-medium text-muted text-truncate mb-3">Completed Projects</p>
+                                                    <h4 class="fs-22 fw-semibold ff-secondary mb-0"><span class="counter-value" data-target="4305">30</span></h4>
+                                                </div>
+                                                <div class="flex-shrink-0">
+                                                    <div id="new_jobs_chart" data-colors='["--vz-success"]' class="apex-charts" dir="ltr"></div>
+                                                </div>
+                                            </div>
+                                        </div><!-- end card body -->
+                                    </div><!-- end card -->
+                                </div><!-- end col -->
+                                <div class="col-xl-3 col-md-6">
+                                    <!-- card -->
+                                    <div class="card card-animate overflow-hidden">
+                                        <div class="position-absolute start-0" style="z-index: 0;">
+                                            <svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 120" width="200" height="120">
+                                                <style>
+                                                    .s0 {
+                                                        opacity: .05;
+                                                        fill: var(--vz-success);
+                                                    }
+                                                </style>
+                                                <path id="Shape 8" class="s0" d="m189.5-25.8c0 0 20.1 46.2-26.7 71.4 0 0-60 15.4-62.3 65.3-2.2 49.8-50.6 59.3-57.8 61.5-7.2 2.3-60.8 0-60.8 0l-11.9-199.4z" />
+                                            </svg>
+                                        </div>
+                                        <div class="card-body" style="z-index:1 ;">
+                                            <div class="d-flex align-items-center">
+                                                <div class="flex-grow-1 overflow-hidden">
+                                                    <p class="text-uppercase fw-medium text-muted text-truncate mb-3">Upcoming Projects</p>
+                                                    <h4 class="fs-22 fw-semibold ff-secondary mb-0"><span class="counter-value" data-target="5021">20</span></h4>
+                                                </div>
+                                                <div class="flex-shrink-0">
+                                                    <div id="interview_chart" data-colors='["--vz-danger"]' class="apex-charts" dir="ltr"></div>
+                                                </div>
+                                            </div>
+                                        </div><!-- end card body -->
+                                    </div><!-- end card -->
+                                </div><!-- end col -->
+
+                                <div class="col-xl-3 col-md-6">
+                                    <div class="card card-animate overflow-hidden">
+                                        <div class="position-absolute start-0" style="z-index: 0;">
+                                            <svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 120" width="200" height="120">
+                                                <style>
+                                                    .s0 {
+                                                        opacity: .05;
+                                                        fill: var(--vz-success);
+                                                    }
+                                                </style>
+                                                <path id="Shape 8" class="s0" d="m189.5-25.8c0 0 20.1 46.2-26.7 71.4 0 0-60 15.4-62.3 65.3-2.2 49.8-50.6 59.3-57.8 61.5-7.2 2.3-60.8 0-60.8 0l-11.9-199.4z" />
+                                            </svg>
+                                        </div>
+                                        <div class="card-body" style="z-index:1 ;">
+                                            <div class="d-flex align-items-center">
+                                                <div class="flex-grow-1 overflow-hidden">
+                                                    <p class="text-uppercase fw-medium text-muted text-truncate mb-3">Total Tasks</p>
+                                                    <h4 class="fs-22 fw-semibold ff-secondary mb-0"><span class="counter-value" data-target="36894">50</span></h4>
+                                                </div>
+                                                <div class="avatar-sm flex-shrink-0">
+                                                    <span class="avatar-title bg-warning-subtle text-warning rounded-2 fs-2">
+                                                        <i class="bx bx-wallet text-dark"></i>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div><!-- end card body -->
+                                    </div><!-- end card -->
+                                </div><!--end col-->
+                                <div class="col-xl-3 col-md-6">
+                                    <!-- card -->
+                                    <div class="card card-animate overflow-hidden">
+                                        <div class="position-absolute start-0" style="z-index: 0;">
+                                            <svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 120" width="200" height="120">
+                                                <style>
+                                                    .s0 {
+                                                        opacity: .05;
+                                                        fill: var(--vz-success);
+                                                    }
+                                                </style>
+                                                <path id="Shape 8" class="s0" d="m189.5-25.8c0 0 20.1 46.2-26.7 71.4 0 0-60 15.4-62.3 65.3-2.2 49.8-50.6 59.3-57.8 61.5-7.2 2.3-60.8 0-60.8 0l-11.9-199.4z" />
+                                            </svg>
+                                        </div>
+                                        <div class="card-body" style="z-index:1 ;">
+                                            <div class="d-flex align-items-center">
+                                                <div class="flex-grow-1 overflow-hidden">
+                                                    <p class="text-uppercase fw-medium text-muted text-truncate mb-3">Running Tasks</p>
+                                                    <h4 class="fs-22 fw-semibold ff-secondary mb-0"><span class="counter-value" data-target="28410">70</span></h4>
+                                                </div>
+                                                <div class="avatar-sm flex-shrink-0">
+                                                    <span class="avatar-title bg-warning-subtle text-warning rounded-2 fs-2">
+                                                        <i class="bx bx-wallet text-dark"></i>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div><!-- end card body -->
+                                    </div><!-- end card -->
+                                </div><!-- end col -->
+                                <div class="col-xl-3 col-md-6">
+                                    <!-- card -->
+                                    <div class="card card-animate overflow-hidden">
+                                        <div class="position-absolute start-0" style="z-index: 0;">
+                                            <svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 120" width="200" height="120">
+                                                <style>
+                                                    .s0 {
+                                                        opacity: .05;
+                                                        fill: var(--vz-success);
+                                                    }
+                                                </style>
+                                                <path id="Shape 8" class="s0" d="m189.5-25.8c0 0 20.1 46.2-26.7 71.4 0 0-60 15.4-62.3 65.3-2.2 49.8-50.6 59.3-57.8 61.5-7.2 2.3-60.8 0-60.8 0l-11.9-199.4z" />
+                                            </svg>
+                                        </div>
+                                        <div class="card-body" style="z-index:1 ;">
+                                            <div class="d-flex align-items-center">
+                                                <div class="flex-grow-1 overflow-hidden">
+                                                    <p class="text-uppercase fw-medium text-muted text-truncate mb-3">On Hold Tasks</p>
+                                                    <h4 class="fs-22 fw-semibold ff-secondary mb-0"><span class="counter-value" data-target="4305">80</span></h4>
+                                                </div>
+                                                <div class="avatar-sm flex-shrink-0">
+                                                    <span class="avatar-title bg-warning-subtle text-warning rounded-2 fs-2">
+                                                        <i class="bx bx-wallet text-dark"></i>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div><!-- end card body -->
+                                    </div><!-- end card -->
+                                </div><!-- end col -->
+                                <div class="col-xl-3 col-md-6">
+                                    <!-- card -->
+                                    <div class="card card-animate overflow-hidden">
+                                        <div class="position-absolute start-0" style="z-index: 0;">
+                                            <svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 120" width="200" height="120">
+                                                <style>
+                                                    .s0 {
+                                                        opacity: .05;
+                                                        fill: var(--vz-success);
+                                                    }
+                                                </style>
+                                                <path id="Shape 8" class="s0" d="m189.5-25.8c0 0 20.1 46.2-26.7 71.4 0 0-60 15.4-62.3 65.3-2.2 49.8-50.6 59.3-57.8 61.5-7.2 2.3-60.8 0-60.8 0l-11.9-199.4z" />
+                                            </svg>
+                                        </div>
+                                        <div class="card-body" style="z-index:1 ;">
+                                            <div class="d-flex align-items-center">
+                                                <div class="flex-grow-1 overflow-hidden">
+                                                    <p class="text-uppercase fw-medium text-muted text-truncate mb-3">Completed Tasks</p>
+                                                    <h4 class="fs-22 fw-semibold ff-secondary mb-0"><span class="counter-value" data-target="5021">90</span></h4>
+                                                </div>
+                                                <div class="avatar-sm flex-shrink-0">
+                                                    <span class="avatar-title bg-warning-subtle text-warning rounded-2 fs-2">
+                                                        <i class="bx bx-wallet text-dark"></i>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div><!-- end card body -->
+                                    </div><!-- end card -->
+                                </div><!-- end col -->
+                            </div><!--end row-->
+                        </div>
+                    </div><!--end col-->
+                </div>
+
+                <div class="row">
+                    <div class="col-xxl-6 col-lg-4">
+                        <div class="card card-height-100">
+                            <div class="card-header align-items-center d-flex">
+                                <h4 class="card-title mb-0 flex-grow-1">Projects Status</h4>
+                                <div class="flex-shrink-0">
+                                    <div class="dropdown card-header-dropdown">
+                                        <a class="dropdown-btn text-muted" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            All Time <i class="mdi mdi-chevron-down ms-1"></i>
+                                        </a>
+                                        <div class="dropdown-menu dropdown-menu-end">
+                                            <a class="dropdown-item" href="#">All Time</a>
+                                            <a class="dropdown-item" href="#">Last 7 Days</a>
+                                            <a class="dropdown-item" href="#">Last 30 Days</a>
+                                            <a class="dropdown-item" href="#">Last 90 Days</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!-- end card header -->
+                            <div class="card-body">
+                                <div id="prjects-status" data-colors='["--vz-success", "--vz-primary", "--vz-warning", "--vz-danger"]' data-colors-minimal='["--vz-primary", "--vz-primary-rgb, 0.85", "--vz-primary-rgb, 0.70", "--vz-primary-rgb, 0.50"]' data-colors-galaxy='["--vz-primary", "--vz-primary-rgb, 0.85", "--vz-primary-rgb, 0.70", "--vz-primary-rgb, 0.50"]' class="apex-charts" dir="ltr"></div>
+                                <div class="mt-3">
+                                    <div class="d-flex justify-content-center align-items-center mb-4">
+                                        <h2 class="me-3 ff-secondary mb-0">258</h2>
+                                        <div>
+                                            <p class="text-muted mb-0">Total Projects</p>
+                                            <p class="text-success fw-medium mb-0">
+                                                <span class="badge bg-success-subtle text-success p-1 rounded-circle"><i class="ri-arrow-right-up-line"></i></span> +3 New
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex justify-content-between border-bottom border-bottom-dashed py-2">
+                                        <p class="fw-medium mb-0"><i class="ri-checkbox-blank-circle-fill text-success align-middle me-2"></i> Completed</p>
+                                        <div>
+                                            <span class="text-muted">125 Projects</span>
+                                        </div>
+                                    </div><!-- end -->
+                                    <div class="d-flex justify-content-between border-bottom border-bottom-dashed py-2">
+                                        <p class="fw-medium mb-0"><i class="ri-checkbox-blank-circle-fill text-primary align-middle me-2"></i> In Progress</p>
+                                        <div>
+                                            <span class="text-muted">42 Projects</span>
+                                        </div>
+                                    </div><!-- end -->
+                                    <div class="d-flex justify-content-between border-bottom border-bottom-dashed py-2">
+                                        <p class="fw-medium mb-0"><i class="ri-checkbox-blank-circle-fill text-warning align-middle me-2"></i> Yet to Start</p>
+                                        <div>
+                                            <span class="text-muted">58 Projects</span>
+                                        </div>
+                                    </div><!-- end -->
+                                    <div class="d-flex justify-content-between py-2">
+                                        <p class="fw-medium mb-0"><i class="ri-checkbox-blank-circle-fill text-danger align-middle me-2"></i> Cancelled</p>
+                                        <div>
+                                            <span class="text-muted">89 Projects</span>
+                                        </div>
+                                    </div><!-- end -->
+                                </div>
+                            </div><!-- end cardbody -->
+                        </div><!-- end card -->
+                    </div>
+                    <div class="col-xl-8 col-xxl-6 col-lg-8 col-md-8">
+                        <div class="card card-height-100">
+                            <div class="card-header d-flex align-items-center">
+                                <h4 class="card-title flex-grow-1 mb-0">Active Projects</h4>
+                                <div class="flex-shrink-0">
+                                    <a href="javascript:void(0);" class="btn btn-soft-info btn-sm material-shadow-none">Export Report</a>
+                                </div>
+                            </div><!-- end cardheader -->
+                            <div class="card-body">
+                                <div class="table-responsive table-card">
+                                    <table class="table table-nowrap table-centered align-middle">
+                                        <thead class="bg-light text-muted">
+                                            <tr>
+                                                <th scope="col">Project Name</th>
+                                                <th scope="col">Project Lead</th>
+                                                <th scope="col">Progress</th>
+                                                <!--<th scope="col">Assignee</th>-->
+                                                <th scope="col">Status</th>
+                                                <th scope="col" style="width: 10%;">Due Date</th>
+                                            </tr><!-- end tr -->
+                                        </thead><!-- thead -->
+                                        <tbody>
+                                            <tr>
+                                                <td class="fw-medium">Project 1</td>
+                                                <td>
+                                                    <img src="/assets/images/users/avatar-3.jpg" class="avatar-xxs rounded-circle me-1 material-shadow" alt="">
+                                                    <a href="javascript: void(0);" class="text-reset">Employee One</a>
+                                                </td>
+                                                <td>
+                                                    <div class="d-flex align-items-center">
+                                                        <div class="flex-shrink-0 me-1 text-muted fs-13">53%</div>
+                                                        <div class="progress progress-sm  flex-grow-1" style="width: 68%;">
+                                                            <div class="progress-bar bg-primary rounded" role="progressbar" style="width: 53%" aria-valuenow="53" aria-valuemin="0" aria-valuemax="100"></div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td><span class="badge bg-warning-subtle text-warning">Inprogress</span></td>
+                                                <td class="text-muted">06 Sep 2021</td>
+                                            </tr><!-- end tr -->
+                                            <tr>
+                                                <td class="fw-medium">Project 2</td>
+                                                <td>
+                                                    <img src="/assets/images/users/avatar-2.jpg" class="avatar-xxs rounded-circle me-1 material-shadow" alt="">
+                                                    <a href="javascript: void(0);" class="text-reset">Employee Two</a>
+                                                </td>
+                                                <td>
+                                                    <div class="d-flex align-items-center">
+                                                        <div class="flex-shrink-0 text-muted me-1">0%</div>
+                                                        <div class="progress progress-sm flex-grow-1" style="width: 68%;">
+                                                            <div class="progress-bar bg-primary rounded" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td><span class="badge bg-danger-subtle text-danger">Pending</span></td>
+                                                <td class="text-muted">13 Nov 2021</td>
+                                            </tr><!-- end tr -->
+                                            <tr>
+                                                <td class="fw-medium">Project 3</td>
+                                                <td>
+                                                    <img src="/assets/images/users/avatar-3.jpg" class="avatar-xxs rounded-circle me-1 material-shadow" alt="">
+                                                    <a href="javascript: void(0);" class="text-reset">Employee Three</a>
+                                                </td>
+                                                <td>
+                                                    <div class="d-flex align-items-center">
+                                                        <div class="flex-shrink-0 text-muted me-1">100%</div>
+                                                        <div class="progress progress-sm flex-grow-1" style="width: 68%;">
+                                                            <div class="progress-bar bg-primary rounded" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td><span class="badge bg-success-subtle text-success">Completed</span></td>
+                                                <td class="text-muted">26 Nov 2021</td>
+                                            </tr><!-- end tr -->
+                                            <tr>
+                                                <td class="fw-medium">Project 4</td>
+                                                <td>
+                                                    <img src="/assets/images/users/avatar-5.jpg" class="avatar-xxs rounded-circle me-1 material-shadow" alt="">
+                                                    <a href="javascript: void(0);" class="text-reset">Employee Four</a>
+                                                </td>
+                                                <td>
+                                                    <div class="d-flex align-items-center">
+                                                        <div class="flex-shrink-0 text-muted me-1">64%</div>
+                                                        <div class="progress flex-grow-1 progress-sm" style="width: 68%;">
+                                                            <div class="progress-bar bg-primary rounded" role="progressbar" style="width: 64%" aria-valuenow="64" aria-valuemin="0" aria-valuemax="100"></div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td><span class="badge bg-warning-subtle text-warning">Progress</span></td>
+                                                <td class="text-muted">15 Dec 2021</td>
+                                            </tr><!-- end tr -->
+                                            <tr>
+                                                <td class="fw-medium">Project 5</td>
+                                                <td>
+                                                    <img src="/assets/images/users/avatar-3.jpg" class="avatar-xxs rounded-circle me-1 material-shadow" alt="">
+                                                    <a href="javascript: void(0);" class="text-reset">Employee Five</a>
+                                                </td>
+                                                <td>
+                                                    <div class="d-flex align-items-center">
+                                                        <div class="flex-shrink-0 me-1 text-muted fs-13">53%</div>
+                                                        <div class="progress progress-sm  flex-grow-1" style="width: 68%;">
+                                                            <div class="progress-bar bg-primary rounded" role="progressbar" style="width: 53%" aria-valuenow="53" aria-valuemin="0" aria-valuemax="100"></div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td><span class="badge bg-warning-subtle text-warning">Inprogress</span></td>
+                                                <td class="text-muted">06 Sep 2021</td>
+                                            </tr><!-- end tr -->
+                                            <tr>
+                                                <td class="fw-medium">Project 6</td>
+                                                <td>
+                                                    <img src="/assets/images/users/avatar-2.jpg" class="avatar-xxs rounded-circle me-1 material-shadow" alt="">
+                                                    <a href="javascript: void(0);" class="text-reset">Employee Six</a>
+                                                </td>
+                                                <td>
+                                                    <div class="d-flex align-items-center">
+                                                        <div class="flex-shrink-0 text-muted me-1">0%</div>
+                                                        <div class="progress progress-sm flex-grow-1" style="width: 68%;">
+                                                            <div class="progress-bar bg-primary rounded" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td><span class="badge bg-danger-subtle text-danger">Pending</span></td>
+                                                <td class="text-muted">13 Nov 2021</td>
+                                            </tr><!-- end tr -->
+                                            <tr>
+                                                <td class="fw-medium">Project 7</td>
+                                                <td>
+                                                    <img src="/assets/images/users/avatar-3.jpg" class="avatar-xxs rounded-circle me-1 material-shadow" alt="">
+                                                    <a href="javascript: void(0);" class="text-reset">Employee Seven</a>
+                                                </td>
+                                                <td>
+                                                    <div class="d-flex align-items-center">
+                                                        <div class="flex-shrink-0 text-muted me-1">100%</div>
+                                                        <div class="progress progress-sm flex-grow-1" style="width: 68%;">
+                                                            <div class="progress-bar bg-primary rounded" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td><span class="badge bg-success-subtle text-success">Completed</span></td>
+                                                <td class="text-muted">26 Nov 2021</td>
+                                            </tr><!-- end tr -->
+                                            <tr>
+                                                <td class="fw-medium">Project 8</td>
+                                                <td>
+                                                    <img src="/assets/images/users/avatar-2.jpg" class="avatar-xxs rounded-circle me-1 material-shadow" alt="">
+                                                    <a href="javascript: void(0);" class="text-reset">Employee Eight</a>
+                                                </td>
+                                                <td>
+                                                    <div class="d-flex align-items-center">
+                                                        <div class="flex-shrink-0 text-muted me-1">64%</div>
+                                                        <div class="progress flex-grow-1 progress-sm" style="width: 68%;">
+                                                            <div class="progress-bar bg-primary rounded" role="progressbar" style="width: 64%" aria-valuenow="64" aria-valuemin="0" aria-valuemax="100"></div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td><span class="badge bg-warning-subtle text-warning">Progress</span></td>
+                                                <td class="text-muted">15 Dec 2021</td>
+                                            </tr><!-- end tr -->
+                                        </tbody><!-- end tbody -->
+                                    </table><!-- end table -->
+                                </div>
+                                <div class="align-items-center mt-xl-3 mt-4 justify-content-between d-flex">
+                                    <div class="flex-shrink-0">
+                                        <div class="text-muted">Showing <span class="fw-semibold">5</span> of <span class="fw-semibold">25</span> Results </div>
+                                    </div>
+                                    <ul class="pagination pagination-separated pagination-sm mb-0">
+                                        <li class="page-item disabled">
+                                            <a href="#" class="page-link">←</a>
+                                        </li>
+                                        <li class="page-item">
+                                            <a href="#" class="page-link">1</a>
+                                        </li>
+                                        <li class="page-item active">
+                                            <a href="#" class="page-link">2</a>
+                                        </li>
+                                        <li class="page-item">
+                                            <a href="#" class="page-link">3</a>
+                                        </li>
+                                        <li class="page-item">
+                                            <a href="#" class="page-link">→</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div><!-- end card body -->
+                        </div><!-- end card -->
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="card card-height-100">
+                            <div class="card-header d-flex align-items-center">
+                                <h4 class="card-title flex-grow-1 mb-0">Upcoming Deadlines</h4>
+                                <div class="flex-shrink-0">
+                                    <a href="javascript:void(0);" class="btn btn-soft-info btn-sm">Export Report</a>
+                                </div>
+                            </div><!-- end cardheader -->
+                            <div class="card-body">
+                                <div class="table-responsive table-card">
+                                    <table class="table table-nowrap table-centered align-middle">
+                                        <thead class="bg-light text-muted">
+                                            <tr>
+                                                <th scope="col">Project Name</th>
+                                                <th scope="col">Project Lead</th>
+                                                <th scope="col">Progress</th>
+                                                <th scope="col">Assignee</th>
+                                                <th scope="col">Status</th>
+                                                <th scope="col" style="width: 10%;">Due Date</th>
+                                            </tr><!-- end tr -->
+                                        </thead><!-- thead -->
+
+                                        <tbody>
+                                            <tr>
+                                                <td class="fw-medium">Project 1</td>
+                                                <td>
+                                                    <a href="javascript: void(0);" class="text-reset">
+                                                        Employee One
+                                                    </a>
+                                                </td>
+                                                <td>
+                                                    <div class="d-flex align-items-center">
+                                                        <div class="flex-shrink-0 me-1 text-muted fs-13">53%</div>
+                                                        <div class="progress progress-sm  flex-grow-1" style="width: 68%;">
+                                                            <div class="progress-bar bg-primary rounded" role="progressbar" style="width: 53%" aria-valuenow="53" aria-valuemin="0" aria-valuemax="100"></div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    Employee One
+                                                </td>
+                                                <td><span class="badge bg-warning-subtle text-warning">Inprogress</span></td>
+                                                <td class="text-muted">06 Sep 2021</td>
+                                            </tr><!-- end tr -->
+                                            <tr>
+                                                <td class="fw-medium">Project 2</td>
+                                                <td>
+                                                    <a href="javascript: void(0);" class="text-reset">
+                                                        Employee Two
+                                                    </a>
+                                                </td>
+                                                <td>
+                                                    <div class="d-flex align-items-center">
+                                                        <div class="flex-shrink-0 me-1 text-muted fs-13">53%</div>
+                                                        <div class="progress progress-sm  flex-grow-1" style="width: 68%;">
+                                                            <div class="progress-bar bg-primary rounded" role="progressbar" style="width: 53%" aria-valuenow="53" aria-valuemin="0" aria-valuemax="100"></div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    Employee Two
+                                                </td>
+                                                <td><span class="badge bg-danger-subtle text-danger">Pending</span></td>
+                                                <td class="text-muted">13 Nov 2021</td>
+                                            </tr><!-- end tr -->
+                                            <tr>
+                                                <td class="fw-medium">Project 3</td>
+                                                <td>
+                                                    <a href="javascript: void(0);" class="text-reset">
+                                                        Employee Three
+                                                    </a>
+                                                </td>
+                                                <td>
+                                                    <div class="d-flex align-items-center">
+                                                        <div class="flex-shrink-0 me-1 text-muted fs-13">53%</div>
+                                                        <div class="progress progress-sm  flex-grow-1" style="width: 68%;">
+                                                            <div class="progress-bar bg-primary rounded" role="progressbar" style="width: 53%" aria-valuenow="53" aria-valuemin="0" aria-valuemax="100"></div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    Employee Three
+                                                </td>
+                                                <td><span class="badge bg-success-subtle text-success">Completed</span></td>
+                                                <td class="text-muted">26 Nov 2021</td>
+                                            </tr><!-- end tr -->
+                                            <tr>
+                                                <td class="fw-medium">Project 4</td>
+                                                <td>
+                                                    <a href="javascript: void(0);" class="text-reset">
+                                                        Employee Four
+                                                    </a>
+                                                </td>
+                                                <td>
+                                                    <div class="d-flex align-items-center">
+                                                        <div class="flex-shrink-0 me-1 text-muted fs-13">53%</div>
+                                                        <div class="progress progress-sm  flex-grow-1" style="width: 68%;">
+                                                            <div class="progress-bar bg-primary rounded" role="progressbar" style="width: 53%" aria-valuenow="53" aria-valuemin="0" aria-valuemax="100"></div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    Employee Four
+                                                </td>
+                                                <td><span class="badge bg-warning-subtle text-warning">Progress</span></td>
+                                                <td class="text-muted">15 Dec 2021</td>
+                                            </tr><!-- end tr -->
+                                            <tr>
+                                                <td class="fw-medium">Project 5</td>
+                                                <td>
+                                                    <a href="javascript: void(0);" class="text-reset">
+                                                        Employee Five
+                                                    </a>
+                                                </td>
+                                                <td>
+                                                    <div class="d-flex align-items-center">
+                                                        <div class="flex-shrink-0 me-1 text-muted fs-13">53%</div>
+                                                        <div class="progress progress-sm  flex-grow-1" style="width: 68%;">
+                                                            <div class="progress-bar bg-primary rounded" role="progressbar" style="width: 53%" aria-valuenow="53" aria-valuemin="0" aria-valuemax="100"></div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    Employee Five
+                                                </td>
+                                                <td><span class="badge bg-warning-subtle text-warning">Progress</span></td>
+                                                <td class="text-muted">21 Dec 2021</td>
+                                            </tr><!-- end tr -->
+                                        </tbody><!-- end tbody -->
+                                    </table><!-- end table -->
+                                </div>
+
+                                <div class="align-items-center mt-xl-3 mt-4 justify-content-between d-flex">
+                                    <div class="flex-shrink-0">
+                                        <div class="text-muted">
+                                            Showing <span class="fw-semibold">5</span> of <span class="fw-semibold">25</span> Results
+                                        </div>
+                                    </div>
+                                    <ul class="pagination pagination-separated pagination-sm mb-0">
+                                        <li class="page-item disabled">
+                                            <a href="#" class="page-link">←</a>
+                                        </li>
+                                        <li class="page-item active">
+                                            <a href="#" class="page-link">1</a>
+                                        </li>
+                                        <li class="page-item">
+                                            <a href="#" class="page-link">2</a>
+                                        </li>
+                                        <li class="page-item">
+                                            <a href="#" class="page-link">3</a>
+                                        </li>
+                                        <li class="page-item">
+                                            <a href="#" class="page-link">→</a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                            </div><!-- end card body -->
+                        </div><!-- end card -->
+                    </div><!-- end col -->
+
+
+                </div>
+
+            </div>
+            <!-- container-fluid -->
+        </div>
+        <!-- End Page-content -->
+
+        <div w3-include-html="/Views/Shared/footer.html"> </div>
+    </div>
+    <!-- end main content-->
+</div>
+<!-- END layout-wrapper -->
+<!--start back-to-top-->
+<button onclick="topFunction()" class="btn btn-danger btn-icon" id="back-to-top">
+    <i class="ri-arrow-up-line"></i>
+</button>
+<!--end back-to-top-->
+<!--preloader-->
+<div id="preloader">
+    <div id="status">
+        <div class="spinner-border text-primary avatar-sm" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+    </div>
+</div>
+<!-- JAVASCRIPT -->
+<script src="~/assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="~/assets/libs/simplebar/simplebar.min.js"></script>
+<script src="~/assets/libs/node-waves/waves.min.js"></script>
+<script src="~/assets/libs/feather-icons/feather.min.js"></script>
+<script src="~/assets/js/pages/plugins/lord-icon-2.1.0.js"></script>
+<script src="~/assets/js/plugins.js"></script>
+<!-- apexcharts -->
+<script src="~/assets/libs/apexcharts/apexcharts.min.js"></script>
+<!-- Dashboard init -->
+<script src="~/assets/js/pages/dashboard-job.init.js"></script>
+<!-- projects js -->
+<script src="~/assets/js/pages/dashboard-projects.init.js"></script>
+<!-- Dashboard init -->
+<script src="~/assets/js/pages/dashboard-crm.init.js"></script>
+<!-- App js -->
+<script src="~/assets/js/app.js"></script>

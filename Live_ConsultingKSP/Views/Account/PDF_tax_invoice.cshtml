@@ -1,0 +1,623 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sales Order Print</title>
+    <style>
+        font-face {
+            font-family: SohoGothicProBold;
+            src: url("Print/Font/SohoGothicPro-Bold.otf") format("opentype");
+        }
+
+        font-face {
+            font-family: SohoGothicProBoldItalic;
+            src: url("Print/Font/SohoGothicPro-BoldItalic.otf") format("opentype");
+        }
+
+        font-face {
+            font-family: SohoGothicProExtraBold;
+            src: url("Print/Font/SohoGothicPro-ExtraBold.otf") format("opentype");
+        }
+
+        font-face {
+            font-family: SohoGothicProExtraBoldIt;
+            src: url("Print/Font/SohoGothicPro-ExtraBoldIt.otf") format("opentype");
+        }
+
+        font-face {
+            font-family: SohoGothicProItalic;
+            src: url("Print/Font/SohoGothicPro-Italic.otf") format("opentype");
+        }
+
+        font-face {
+            font-family: SohoGothicProLight;
+            src: url("Print/Font/SohoGothicPro-Light.otf") format("opentype");
+        }
+
+        font-face {
+            font-family: SohoGothicProLightItalic;
+            src: url("Print/Font/SohoGothicPro-LightItalic.otf") format("opentype");
+        }
+
+        font-face {
+            font-family: SohoGothicProMedium;
+            src: url("Print/Font/SohoGothicPro-Medium.otf") format("opentype");
+        }
+
+        font-face {
+            font-family: SohoGothicProMediumIt;
+            src: url("Print/Font/SohoGothicPro-MediumIt.otf") format("opentype");
+        }
+
+        font-face {
+            font-family: SohoGothicProRegular;
+            src: url("Print/Font/SohoGothicPro-Regular.otf") format("opentype");
+        }
+
+        font-face {
+            font-family: SohoGothicProThin;
+            src: url("Print/Font/SohoGothicPro-Thin.otf") format("opentype");
+        }
+
+        font-face {
+            font-family: SohoGothicProThinItalic;
+            src: url("Print/Font/SohoGothicPro-ThinItalic.otf") format("opentype");
+        }
+
+        font-face {
+            font-family: SohoGothicProUltra;
+            src: url("Print/Font/SohoGothicPro-Ultra.otf") format("opentype");
+        }
+
+        font-face {
+            font-family: SohoGothicProUltraItalic;
+            src: url("Print/Font/SohoGothicPro-UltraItalic.otf") format("opentype");
+        }
+
+        .FontSGPBH1Title {
+            font-family: 'Rubik', sans-serif;
+            font-size: 12.5px;
+            color: #000000;
+        }
+
+        .FontSGPBH1Data {
+            font-family: 'Rubik', sans-serif;
+            font-size: 12.5px;
+            color: #000000;
+        }
+
+        .FontSGPBHeadTitle {
+            font-family: 'Rubik', sans-serif;
+            font-size: 15px;
+            color: #000000;
+        }
+
+        p, td {
+            margin: 0;
+            padding: 0;
+        }
+
+        .tblPay {
+            text-align: left;
+            padding-left: 5px;
+        }
+
+        .custome-bg {
+            background-color: #e6e7e9 !important;
+        }
+
+      
+
+    </style>
+
+</head>
+<body style="height: 622.519685px; width: 793.7007874px;">
+    <div id="MultiPageSO">
+        <h3 class="FontSGPBHeadTitle" style="text-align:center;font-size:18px;">Tax Invoice</h3>
+        <table style="min-height: 622.519685px; width: 793.7007874px; /*border: 1px solid black; */">
+
+            <tr>
+                <td style="height: 50.913385827px; vertical-align: baseline;">
+                    <table style="width: 718.11023622px; margin-left: 1cm;border:1px solid #000" cellpadding="0" cellspacing="0">
+                        <tr style="height: 30.236220472px;">
+                            <td class="FontSGPBH1Data" style="text-align: left; padding-left: 5px;width:30px;border-bottom:1px solid #000" rowspan="3" colspan="2">
+                                <img src="~/assets/images/new-logo/ksp-logo.png"  style="width:auto;height:80px">
+                            </td>
+                            <td class="FontSGPBH1Data" style="text-align: left; padding-left: 5px;border-right:1px solid #000;width:230px;border-bottom:1px solid #000;padding-bottom:10px;" rowspan="3">
+                                <h5 style="font-size:13px">KSP Consultancy</h5>
+                                <p>
+                                    B-209, Park Plaza,<br />
+                                    Krishna Nagar<br />
+                                    Lucknow<br />
+                                    GSTIN/UIN: 09AABCS1429B1ZS<br />
+                                    State Name: Uttar Pradesh, Code : 09<br />
+                                    Email: info@ace.com<br />
+                                </p>
+                            </td>
+                            <td class="FontSGPBH1Data" style="text-align: left;padding-left: 5px;padding-bottom:5px;border-bottom:1px solid #000; border-right:1px solid #000" >
+                                <h5 style="font-size:13px;margin-top:3px;">Invoice No.</h5>
+                                <p>ACMPLM0019-20</p>
+                            </td>
+                            <!--<td class="FontSGPBH1Data" style="text-align: left; padding-left: 5px;padding-bottom:5px; border-bottom:1px solid #000;border-right:1px solid #000;width:100px;">
+                                <h5 style="font-size:13px;margin-top:3px;">e-Way Bill No.</h5>
+                                <p>1810011002234</p>
+                            </td>-->
+                            <td class="FontSGPBH1Data" style="text-align: left; padding-left: 5px;padding-bottom:5px;border-bottom:1px solid #000">
+                                <h5 style="font-size:13px;margin-top:3px;">Dated</h5>
+                                <p>18-Apr-2019</p>
+                            </td>
+                        </tr>
+                        <tr style="height: 30.236220472px;border:1px solid #000">
+                            <td class="FontSGPBH1Data" style="text-align: left;padding-left: 5px;border-bottom:1px solid #000;" colspan="3">
+                                Delivery Note
+                            </td>
+                            
+                        </tr>
+                        <tr style="height: 30.236220472px;border:1px solid #000">
+                            <!--<td class="FontSGPBH1Data" style="text-align: left;padding-left: 5px;border-right:1px solid #000;border-bottom:1px solid #000" colspan="2">
+        Supplier's Ref.
+    </td>
+    <td class="FontSGPBH1Data" style="text-align: left; padding-left: 5px;border-bottom:1px solid #000">
+        Other Reference(s)
+    </td>-->    
+                            <td class="FontSGPBH1Data" style="text-align: left; padding-left: 5px;border-bottom:1px solid #000" colspan="3">
+                                Mode/Terms Of Payment
+                            </td>
+                        </tr>
+                        <tr style="height: 30.236220472px">
+                            <td class="FontSGPBH1Data" style="text-align: left; padding-left: 5px;width:30px;border-right:1px solid #000" rowspan="9" colspan="3">
+                                <p style="margin:0px">Buy</p>
+                                <h5 style="margin:0px">KSP Consultancy</h5>
+                                <p>
+                                    261-1<br />
+                                    Krishana Palace Road<br />
+                                    Farizabad<br />
+                                    GSTIN/UIN: 09AABCS1429B1ZS<br />
+                                    State Name: Uttar Pradesh, Code : 09<br />
+                                </p>
+                            </td>
+                            <td class="FontSGPBH1Data" style="text-align: left; padding-left: 5px;border-bottom:1px solid #000;" colspan="3">
+                                <!--Buyer's Order No.-->Destination
+                            </td>
+                            <!--<td class="FontSGPBH1Data" style="text-align: left; padding-left: 5px;border-bottom:1px solid #000" rowspan="1">
+                                Destination
+                            </td>-->
+                        </tr>
+                        <!--<tr style="height: 30.236220472px">
+                            <td class="FontSGPBH1Data" style="text-align: left; padding-left: 5px;border-bottom:1px solid #000;border-right:1px solid #000" colspan="2" rowspan="1">
+                                Despatch Document No.
+                            </td>
+                            <td class="FontSGPBH1Data" style="text-align: left; padding-left: 5px;border-bottom:1px solid #000" rowspan="1">
+                                Delivery Node Date
+                            </td>
+                        </tr>-->
+                        <!--<tr style="height: 30.236220472px">
+                            <td class="FontSGPBH1Data" style="text-align: left; padding-left: 5px;border-bottom:1px solid #000;border-right:1px solid #000" colspan="2" rowspan="1">
+                                Despatched Through
+                            </td>
+                           
+                        </tr>-->
+                        <tr style="height: 30.236220472px">
+                            <td class="FontSGPBH1Data" style="text-align: left; padding-left: 5px;" rowspan="3" colspan="3">
+                                Terms of Delivery
+                            </td>
+                        </tr>
+
+                    </table>
+                    <table style="width: 718.11023622px; margin-left: 1cm;border: 1px solid #000000; border-top:none;" cellpadding="0" cellspacing="0">
+                        <tbody>
+                            <tr style="height: 22.677165354px">
+                                <th class="FontSGPBH1Title" style="text-align: left; padding-left: 5px;border-right:1px solid #000">Sr No.</th>
+                                <th class="FontSGPBH1Title" style="text-align: left; padding-left: 5px;text-align:center;border-right:1px solid #000">Description</th>
+                                <th class="FontSGPBH1Title" style="text-align: left; padding-left: 5px;text-align:center;border-right:1px solid #000">HSN/SAC</th>
+                                <th class="FontSGPBH1Title" style="text-align: left; padding-left: 5px;text-align:center;border-right:1px solid #000">Quantity</th>
+                                <th class="FontSGPBH1Title" style="text-align: left; padding-left: 5px;text-align:center;border-right:1px solid #000">Rate</th>
+
+                                <th class="FontSGPBH1Title" style="text-align: left; padding-left: 5px;text-align:center;">Amount</th>
+                            </tr>
+                            <tr style="height: 30.236220472px">
+                                <td class="FontSGPBH1Data" style="text-align: left; padding-left: 5px;border: 1px solid #000000;border-left:none;border-bottom:none;">
+                                    1
+                                </td>
+                                <td class="FontSGPBH1Data" style="text-align: left; padding-left: 5px;border: 1px solid #000000;border-left:none;border-bottom:none;">
+                                    <h5 style="margin-bottom:0px;margin-top:2px">Ace A1-Smartphone</h5>
+                                    <p style="margin-top:0px;padding-bottom:2px;">Batch : Batch 1</p>
+                                </td>
+                                <td class="FontSGPBH1Data" style="text-align: center; padding-right: 8px;border: 1px solid #000000;border-left:none;border-bottom:none;">
+                                    8517
+                                </td>
+                                <td class="FontSGPBH1Data" style="text-align: left; padding-left: 5px;border: 1px solid #000000;border-left:none;border-bottom:none;">
+                                    500 Nos
+                                </td>
+                                <td class="FontSGPBH1Data" style="text-align: left; padding-left: 5px;text-align:center;border: 1px solid #000000;border-left:none;border-bottom:none;">
+                                    6,000.00
+                                </td>
+
+                                <td class="FontSGPBH1Data" style="text-align: center; padding-right: 8px;text-align:center;border: 1px solid #000000;border-left:none; border-right:none;border-bottom:none;">
+                                    30,00,000,00
+                                </td>
+                            </tr>
+                            <tr style="height: 30.236220472px">
+                                <td class="FontSGPBH1Data" style="text-align: left; padding-left: 5px;border: 1px solid #000000;border-left:none;width:50px;border-left:none;">
+                                    2
+                                </td>
+                                <td class="FontSGPBH1Data" style="text-align: left; padding-left: 5px;border: 1px solid #000000;border-left:none;border-left:none;">
+                                    <h5 style="margin-bottom:0px;margin-top:2px">Ace A1 Plus-Smartphone</h5>
+                                    <p style="margin-top:0px;padding-bottom:2px;">Batch : Batch 01</p>
+                                </td>
+                                <td class="FontSGPBH1Data" style="text-align: center; padding-right: 8px;border: 1px solid #000000;border-left:none;border-left:none;">
+                                    8517
+                                </td>
+                                <td class="FontSGPBH1Data" style="text-align: left; padding-left: 5px;border: 1px solid #000000;border-left:none;border-left:none;">
+                                    800 Nos
+                                </td>
+                                <td class="FontSGPBH1Data" style="text-align: left; padding-left: 5px;text-align:center;border: 1px solid #000000;border-left:none;border-left:none;">
+                                    7,000.00
+                                </td>
+
+                                <td class="FontSGPBH1Data" style="text-align: center; padding-right: 8px;text-align:center;border: 1px solid #000000;border-left:none; border-right:none;border-left:none;">
+                                    56,00,000,00
+                                </td>
+                            </tr>
+                            <tr style="height: 30.236220472px">
+                                <td class="FontSGPBH1Data" style="text-align: left; padding-left: 5px;border: 1px solid #000000;border-left:none;width:50px">
+                                    3
+                                </td>
+                                <td class="FontSGPBH1Data" style="text-align: left; padding-left: 5px;border: 1px solid #000000;border-left:none;">
+                                    <h5 style="margin-bottom:0px;margin-top:2px">Ace A1 Plus-Smartphone</h5>
+                                    <p style="margin-top:0px;padding-bottom:2px;">Batch : Batch 01</p>
+                                </td>
+                                <td class="FontSGPBH1Data" style="text-align: center; padding-right: 8px;border: 1px solid #000000;border-left:none;">
+                                    8517
+                                </td>
+                                <td class="FontSGPBH1Data" style="text-align: left; padding-left: 5px;border: 1px solid #000000;border-left:none;">
+                                    800 Nos
+                                </td>
+                                <td class="FontSGPBH1Data" style="text-align: left; padding-left: 5px;text-align:center;border: 1px solid #000000;border-left:none;">
+                                    7,000.00
+                                </td>
+
+                                <td class="FontSGPBH1Data" style="text-align: center; padding-right: 8px;text-align:center;border: 1px solid #000000;border-left:none; border-right:none;">
+                                    56,00,000,00
+                                </td>
+                            </tr>
+                            <tr style="height: 30.236220472px">
+                                <td class="FontSGPBH1Data" style="text-align: left; padding-left: 5px;border: 1px solid #000000;border-left:none;width:50px">
+                                    4
+                                </td>
+                                <td class="FontSGPBH1Data" style="text-align: left; padding-left: 5px;border: 1px solid #000000;border-left:none;">
+                                    <h5 style="margin-bottom:0px;margin-top:2px">Ace A1 Plus-Smartphone</h5>
+                                    <p style="margin-top:0px;padding-bottom:2px;">Batch : Batch 01</p>
+                                </td>
+                                <td class="FontSGPBH1Data" style="text-align: center; padding-right: 8px;border: 1px solid #000000;border-left:none;">
+                                    8517
+                                </td>
+                                <td class="FontSGPBH1Data" style="text-align: left; padding-left: 5px;border: 1px solid #000000;border-left:none;">
+                                    800 Nos
+                                </td>
+                                <td class="FontSGPBH1Data" style="text-align: left; padding-left: 5px;text-align:center;border: 1px solid #000000;border-left:none;">
+                                    7,000.00
+                                </td>
+
+                                <td class="FontSGPBH1Data" style="text-align: center; padding-right: 8px;text-align:center;border: 1px solid #000000;border-left:none; border-right:none;">
+                                    56,00,000,00
+                                </td>
+                            </tr>
+                            <tr style="height: 30.236220472px">
+                                <td class="FontSGPBH1Data" style="text-align: left; padding-left: 5px;border: 1px solid #000000;border-left:none;width:50px">
+                                    5
+                                </td>
+                                <td class="FontSGPBH1Data" style="text-align: left; padding-left: 5px;border: 1px solid #000000;border-left:none;">
+                                    <h5 style="margin-bottom:0px;margin-top:2px">Ace A1 Plus-Smartphone</h5>
+                                    <p style="margin-top:0px;padding-bottom:2px;">Batch : Batch 01</p>
+                                </td>
+                                <td class="FontSGPBH1Data" style="text-align: center; padding-right: 8px;border: 1px solid #000000;border-left:none;">
+                                    8517
+                                </td>
+                                <td class="FontSGPBH1Data" style="text-align: left; padding-left: 5px;border: 1px solid #000000;border-left:none;">
+                                    800 Nos
+                                </td>
+                                <td class="FontSGPBH1Data" style="text-align: left; padding-left: 5px;text-align:center;border: 1px solid #000000;border-left:none;">
+                                    7,000.00
+                                </td>
+
+                                <td class="FontSGPBH1Data" style="text-align: center; padding-right: 8px;text-align:center;border: 1px solid #000000;border-left:none; border-right:none;">
+                                    56,00,000,00
+                                </td>
+                            </tr>
+                            <tr style="height: 30.236220472px">
+                                <td class="FontSGPBH1Data" style="text-align: left; padding-left: 5px;border: 1px solid #000000;border-left:none;width:50px">
+                                    6
+                                </td>
+                                <td class="FontSGPBH1Data" style="text-align: left; padding-left: 5px;border: 1px solid #000000;border-left:none;">
+                                    <h5 style="margin-bottom:0px;margin-top:2px">Ace A1 Plus-Smartphone</h5>
+                                    <p style="margin-top:0px;padding-bottom:2px;">Batch : Batch 01</p>
+                                </td>
+                                <td class="FontSGPBH1Data" style="text-align: center; padding-right: 8px;border: 1px solid #000000;border-left:none;">
+                                    8517
+                                </td>
+                                <td class="FontSGPBH1Data" style="text-align: left; padding-left: 5px;border: 1px solid #000000;border-left:none;">
+                                    800 Nos
+                                </td>
+                                <td class="FontSGPBH1Data" style="text-align: left; padding-left: 5px;text-align:center;border: 1px solid #000000;border-left:none;">
+                                    7,000.00
+                                </td>
+
+                                <td class="FontSGPBH1Data" style="text-align: center; padding-right: 8px;text-align:center;border: 1px solid #000000;border-left:none; border-right:none;">
+                                    56,00,000,00
+                                </td>
+                            </tr>
+                            <tr style="height: 30.236220472px">
+                                <td class="FontSGPBH1Data" style="text-align: left; padding-left: 5px;border: 1px solid #000000;border-left:none;width:50px">
+                                    7
+                                </td>
+                                <td class="FontSGPBH1Data" style="text-align: left; padding-left: 5px;border: 1px solid #000000;border-left:none;">
+                                    <h5 style="margin-bottom:0px;margin-top:2px">Ace A1 Plus-Smartphone</h5>
+                                    <p style="margin-top:0px;padding-bottom:2px;">Batch : Batch 01</p>
+                                </td>
+                                <td class="FontSGPBH1Data" style="text-align: center; padding-right: 8px;border: 1px solid #000000;border-left:none;">
+                                    8517
+                                </td>
+                                <td class="FontSGPBH1Data" style="text-align: left; padding-left: 5px;border: 1px solid #000000;border-left:none;">
+                                    800 Nos
+                                </td>
+                                <td class="FontSGPBH1Data" style="text-align: left; padding-left: 5px;text-align:center;border: 1px solid #000000;border-left:none;">
+                                    7,000.00
+                                </td>
+
+                                <td class="FontSGPBH1Data" style="text-align: center; padding-right: 8px;text-align:center;border: 1px solid #000000;border-left:none; border-right:none;">
+                                    56,00,000,00
+                                </td>
+                            </tr>
+                            <tr style="height: 30.236220472px">
+                                <td class="FontSGPBH1Data" style="text-align: left; padding-left: 5px;border: 1px solid #000000;border-left:none;width:50px">
+                                    8
+                                </td>
+                                <td class="FontSGPBH1Data" style="text-align: left; padding-left: 5px;border: 1px solid #000000;border-left:none;">
+                                    <h5 style="margin-bottom:0px;margin-top:2px">Ace A1 Plus-Smartphone</h5>
+                                    <p style="margin-top:0px;padding-bottom:2px;">Batch : Batch 01</p>
+                                </td>
+                                <td class="FontSGPBH1Data" style="text-align: center; padding-right: 8px;border: 1px solid #000000;border-left:none;">
+                                    8517
+                                </td>
+                                <td class="FontSGPBH1Data" style="text-align: left; padding-left: 5px;border: 1px solid #000000;border-left:none;">
+                                    800 Nos
+                                </td>
+                                <td class="FontSGPBH1Data" style="text-align: left; padding-left: 5px;text-align:center;border: 1px solid #000000;border-left:none;">
+                                    7,000.00
+                                </td>
+
+                                <td class="FontSGPBH1Data" style="text-align: center; padding-right: 8px;text-align:center;border: 1px solid #000000;border-left:none; border-right:none;">
+                                    56,00,000,00
+                                </td>
+                            </tr>
+                            <tr style="height: 30.236220472px">
+                                <td class="FontSGPBH1Data" style="text-align: left; padding-left: 5px;border: 1px solid #000000;border-left:none;width:50px">
+                                    9
+                                </td>
+                                <td class="FontSGPBH1Data" style="text-align: left; padding-left: 5px;border: 1px solid #000000;border-left:none;">
+                                    <h5 style="margin-bottom:0px;margin-top:2px">Ace A1 Plus-Smartphone</h5>
+                                    <p style="margin-top:0px;padding-bottom:2px;">Batch : Batch 01</p>
+                                </td>
+                                <td class="FontSGPBH1Data" style="text-align: center; padding-right: 8px;border: 1px solid #000000;border-left:none;">
+                                    8517
+                                </td>
+                                <td class="FontSGPBH1Data" style="text-align: left; padding-left: 5px;border: 1px solid #000000;border-left:none;">
+                                    800 Nos
+                                </td>
+                                <td class="FontSGPBH1Data" style="text-align: left; padding-left: 5px;text-align:center;border: 1px solid #000000;border-left:none;">
+                                    7,000.00
+                                </td>
+
+                                <td class="FontSGPBH1Data" style="text-align: center; padding-right: 8px;text-align:center;border: 1px solid #000000;border-left:none; border-right:none;">
+                                    56,00,000,00
+                                </td>
+                            </tr>
+                            <tr style="height: 30.236220472px">
+                                <td class="FontSGPBH1Data" style="text-align: left; padding-left: 5px;border: 1px solid #000000;border-left:none;width:50px">
+                                    10
+                                </td>
+                                <td class="FontSGPBH1Data" style="text-align: left; padding-left: 5px;border: 1px solid #000000;border-left:none;">
+                                    <h5 style="margin-bottom:0px;margin-top:2px">Ace A1 Plus-Smartphone</h5>
+                                    <p style="margin-top:0px;padding-bottom:2px;">Batch : Batch 01</p>
+                                </td>
+                                <td class="FontSGPBH1Data" style="text-align: center; padding-right: 8px;border: 1px solid #000000;border-left:none;">
+                                    8517
+                                </td>
+                                <td class="FontSGPBH1Data" style="text-align: left; padding-left: 5px;border: 1px solid #000000;border-left:none;">
+                                    800 Nos
+                                </td>
+                                <td class="FontSGPBH1Data" style="text-align: left; padding-left: 5px;text-align:center;border: 1px solid #000000;border-left:none;">
+                                    7,000.00
+                                </td>
+
+                                <td class="FontSGPBH1Data" style="text-align: center ; padding-right: 8px;text-align:center;border: 1px solid #000000;border-left:none; border-right:none;">
+                                    56,00,000,00
+                                </td>
+                            </tr>
+                            <tr style="height: 10.236220472px; background-color:#2f2f2f4d;">
+                                <td class="FontSGPBH1Data" style="border-top: none; border-bottom:none;border-right:1px solid #000;border-left:none"></td>
+                                <td class="FontSGPBH1Data" style="border-top: none; border-bottom:none;border-right:1px solid #000;border-left:none; font-size:12px; padding:7px 2px;font-size:15px;font-weight:700; letter-spacing:1px;">Total</td>
+                                <td class="FontSGPBH1Data" style="border-top: none; border-bottom:none;border-right:1px solid #000;border-left:none"></td>
+                                <td class="FontSGPBH1Data" style="border-top: none; border-bottom:none;border-right:1px solid #000;border-left:none"></td>
+                                <td class="FontSGPBH1Data" style="border-top: none; border-bottom:none;border-right:1px solid #000;border-left:none"></td>
+
+                                <td class="FontSGPBH1Data" style="text-align:center; border-top: none; border-bottom:none;border-right:1px solid #000;border-left:none;border-right:none;font-size:15px;font-weight:700; letter-spacing:1px;"">
+                                    86,00,000.00
+                                </td>
+                            </tr>
+                            <!--<tr style="height: 20.236220472px">
+                                <td class="FontSGPBH1Data" style="text-align: left; padding-left: 5px;border-top: none; border-bottom:none;border-right:1px solid #000;border-left:none"></td>
+                                <td class="FontSGPBH1Data" style="text-align: right; padding-right: 5px;border-top: none; border-bottom:none;border-right:1px solid #000;border-left:none">
+                                    Output CGST
+                                </td>
+                                <td class="FontSGPBH1Data" style="text-align: right; padding-right: 8px;border-top: none; border-bottom:none;border-right:1px solid #000;border-left:none"></td>
+                                <td class="FontSGPBH1Data" style="text-align: left; padding-left: 5px;border-top: none; border-bottom:none;border-right:1px solid #000;border-left:none"></td>
+                                <td class="FontSGPBH1Data" style="text-align: left; padding-left: 5px;border-top: none; border-bottom:none;border-right:1px solid #000;border-left:none"></td>
+
+                                <td class="FontSGPBH1Data" style="text-align: right; padding-right: 8px;text-align:center;border-top:none;border-bottom:none;">
+                                    5,16,000.00
+                                </td>
+                            </tr>
+                            <tr style="height: 20.236220472px">
+                                <td class="FontSGPBH1Data" style="text-align: left; padding-left: 5px;border-top: none; border-bottom:none;border-right:1px solid #000;border-left:none"></td>
+                                <td class="FontSGPBH1Data" style="text-align: right; padding-right: 5px;border-top: none; border-bottom:none;border-right:1px solid #000;border-left:none">
+                                    Output CGST
+                                </td>
+                                <td class="FontSGPBH1Data" style="text-align: right; padding-right: 8px;border-top: none; border-bottom:none;border-right:1px solid #000;border-left:none"></td>
+                                <td class="FontSGPBH1Data" style="text-align: left; padding-left: 5px;border-top: none; border-bottom:none;border-right:1px solid #000;border-left:none"></td>
+                                <td class="FontSGPBH1Data" style="text-align: left; padding-left: 5px;border-top: none; border-bottom:none;border-right:1px solid #000;border-left:none"></td>
+
+                                <td class="FontSGPBH1Data" style="text-align: right; padding-right: 8px;text-align:center;border-top: none; border-bottom:none;border-right:1px solid #000;border-left:none;border-right:none;">
+                                    5,16,000.00
+                                </td>
+                            </tr>
+                            <tr style="height: 20.236220472px">
+                                <td class="FontSGPBH1Data" style="text-align: left; padding-left: 5px;border:1px solid #000;border-left:none;border-bottom:none;"></td>
+                                <td class="FontSGPBH1Data" style="text-align: right; padding-right: 5px;border:1px solid #000;border-left:none;border-bottom:none;">
+                                    Output CGST
+                                </td>
+                                <td class="FontSGPBH1Data" style="text-align: right; padding-right: 8px;border:1px solid #000;border-left:none;border-bottom:none;"></td>
+                                <td class="FontSGPBH1Data" style="text-align: left; padding-left: 5px;border:1px solid #000;border-left:none;border-bottom:none;"></td>
+                                <td class="FontSGPBH1Data" style="text-align: left; padding-left: 5px;border:1px solid #000;border-left:none;border-bottom:none;"></td>
+
+                                <td class="FontSGPBH1Data" style="text-align: right; padding-right: 8px;text-align:center;border:1px solid #000;border-left:none;border-right:none;border-bottom:none;">
+                                    5,16,000.00
+                                </td>
+                            </tr>-->
+                            <tr style="height: 20.236220472px">
+                                <td class="FontSGPBH1Data" style="text-align: left; padding-left: 5px;border:1px solid #000;border-left:none;border-bottom:none;" colspan="2">
+                                    <p style="margin-top:3px;">Amount Chargeable (in words)</p>
+                                    <h5 style="font-size:13px; margin:3px 0px;">INR Eight million six hundred thousand</h5>
+                                </td>
+                                <td class="FontSGPBH1Data" style="text-align: right; padding-right: 5px;border:1px solid #000;border-left:none;border-bottom:none;border-right:none;" colspan="5">
+                                    E. &amp; O.E
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table style="width: 718.11023622px; margin-left: 1cm;border: 1px solid #000000; border-top:none;" cellpadding="0" cellspacing="0">
+                        <tr style="height: 20.236220472px">
+                            <td class="FontSGPBH1Data" style="text-align: center; padding-left: 5px;border:1px solid #000;border-left:none;border-bottom:none;width:200px;border-top:none;" rowspan="2">
+                                HSN/SAC
+                            </td>
+                            <td class="FontSGPBH1Data" style="text-align: center; padding-right: 5px;border:1px solid #000;border-left:none;border-bottom:none;width:100px;border-top:none;" rowspan="2">
+                                Taxable Value
+                            </td>
+                            <td class="FontSGPBH1Data" style="text-align: center; padding-right: 8px;border:1px solid #000;border-left:none;border-bottom:none;border-top:none;" colspan="2">
+                                CGST
+                            </td>
+                            <td class="FontSGPBH1Data" style="text-align: center; padding-left: 5px;border:1px solid #000;border-left:none;border-bottom:none;border-top:none;" colspan="2">
+                                IGST
+                            </td>
+                            <td class="FontSGPBH1Data" style="text-align: center; padding-left: 5px;border:1px solid #000;border-left:none;border-bottom:none;border-top:none;border-right:none;" rowspan="2">
+                                Total Amount
+                            </td>
+                        </tr>
+                        <tr style="height: 20.236220472px">
+                            <td class="FontSGPBH1Data" style="text-align: center; padding-left: 5px;border:1px solid #000;border-left:none;border-bottom:none;width:50px;">
+                                Rate
+                            </td>
+                            <td class="FontSGPBH1Data" style="text-align: center; padding-right: 5px;border:1px solid #000;border-left:none;border-bottom:none;width:100px">
+                                Amount
+                            </td>
+                            <td class="FontSGPBH1Data" style="text-align: center; padding-left: 5px;border:1px solid #000;border-left:none;border-bottom:none;width:50px;">
+                                Rate
+                            </td>
+                            <td class="FontSGPBH1Data" style="text-align: center; padding-right: 5px;border:1px solid #000;border-left:none;border-bottom:none;width:100px">
+                                Amount
+                            </td>
+                        </tr>
+                        <tr style="height: 20.236220472px">
+                            <td class="FontSGPBH1Data" style="text-align: center; padding-left: 5px;border: 1px solid #000000;border-left:none;border-bottom:none;">
+                                8517
+                            </td>
+                            <td class="FontSGPBH1Data" style="text-align: center; padding-left: 5px;border: 1px solid #000000;border-left:none;border-bottom:none;">
+                                86,00,000.00
+                            </td>
+                            <td class="FontSGPBH1Data" style="text-align: center; padding-right: 8px;border: 1px solid #000000;border-left:none;border-bottom:none;">
+                                6%
+                            </td>
+                            <td class="FontSGPBH1Data" style="text-align: center; padding-left: 5px;border: 1px solid #000000;border-left:none;border-bottom:none;">
+                                5,16,000.00
+                            </td>
+                            <td class="FontSGPBH1Data" style="text-align: center; padding-left: 5px;text-align:center;border: 1px solid #000000;border-left:none;border-bottom:none;">
+                                6%
+                            </td>
+                            <td class="FontSGPBH1Data" style="text-align: center; padding-right: 8px;text-align:center;border: 1px solid #000000;border-left:none;border-bottom:none;">
+                                5,16,000.00
+                            </td>
+                            <td class="FontSGPBH1Data" style="text-align: center; padding-right: 8px;text-align:center;border: 1px solid #000000;border-left:none; border-right:none;border-bottom:none;">
+                                10,32,000.00
+                            </td>
+                        </tr>
+                        <tr style="height: 20.236220472px">
+                            <td class="FontSGPBH1Data" style="text-align: right; padding-right: 5px;border: 1px solid #000000;border-left:none;border-bottom:none;">
+                                Total
+                            </td>
+                            <td class="FontSGPBH1Data" style="text-align: center; padding-left: 5px;border: 1px solid #000000;border-left:none;border-bottom:none;">
+                                86,00,000.00
+                            </td>
+                            <td class="FontSGPBH1Data" style="text-align: center; padding-right: 8px;border: 1px solid #000000;border-left:none;border-bottom:none;"></td>
+                            <td class="FontSGPBH1Data" style="text-align: center; padding-left: 5px;border: 1px solid #000000;border-left:none;border-bottom:none;">
+                                5,16,000.00
+                            </td>
+                            <td class="FontSGPBH1Data" style="text-align: center; padding-left: 5px;text-align:center;border: 1px solid #000000;border-left:none;border-bottom:none;"></td>
+                            <td class="FontSGPBH1Data" style="text-align: center; padding-right: 8px;text-align:center;border: 1px solid #000000;border-left:none;border-bottom:none;">
+                                5,16,000.00
+                            </td>
+                            <td class="FontSGPBH1Data" style="text-align: center; padding-right: 8px;text-align:center;border: 1px solid #000000;border-left:none; border-right:none;border-bottom:none;">
+                                10,32,000.00
+                            </td>
+                        </tr>
+                        <tr style="height: 60.236220472px">
+                            <td class="FontSGPBH1Data" style="text-align: left; padding-left: 10px;border: 1px solid #000000;border-left:none;border-bottom:none;border-right:none;" colspan="7">
+                                Tax Amount (In Words) : INR Ten Lakh Thirty Two Thousand Only
+                            </td>
+                        </tr>
+                        <tr style="height: 40.236220472px">
+                            <td class="FontSGPBH1Data" style="text-align: left; padding-left: 10px;border: 1px solid #000000;border-left:none;border-bottom:none;border-top:none" colspan="3" rowspan="1">
+                                <h5 style="margin-bottom:3px;">Declaration</h5>
+                                <p style="margin-top:3px;margin-bottom:5px;">
+                                    We declare that this invoice shows the actual price of the<br />
+                                    goods described and that all particulars are true and<br />
+                                    correct.
+
+                                </p>
+                            </td>
+                            <td class="FontSGPBH1Data" style="text-align: right; padding-left: 10px;border: 1px solid #000000;border-left:none;border-bottom:none;border-right:none;vertical-align:baseline !important;" colspan="4" rowspan="1">
+                                <h5 style="margin:3px;">For KSP Consultancy</h5>
+                            </td>
+                        </tr>
+                        <tr style="height: 20.236220472px">
+                            <td class="FontSGPBH1Data" style="text-align: left; padding-left: 10px;border: 1px solid #000000;border-left:none;border-bottom:none;border-top:none" colspan="3" rowspan="1">
+                                <h5 style="margin-bottom:3px;">Remark</h5>
+                                <p style="margin-top:3px;margin-bottom:5px;">
+                                    Expenses for Gopal are pro-rated - worked 16 days out of 20
+
+                                </p>
+                            </td>
+                            <td class="FontSGPBH1Data" style="text-align: right; padding-left: 10px;border: 1px solid #000000;border-left:none;border-bottom:none;border-right:none;border-top:none;vertical-align:bottom !important;width:100px;" colspan="4">
+                                <img src="~/assets/images/signature.png" style="width:auto;height:80px;" />
+                                <h5 style="margin:3px;">Authorised Signatory</h5>
+                            </td>
+                        </tr>
+
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <h4 class="FontSGPBHeadTitle" style="text-align:center;">This is a Computer Generated Invoice</h4>
+        <div class="modal-footer no-print">
+            <button type="button" class="btn btn-light custome-bg" data-bs-dismiss="modal" style="margin-left:80%; margin-top:1%;   background-color: #e6e7e9; margin-bottom:5%;  ">Close</button>
+            <button type="button" class="btn btn-primary custome-bg ">Download</button>
+        </div>
+    </div>
+</body>
+</html>

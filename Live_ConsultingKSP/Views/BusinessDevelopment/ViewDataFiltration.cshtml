@@ -1,0 +1,271 @@
+﻿@*@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model IEnumerable<Live_ConsultingKSP.Models.>
+
+@section Stylecss {
+    <style>
+
+        /* Overlay Styles */
+        .overlay {
+            display: none; /* Hidden by default */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+            z-index: 9999;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            display: flex; /* Flexbox to center the content */
+        }
+
+        /* Center the content inside the overlay */
+        .overlay-content {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 5px;
+            position: relative; /* Relative to its container */
+            max-width: 90%; /* Optional, to ensure content doesn't overflow */
+            max-height: 90%; /* Optional, to prevent overflow */
+            box-sizing: border-box; /* Ensure padding is included in width/height */
+        }
+    </style>
+} *@
+
+<div class="page-content">
+    <div class="container-fluid">
+
+
+        <!--end row-->
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="card" id="CardData">
+                    <div class="card-header">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <h5 class="card-title mb-0">View Filtration Data</h5>
+                            </div>
+                            <!--<div class="col-md-1">
+                                <i class="bx bxs-pin float-end custom-icon-color"></i>
+                            </div>-->
+                            <div class="col-md-4">
+                                <a><i class="bx bxs-pin float-end custom-icon-color"></i></a>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="row" style="margin-bottom:25px;">
+                            <div class="col-lg-2 col-sm-6 col-xs-12">
+                                <!--   <label class="form-label">Select Research Channel</label>-->
+                                <select class="form-select2 js-example-basic-single" data-choices data-choices-sorting="true" id="ResearchChannel">
+                                    <option>Select Research Channel</option>
+                                    <option>Google</option>
+
+                                </select>
+                            </div>
+                            <div class="col-lg-2 col-sm-6 col-xs-12">
+                                <!-- <label class="form-label">Select Research Audience</label>-->
+                                <select class="form-select2 js-example-basic-single" data-choices data-choices-sorting="true" id="ResearchAudience">
+                                    <option>Select Research Audience</option>
+                                    <option>Manufacturer</option>
+
+                                </select>
+                            </div>
+                            <div class="col-lg-2 col-sm-6 col-xs-12">
+                                <!--  <label class="form-label">Select Research Group</label>-->
+                                <select class="form-select2 js-example-basic-single" data-choices data-choices-sorting="true" id="ResearchGroup">
+                                    <option> Select Research Group</option>
+                                    <option>Manufacturer-A</option>
+                                </select>
+                            </div>
+                            <div class="col-lg-2 col-sm-6 col-xs-12">
+                                <a href="#" class="btn btn-primary "> Search</a>
+
+                            </div>
+                        </div>
+                        <div class="row gx-3 gy-2 align-items-center" style="padding-bottom:20px">
+
+                            <div class="table-responsive">
+
+                                <table id="buttons-datatables" class="display table table-bordered"
+                                       style="width:100%;">
+                                    <thead>
+                                        <tr>
+                                            <th>Sr.No</th>
+                                            <th>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" id="selectall">
+
+                                                </div>
+                                            </th>
+                                            <th>UUID</th>
+
+                                            <th>Company Information</th>
+                                            <th>Contact Details</th>
+                                            <th>Contact Status</th>
+
+                                            <th>Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" id="chck">
+
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <a href="@Url.Action("ManageFiltrationData", "BusinessDevelopment")">
+                                                    68296b27-1bbb-450c-b439-a231f6c50bba
+                                                </a>
+                                            </td>
+                                            <td>
+                                                <ul>
+                                                    <li>Contact Person Name :- Kalpesh Patel</li>
+                                                    <li>Company Name. :- KSP Consults</li>
+                                                    <li>Website URL. :- <a href="https://kspconsults.com/" target="_blank">www.kspconsults.com</a></li>
+                                                </ul>
+                                            </td>
+                                            <td>
+                                                <ul>
+                                                    <li>Email. :- sales@kspconsults.com</li>
+                                                    <li>Alternate. :- info@kspconsults.com</li>
+                                                    <li>Mobile No. :- +91 8963257410</li>
+                                                    <li>Alternate No. :- +91 7845120369</li>
+                                                </ul>
+                                            </td>
+
+                                            <td>
+                                                <span class="badge bg-success">Positive</span>
+                                            </td>
+
+                                            <td>
+                                                <a id="AnchorAdd" runat="server" href="#"
+                                                   class="btn btn-sm btn-outline-dark salesorder" title="">
+                                                    <i class=" ri-chat-new-line" style="font-size: 20px; padding: 0px"></i>
+                                                    <span class="tooltiptext"></span>
+                                                </a>
+
+                                                <a id="AnchorAdd" runat="server" href="#"
+                                                   class="btn btn-sm btn-outline-dark salesorder">
+                                                    <i class=" ri-chat-forward-line" style="font-size: 20px; padding: 0px"></i>
+                                                    <span class="tooltiptext"></span>
+                                                </a>
+
+                                            </td>
+                                        </tr>
+
+
+
+                                    </tbody>
+                                </table>
+
+
+                            </div>
+
+                        </div>
+                        <div class="row gx-3 gy-2 align-items-center">
+                            <div class="col-lg-12 col-sm-12 col-xs-12">
+                                <a href="#" class="btn btn-primary float-end"> Forward Data to B.D</a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" id="CardAccessDenied" style="display:none">
+                    <div class="w3-display-middle" style="margin-top:100px;">
+                        <h1 class="w3-jumbo w3-animate-top w3-center"><span style="color:#38454a">Access Denied</span></h1>
+                        <hr class="w3-border-white w3-animate-left" style="margin:auto;width:50%">
+                        <h3 class="w3-center w3-animate-right">You don't have Rights to Access this Page</h3>
+                        <h3 class="w3-center w3-animate-right">Kindly Contact Administrative</h3>
+                        <h3 class="w3-center w3-animate-zoom">🚫🚫🚫🚫</h3>
+                        <h6 class="w3-center w3-animate-zoom">error code:403 forbidden</h6>
+                    </div>
+                </div>
+
+
+            </div>
+            <!-- container-fluid -->
+        </div>
+        <!-- End Page-content -->
+
+        <div w3-include-html="include/footer.html"> </div>
+    </div>
+    <!-- end main content-->
+
+</div>
+
+@*
+<div id="overlay" class="overlay">
+    <div class="overlay-content">Please Wait...</div>
+</div> *@
+<script src="~/assets/js/jquery-3.6.0.min.js"></script>
+<script src="~/assets/js/jquery.dataTables.min.js"></script>
+<script src="~/assets/js/dataTables.bootstrap5.min.js"></script>
+<script src="~/assets/js/dataTables.responsive.min.js"></script>
+<script src="~/assets/js/dataTables.buttons.min.js"></script>
+<script src="~/assets/js/jszip.min.js"></script>
+<script src="~/assets/js/pdfmake.min.js"></script>
+<script src="~/assets/js/vfs_fonts.js"></script>
+<script src="~/assets/js/buttons.html5.min.js"></script>
+<script src="~/assets/js/buttons.print.min.js"></script>
+<script src="~/assets/js/jquery-3.6.0.min.js"></script>
+<!--select2 cdn-->
+<script src="~/assets/js/select2.min.js"></script>
+<script src="~/assets/js/pages/select2.init.js"></script>
+
+
+<script>
+    $(document).ready(function () {
+        $('#buttons-datatables').DataTable({
+            // dom: 'Bfrtip',
+            // responsive: true,
+            // buttons: [
+            //     'copy', 'csv', 'excel', 'pdf', 'print'
+            // ]
+        });
+    });
+</script>
+
+<script>
+    // Get the "Select All" checkbox
+    const selectAllCheckbox = document.getElementById('selectall');
+
+    // Get the target checkbox
+    const targetCheckbox = document.getElementById('chck');
+
+    // Add an event listener to the "Select All" checkbox
+    selectAllCheckbox.addEventListener('change', function () {
+        // Set the target checkbox to match the state of "Select All"
+        targetCheckbox.checked = selectAllCheckbox.checked;
+    });
+</script>
+
+
+
+
+<script>
+    // Get the "Select All" checkbox
+    const selectAllCheckbox = document.getElementById('selectall');
+
+    // Get the target checkbox
+    const targetCheckbox = document.getElementById('chck');
+
+    // Add an event listener to the "Select All" checkbox
+    selectAllCheckbox.addEventListener('change', function () {
+        // Set the target checkbox to match the state of "Select All"
+        targetCheckbox.checked = selectAllCheckbox.checked;
+    });
+</script>
+
+

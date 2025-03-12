@@ -1,0 +1,70 @@
+﻿
+        <div class="page-content">
+            <div class="container-fluid">
+                <!-- start page title -->
+                <div class="row">
+                    <div class="col-12">
+                        <div class="page-title-box d-sm-flex align-items-center justify-content-between">
+                            <h4 class="mb-sm-0">Add Invoice Sub Type</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="card" id="CardData">
+                            <div class="card-body">
+                                <div class="live-preview">
+                                    <div class="row gx-3 gy-2 align-items-center">
+                                        <div class="col-lg-3 col-sm-6 col-xs-12">
+                                            <label class="form-label">UUID<span class="start-lable" style="color: red">*</span></label>
+                                            <input type="text" class="form-control" placeholder="bc91183d-a1f8-4ef2-8ae4-0fe840f6d06f" disabled>
+                                        </div>
+                                        <div class="col-lg-3 col-sm-6 col-xs-12">
+                                            <label class="form-label">Invoice Type<span class="start-lable" style="color: red">*</span></label>
+                                            <select class="form-select" data-choices data-choices-sorting="true" id="level" Onchange="Ondropdownselect()">
+                                                <option selected>- Select Invoice Type -</option>
+                                                <option value="1">Standard</option>
+                                                <option value="2">Simplified</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-lg-3 col-sm-6 col-xs-12">
+                                            <label class="form-label">Title<span class="start-lable" style="color: red">*</span></label>
+                                            <input type="text" class="form-control" placeholder="eg. Standarad">
+                                        </div>
+                                        <div class="col-lg-1">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="">
+                                                <label class="form-check-label" for="">
+                                                    Is Credit
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-2">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="">
+                                                <label class="form-check-label" for="">
+                                                    Is Debit
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="" checked>
+                                                <label class="form-check-label" for="">
+                                                    Is Display
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-9">
+                                            <a href="#" class="btn btn-primary " style="float:right;"> Submit</a>
+                                            <a href="#" class="btn btn-danger " style="float:right;margin-right:10px;"> Cancel</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        

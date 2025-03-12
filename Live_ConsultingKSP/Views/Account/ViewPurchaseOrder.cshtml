@@ -1,0 +1,274 @@
+﻿@*  @{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model List<Live_ConsultingKSP.Models.> *@
+@section Stylecss {
+    <style>
+
+        /* .overlay {
+            display: none; 
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); 
+            z-index: 9999;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            display: flex; 
+        }
+
+        .overlay-content {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 5px;
+            position: relative; 
+            max-width: 90%; 
+            max-height: 90%;
+            box-sizing: border-box; 
+        } */
+            .salesorder {
+            position: relative;
+            display: inline-block;
+            border-bottom: 1px dotted black;
+        }
+        .tooltiptext {
+            visibility: hidden;
+            width: 120px;
+            background-color: #38454a;
+            color: #fff;
+            text-align: center;
+            padding: 5px 0;
+            border-radius: 6px;
+            /* Position the tooltip text - see examples below! */
+            position: absolute;
+            z-index: 20;
+            top: 30px;
+            right: 0px;
+        }
+        .salesorder:hover .tooltiptext {
+            visibility: visible;
+        }
+    </style>
+} 
+<div class="page-content">
+    <div class="container-fluid">
+
+
+        <!--end row-->
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="card" id="CardData">
+                    <div class="card-header">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <h5 class="card-title mb-0">View Purchase Order</h5>
+                            </div>
+                            <!--<div class="col-md-1">
+                                <i class="bx bxs-pin float-end custom-icon-color"></i>
+                            </div>-->
+                            <div class="col-md-4">
+                                <a><i class="bx bxs-pin float-end custom-icon-color"></i></a>
+                                <a id="AnchorAdd" runat="server" href="@Url.Action("AddPurchaseOrder","Account")"
+                                   class="btn btn-dark float-end custom-class btnAdd">
+                                    Add Purchase Order
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+
+                            <table id="buttons-datatables" class="display table table-bordered"
+                                   style="width:100%;">
+                                <thead>
+                                    <tr>
+                                        <th>Sr.No</th>
+                                        <th>Vendor Name</th>
+                                        <th>Project Name</th>
+                                        <th>Delivery Date</th>
+                                        <th>Item </th>
+                                        <th>Quantity</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>MoonByte</td>
+                                        <td>Ksp</td>
+                                        <td>01/01/25</td>
+                                        <td>
+                                            <ul>
+                                                <li><b>Item Type: </b>Furniture</li>
+                                                <li>
+                                                    <b>Name:</b>Chair
+                                                </li>
+
+                                            </ul>
+                                        </td>
+
+                                        <td>
+                                            10
+                                        </td>
+
+                                        <td>
+                                            <a id="AnchorAdd" runat="server" href="#"
+                                               class="btn btn-sm btn-outline-dark ">
+                                                <i class="ri-delete-bin-fill"></i>
+                                            </a>
+                                            <a id="AnchorAdd" runat="server" href="@Url.Action("AddPurchaseInvoice","Account")"
+                                               class="btn btn-sm btn-outline-dark salesorder">
+                                                <i class="ri-chat-forward-line"></i>
+                                                <span class="tooltiptext">Convert to Purchase Invoice</span>
+                                            </a>
+                                            <a id="AnchorAdd1" runat="server" href="@Url.Action("PDF_purchase_order","Account")" target="_blank"
+                                               class="btn btn-sm btn-outline-dark salesorder">
+                                                <i class=" ri-folder-download-line"></i>
+                                                <span class="tooltiptext">Download PO</span>
+                                            </a>
+                                            <a id="AnchorAdd1" runat="server"
+                                               class="btn btn-sm btn-outline-dark salesorder" data-bs-toggle="offcanvas" data-bs-target="#theme-settings-offcanvas" aria-controls="theme-settings-offcanvas">
+                                                <i class="ri-eye-fill align-middle"></i>
+                                                <span class="tooltiptext">View All Documents</span>
+                                            </a>
+
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                            <!--<div class="col-lg-12">
+                                <a href="#" class="btn btn-primary " style="float:right;"> Submit</a>
+                                <a href="#" class="btn btn-danger " style="float:right;margin-right:10px;"> Cancel</a>
+                            </div>-->
+                        </div>
+                    </div>
+                </div>
+                <div class="card" id="CardAccessDenied" style="display:none">
+                    <div class="w3-display-middle" style="margin-top:100px;">
+                        <h1 class="w3-jumbo w3-animate-top w3-center"><span style="color:#38454a">Access Denied</span></h1>
+                        <hr class="w3-border-white w3-animate-left" style="margin:auto;width:50%">
+                        <h3 class="w3-center w3-animate-right">You don't have Rights to Access this Page</h3>
+                        <h3 class="w3-center w3-animate-right">Kindly Contact Administrative</h3>
+                        <h3 class="w3-center w3-animate-zoom">🚫🚫🚫🚫</h3>
+                        <h6 class="w3-center w3-animate-zoom">error code:403 forbidden</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- container-fluid -->
+</div>
+
+ <div class="offcanvas offcanvas-end border-0" tabindex="-1" id="theme-settings-offcanvas">
+        <div class="d-flex align-items-center bg-gradient p-3 offcanvas-header" style="background-color:#38454a">
+            <h5 class="m-0 me-2 text-white">Purchase Order</h5>
+            <button type="button" class="btn-close btn-close-white ms-auto" id="customizerclose-btn" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body p-0">
+            <div data-simplebar class="h-100">
+                <div class="p-4">
+                    <h6 class="mb-2 fw-bold text-uppercase">Sales Order</h6>
+
+                    <div class="row gy-3">
+                        <ul>
+                            <li>
+                                Sales Order On 12-12-2024 : <a href="" target="_blank">a2b35247-41e1-41ce-a587-cb30c1dee5e1 </a>
+                            </li>
+
+
+                        </ul>
+                    </div>
+
+                </div>
+                <div class="p-4">
+                    <h6 class="mb-2 fw-bold text-uppercase">Purchase Invoice</h6>
+
+                    <div class="row gy-3">
+                        <ul>
+
+                            <li>
+                                Purchase Invoice On 18-12-2024 : <a href="" target="_blank">1b55e25e-dcd2-4fd9-8128-5f62476b8d8d</a>
+                            </li>
+                            <li>
+                                Purchase Invoice On 19-12-2024 : <a href="" target="_blank">9c5fb6ca-0b7f-4202-89e7-c28d3ed106e1</a>
+                            </li>
+
+
+                        </ul>
+                    </div>
+
+                </div>
+                <div class="p-4">
+                    <h6 class="mb-2 fw-bold text-uppercase">Perfoma Invoice</h6>
+
+                    <div class="row gy-3">
+                        <ul>
+
+                            <li>
+                                Perfoma Invoice On 20-12-2024 : <a href="" target="_blank">b2b7baa1-844c-42fb-8784-0239a27654eb</a>
+                            </li>
+
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+    @* <div id="overlay" class="overlay">
+    <div class="overlay-content">Please Wait...</div>
+</div> *@
+    <!-- JAVASCRIPT -->
+    <script src="~/assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="~/assets/libs/simplebar/simplebar.min.js"></script>
+    <script src="~/assets/libs/node-waves/waves.min.js"></script>
+    <script src="~/assets/libs/feather-icons/feather.min.js"></script>
+    <script src="~/assets/js/pages/plugins/lord-icon-2.1.0.js"></script>
+    <script src="~/assets/js/plugins.js"></script>
+
+    <!-- list.js min js -->
+    <script src="~/assets/libs/list.js/list.min.js"></script>
+
+    <!--list pagination js-->
+    <script src="~/assets/libs/list.pagination.js/list.pagination.min.js"></script>
+
+    <!-- titcket init js -->
+    <script src="~/assets/js/pages/tasks-list.init.js"></script>
+
+    <!-- Sweet Alerts js -->
+    <script src="~/assets/libs/sweetalert2/sweetalert2.min.js"></script>
+
+    <!-- App js -->
+    <script src="~/assets/js/app.js"></script>
+
+
+    <script src="~/assets/js/jquery-3.6.0.min.js"></script>
+    <script src="~/assets/js/jquery.dataTables.min.js"></script>
+    <script src="~/assets/js/dataTables.bootstrap5.min.js"></script>
+    <script src="~/assets/js/dataTables.responsive.min.js"></script>
+    <script src="~/assets/js/dataTables.buttons.min.js"></script>
+    <script src="~/assets/js/jszip.min.js"></script>
+    <script src="~/assets/js/pdfmake.min.js"></script>
+    <script src="~/assets/js/vfs_fonts.js"></script>
+    <script src="~/assets/js/buttons.html5.min.js"></script>
+    <script src="~/assets/js/buttons.print.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('#buttons-datatables').DataTable({
+                // dom: 'Bfrtip',
+                // responsive: true,
+                // buttons: [
+                //     'copy', 'csv', 'excel', 'pdf', 'print'
+                // ]
+            });
+        });
+    </script>

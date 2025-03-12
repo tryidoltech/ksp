@@ -1,0 +1,133 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = Live_ConsultingKSP
+build_property.RootNamespace = Live_ConsultingKSP
+build_property.ProjectDir = C:\KSPBackUps\Live_KSPConsulting(11-02-25)Morning\packages\Live_ConsultingKSP\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\KSPBackUps\Live_KSPConsulting(11-02-25)Morning\packages\Live_ConsultingKSP
+build_property._RazorSourceGeneratorDebug = 
+build_property.EffectiveAnalysisLevelStyle = 8.0
+build_property.EnableCodeStyleSeverity = 
+
+[C:/KSPBackUps/Live_KSPConsulting(11-02-25)Morning/packages/Live_ConsultingKSP/Views/Account/AddCustomer.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxBZGRDdXN0b21lci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/KSPBackUps/Live_KSPConsulting(11-02-25)Morning/packages/Live_ConsultingKSP/Views/Account/AddinvoiceSubType.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxBZGRpbnZvaWNlU3ViVHlwZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/KSPBackUps/Live_KSPConsulting(11-02-25)Morning/packages/Live_ConsultingKSP/Views/Account/AddInvoiceType.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxBZGRJbnZvaWNlVHlwZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/KSPBackUps/Live_KSPConsulting(11-02-25)Morning/packages/Live_ConsultingKSP/Views/Account/AddInvoiceTypeCode.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxBZGRJbnZvaWNlVHlwZUNvZGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/KSPBackUps/Live_KSPConsulting(11-02-25)Morning/packages/Live_ConsultingKSP/Views/Account/AddItemGroup.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxBZGRJdGVtR3JvdXAuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/KSPBackUps/Live_KSPConsulting(11-02-25)Morning/packages/Live_ConsultingKSP/Views/Account/AddItemMaster.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxBZGRJdGVtTWFzdGVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/KSPBackUps/Live_KSPConsulting(11-02-25)Morning/packages/Live_ConsultingKSP/Views/Account/AddModeofDelivery.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxBZGRNb2Rlb2ZEZWxpdmVyeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/KSPBackUps/Live_KSPConsulting(11-02-25)Morning/packages/Live_ConsultingKSP/Views/Account/AddModeofPayment.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxBZGRNb2Rlb2ZQYXltZW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/KSPBackUps/Live_KSPConsulting(11-02-25)Morning/packages/Live_ConsultingKSP/Views/Account/AddModeofTransport.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxBZGRNb2Rlb2ZUcmFuc3BvcnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/KSPBackUps/Live_KSPConsulting(11-02-25)Morning/packages/Live_ConsultingKSP/Views/Account/AddNomenClature.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxBZGROb21lbkNsYXR1cmUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/KSPBackUps/Live_KSPConsulting(11-02-25)Morning/packages/Live_ConsultingKSP/Views/Account/AddPaymentMeansCode.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxBZGRQYXltZW50TWVhbnNDb2RlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/KSPBackUps/Live_KSPConsulting(11-02-25)Morning/packages/Live_ConsultingKSP/Views/Account/AddPurchaseInquiry.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxBZGRQdXJjaGFzZUlucXVpcnkuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/KSPBackUps/Live_KSPConsulting(11-02-25)Morning/packages/Live_ConsultingKSP/Views/Account/AddPurchaseInvoice.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxBZGRQdXJjaGFzZUludm9pY2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/KSPBackUps/Live_KSPConsulting(11-02-25)Morning/packages/Live_ConsultingKSP/Views/Account/AddPurchaseOrder.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxBZGRQdXJjaGFzZU9yZGVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/KSPBackUps/Live_KSPConsulting(11-02-25)Morning/packages/Live_ConsultingKSP/Views/Account/AddPurchasePerformaInvoice.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxBZGRQdXJjaGFzZVBlcmZvcm1hSW52b2ljZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/KSPBackUps/Live_KSPConsulting(11-02-25)Morning/packages/Live_ConsultingKSP/Views/Account/AddPurchaseQuotation.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxBZGRQdXJjaGFzZVF1b3RhdGlvbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/KSPBackUps/Live_KSPConsulting(11-02-25)Morning/packages/Live_ConsultingKSP/Views/Account/AddSaleInvoice.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxBZGRTYWxlSW52b2ljZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/KSPBackUps/Live_KSPConsulting(11-02-25)Morning/packages/Live_ConsultingKSP/Views/Account/AddSalesCustomerInquiry.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxBZGRTYWxlc0N1c3RvbWVySW5xdWlyeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/KSPBackUps/Live_KSPConsulting(11-02-25)Morning/packages/Live_ConsultingKSP/Views/Account/AddSalesOrder.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxBZGRTYWxlc09yZGVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/KSPBackUps/Live_KSPConsulting(11-02-25)Morning/packages/Live_ConsultingKSP/Views/Account/AddSalesPerfomaInvoice.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxBZGRTYWxlc1BlcmZvbWFJbnZvaWNlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/KSPBackUps/Live_KSPConsulting(11-02-25)Morning/packages/Live_ConsultingKSP/Views/Account/AddTaxCode.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxBZGRUYXhDb2RlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/KSPBackUps/Live_KSPConsulting(11-02-25)Morning/packages/Live_ConsultingKSP/Views/Account/AddTaxData.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxBZGRUYXhEYXRhLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/KSPBackUps/Live_KSPConsulting(11-02-25)Morning/packages/Live_ConsultingKSP/Views/Account/AddTaxGroup.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxBZGRUYXhHcm91cC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/KSPBackUps/Live_KSPConsulting(11-02-25)Morning/packages/Live_ConsultingKSP/Views/Account/AddTermsofPayment.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxBZGRUZXJtc29mUGF5bWVudC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/KSPBackUps/Live_KSPConsulting(11-02-25)Morning/packages/Live_ConsultingKSP/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/KSPBackUps/Live_KSPConsulting(11-02-25)Morning/packages/Live_ConsultingKSP/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 

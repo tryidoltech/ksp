@@ -1,0 +1,296 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sales Order Print</title>
+    <style>
+        font-face {
+            font-family: SohoGothicProBold;
+            src: url("Print/Font/SohoGothicPro-Bold.otf") format("opentype");
+        }
+
+        font-face {
+            font-family: SohoGothicProBoldItalic;
+            src: url("Print/Font/SohoGothicPro-BoldItalic.otf") format("opentype");
+        }
+
+        font-face {
+            font-family: SohoGothicProExtraBold;
+            src: url("Print/Font/SohoGothicPro-ExtraBold.otf") format("opentype");
+        }
+
+        font-face {
+            font-family: SohoGothicProExtraBoldIt;
+            src: url("Print/Font/SohoGothicPro-ExtraBoldIt.otf") format("opentype");
+        }
+
+        font-face {
+            font-family: SohoGothicProItalic;
+            src: url("Print/Font/SohoGothicPro-Italic.otf") format("opentype");
+        }
+
+        font-face {
+            font-family: SohoGothicProLight;
+            src: url("Print/Font/SohoGothicPro-Light.otf") format("opentype");
+        }
+
+        font-face {
+            font-family: SohoGothicProLightItalic;
+            src: url("Print/Font/SohoGothicPro-LightItalic.otf") format("opentype");
+        }
+
+        font-face {
+            font-family: SohoGothicProMedium;
+            src: url("Print/Font/SohoGothicPro-Medium.otf") format("opentype");
+        }
+
+        font-face {
+            font-family: SohoGothicProMediumIt;
+            src: url("Print/Font/SohoGothicPro-MediumIt.otf") format("opentype");
+        }
+
+        font-face {
+            font-family: SohoGothicProRegular;
+            src: url("Print/Font/SohoGothicPro-Regular.otf") format("opentype");
+        }
+
+        font-face {
+            font-family: SohoGothicProThin;
+            src: url("Print/Font/SohoGothicPro-Thin.otf") format("opentype");
+        }
+
+        font-face {
+            font-family: SohoGothicProThinItalic;
+            src: url("Print/Font/SohoGothicPro-ThinItalic.otf") format("opentype");
+        }
+
+        font-face {
+            font-family: SohoGothicProUltra;
+            src: url("Print/Font/SohoGothicPro-Ultra.otf") format("opentype");
+        }
+
+        font-face {
+            font-family: SohoGothicProUltraItalic;
+            src: url("Print/Font/SohoGothicPro-UltraItalic.otf") format("opentype");
+        }
+
+        .FontSGPBH1Title {
+            font-family: 'Rubik', sans-serif;
+            font-size: 12.5px;
+            color: #000000;
+        }
+
+        .FontSGPBH1Data {
+            font-family: 'Rubik', sans-serif;
+            font-size: 12.5px;
+            color: #000000;
+        }
+
+        .FontSGPBHeadTitle {
+            font-family: 'Rubik', sans-serif;
+            font-size: 15px;
+            color: #000000;
+        }
+
+        p, td {
+            margin: 0;
+            padding: 0;
+        }
+
+        .tblPay {
+            text-align: left;
+            padding-left: 5px;
+        }
+
+        .custome-bg {
+            background-color: #e6e7e9 !important;
+        }
+
+
+    </style>
+
+</head>
+<body style="height: 622.519685px; width: 793.7007874px;">
+    <div id="MultiPageSO">
+
+
+        <table style="width: 718.11023622px; margin-left: 1cm;border:1px solid #000" cellpadding="0" cellspacing="0">
+            <tr style="height: 10.236220472px;text-align: center;width:80px;background-color:#fff;">
+                <td class="FontSGPBH1Data" colspan="2" style="border:none;text-align:left;padding-left:10px">
+                    <img src="~/assets/images/new-logo/ksp-logo.png" style="width:auto;height:80px" />
+                </td>
+                <td class="FontSGPBH1Data" colspan="5" style="border:none;padding-right:10px;">
+                    <h3 class="FontSGPBHeadTitle" style="text-align:right;font-size:18px;color:#000;font-weight:600;padding-right:10px;">PURCHASE ORDER</h3>
+                </td>
+            </tr>
+        </table>
+        <table style="width: 718.11023622px; margin-left: 1cm;border: 1px solid #000000; border-top:none;" cellpadding="0" cellspacing="0">
+            <tr style="height: 50.236220472px">
+                <td class="FontSGPBH1Data" style="text-align: left; padding-left: 5px;border: 1px solid #000000;border-left:none;border-bottom:none;vertical-align:top;" colspan="4">
+                    <h5 style="font-size:13px;">Supplier's Name: KSP Consultancy</h5>
+                    <h5 style="font-size:13px;">Supplier's Address: India</h5>
+                </td>
+                <td class="FontSGPBH1Data" style="text-align: left; padding-left: 5px;border: 1px solid #000000;border-left:none;border-bottom:none;" colspan="4">
+                    <h5 style="font-size:13px;">Sales Order Number: 1212</h5>
+                    <h5 style="font-size:13px;">Mode & Terms of Payment: 50% Deposite</h5>
+                    <h5 style="font-size:13px;">Payment Type: Online</h5>
+                    <h5 style="font-size:13px;">Date: 20-Nov-2024</h5>
+                </td>
+            </tr>
+            <tr style="height: 50.236220472px">
+                <td class="FontSGPBH1Data" style="text-align: left; padding-left: 5px;border: 1px solid #000000;border-left:none;" colspan="4">
+                    <h5 style="font-size:13px;">Invoice To: KSP Consultancy</h5>
+                    <h5 style="font-size:13px;">Address of Buyer: India</h5>
+                </td>
+                <td class="FontSGPBH1Data" style="text-align: left; padding-left: 5px;border: 1px solid #000000;border-left:none;" colspan="4">
+                    <h5 style="font-size:13px;">Ship To: Moonbyte</h5>
+                    <h5 style="font-size:13px;">Delivery Address: India</h5>
+                </td>
+            </tr>
+
+        </table>
+        <table style="width: 718.11023622px; margin-left: 1cm;border:1px solid #000" cellpadding="0" cellspacing="0">
+            <tr style="height: 20.236220472px;background-color: #e34e25;color:#fff">
+                <th class="FontSGPBH1Data" style="text-align: center; padding-left: 5px;border:1px solid #000;border-left:none;border-bottom:none;width:200px;border-top:none;color:#fff;">
+                    Serial No.
+                </th>
+                <th class="FontSGPBH1Data" style="text-align: center; padding-left: 5px;border:1px solid #000;border-left:none;border-bottom:none;width:200px;border-top:none;color:#fff;">
+                    Description
+                </th>
+                <th class="FontSGPBH1Data" style="text-align: center; padding-left: 5px;border:1px solid #000;border-left:none;border-bottom:none;width:200px;border-top:none;color:#fff;">
+                    Code No.
+                </th>
+                <th class="FontSGPBH1Data" style="text-align: center; padding-left: 5px;border:1px solid #000;border-left:none;border-bottom:none;width:200px;border-top:none;color:#fff;">
+                    Quantity
+                </th>
+                <th class="FontSGPBH1Data" style="text-align: center; padding-left: 5px;border:1px solid #000;border-left:none;border-bottom:none;width:200px;border-top:none;color:#fff;">
+                    Unit Price
+                </th>
+                <th class="FontSGPBH1Data" style="text-align: center; padding-left: 5px;border:1px solid #000;border-left:none;border-bottom:none;width:200px;border-top:none;color:#fff;">
+                    Amount
+                </th>
+            </tr>
+            <tr style="height: 20.236220472px">
+                <td class="FontSGPBH1Data" style="text-align: center; padding-left: 5px;border: 1px solid #000000;border-left:none;border-bottom:none;">
+                    1011
+                </td>
+                <td class="FontSGPBH1Data" style="text-align: center; padding-left: 5px;border: 1px solid #000000;border-left:none;border-bottom:none;">
+                    Assembled PIV
+                </td>
+                <td class="FontSGPBH1Data" style="text-align: center; padding-left: 5px;border: 1px solid #000000;border-left:none;border-bottom:none;">
+                    232
+                </td>
+                <td class="FontSGPBH1Data" style="text-align: center; padding-left: 5px;border: 1px solid #000000;border-left:none;border-bottom:none;">
+                    20
+                </td>
+                <td class="FontSGPBH1Data" style="text-align: center; padding-left: 5px;border: 1px solid #000000;border-left:none;border-bottom:none;">
+                    1500.00
+                </td>
+                <td class="FontSGPBH1Data" style="text-align: center; padding-left: 5px;border: 1px solid #000000;border-left:none;border-bottom:none;">
+                    30,000.00
+                </td>
+            </tr>
+            <tr style="height: 20.236220472px">
+                <td class="FontSGPBH1Data" style="text-align: left; padding-left: 5px;border: 1px solid #000000;border-left:none;border-bottom:none;"></td>
+                <td class="FontSGPBH1Data" style="text-align: center; padding-left: 5px;border: 1px solid #000000;border-left:none;border-bottom:none;">
+                    Sub Total
+                </td>
+                <td class="FontSGPBH1Data" style="text-align: left; padding-left: 5px;border: 1px solid #000000;border-left:none;border-bottom:none;"></td>
+                <td class="FontSGPBH1Data" style="text-align: center; padding-left: 5px;border: 1px solid #000000;border-left:none;border-bottom:none;"></td>
+                <td class="FontSGPBH1Data" style="text-align: left; padding-left: 5px;border: 1px solid #000000;border-left:none;border-bottom:none;"></td>
+                <td class="FontSGPBH1Data" style="text-align: center; padding-left: 5px;border: 1px solid #000000;border-left:none;border-bottom:none;">
+                    30,000.00
+                </td>
+            </tr>
+            <tr style="height: 20.236220472px">
+                <td class="FontSGPBH1Data" style="text-align: left; padding-left: 5px;border: 1px solid #000000;border-left:none;border-bottom:none;"></td>
+                <td class="FontSGPBH1Data" style="text-align: center; padding-left: 5px;border: 1px solid #000000;border-left:none;border-bottom:none;">
+                    Discount
+                </td>
+                <td class="FontSGPBH1Data" style="text-align: left; padding-left: 5px;border: 1px solid #000000;border-left:none;border-bottom:none;"></td>
+                <td class="FontSGPBH1Data" style="text-align: center; padding-left: 5px;border: 1px solid #000000;border-left:none;border-bottom:none;"></td>
+                <td class="FontSGPBH1Data" style="text-align: left; padding-left: 5px;border: 1px solid #000000;border-left:none;border-bottom:none;"></td>
+                <td class="FontSGPBH1Data" style="text-align: center; padding-left: 5px;border: 1px solid #000000;border-left:none;border-bottom:none;">
+                    1500.00
+                </td>
+            </tr>
+            <tr style="height: 20.236220472px">
+                <td class="FontSGPBH1Data" style="text-align: left; padding-left: 5px;border: 1px solid #000000;border-left:none;border-bottom:none;"></td>
+                <td class="FontSGPBH1Data" style="text-align: center; padding-left: 5px;border: 1px solid #000000;border-left:none;border-bottom:none;">
+                    Total
+                </td>
+                <td class="FontSGPBH1Data" style="text-align: left; padding-left: 5px;border: 1px solid #000000;border-left:none;border-bottom:none;"></td>
+                <td class="FontSGPBH1Data" style="text-align: center; padding-left: 5px;border: 1px solid #000000;border-left:none;border-bottom:none;"></td>
+                <td class="FontSGPBH1Data" style="text-align: left; padding-left: 5px;border: 1px solid #000000;border-left:none;border-bottom:none;"></td>
+                <td class="FontSGPBH1Data" style="text-align: center; padding-left: 5px;border: 1px solid #000000;border-left:none;border-bottom:none;">
+                    28,500.00
+                </td>
+            </tr>
+            <tr style="height: 20.236220472px">
+                <td class="FontSGPBH1Data" style="text-align: left; padding-left: 5px;border: 1px solid #000000;border-left:none;border-bottom:none;"></td>
+                <td class="FontSGPBH1Data" style="text-align: center; padding-left: 5px;border: 1px solid #000000;border-left:none;border-bottom:none;">
+                    CGST
+                </td>
+                <td class="FontSGPBH1Data" style="text-align: left; padding-left: 5px;border: 1px solid #000000;border-left:none;border-bottom:none;"></td>
+                <td class="FontSGPBH1Data" style="text-align: center; padding-left: 5px;border: 1px solid #000000;border-left:none;border-bottom:none;"></td>
+                <td class="FontSGPBH1Data" style="text-align: left; padding-left: 5px;border: 1px solid #000000;border-left:none;border-bottom:none;"></td>
+                <td class="FontSGPBH1Data" style="text-align: center; padding-left: 5px;border: 1px solid #000000;border-left:none;border-bottom:none;">
+                    1000
+                </td>
+            </tr>
+            <tr style="height: 20.236220472px">
+                <td class="FontSGPBH1Data" style="text-align: left; padding-left: 5px;border: 1px solid #000000;border-left:none;border-bottom:none;"></td>
+                <td class="FontSGPBH1Data" style="text-align: center; padding-left: 5px;border: 1px solid #000000;border-left:none;border-bottom:none;">
+                    SGST
+                </td>
+                <td class="FontSGPBH1Data" style="text-align: left; padding-left: 5px;border: 1px solid #000000;border-left:none;border-bottom:none;"></td>
+                <td class="FontSGPBH1Data" style="text-align: center; padding-left: 5px;border: 1px solid #000000;border-left:none;border-bottom:none;"></td>
+                <td class="FontSGPBH1Data" style="text-align: left; padding-left: 5px;border: 1px solid #000000;border-left:none;border-bottom:none;"></td>
+                <td class="FontSGPBH1Data" style="text-align: center; padding-left: 5px;border: 1px solid #000000;border-left:none;border-bottom:none;">
+                    1000
+                </td>
+            </tr>
+            <tr style="height: 20.236220472px">
+                <td class="FontSGPBH1Data" style="text-align: left; padding-left: 5px;border: 1px solid #000000;border-left:none;border-bottom:none;"></td>
+                <td class="FontSGPBH1Data" style="text-align: center; padding-left: 5px;border: 1px solid #000000;border-left:none;border-bottom:none;">
+                    Grand Total
+                </td>
+                <td class="FontSGPBH1Data" style="text-align: left; padding-left: 5px;border: 1px solid #000000;border-left:none;border-bottom:none;"></td>
+                <td class="FontSGPBH1Data" style="text-align: center; padding-left: 5px;border: 1px solid #000000;border-left:none;border-bottom:none;"></td>
+                <td class="FontSGPBH1Data" style="text-align: left; padding-left: 5px;border: 1px solid #000000;border-left:none;border-bottom:none;"></td>
+                <td class="FontSGPBH1Data" style="text-align: center; padding-left: 5px;border: 1px solid #000000;border-left:none;border-bottom:none;">
+                    30,500.00
+                </td>
+            </tr>
+            <tr style="height: 20.236220472px">
+                <td class="FontSGPBH1Data" style="text-align: left; padding-left: 5px;border: 1px solid #000000;border-left:none;border-bottom:none;vertical-align:top;padding-top:5px;" colspan="3">
+                    Amount Chargeable (In Words)
+                    <h5 style="font-size:13px;margin-top:3px;">Thirty thousand five hundreds only</h5>
+                </td>
+                <td class="FontSGPBH1Data" style="text-align: left; padding-left: 5px;border: 1px solid #000000;border-left:none;border-bottom:none;vertical-align:top" colspan="3">
+                    <h5 style="margin-bottom:0px;margin-top:0px;padding-top:5px;font-size:13px;">Company's Bank Details</h5>
+                    <h5 style="margin-top:2px;margin-bottom:0px;font-size:13px;">Bank Name: HDFC Bank</h5>
+                    <h5 style="margin-top:2px;margin-bottom:0px;font-size:13px;">Account Number: 2342322445</h5>
+                    <h5 style="margin-top:2px;margin-bottom:0px;font-size:13px;">Branch & IFSC Code: Gotri 23423</h5>
+                </td>
+            </tr>
+            <tr style="height: 50.236220472px">
+                <td class="FontSGPBH1Data" style="text-align: right;border: 1px solid #000000;border-left:none;border-bottom:none;vertical-align:bottom;padding-bottom:5px;padding-right:10px;" colspan="6">
+                    <img src="~/assets/images/signature.png" style="width:auto;height:80px;" />
+                    Authorized Signatory
+                </td>
+            </tr>
+        </table>
+        <div class="modal-footer no-print">
+            <button type="button" class="btn btn-light custome-bg" data-bs-dismiss="modal" style="margin-left:80%; margin-top:2%;   background-color: #e6e7e9 ">Close</button>
+            <button type="button" class="btn btn-primary custome-bg ">Download</button>
+        </div>
+    </div>
+</body>
+</html>

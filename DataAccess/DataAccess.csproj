@@ -1,0 +1,600 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.5.1\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.5.1\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0F2D1849-19C7-4C4A-96DC-686CB1F5E1CD}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DataAccess</RootNamespace>
+    <AssemblyName>DataAccess</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Azure.Core, Version=1.35.0.0, Culture=neutral, PublicKeyToken=92742159e12e44c8, processorArchitecture=MSIL">
+      <HintPath>..\packages\Azure.Core.1.35.0\lib\net472\Azure.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Azure.Identity, Version=1.10.3.0, Culture=neutral, PublicKeyToken=92742159e12e44c8, processorArchitecture=MSIL">
+      <HintPath>..\packages\Azure.Identity.1.10.3\lib\netstandard2.0\Azure.Identity.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.5.1\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.5.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.1.1.1\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.SqlClient, Version=5.0.0.0, Culture=neutral, PublicKeyToken=23ec7fc2d6eaa4a5, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Data.SqlClient.5.1.5\lib\net462\Microsoft.Data.SqlClient.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.EntityFramework.SqlServer.6.5.1\lib\net462\Microsoft.EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Identity.Client, Version=4.56.0.0, Culture=neutral, PublicKeyToken=0a613f4dd989e8ae, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Identity.Client.4.56.0\lib\net461\Microsoft.Identity.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Identity.Client.Extensions.Msal, Version=4.56.0.0, Culture=neutral, PublicKeyToken=0a613f4dd989e8ae, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Identity.Client.Extensions.Msal.4.56.0\lib\netstandard2.0\Microsoft.Identity.Client.Extensions.Msal.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Abstractions, Version=6.35.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IdentityModel.Abstractions.6.35.0\lib\net472\Microsoft.IdentityModel.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.JsonWebTokens, Version=6.35.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IdentityModel.JsonWebTokens.6.35.0\lib\net472\Microsoft.IdentityModel.JsonWebTokens.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Logging, Version=6.35.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IdentityModel.Logging.6.35.0\lib\net472\Microsoft.IdentityModel.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Protocols, Version=6.35.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IdentityModel.Protocols.6.35.0\lib\net472\Microsoft.IdentityModel.Protocols.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Protocols.OpenIdConnect, Version=6.35.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IdentityModel.Protocols.OpenIdConnect.6.35.0\lib\net472\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Tokens, Version=6.35.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IdentityModel.Tokens.6.35.0\lib\net472\Microsoft.IdentityModel.Tokens.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.ConfigurationManager, Version=6.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Configuration.ConfigurationManager.6.0.1\lib\net461\System.Configuration.ConfigurationManager.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Data.SqlClient, Version=4.6.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SqlClient.4.9.0\lib\net462\System.Data.SqlClient.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=6.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Diagnostics.DiagnosticSource.6.0.1\lib\net461\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IdentityModel" />
+    <Reference Include="System.IdentityModel.Tokens.Jwt, Version=6.35.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IdentityModel.Tokens.Jwt.6.35.0\lib\net472\System.IdentityModel.Tokens.Jwt.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.FileSystem.AccessControl, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.FileSystem.AccessControl.5.0.0\lib\net461\System.IO.FileSystem.AccessControl.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Memory.Data, Version=1.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.Data.1.0.2\lib\net461\System.Memory.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.InteropServices.RuntimeInformation, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.InteropServices.RuntimeInformation.4.3.0\lib\net45\System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Security.AccessControl, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.AccessControl.6.0.0\lib\net461\System.Security.AccessControl.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.ProtectedData, Version=4.0.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.ProtectedData.4.7.0\lib\net461\System.Security.Cryptography.ProtectedData.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Permissions, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Permissions.6.0.0\lib\net461\System.Security.Permissions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Principal.Windows, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Principal.Windows.5.0.0\lib\net461\System.Security.Principal.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Text.Encodings.Web, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Encodings.Web.6.0.0\lib\net461\System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Json, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Json.4.7.2\lib\net461\System.Text.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Entities\ACSales_ManageInquiry.cs" />
+    <Compile Include="Entities\AC_AllowanceType.cs" />
+    <Compile Include="Entities\AC_CustomerMaster.cs" />
+    <Compile Include="Entities\AC_FinancialYear.cs" />
+    <Compile Include="Entities\AC_IncomeTaxMaster.cs" />
+    <Compile Include="Entities\AC_InvoiceSubTypeMaster.cs" />
+    <Compile Include="Entities\AC_InvoiceTypeCodeMaster.cs" />
+    <Compile Include="Entities\AC_InvoiceTypeMaster.cs" />
+    <Compile Include="Entities\AC_ITDeduction.cs" />
+    <Compile Include="Entities\AC_ItemGroup.cs" />
+    <Compile Include="Entities\AC_ItemMaster.cs" />
+    <Compile Include="Entities\AC_ITEmployeeParameter.cs" />
+    <Compile Include="Entities\AC_ITSubdeduction.cs" />
+    <Compile Include="Entities\AC_Language.cs" />
+    <Compile Include="Entities\AC_ModeOfPayment.cs" />
+    <Compile Include="Entities\AC_ModeOfTransport.cs" />
+    <Compile Include="Entities\AC_NomenClature.cs" />
+    <Compile Include="Entities\AC_PaymentMeansCode.cs" />
+    <Compile Include="Entities\AC_PaymentStatus.cs" />
+    <Compile Include="Entities\AC_Taxcode.cs" />
+    <Compile Include="Entities\AC_TaxData.cs" />
+    <Compile Include="Entities\AC_TaxGroup.cs" />
+    <Compile Include="Entities\AC_TermsOfPayment.cs" />
+    <Compile Include="Entities\AC_Unit.cs" />
+    <Compile Include="Entities\AC_VendorMaster.cs" />
+    <Compile Include="Entities\AppDbContext.cs" />
+    <Compile Include="Entities\BD_CommunicationHistory.cs" />
+    <Compile Include="Entities\BD_ReasearchCommunicationStatus.cs" />
+    <Compile Include="Entities\BD_ResearchAudience.cs" />
+    <Compile Include="Entities\BD_ResearchChannelType.cs" />
+    <Compile Include="Entities\BD_ResearchCommunicationMode.cs" />
+    <Compile Include="Entities\CompanySetup_EmailCredential.cs" />
+    <Compile Include="Entities\CompanySetup_EmailTemplate.cs" />
+    <Compile Include="Entities\ERSetup_CostCategory.cs" />
+    <Compile Include="Entities\ERSetup_CostCity.cs" />
+    <Compile Include="Entities\ERSetup_Currency.cs" />
+    <Compile Include="Entities\ERSetup_ExpenseEligibility.cs" />
+    <Compile Include="Entities\ERSetup_ExpenseLimit.cs" />
+    <Compile Include="Entities\ERSetup_WorkFlowInstance.cs" />
+    <Compile Include="Entities\ER_ExpenseDataRange.cs" />
+    <Compile Include="Entities\ER_ExpenseSubType.cs" />
+    <Compile Include="Entities\ER_ExpenseSubUnit.cs" />
+    <Compile Include="Entities\ER_ExpenseType.cs" />
+    <Compile Include="Entities\ER_ExpenseUnit.cs" />
+    <Compile Include="Entities\ER_HeadDesignation.cs" />
+    <Compile Include="Entities\ER_ManageReportDesignation.cs" />
+    <Compile Include="Entities\ER_RemarkTagMaster.cs" />
+    <Compile Include="Entities\ER_RemarkTemplate.cs" />
+    <Compile Include="Entities\ER_SubstituteExpense.cs" />
+    <Compile Include="Entities\HRAEmployeeSalary_SalaryParameter.cs" />
+    <Compile Include="Entities\HRAEmployeeSalary_SalaryPaySlip.cs" />
+    <Compile Include="Entities\HRAEmployee_LeaveAuthorization.cs" />
+    <Compile Include="Entities\HRAEmployee_WeekOff.cs" />
+    <Compile Include="Entities\HRAIncome_IncomeTax.cs" />
+    <Compile Include="Entities\HRAIncome_ITDeduction.cs" />
+    <Compile Include="Entities\HRAIncome_ITEmployeeParameter.cs" />
+    <Compile Include="Entities\HRA_AttendenceReport.cs" />
+    <Compile Include="Entities\HRA_DocumentNamingMaster.cs" />
+    <Compile Include="Entities\HRA_DocumentType.cs" />
+    <Compile Include="Entities\HRA_EmployeeType.cs" />
+    <Compile Include="Entities\HRA_LeaveStatus.cs" />
+    <Compile Include="Entities\HRA_LeaveTypeMaster.cs" />
+    <Compile Include="Entities\HRA_ManageLeave.cs" />
+    <Compile Include="Entities\HRA_Nominee.cs" />
+    <Compile Include="Entities\HRA_PaySlipCategory.cs" />
+    <Compile Include="Entities\HRA_ProfessionalTax.cs" />
+    <Compile Include="Entities\HRA_Shift.cs" />
+    <Compile Include="Entities\HRA_TaxRegime.cs" />
+    <Compile Include="Entities\HRA_WeekDay.cs" />
+    <Compile Include="Entities\Income_ITSubDeduction.cs" />
+    <Compile Include="Entities\Master_Asset.cs" />
+    <Compile Include="Entities\Master_BankACtype.cs" />
+    <Compile Include="Entities\Master_Banktype.cs" />
+    <Compile Include="Entities\Master_BloodGroup.cs" />
+    <Compile Include="Entities\Master_CategorTag.cs" />
+    <Compile Include="Entities\Master_Category.cs" />
+    <Compile Include="Entities\Master_City.cs" />
+    <Compile Include="Entities\Master_Company.cs" />
+    <Compile Include="Entities\Master_CompanyBranch.cs" />
+    <Compile Include="Entities\Master_CompanyType.cs" />
+    <Compile Include="Entities\Master_Country.cs" />
+    <Compile Include="Entities\Master_Department.cs" />
+    <Compile Include="Entities\Master_Designation.cs" />
+    <Compile Include="Entities\Master_DocumentCategory.cs" />
+    <Compile Include="Entities\Master_DocumentCategoryTag.cs" />
+    <Compile Include="Entities\Master_DocumentGrop.cs" />
+    <Compile Include="Entities\Master_Employee.cs" />
+    <Compile Include="Entities\Master_Employee_AssestsDetails.cs" />
+    <Compile Include="Entities\Master_Employee_DocumentSetup.cs" />
+    <Compile Include="Entities\Master_Employee_EducationDetails.cs" />
+    <Compile Include="Entities\Master_Employee_ExperienceDetail.cs" />
+    <Compile Include="Entities\Master_Employee_HR_Setup.cs" />
+    <Compile Include="Entities\Master_Employee_leaveAuthorisation.cs" />
+    <Compile Include="Entities\Master_Environment.cs" />
+    <Compile Include="Entities\Master_Gender.cs" />
+    <Compile Include="Entities\Master_Honorific.cs" />
+    <Compile Include="Entities\Master_Industry.cs" />
+    <Compile Include="Entities\Master_ManageBankDetail.cs" />
+    <Compile Include="Entities\Master_ManageDocument.cs" />
+    <Compile Include="Entities\Master_Marital.cs" />
+    <Compile Include="Entities\Master_Menu.cs" />
+    <Compile Include="Entities\Master_Nationality.cs" />
+    <Compile Include="Entities\Master_Service.cs" />
+    <Compile Include="Entities\Master_State.cs" />
+    <Compile Include="Entities\Master_User_MenuRight.cs" />
+    <Compile Include="Entities\Master_User_Role.cs" />
+    <Compile Include="Entities\Master_Year.cs" />
+    <Compile Include="Entities\MA_AuthAC.cs" />
+    <Compile Include="Entities\Project_CreateProject.cs" />
+    <Compile Include="Entities\Project_CreateProjectPhase.cs" />
+    <Compile Include="Entities\Project_CreateProjectStep.cs" />
+    <Compile Include="Entities\Project_ManageResourceCosting.cs" />
+    <Compile Include="Entities\Project_ManageTaskTimeLine.cs" />
+    <Compile Include="Entities\Project_ProjectCrendentials.cs" />
+    <Compile Include="Entities\Project_ProjectDocument.cs" />
+    <Compile Include="Entities\Project_ProjectMeeting.cs" />
+    <Compile Include="Entities\Project_ProjectMOM.cs" />
+    <Compile Include="Entities\Project_ProjectResources.cs" />
+    <Compile Include="Entities\Project_ProjectStatus.cs" />
+    <Compile Include="Entities\Project_ProjectTask.cs" />
+    <Compile Include="Entities\Research_ManageFilterData.cs" />
+    <Compile Include="Entities\Research_ManageResearchGroup.cs" />
+    <Compile Include="Entities\Research_UploadResearchData.cs" />
+    <Compile Include="Entities\Sales_ManagePositiveLead.cs" />
+    <Compile Include="Entities\SoleExpenceDetailMaster.cs" />
+    <Compile Include="Entities\SoleExpenceMaster.cs" />
+    <Compile Include="Entities\Timesheet_Header.cs" />
+    <Compile Include="Entities\Timesheet_Line.cs" />
+    <Compile Include="Entities\Website_BannerMaster.cs" />
+    <Compile Include="Entities\Website_BlogCategoryMaster.cs" />
+    <Compile Include="Entities\Website_BlogMaster.cs" />
+    <Compile Include="Entities\Website_CMSMaster.cs" />
+    <Compile Include="Entities\Website_CompanyBasicData.cs" />
+    <Compile Include="Entities\Website_PhotoGallery.cs" />
+    <Compile Include="Entities\Website_Servicecategory.cs" />
+    <Compile Include="Entities\Website_Testimonial.cs" />
+    <Compile Include="Entities\Website_VideoGallery.cs" />
+    <Compile Include="IService.cs" />
+    <Compile Include="Logic\ACSales_ManageInquiryLogic.cs" />
+    <Compile Include="Logic\AC_ITEmployeeParameterLogic.cs" />
+    <Compile Include="Logic\AC_ITSubdeductionLogic.cs" />
+    <Compile Include="Logic\AC_ITDeductionLogic.cs" />
+    <Compile Include="Logic\AC_IncomeTaxMasterLogic.cs" />
+    <Compile Include="Logic\ER_RemarkTagMasterLogic.cs" />
+    <Compile Include="Logic\Master_Employee_ExperienceDetailLogic.cs" />
+    <Compile Include="Logic\Master_Employee_AssestsDetailsLogic.cs" />
+    <Compile Include="Logic\Master_Employee_EducationDetailsLogic.cs" />
+    <Compile Include="Logic\Timesheet_HeaderLogic.cs" />
+    <Compile Include="Logic\Timesheet_LineLogic.cs" />
+    <Compile Include="Logic\Sales_ManagePositiveLeadLogic.cs" />
+    <Compile Include="Logic\Research_UploadResearchDataLogic.cs" />
+    <Compile Include="Logic\Research_ManageResearchGroupLogic.cs" />
+    <Compile Include="Logic\Research_ManageFilterDataLogic.cs" />
+    <Compile Include="Logic\Project_ProjectTaskLogic.cs" />
+    <Compile Include="Logic\Project_ProjectStatusLogic.cs" />
+    <Compile Include="Logic\Project_ProjectResourcesLogic.cs" />
+    <Compile Include="Logic\Project_ProjectMOMLogic.cs" />
+    <Compile Include="Logic\Project_ProjectMeetingLogic.cs" />
+    <Compile Include="Logic\Project_ProjectDocumentLogic.cs" />
+    <Compile Include="Logic\Project_ProjectCrendentialsLogic.cs" />
+    <Compile Include="Logic\Project_ManageTaskTimeLineLogic.cs" />
+    <Compile Include="Logic\Project_ManageResourceCostingLogic.cs" />
+    <Compile Include="Logic\Project_CreateProjectStepLogic.cs" />
+    <Compile Include="Logic\Project_CreateProjectPhaseLogic.cs" />
+    <Compile Include="Logic\Project_CreateProjectLogic.cs" />
+    <Compile Include="Logic\Master_UserRoleLogic.cs" />
+    <Compile Include="Logic\Master_UserMenuRightLogic.cs" />
+    <Compile Include="Logic\Master_MenuLogic.cs" />
+    <Compile Include="Logic\Master_EnvironmentLogic.cs" />
+    <Compile Include="Logic\Master_CountryLogic.cs" />
+    <Compile Include="Logic\Master_CompanyLogic.cs" />
+    <Compile Include="Logic\Master_YearLogic.cs" />
+    <Compile Include="Logic\Master_StateLogic.cs" />
+    <Compile Include="Logic\Master_ServiceLogic.cs" />
+    <Compile Include="Logic\Master_NationalityLogic.cs" />
+    <Compile Include="Logic\Master_MaritalLogic.cs" />
+    <Compile Include="Logic\Master_ManageDocumentLogic.cs" />
+    <Compile Include="Logic\Master_ManageBankDetailLogic.cs" />
+    <Compile Include="Logic\Master_IndustryLogic.cs" />
+    <Compile Include="Logic\Master_HonorificLogic.cs" />
+    <Compile Include="Logic\Master_GenderLogic.cs" />
+    <Compile Include="Logic\Master_Employee_leaveAuthorisationLogic.cs" />
+    <Compile Include="Logic\Master_Employee_DocumentSetupLogic.cs" />
+    <Compile Include="Logic\Master_EmployeeLogic.cs" />
+    <Compile Include="Logic\Master_DocumentGropLogic.cs" />
+    <Compile Include="Logic\Master_DocumentCategoryTagLogic.cs" />
+    <Compile Include="Logic\Master_DocumentCategoryLogic.cs" />
+    <Compile Include="Logic\Master_DesignationLogic.cs" />
+    <Compile Include="Logic\Master_DepartmentLogic.cs" />
+    <Compile Include="Logic\Master_CompanyTypeLogic.cs" />
+    <Compile Include="Logic\Master_CompanyBranchLogic.cs" />
+    <Compile Include="Logic\Master_CityLogic.cs" />
+    <Compile Include="Logic\Master_CategoryLogic.cs" />
+    <Compile Include="Logic\Master_CategorTagLogic.cs" />
+    <Compile Include="Logic\Master_BloodGroupLogic.cs" />
+    <Compile Include="Logic\Master_BanktypeLogic.cs" />
+    <Compile Include="Logic\Master_BankACtypeLogic.cs" />
+    <Compile Include="Logic\Master_AssetLogic.cs" />
+    <Compile Include="Logic\Income_ITSubDeductionLogic.cs" />
+    <Compile Include="Logic\HRAIncome_ITEmployeeParameterLogic.cs" />
+    <Compile Include="Logic\HRAIncome_ITDeductionLogic.cs" />
+    <Compile Include="Logic\HRAIncome_IncomeTaxLogic.cs" />
+    <Compile Include="Logic\HRAEmployeeSalary_SalaryPaySlipLogic.cs" />
+    <Compile Include="Logic\HRAEmployeeSalary_SalaryParameterLogic.cs" />
+    <Compile Include="Logic\HRAEmployee_WeekOffLogic.cs" />
+    <Compile Include="Logic\HRAEmployee_LeaveAuthorization.cs" />
+    <Compile Include="Logic\HRA_WeekDayLogic.cs" />
+    <Compile Include="Logic\HRA_TaxRegimeLogic.cs" />
+    <Compile Include="Logic\HRA_ShiftLogic.cs" />
+    <Compile Include="Logic\HRA_ProfessionalTaxLogic.cs" />
+    <Compile Include="Logic\HRA_PaySlipCategoryLogic.cs" />
+    <Compile Include="Logic\HRA_NomineeLogic.cs" />
+    <Compile Include="Logic\HRA_ManageLeaveLogic.cs" />
+    <Compile Include="Logic\HRA_LeaveTypeMasterLogic.cs" />
+    <Compile Include="Logic\HRA_EmployeeTypeLogic.cs" />
+    <Compile Include="Logic\HRA_DocumentTypeLogic.cs" />
+    <Compile Include="Logic\HRA_DocumentNamingMasterLogic.cs" />
+    <Compile Include="Logic\HRA_AttendenceReportLogic.cs" />
+    <Compile Include="Logic\ERSetup_WorkFlowInstanceLogic.cs" />
+    <Compile Include="Logic\ERSetup_ExpenseLimitLogic.cs" />
+    <Compile Include="Logic\ERSetup_ExpenseEligibilityLogic.cs" />
+    <Compile Include="Logic\ERSetup_CurrencyLogic.cs" />
+    <Compile Include="Logic\ERSetup_CostCityLogic.cs" />
+    <Compile Include="Logic\ERSetup_CostCategoryLogic.cs" />
+    <Compile Include="Logic\ER_SubstituteExpenseLogic.cs" />
+    <Compile Include="Logic\ER_RemarkTemplateLogic.cs" />
+    <Compile Include="Logic\ER_ManageReportDesignationLogic.cs" />
+    <Compile Include="Logic\ER_HeadDesignationLogic.cs" />
+    <Compile Include="Logic\ER_ExpenseUnitLogic.cs" />
+    <Compile Include="Logic\ER_ExpenseTypeLogic.cs" />
+    <Compile Include="Logic\ER_ExpenseSubUnitLogic.cs" />
+    <Compile Include="Logic\ER_ExpenseSubTypeLogic.cs" />
+    <Compile Include="Logic\ER_ExpenseDataRangeLogic.cs" />
+    <Compile Include="Logic\CompanySetup_EmailTemplateLogic.cs" />
+    <Compile Include="Logic\CompanySetup_EmailCredentialLogic.cs" />
+    <Compile Include="Logic\BD_ResearchCommunicationModeLogic.cs" />
+    <Compile Include="Logic\BD_ResearchChannelTypeLogic.cs" />
+    <Compile Include="Logic\BD_ResearchAudienceLogic.cs" />
+    <Compile Include="Logic\BD_ReasearchCommunicationStatusLogic.cs" />
+    <Compile Include="Logic\BD_CommunicationHistoryLogic.cs" />
+    <Compile Include="Logic\AC_VendorMasterLogic.cs" />
+    <Compile Include="Logic\AC_UnitLogic.cs" />
+    <Compile Include="Logic\AC_TermsOfPaymentLogic.cs" />
+    <Compile Include="Logic\AC_TaxGroupLogic.cs" />
+    <Compile Include="Logic\AC_TaxDataLogic.cs" />
+    <Compile Include="Logic\AC_TaxcodeLogic.cs" />
+    <Compile Include="Logic\AC_PaymentStatusLogic.cs" />
+    <Compile Include="Logic\AC_PaymentMeansCodeLogic.cs" />
+    <Compile Include="Logic\AC_NomenClatureLogic.cs" />
+    <Compile Include="Logic\AC_ModeOfTransportLogic.cs" />
+    <Compile Include="Logic\AC_ModeOfPaymentLogic.cs" />
+    <Compile Include="Logic\AC_LanguageRepository.cs" />
+    <Compile Include="Logic\AC_ItemMasterLogic.cs" />
+    <Compile Include="Logic\AC_ItemGroupLogic.cs" />
+    <Compile Include="Logic\AC_InvoiceTypeMasterLogic.cs" />
+    <Compile Include="Logic\AC_InvoiceTypeCodeMasterLogic.cs" />
+    <Compile Include="Logic\AC_InvoiceSubTypeMasterLogic.cs" />
+    <Compile Include="Logic\AC_CustomerMasterLogic.cs" />
+    <Compile Include="Logic\AC_AllowanceTypeLogic.cs" />
+    <Compile Include="Logic\AC_FinancialYearLogic.cs" />
+    <Compile Include="Model\ACInvoiceSubTypeModel.cs" />
+    <Compile Include="Model\ACInvoiceTypeCodeModel.cs" />
+    <Compile Include="Model\ErRemarkTemplateModel.cs" />
+    <Compile Include="Model\ERSubstituteExpenseModel.cs" />
+    <Compile Include="Model\ERCurrencyModel.cs" />
+    <Compile Include="Model\ERSetupWorkFlowInstanceModel.cs" />
+    <Compile Include="Model\ACSubITDeductionModel.cs" />
+    <Compile Include="Model\IncomeTaxMasterModel.cs" />
+    <Compile Include="Model\HRAEmployeeWeekOffModel.cs" />
+    <Compile Include="Model\ItemMasterModel.cs" />
+    <Compile Include="Model\ITEmployeeParameterModel.cs" />
+    <Compile Include="Model\ManageBankDetailsModel.cs" />
+    <Compile Include="Model\ManageResourceCostingModel.cs" />
+    <Compile Include="Model\HRALeaveAuthorizationModel.cs" />
+    <Compile Include="Model\CompanyBranchModel.cs" />
+    <Compile Include="Model\EmployeeModel.cs" />
+    <Compile Include="Model\CreateProjectModel.cs" />
+    <Compile Include="Model\CityModel.cs" />
+    <Compile Include="Model\ExpenseSubTypeModel.cs" />
+    <Compile Include="Model\ManagePageResourseModel.cs" />
+    <Compile Include="Model\MasterEmployeeLeaveAuthorizarionModel.cs" />
+    <Compile Include="Model\MenuRecordsModel.cs" />
+    <Compile Include="Model\BDReasearchCommunicationStatusModel.cs" />
+    <Compile Include="Model\NomenClatureModel.cs" />
+    <Compile Include="Model\ProjectCrendentialsModel.cs" />
+    <Compile Include="Model\ProjectDocumentModel.cs" />
+    <Compile Include="Model\ProjectPhaseModel.cs" />
+    <Compile Include="Model\ProjectProjectTaskModel.cs" />
+    <Compile Include="Model\ProjectStepModel.cs" />
+    <Compile Include="Model\ProjectTaskTimeModel.cs" />
+    <Compile Include="Model\StateModel.cs" />
+    <Compile Include="Model\TaxCodeModel.cs" />
+    <Compile Include="Model\TaxDataModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository\ACSales_ManageInquiryRepository.cs" />
+    <Compile Include="Repository\AC_ITEmployeeParameterRepository.cs" />
+    <Compile Include="Repository\AC_ITSubdeductionRepository.cs" />
+    <Compile Include="Repository\AC_ITDeductionRepository.cs" />
+    <Compile Include="Repository\AC_IncomeTaxMasterRepository.cs" />
+    <Compile Include="Repository\ER_RemarkTagMasterRepository.cs" />
+    <Compile Include="Repository\Master_Employee_AssestsDetailsRepository.cs" />
+    <Compile Include="Repository\Master_Employee_EducationDetailsRepository.cs" />
+    <Compile Include="Repository\Master_Employee_ExperienceDetailRepository.cs" />
+    <Compile Include="Repository\Timesheet_HeaderRepository.cs" />
+    <Compile Include="Repository\Timesheet_LineRepository.cs" />
+    <Compile Include="Repository\Sales_ManagePositiveLeadRepository.cs" />
+    <Compile Include="Repository\Research_UploadResearchDataRepository.cs" />
+    <Compile Include="Repository\Research_ManageResearchGroupRepository.cs" />
+    <Compile Include="Repository\Research_ManageFilterDataRepository.cs" />
+    <Compile Include="Repository\Project_ProjectTaskRepository.cs" />
+    <Compile Include="Repository\Project_ProjectStatusRepository.cs" />
+    <Compile Include="Repository\Project_ProjectResourcesRepository.cs" />
+    <Compile Include="Repository\Project_ProjectMOMRepository.cs" />
+    <Compile Include="Repository\Project_ProjectMeetingRepository.cs" />
+    <Compile Include="Repository\Project_ProjectDocumentRepository.cs" />
+    <Compile Include="Repository\Project_ProjectCrendentialsRepository.cs" />
+    <Compile Include="Repository\Project_ManageTaskTimeLineRepository.cs" />
+    <Compile Include="Repository\Project_ManageResourceCostingRepository.cs" />
+    <Compile Include="Repository\Project_CreateProjectStepRepository.cs" />
+    <Compile Include="Repository\Project_CreateProjectPhaseRepository.cs" />
+    <Compile Include="Repository\Project_CreateProjectRepository.cs" />
+    <Compile Include="Repository\Master_UserRoleRepository.cs" />
+    <Compile Include="Repository\Master_UserMenuRightRepository.cs" />
+    <Compile Include="Repository\Master_MenuRepository.cs" />
+    <Compile Include="Repository\Master_EnvironmentRepository.cs" />
+    <Compile Include="Repository\Master_CountryRepository.cs" />
+    <Compile Include="Repository\Master_CompanyRepository.cs" />
+    <Compile Include="Repository\Master_YearRepository.cs" />
+    <Compile Include="Repository\Master_StateRepository.cs" />
+    <Compile Include="Repository\Master_ServiceRepository.cs" />
+    <Compile Include="Repository\Master_NationalityRepository.cs" />
+    <Compile Include="Repository\Master_MaritalRepository.cs" />
+    <Compile Include="Repository\Master_ManageDocumentRepository.cs" />
+    <Compile Include="Repository\Master_ManageBankDetailRepository.cs" />
+    <Compile Include="Repository\Master_IndustryRepository.cs" />
+    <Compile Include="Repository\Master_HonorificRepository.cs" />
+    <Compile Include="Repository\Master_GenderRepository.cs" />
+    <Compile Include="Repository\Master_Employee_leaveAuthorisationRepository.cs" />
+    <Compile Include="Repository\Master_Employee_DocumentSetupRepository.cs" />
+    <Compile Include="Repository\Master_EmployeeRepository.cs" />
+    <Compile Include="Repository\Master_DocumentGropRepository.cs" />
+    <Compile Include="Repository\Master_DocumentCategoryTagRepository.cs" />
+    <Compile Include="Repository\Master_DocumentCategoryRepository.cs" />
+    <Compile Include="Repository\Master_DesignationRepository.cs" />
+    <Compile Include="Repository\Master_DepartmentRepository.cs" />
+    <Compile Include="Repository\Master_CompanyTypeRepository.cs" />
+    <Compile Include="Repository\Master_CompanyBranchRepository.cs" />
+    <Compile Include="Repository\Master_CityRepository.cs" />
+    <Compile Include="Repository\Master_CategoryRepository.cs" />
+    <Compile Include="Repository\Master_CategorTagRepository.cs" />
+    <Compile Include="Repository\Master_BloodGroupRepository.cs" />
+    <Compile Include="Repository\Master_BanktypeRepository.cs" />
+    <Compile Include="Repository\Master_BankACtypeRepository.cs" />
+    <Compile Include="Repository\Master_AssetRepository.cs" />
+    <Compile Include="Repository\Income_ITSubDeductionRepository.cs" />
+    <Compile Include="Repository\HRAIncome_ITEmployeeParameterRepository.cs" />
+    <Compile Include="Repository\HRAIncome_ITDeductionRepository.cs" />
+    <Compile Include="Repository\HRAIncome_IncomeTaxRepository.cs" />
+    <Compile Include="Repository\HRAEmployeeSalary_SalaryPaySlipRepository.cs" />
+    <Compile Include="Repository\HRAEmployeeSalary_SalaryParameterRepository.cs" />
+    <Compile Include="Repository\HRAEmployee_WeekOffRepository.cs" />
+    <Compile Include="Repository\HRAEmployee_LeaveAuthorizationRepository.cs" />
+    <Compile Include="Repository\HRA_WeekDayRepository.cs" />
+    <Compile Include="Repository\HRA_TaxRegimeRepository.cs" />
+    <Compile Include="Repository\HRA_ShiftRepository.cs" />
+    <Compile Include="Repository\HRA_ProfessionalTaxRepository.cs" />
+    <Compile Include="Repository\HRA_PaySlipCategoryRepository.cs" />
+    <Compile Include="Repository\HRA_NomineeRepository.cs" />
+    <Compile Include="Repository\HRA_ManageLeaveRepository.cs" />
+    <Compile Include="Repository\HRA_LeaveTypeMasterRepository.cs" />
+    <Compile Include="Repository\HRA_EmployeeTypeRepository.cs" />
+    <Compile Include="Repository\HRA_DocumentTypeRepository.cs" />
+    <Compile Include="Repository\HRA_DocumentNamingMasterRepository.cs" />
+    <Compile Include="Repository\HRA_AttendenceReportRepository.cs" />
+    <Compile Include="Repository\ERSetup_WorkFlowInstanceRepository.cs" />
+    <Compile Include="Repository\ERSetup_ExpenseLimitRepository.cs" />
+    <Compile Include="Repository\ERSetup_ExpenseEligibilityRepository.cs" />
+    <Compile Include="Repository\ERSetup_CurrencyRepository.cs" />
+    <Compile Include="Repository\ERSetup_CostCityRepository.cs" />
+    <Compile Include="Repository\ERSetup_CostCategoryRepository.cs" />
+    <Compile Include="Repository\ER_SubstituteExpenseRepository.cs" />
+    <Compile Include="Repository\ER_RemarkTemplateRepository.cs" />
+    <Compile Include="Repository\ER_ManageReportDesignationRepository.cs" />
+    <Compile Include="Repository\ER_HeadDesignationRepository.cs" />
+    <Compile Include="Repository\ER_ExpenseUnitRepository.cs" />
+    <Compile Include="Repository\ER_ExpenseTypeRepository.cs" />
+    <Compile Include="Repository\ER_ExpenseSubUnitRepository.cs" />
+    <Compile Include="Repository\ER_ExpenseSubTypeRepository.cs" />
+    <Compile Include="Repository\ER_ExpenseDataRangeRepository.cs" />
+    <Compile Include="Repository\CompanySetup_EmailTemplateRepository.cs" />
+    <Compile Include="Repository\CompanySetup_EmailCredentialRepository.cs" />
+    <Compile Include="Repository\BD_ResearchCommunicationModeRepository.cs" />
+    <Compile Include="Repository\BD_ResearchChannelTypeRepository.cs" />
+    <Compile Include="Repository\BD_ResearchAudienceRepository.cs" />
+    <Compile Include="Repository\BD_ReasearchCommunicationStatusRepository.cs" />
+    <Compile Include="Repository\BD_CommunicationHistoryRepository.cs" />
+    <Compile Include="Repository\AC_VendorMasterRepository.cs" />
+    <Compile Include="Repository\AC_UnitRepository.cs" />
+    <Compile Include="Repository\AC_TermsOfPaymentRepository.cs" />
+    <Compile Include="Repository\AC_TaxGroupRepository.cs" />
+    <Compile Include="Repository\AC_TaxDataRepository.cs" />
+    <Compile Include="Repository\AC_TaxcodeRepository.cs" />
+    <Compile Include="Repository\AC_PaymentStatusRepository.cs" />
+    <Compile Include="Repository\AC_PaymentMeansCodeRepository.cs" />
+    <Compile Include="Repository\AC_NomenClatureRepository.cs" />
+    <Compile Include="Repository\AC_ModeOfTransportRepository.cs" />
+    <Compile Include="Repository\AC_ModeOfPaymentRepository.cs" />
+    <Compile Include="Repository\AC_LanguageRepository.cs" />
+    <Compile Include="Repository\AC_ItemMasterRepository.cs" />
+    <Compile Include="Repository\AC_ItemGroupRepository.cs" />
+    <Compile Include="Repository\AC_InvoiceTypeMasterRepository.cs" />
+    <Compile Include="Repository\AC_InvoiceTypeCodeMasterRepository.cs" />
+    <Compile Include="Repository\AC_InvoiceSubTypeMasterRepository.cs" />
+    <Compile Include="Repository\AC_AllowanceTypeRepository.cs" />
+    <Compile Include="Repository\AC_CustomerMasterRepository.cs" />
+    <Compile Include="Repository\AC_FinancialYearRepository.cs" />
+    <Compile Include="Repository\IRepository.cs" />
+    <Compile Include="Repository\Repository.cs" />
+    <Compile Include="Service.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.5.1\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.5.1\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.5.1\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.5.1\build\EntityFramework.targets'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.Data.SqlClient.SNI.5.1.1\build\net462\Microsoft.Data.SqlClient.SNI.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Data.SqlClient.SNI.5.1.1\build\net462\Microsoft.Data.SqlClient.SNI.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.5.1\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.5.1\build\EntityFramework.targets')" />
+  <Import Project="..\packages\Microsoft.Data.SqlClient.SNI.5.1.1\build\net462\Microsoft.Data.SqlClient.SNI.targets" Condition="Exists('..\packages\Microsoft.Data.SqlClient.SNI.5.1.1\build\net462\Microsoft.Data.SqlClient.SNI.targets')" />
+</Project>

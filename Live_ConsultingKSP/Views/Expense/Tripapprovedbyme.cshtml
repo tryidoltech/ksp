@@ -1,0 +1,261 @@
+﻿<div class="page-content">
+    <div class="container-fluid">
+
+
+        <!--end row-->
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="card" id="CardData">
+                    <div class="card-header">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <h5 class="card-title mb-0">Trip Approval Expense</h5>
+                            </div>
+                            <!--<div class="col-md-1">
+                                <i class="bx bxs-pin float-end custom-icon-color"></i>
+                            </div>-->
+                            <div class="col-md-4">
+                                <a><i class="bx bxs-pin float-end custom-icon-color"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xxl-12">
+
+                        <div class="card" id="CardData">
+                            <div class="card-body">
+                                <!-- Nav tabs -->
+                                <ul class="nav nav-tabs nav-justified mb-3" role="tablist">
+                                    <li class="nav-item">
+                                        <a class="nav-link " href="@Url.Action("TripExpenseApproval", "Expense")" aria-selected="false">
+                                            Trip Expense to Approve
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link " href="@Url.Action("Mytripapprovedexpenses", "Expense")" aria-selected="false">
+                                            My Trip Approved Expenses
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="@Url.Action("Pendingtripapprovals", "Expense")" aria-selected="false">
+                                            Pending Trip Approval(My Expenses)
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="@Url.Action("Mytriprejectedexpenses", "Expense")" aria-selected="true">
+                                            My Trip Rejected Expenses
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link active" data-bs-toggle="tab" href="@Url.Action("Tripapprovedbyme", "Expense")" role="tab" aria-selected="true">
+                                            Trip Approved By Me Expenses
+                                        </a>
+                                    </li>
+
+                                </ul>
+                                <!-- Tab panes -->
+                                <div class="tab-content  text-muted">
+
+                                    <div class="tab-pane active" id="tripapprovedbyme" role="tabpanel">
+                                        <div class="card-body">
+                                            <div class="row gx-3 gy-2 align-items-center" style="padding-bottom:20px">
+                                                <div class="col-lg-3 col-sm-6 col-xs-12">
+                                                    <!-- <label class="form-label">Select Filter</label>-->
+                                                    <select class="form-select2 js-example-basic-single" data-choices data-choices-sorting="true" id="Filter">
+                                                        <option selected>- Select Project Name  -</option>
+                                                        <option value="">Project 1</option>
+                                                        <option value="">Project 2</option>
+
+                                                    </select>
+                                                </div>
+                                                <div class="col-lg-3 col-sm-6 col-xs-12">
+                                                    <a class="btn btn-primary">Search</a>
+                                                </div>
+
+                                            </div>
+                                            <div class="table-responsive">
+
+                                                <table id="tripapprovedbymetable" class="display table table-bordered"
+                                                       style="width:100%">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>Sr.No</th>
+
+
+                                                            <th>
+                                                                Eligibility
+                                                            </th>
+                                                            <th>UUID</th>
+                                                            <th>Project Name</th>
+                                                            <th>Project Task</th>
+                                                            <th>Employee By</th>
+                                                            <th>Trip Name</th>
+                                                            <th>Trip Code</th>
+                                                            <th>Date</th>
+
+                                                            <th>Document From | To Date</th>
+                                                            <th>Amount</th>
+                                                            <th>Trip Expense Details</th>
+                                                            <th>View Approval Detail</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>1.</td>
+
+
+                                                            <td>
+                                                                <i class="ri-flag-fill" style="color:red; font-size:18px;"></i>
+                                                                <i class="ri-flag-fill" style="color:maroon; font-size:18px;"></i>
+                                                            </td>
+                                                            <td>
+                                                                <a href="#">821aea56-3e4d-4c23-b580-1957e3038875</a>
+                                                            </td>
+                                                            <td>Project 1</td>
+                                                            <td>Task 1</td>
+                                                            <td>Prasad Ugale</td>
+                                                            <td><span class="badge bg-dark">TRP2024091694636</span></td>
+                                                            <td>
+                                                                Pune Business Review meeting
+                                                            </td>
+                                                            <td>
+                                                                <ul>
+                                                                    <li><span style="font-weight:700">From Place :</span>Thane</li>
+                                                                    <li><span style="font-weight:700">To Place :</span>Pune</li>
+                                                                </ul>
+                                                            </td>
+                                                            <td>
+                                                                <ul>
+                                                                    <li><span style="font-weight:700">From Date :</span>14-11-2024</li>
+                                                                    <li><span style="font-weight:700">To Date :</span>20-11-2024</li>
+                                                                </ul>
+                                                            </td>
+                                                            <td>₹730</td>
+
+                                                            <td><a href="ExpenseSlip.html" class="btn btn-sm btn-outline-dark "><i class="ri-eye-fill align-middle"></i></a>View Document/View Voucher</td>
+                                                            <td><a href="#" class="btn btn-sm btn-outline-dark" data-bs-toggle="modal" data-bs-target="#newfadeInRightModal"><i class="ri-eye-fill align-middle"></i></a></td>
+                                                        </tr>
+
+
+                                                    </tbody>
+                                                </table>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div><!-- end card-body -->
+                        </div><!-- end card -->
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- container-fluid -->
+</div>
+<div id="newfadeInRightModal" class="modal fade fadeInRight" tabindex="-1" aria-labelledby="fadeInRightModalLabel" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="newfadeInRightModal">View Detail</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <table class="display table table-bordered"
+                       style="width:100%">
+                    <thead>
+                        <tr>
+                            <th>Sr.No</th>
+                            <th>Action Date</th>
+                            <th>Entered By</th>
+                            <th>Status</th>
+                            <th>Remark By Approver</th>
+                            <th>Action Taken By</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>21/11/2024 10:31</td>
+                            <td>Prasad Ugale</td>
+                            <td><span class="badge bg-success">Approved</span></td>
+                            <td></td>
+                            <td>Madhukar Kaissary (Madhukar Kaissary-Head - After Sales (Head After Sales))</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>21/11/2024 11:44</td>
+                            <td>Prasad Ugale</td>
+                            <td><span class="badge bg-success">Approved</span></td>
+                            <td></td>
+                            <td>
+                                Makrand Thotam (Jay Virchand Soni /Makrand Thotam-Executive - Finance)
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>21/11/2024 14:07</td>
+                            <td>Prasad Ugale</td>
+                            <td><span class="badge bg-success">Approved</span></td>
+                            <td></td>
+                            <td>Shrenik Shah (Shrenik Shah-Sr.Manager - Finance)</td>
+                        </tr>
+
+
+                    </tbody>
+                </table>
+            </div>
+
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div>
+<!-- JAVASCRIPT -->
+<script src="~/assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="~/assets/libs/simplebar/simplebar.min.js"></script>
+<script src="~/assets/libs/node-waves/waves.min.js"></script>
+<script src="~/assets/libs/feather-icons/feather.min.js"></script>
+<script src="~/assets/js/pages/plugins/lord-icon-2.1.0.js"></script>
+<script src="~/assets/js/plugins.js"></script>
+
+<!-- list.js min js -->
+<script src="~/assets/libs/list.js/list.min.js"></script>
+
+<!--list pagination js-->
+<script src="~/assets/libs/list.pagination.js/list.pagination.min.js"></script>
+
+<!-- titcket init js -->
+<script src="~/assets/js/pages/tasks-list.init.js"></script>
+
+<!-- Sweet Alerts js -->
+<script src="~/assets/libs/sweetalert2/sweetalert2.min.js"></script>
+
+<!-- App js -->
+<script src="~/assets/js/app.js"></script>
+
+
+<script src="~/assets/js/jquery-3.6.0.min.js"></script>
+<script src="~/assets/js/jquery.dataTables.min.js"></script>
+<script src="~/assets/js/dataTables.bootstrap5.min.js"></script>
+<script src="~/assets/js/dataTables.responsive.min.js"></script>
+<script src="~/assets/js/dataTables.buttons.min.js"></script>
+<script src="~/assets/js/jszip.min.js"></script>
+<script src="~/assets/js/pdfmake.min.js"></script>
+<script src="~/assets/js/vfs_fonts.js"></script>
+<script src="~/assets/js/buttons.html5.min.js"></script>
+<script src="~/assets/js/buttons.print.min.js"></script>
+<script src="~/assets/js/select2.min.js"></script>
+<script src="~/assets/js/pages/select2.init.js"></script>
+<script>
+
+    $(document).ready(function () {
+        $('#tripapprovedbymetable').DataTable({
+            // dom: 'Bfrtip',
+            // responsive: true,
+            // buttons: [
+            //     'copy', 'csv', 'excel', 'pdf', 'print'
+            // ]
+        });
+    });
+
+</script>

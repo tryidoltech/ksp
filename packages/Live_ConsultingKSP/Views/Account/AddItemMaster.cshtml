@@ -1,0 +1,143 @@
+﻿<div class="page-content">
+    <div class="container-fluid">
+        <!-- start page title -->
+        <div class="row">
+            <div class="col-12">
+                <div class="page-title-box d-sm-flex align-items-center justify-content-between">
+                    <h4 class="mb-sm-0">Add Item</h4>
+                </div>
+            </div>
+        </div>
+        <!-- end page title -->
+
+
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="card">
+
+                    <div class="card-body">
+                        <div class="live-preview">
+
+                            <div class="row gx-3 gy-2 align-items-center">
+                                <div class="col-lg-3 col-sm-6 col-xs-12">
+                                    <label class="form-label">UUID<span class="start-lable" style="color: red">*</span></label>
+                                    <input type="text" class="form-control" placeholder="ab8a39cb-306e-4019-853a-b2e9579b3f7e" disabled>
+                                </div>
+                                <div class="col-lg-3 col-sm-6 col-xs-12">
+                                    <label class="form-label">Mode<span class="start-lable" style="color: red">*</span></label>
+                                    <select class="form-select2 js-example-basic-single" data-choices data-choices-sorting="true" id="itemmode">
+                                        <option selected>- Select Mode -</option>
+                                        <option value="1">Purchase</option>
+                                        <option value="2">Sales</option>
+                                    </select>
+                                </div>
+                                <div class="col-lg-3 col-sm-6 col-xs-12">
+                                    <label class="form-label">Item Group<span class="start-lable" style="color: red">*</span></label>
+                                    <a href="#"><i class="bx bx-reset float-end" style="border:1px solid #000;margin-right:5px;font-size:18px;padding:2px;border-radius:5px;color:#000;font-weight:500"></i></a>
+                                    <a href="AddItemGroup.html" target="_blank">
+                                        <i class="bx bx-plus float-end" style="border:1px solid #000;margin-right:5px;font-size:18px;padding:2px;border-radius:5px;color:#000;font-weight:500"></i>
+                                    </a>
+                                    <select class="form-select2 js-example-basic-single" data-choices data-choices-sorting="true" id="drpitemgrp">
+                                        <option selected>- Select Item Group -</option>
+                                        <option value="1">Cleaning</option>
+                                        <option value="2">Services</option>
+                                        <option value="3">Transportation</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-lg-3 col-sm-6 col-xs-12">
+                                    <label class="form-label">Item Name<span class="start-lable" style="color: red">*</span></label>
+                                    <input type="text" class="form-control" placeholder="eg.">
+                                </div>
+                                <div class="col-lg-3 col-sm-6 col-xs-12">
+                                    <label class="form-label">Purchase Unit<span class="start-lable" style="color: red">*</span></label>
+                                    <select class="form-select2 js-example-basic-single" data-choices data-choices-sorting="true" id="purchaseunit">
+                                        <option selected>- Select Purchase Unit -</option>
+                                        <option value="1">Pieces</option>
+                                    </select>
+                                </div>
+                                <div class="col-lg-3 col-sm-6 col-xs-12">
+                                    <label class="form-label">Item Code<span class="start-lable" style="color: red">*</span></label>
+                                    <input type="text" class="form-control" placeholder="eg.">
+                                </div>
+                                <div class="col-lg-3 col-sm-6 col-xs-12">
+                                    <label class="form-label">Sales Unit<span class="start-lable" style="color: red">*</span></label>
+                                    <select class="form-select2 js-example-basic-single" data-choices data-choices-sorting="true" id="salesunit">
+                                        <option selected>- Select Sales Unit -</option>
+                                        <option value="1">Pieces</option>
+                                    </select>
+                                </div>
+                                <div class="col-lg-3 col-sm-6 col-xs-12">
+                                    <label class="form-label">Description<span class="start-lable" style="color: red">*</span></label>
+                                    <input type="text" class="form-control" placeholder="eg.">
+                                </div>
+
+                                <div class="col-lg-3 col-sm-6 col-xs-12">
+                                    <label class="form-label">Pack Unit<span class="start-lable" style="color: red">*</span></label>
+                                    <select class="form-select2 js-example-basic-single" data-choices data-choices-sorting="true" id="packunit">
+                                        <option selected>- Select Pack Unit -</option>
+                                        <option value="1"></option>
+                                    </select>
+                                </div>
+                                <div class="col-lg-3 col-sm-6 col-xs-12">
+                                    <label class="form-label">HSN/SAC No.<span class="start-lable" style="color: red">*</span></label>
+                                    <input type="text" class="form-control" placeholder="eg.">
+                                </div>
+                                <div class="col-lg-3">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="">
+                                        <label class="form-check-label" for="">
+                                            Is Display
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-3 mt-5">
+                                    <a href="#" class="btn btn-primary " style="float:right;"> Submit</a>
+                                    <a href="#" class="btn btn-danger " style="float:right;margin-right:10px;"> Cancel</a>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+
+
+
+
+                </div>
+            </div> <!-- end col -->
+        </div>
+        <!--end row-->
+
+    </div> <!-- container-fluid -->
+</div>
+
+<!-- JAVASCRIPT -->
+<script src="~/assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="~/assets/libs/simplebar/simplebar.min.js"></script>
+<script src="~/assets/libs/node-waves/waves.min.js"></script>
+<script src="~/assets/libs/feather-icons/feather.min.js"></script>
+<script src="~/assets/js/pages/plugins/lord-icon-2.1.0.js"></script>
+<script src="~/assets/js/plugins.js"></script>
+<!-- prismjs plugin -->
+<script src="~/assets/libs/prismjs/prism.js"></script>
+<script src="~/assets/js/jquery-3.6.0.min.js"></script>
+<!--select2 cdn-->
+<script src="~/assets/js/select2.min.js"></script>
+            
+<script src="~/assets/js/pages/select2.init.js"></script>
+<script src="~/assets/js/app.js"></script>
+<script>
+    document.getElementById('hassubexpensetype').addEventListener('change', function () {
+        const multipleDiv = document.getElementById('unittype');
+        if (this.checked) {
+            multipleDiv.style.display = 'none'; // Hide the div
+        } else {
+            multipleDiv.style.display = 'block'; // Show the�div
+        }
+    });
+
+</script>

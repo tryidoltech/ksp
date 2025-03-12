@@ -1,0 +1,227 @@
+﻿<div class="page-content">
+    <div class="container-fluid">
+        <!-- start page title -->
+        <div class="row">
+            <div class="col-12">
+                <div class="page-title-box d-sm-flex align-items-center justify-content-between">
+                    <h4 class="mb-sm-0">Add Purchase Inquiry</h4>
+                </div>
+            </div>
+        </div>
+        <!-- end page title -->
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="card" id="frmCreate">
+                    <div class="card-header">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="page-title-box d-sm-flex align-items-center justify-content-between" style="padding:1rem 0rem 0rem">
+                                    <h4 class="mb-sm-0">Header</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="live-preview">
+                            <div class="row gx-3 gy-2 align-items-center">
+                                <div class="col-lg-2 col-sm-6 col-xs-12">
+                                    <label class="form-label">UUID<span class="start-lable" style="color: red">*</span></label>
+                                    <input type="text" class="form-control" placeholder="0e073e1b-3b3f-4ae2-8f77-5a48b52b3c6f" disabled>
+                                </div>
+
+                                <div class="col-lg-2 col-sm-6 col-xs-12">
+                                    <label class="form-label"> Currency Type<span class="start-lable" style="color: red">*</span></label>
+                                    <select class="form-select2 js-example-basic-single" data-choices data-choices-sorting="true" id="Currency">
+                                        <option selected>- Select Currency -</option>
+                                        <option value="1">Rupee</option>
+                                    </select>
+                                </div>
+                                <div class="col-lg-2 col-sm-6 col-xs-12">
+                                    <label class="form-label">Request Title<span class="start-lable" style="color: red">*</span></label>
+                                    <input type="text" class="form-control" placeholder="eg. ">
+                                </div>
+                                <div class="col-lg-2 col-sm-6 col-xs-12">
+                                    <label class="form-label">Requested Date<span class="start-lable" style="color: red">*</span></label>
+                                    <input type="date" class="form-control" placeholder="DD-MM-YY">
+                                </div>
+                                <div class="col-lg-2 col-sm-6 col-xs-12">
+                                    <label class="form-label">Expected Purchase Date<span class="start-lable" style="color: red">*</span></label>
+                                    <input type="date" class="form-control" placeholder="DD-MM-YY">
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-header">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="page-title-box d-sm-flex align-items-center justify-content-between" style="padding:1rem 0rem 0rem">
+                                    <h4 class="mb-sm-0">Line</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="live-preview">
+                            <div class="row gx-3 gy-2 align-items-center">
+                                <div class="col-lg-2 col-sm-6 col-xs-12">
+                                    <label class="form-label">Item Type<span class="start-lable" style="color: red">*</span></label>
+                                    <select class="form-select2 js-example-basic-single" data-choices data-choices-sorting="true" id="Type">
+                                        <option selected>- Select Item -</option>
+                                        <option value="1">Furniture</option>
+                                    </select>
+                                </div>
+                                <div class="col-lg-2 col-sm-6 col-xs-12">
+                                    <label class="form-label">Item Name<span class="start-lable" style="color: red">*</span></label>
+                                    <select class="form-select2 js-example-basic-single" data-choices data-choices-sorting="true" id="Name">
+                                        <option selected>- Select Item -</option>
+                                        <option value="1">Table</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-lg-2 col-sm-6 col-xs-12">
+                                    <label class="form-label">Quantity<span class="start-lable" style="color: red">*</span></label>
+                                    <input type="text" class="form-control" placeholder="eg. Auto fill">
+                                </div>
+                                <div class="col-lg-2 col-sm-6 col-xs-12">
+                                    <label class="form-label">Unit<span class="start-lable" style="color: red">*</span></label>
+                                    <select class="form-select2 js-example-basic-single" data-choices data-choices-sorting="true" id="Unit">
+                                        <option selected>- Select Unit -</option>
+                                        <option value="1">Miter</option>
+                                        <option value="1">Count</option>
+                                    </select>
+                                </div>
+                                <div class="col-lg-4" style="margin-top:36px">
+                                    <a href="#" class="btn btn-primary " style="float:right;"> Add</a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+
+                            <table id="buttons-datatables" class="display table table-bordered"
+                                   style="width:100%;">
+                                <thead>
+                                    <tr>
+                                        <th>Sr.No</th>
+                                        <th>Item </th>
+                                        <th>Quantity</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>
+                                            <ul>
+                                                <li><b>Item Type: </b>Furniture</li>
+                                                <li>
+                                                    <b>Name:</b>Chair
+                                                </li>
+
+                                            </ul>
+                                        </td>
+
+                                        <td>
+                                            10
+                                        </td>
+
+                                        <td>
+                                            <a id="AnchorAdd" runat="server" href="#"
+                                               class="btn btn-danger custom-class">
+                                                Edit
+                                            </a>
+                                            <a id="AnchorAdd" runat="server" href="#"
+                                               class="btn btn-danger custom-class">
+                                                Delete
+                                            </a>
+
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>
+                                            <ul>
+                                                <li><b>Item Type: </b>Furniture</li>
+                                                <li>
+                                                    <b>Name:</b>Table
+                                                </li>
+
+                                            </ul>
+                                        </td>
+
+                                        <td>
+                                            15
+                                        </td>
+
+                                        <td>
+                                            <a id="AnchorAdd" runat="server" href="#"
+                                               class="btn btn-danger custom-class">
+                                                Edit
+                                            </a>
+                                            <a id="AnchorAdd" runat="server" href="#"
+                                               class="btn btn-danger custom-class">
+                                                Delete
+                                            </a>
+
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="col-lg-12">
+                                <a href="#" class="btn btn-primary " style="float:right;"> Submit</a>
+                                <a href="#" class="btn btn-danger " style="float:right;margin-right:10px;"> Cancel</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" id="CardAccessDenied" style="display:none">
+                    <div class="w3-display-middle" style="margin-top:100px;">
+                        <h1 class="w3-jumbo w3-animate-top w3-center"><span style="color:#38454a">Access Denied</span></h1>
+                        <hr class="w3-border-white w3-animate-left" style="margin:auto;width:50%">
+                        <h3 class="w3-center w3-animate-right">You don't have Rights to Access this Page</h3>
+                        <h3 class="w3-center w3-animate-right">Kindly Contact Administrative</h3>
+                        <h3 class="w3-center w3-animate-zoom">🚫🚫🚫🚫</h3>
+                        <h6 class="w3-center w3-animate-zoom">error code:403 forbidden</h6>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div> <!-- end col -->
+    </div>
+    <!--end row-->
+
+</div>
+
+<!-- JAVASCRIPT -->
+<script src="~/assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="~/assets/libs/simplebar/simplebar.min.js"></script>
+<script src="~/assets/libs/node-waves/waves.min.js"></script>
+<script src="~/assets/libs/feather-icons/feather.min.js"></script>
+<script src="~/assets/js/pages/plugins/lord-icon-2.1.0.js"></script>
+<script src="~/assets/js/plugins.js"></script>
+<!-- prismjs plugin -->
+<script src="~/assets/libs/prismjs/prism.js"></script>
+<script src="~/assets/js/jquery-3.6.0.min.js"></script>
+<!--select2 cdn-->
+<script src="~/assets/js/select2.min.js"></script>
+             
+<script src="~/assets/js/pages/select2.init.js"></script>
+<script src="~/assets/js/app.js"></script>
+@* <script>
+    document.getElementById('hassubexpensetype').addEventListener('change', function () {
+        const multipleDiv = document.getElementById('unittype');
+        if (this.checked) {
+            multipleDiv.style.display = 'none'; // Hide the div
+        } else {
+            multipleDiv.style.display = 'block'; // Show the�div
+        }
+    });
+
+</script> *@

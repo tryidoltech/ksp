@@ -1,0 +1,354 @@
+﻿@* {
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model IEnumerable<Live_ConsultingKSP.Models.>
+
+@section Stylecss {
+    <style>
+
+        /* Overlay Styles */
+        .overlay {
+            display: none; /* Hidden by default */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+            z-index: 9999;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            display: flex; /* Flexbox to center the content */
+        }
+
+        /* Center the content inside the overlay */
+        .overlay-content {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 5px;
+            position: relative; /* Relative to its container */
+            max-width: 90%; /* Optional, to ensure content doesn't overflow */
+            max-height: 90%; /* Optional, to prevent overflow */
+            box-sizing: border-box; /* Ensure padding is included in width/height */
+        }
+    </style>
+}  *@
+
+<div class="page-content">
+                <div class="container-fluid">
+                    <!-- start page title -->
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="page-title-box d-sm-flex align-items-center justify-content-between">
+                                <h4 class="mb-sm-0">Manage Attendence</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end page title -->
+
+
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="card" id="CardData">
+
+                                <div class="card-body">
+                                    <div class="live-preview">
+
+                                        <div class="row gx-3 gy-2 align-items-center">
+
+                                            <div class="col-lg-3 col-sm-6 col-xs-12">
+                                                <label class="form-label">Attendence Type<span class="start-lable" style="color: red">*</span></label>
+                                                <select class="form-select2 js-example-basic-single" data-choices data-choices-sorting="true" id="drpattendence" Onchange="Ondropdownselect()">
+                                                    <option>- Select Attendence Type -</option>
+                                                    <option selected value="1">Single</option>
+                                                    <option value="2">Bulk</option>
+                                                </select>
+                                            </div>
+
+
+                                        </div>
+
+
+                                    </div>
+
+                                </div>
+                                <div id="single">
+                                    <div class="card-header">
+                                        <div class="row">
+                                            <div class="col-12">
+
+                                                <h4>Manage Single Attendence</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="live-preview">
+
+                                            <div class="row gx-3 gy-2 align-items-center">
+
+                                                <div class="col-lg-3 col-sm-6 col-xs-12">
+                                                    <label class="form-label">Employee<span class="start-lable" style="color: red">*</span></label>
+                                                    <select class="form-select2 js-example-basic-single" data-choices data-choices-sorting="true" id="employee">
+                                                        <option selected>- Select Employee -</option>
+                                                        <option value="1">Manan</option>
+                                                        <option value="2">Aakash</option>
+                                                    </select>
+                                                </div>
+
+
+                                                <div class="col-lg-3 col-sm-6 col-xs-12">
+                                                    <label class="form-label">Date<span class="start-lable" style="color: red">*</span></label>
+                                                    <input type="date" class="form-control" placeholder="eg. ">
+                                                </div>
+                                                <div class="col-lg-3 col-sm-6 col-xs-12">
+                                                    <label class="form-label">Day Type<span class="start-lable" style="color: red">*</span></label>
+                                                    <select class="form-select2 js-example-basic-single" data-choices data-choices-sorting="true" id="drpdaytype">
+                                                        <option selected>- Select Day Type -</option>
+                                                        <option value="1">Full Day</option>
+                                                        <option value="2">First Half</option>
+                                                        <option value="3">Second Half</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-lg-2 col-sm-6 col-xs-12">
+                                                    <label class="form-label">Format<span class="start-lable" style="color: red">*</span></label>
+
+                                                    <div style="padding-left:25px;">
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="absent1" checked>
+                                                            <label class="form-check-label" for="absent1">
+                                                                Absent
+                                                            </label>
+
+                                                        </div>
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="present1" checked>
+                                                            <label class="form-check-label" for="present1">
+                                                                Present
+                                                            </label>
+
+                                                        </div>
+
+                                                    </div>
+
+                                                </div>
+
+                                                <div class="col-lg-1 mt-5">
+                                                    <a href="#" class="btn btn-primary " style="float:right;">Submit</a>
+                                                </div>
+
+                                            </div>
+
+
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div id="multiple" style="display:none;">
+                                    <div class="card-header">
+                                        <div class="row">
+                                            <div class="col-12">
+
+                                                <h4>Manage Multiple Attendence</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="live-preview">
+
+                                            <div class="row gx-3 gy-2 align-items-center">
+
+
+                                                <div class="col-lg-3 col-sm-6 col-xs-12">
+                                                    <label class="form-label">Date<span class="start-lable" style="color: red">*</span></label>
+                                                    <input type="date" class="form-control" placeholder="eg. ">
+                                                </div>
+
+
+
+                                                <div class="col-lg-9 mt-5">
+                                                    <a href="#" class="btn btn-primary " style="float:right;">View</a>
+                                                </div>
+
+                                            </div>
+                                            <div class="row gx-3 gy-2 align-items-center mt-3">
+
+
+                                                <div class="table-responsive">
+
+                                                    <table id="buttons-datatables" class="display table table-bordered"
+                                                           style="width:100%">
+                                                        <thead>
+                                                            <tr>
+                                                                <th>
+                                                                    <div class="form-check">
+                                                                        <input class="form-check-input" type="checkbox" id="autoSizingCheck2">
+
+                                                                    </div>
+                                                                </th>
+                                                                <th>Employee Name</th>
+
+                                                                <th>Day Type</th>
+                                                                <th>Absent / Present</th>
+
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>
+                                                                    <div class="form-check">
+                                                                        <input class="form-check-input" type="checkbox" id="autoSizingCheck2">
+
+                                                                    </div>
+                                                                </td>
+
+                                                                <td>Aakash Patel</td>
+                                                                <td style="width:30%;">
+                                                                    <select class="form-select2 js-example-basic-single" data-choices data-choices-sorting="true" id="daytype">
+                                                                        <option selected>- Select Day Type -</option>
+                                                                        <option value="1">Full Day</option>
+                                                                        <option value="2">First Half</option>
+                                                                        <option value="3">Second Half</option>
+                                                                    </select>
+                                                                </td>
+
+                                                                <td>
+                                                                    <div style="padding-left:25px;">
+                                                                        <div class="form-check">
+                                                                            <input class="form-check-input" type="radio" name="absent" id="absent1" checked>
+                                                                            <label class="form-check-label" for="absent1">
+                                                                                Absent
+                                                                            </label>
+
+                                                                        </div>
+                                                                        <div class="form-check">
+                                                                            <input class="form-check-input" type="radio" name="absent" id="present1">
+                                                                            <label class="form-check-label" for="present1">
+                                                                                Present
+                                                                            </label>
+
+                                                                        </div>
+
+                                                                    </div>
+                                                                </td>
+
+                                                            </tr>
+
+
+                                                        </tbody>
+                                                    </table>
+
+                                                </div>
+
+                                                <div class="col-lg-12">
+                                                    <a href="#" class="btn btn-primary " style="float:right;">Submit</a>
+                                                    <a href="#" class="btn btn-dark " style="float:right; margin-right:5px;">Cancel</a>
+                                                </div>
+                                            </div>
+
+
+                                        </div>
+
+                                    </div>
+                                </div>
+
+
+
+
+                            </div>
+                             <div class="card" id="CardAccessDenied" style="display:none">
+                    <div class="w3-display-middle" style="margin-top:100px;">
+                        <h1 class="w3-jumbo w3-animate-top w3-center"><span style="color:#38454a">Access Denied</span></h1>
+                        <hr class="w3-border-white w3-animate-left" style="margin:auto;width:50%">
+                        <h3 class="w3-center w3-animate-right">You don't have Rights to Access this Page</h3>
+                        <h3 class="w3-center w3-animate-right">Kindly Contact Administrative</h3>
+                        <h3 class="w3-center w3-animate-zoom">🚫🚫🚫🚫</h3>
+                        <h6 class="w3-center w3-animate-zoom">error code:403 forbidden</h6>
+                    </div>
+                </div>
+                        </div> <!-- end col -->
+                    </div>
+                    <!--end row-->
+
+                </div> <!-- container-fluid -->
+            </div>        <!-- End Page-content -->
+@*
+<div id="overlay" class="overlay">
+    <div class="overlay-content">Please Wait...</div>
+</div> *@
+
+
+ <!-- JAVASCRIPT -->
+    <script src="~/assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="~/assets/libs/simplebar/simplebar.min.js"></script>
+    <script src="~/assets/libs/node-waves/waves.min.js"></script>
+    <script src="~/assets/libs/feather-icons/feather.min.js"></script>
+    <script src="~/assets/js/pages/plugins/lord-icon-2.1.0.js"></script>
+    <script src="~/assets/js/plugins.js"></script>
+
+    <!-- prismjs plugin -->
+    <script src="~/assets/libs/prismjs/prism.js"></script>
+
+    <!-- App js -->
+    <script src="~/assets/js/app.js"></script>
+    <!-- list.js min js -->
+    <script src="~/assets/libs/list.js/list.min.js"></script>
+
+    <!--list pagination js-->
+    <script src="~/assets/libs/list.pagination.js/list.pagination.min.js"></script>
+
+    <!-- titcket init js -->
+    <script src="~/assets/js/pages/tasks-list.init.js"></script>
+
+    <!-- Sweet Alerts js -->
+    <script src="~/assets/libs/sweetalert2/sweetalert2.min.js"></script>
+
+    <!-- App js -->
+    <script src="~/assets/js/app.js"></script>
+    <script>
+        function Ondropdownselect() {
+            const drpattendence = document.getElementById("drpattendence");
+            const single = document.getElementById("single");
+            const multiple = document.getElementById("multiple");
+
+            if (drpattendence.value === "1") {
+
+                single.style.display = 'block';
+                multiple.style.display = 'none';
+
+            } else if (drpattendence.value === "2") {
+                multiple.style.display = 'block';
+                single.style.display = 'none';
+            }
+
+        }
+
+    </script>
+
+     <script src="~/assets/js/jquery-3.6.0.min.js"></script>
+    <script src="~/assets/js/jquery.dataTables.min.js"></script>
+    <script src="~/assets/js/dataTables.bootstrap5.min.js"></script>
+    <script src="~/assets/js/dataTables.responsive.min.js"></script>
+    <script src="~/assets/js/dataTables.buttons.min.js"></script>
+    <script src="~/assets/js/jszip.min.js"></script>
+    <script src="~/assets/js/pdfmake.min.js"></script>
+    <script src="~/assets/js/vfs_fonts.js"></script>
+    <script src="~/assets/js/buttons.html5.min.js"></script>
+    <script src="~/assets/js/buttons.print.min.js"></script>
+    <script src="~/assets/js/jquery-3.6.0.min.js"></script>
+    <!--select2 cdn-->
+    <script src="~/assets/js/select2.min.js"></script>
+    <script src="~/assets/js/pages/select2.init.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('#buttons-datatables').DataTable({
+
+            });
+        });
+    </script>

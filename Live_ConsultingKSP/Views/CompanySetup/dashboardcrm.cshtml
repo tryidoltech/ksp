@@ -1,0 +1,844 @@
+﻿
+<!doctype html>
+<html lang="en" data-layout="horizontal" data-topbar="dark" data-sidebar-size="lg" data-sidebar="light" data-sidebar-image="none" data-preloader="disable">
+
+<head>
+    <meta charset="utf-8" />
+    <title>ERP || KSP Consulting</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="" name="description" />
+    <meta name="author" />
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="assets/images/new-logo/favi.png">
+    <!-- Layout config Js -->
+    <script src="assets/js/layout.js"></script>
+    <!-- Bootstrap Css -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <!-- Icons Css -->
+    <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+    <!-- App Css-->
+    <link href="assets/css/app.min.css" rel="stylesheet" type="text/css" />
+    <!-- custom Css-->
+    <link href="assets/css/custom.min.css" rel="stylesheet" type="text/css" />
+
+</head>
+<body>
+    <!-- Begin page -->
+    <div id="layout-wrapper">
+        <div w3-include-html="/Views/Shared/header.html"> </div>
+        <!-- Left Sidebar End -->
+        <!-- Vertical Overlay-->
+        <div class="vertical-overlay"></div>
+        <!-- ============================================================== -->
+        <!-- Start right Content here -->
+        <!-- ============================================================== -->
+        <div class="main-content">
+            <div class="page-content">
+                <div class="container-fluid">
+                    <!-- start page title -->
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="page-title-box d-sm-flex align-items-center justify-content-between">
+                                <h4 class="mb-sm-0">Daily Dashboard</h4>
+                                <div class="page-title-right">
+
+                                    <ol class="breadcrumb m-0">
+                                        <li class="breadcrumb-item"><a href="dashboard-crm.html"><i class="bx bxs-dashboard"></i>&nbsp; Dashboard</a></li>
+                                        <li class="breadcrumb-item active">Daily Dashboard</li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end page title -->
+                    <div class="row">
+
+
+                        <div class="col-xl-7">
+                            <div class="card card-height-100">
+                                <div class="card-header align-items-center d-flex">
+                                    <h4 class="card-title mb-0 flex-grow-1 py-1">Today's Task</h4>
+                                    <div class="flex-shrink-0">
+                                        <div class="dropdown card-header-dropdown">
+                                            <a class="text-reset dropdown-btn" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <span class="text-muted">All Tasks <i class="mdi mdi-chevron-down ms-1"></i></span>
+                                            </a>
+                                            <div class="dropdown-menu dropdown-menu-end">
+                                                <a class="dropdown-item" href="#">All Tasks</a>
+                                                <a class="dropdown-item" href="#">Completed </a>
+                                                <a class="dropdown-item" href="#">Inprogress</a>
+                                                <a class="dropdown-item" href="#">Pending</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div><!-- end card header -->
+                                <div class="card-body">
+                                    <div class="table-responsive table-card">
+                                        <table class="table table-borderless table-nowrap table-centered align-middle mb-0">
+                                            <thead class="table-light text-muted">
+                                                <tr>
+                                                    <th scope="col">Name</th>
+                                                    <th scope="col">Deadline</th>
+                                                    <th scope="col">Status</th>
+                                                    <th scope="col">Assign</th>
+                                                </tr>
+                                            </thead><!-- end thead -->
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <div class="form-check">
+                                                            <input class="form-check-input fs-15" type="checkbox" value="" id="checkTask1">
+                                                            <label class="form-check-label ms-1" for="checkTask1">
+                                                                Create new Admin Template
+                                                            </label>
+                                                        </div>
+                                                    </td>
+                                                    <td class="text-muted">03 Nov 2021</td>
+                                                    <td><span class="badge bg-success-subtle text-success">Completed</span></td>
+                                                    <td>
+                                                        kaushal Patel
+                                                    </td>
+                                                </tr><!-- end -->
+                                                <tr>
+                                                    <td>
+                                                        <div class="form-check">
+                                                            <input class="form-check-input fs-15" type="checkbox" value="" id="checkTask2">
+                                                            <label class="form-check-label ms-1" for="checkTask2">
+                                                                Marketing Coordinator
+                                                            </label>
+                                                        </div>
+                                                    </td>
+                                                    <td class="text-muted">17 Nov 2021</td>
+                                                    <td><span class="badge bg-warning-subtle text-warning">Progress</span></td>
+                                                    <td>
+                                                        kaushal Patel
+                                                    </td>
+                                                </tr><!-- end -->
+                                                <tr>
+                                                    <td>
+                                                        <div class="form-check">
+                                                            <input class="form-check-input fs-15" type="checkbox" value="" id="checkTask3">
+                                                            <label class="form-check-label ms-1" for="checkTask3">
+                                                                Administrative Analyst
+                                                            </label>
+                                                        </div>
+                                                    </td>
+                                                    <td class="text-muted">26 Nov 2021</td>
+                                                    <td><span class="badge bg-success-subtle text-success">Completed</span></td>
+                                                    <td>
+                                                        kaushal Patel
+                                                    </td>
+                                                </tr><!-- end -->
+                                                <tr>
+                                                    <td>
+                                                        <div class="form-check">
+                                                            <input class="form-check-input fs-15" type="checkbox" value="" id="checkTask4">
+                                                            <label class="form-check-label ms-1" for="checkTask4">
+                                                                E-commerce Landing Page
+                                                            </label>
+                                                        </div>
+                                                    </td>
+                                                    <td class="text-muted">10 Dec 2021</td>
+                                                    <td><span class="badge bg-danger-subtle text-danger">Pending</span></td>
+                                                    <td>
+                                                        kaushal Patel
+                                                    </td>
+                                                </tr><!-- end -->
+                                                <tr>
+                                                    <td>
+                                                        <div class="form-check">
+                                                            <input class="form-check-input fs-15" type="checkbox" value="" id="checkTask5">
+                                                            <label class="form-check-label ms-1" for="checkTask5">
+                                                                UI/UX Design
+                                                            </label>
+                                                        </div>
+                                                    </td>
+                                                    <td class="text-muted">22 Dec 2021</td>
+                                                    <td><span class="badge bg-warning-subtle text-warning">Progress</span></td>
+                                                    <td>
+                                                        kaushal Patel
+                                                    </td>
+                                                </tr><!-- end -->
+                                                <tr>
+                                                    <td>
+                                                        <div class="form-check">
+                                                            <input class="form-check-input fs-15" type="checkbox" value="" id="checkTask6">
+                                                            <label class="form-check-label ms-1" for="checkTask6">
+                                                                Projects Design
+                                                            </label>
+                                                        </div>
+                                                    </td>
+                                                    <td class="text-muted">31 Dec 2021</td>
+                                                    <td><span class="badge bg-danger-subtle text-danger">Pending</span></td>
+                                                    <td>
+                                                        kaushal Patel
+                                                    </td>
+                                                </tr><!-- end -->
+                                            </tbody><!-- end tbody -->
+                                        </table><!-- end table -->
+                                    </div>
+                                    <div class="mt-3 text-center">
+                                        <a href="javascript:void(0);" class="text-muted text-decoration-underline">
+                                            Load
+                                            More
+                                        </a>
+                                    </div>
+                                </div><!-- end cardbody -->
+                            </div><!-- end card -->
+                        </div><!-- end col -->
+                        <div class="col-xl-5">
+                            <div class="card card-height-100">
+
+                                <div class="card-header">
+                                    <h4 class="card-title mb-0">Notice Board</h4>
+                                </div><!-- end card header -->
+
+                                <div class="card-body">
+
+
+                                    <div class="mx-n3">
+                                        <div data-simplebar="init" data-simplebar-auto-hide="false" data-simplebar-track="dark" style="max-height: 319px;" class="simplebar-scrollable-y">
+                                            <div class="simplebar-wrapper" style="margin: 0px;">
+                                                <div class="simplebar-height-auto-observer-wrapper"><div class="simplebar-height-auto-observer"></div></div><div class="simplebar-mask">
+                                                    <div class="simplebar-offset" style="right: 0px; bottom: 0px;">
+                                                        <div class="simplebar-content-wrapper" tabindex="0" role="region" aria-label="scrollable content" style="height: auto; overflow: hidden scroll;">
+
+
+                                                            <div class="simplebar-content" style="padding: 0px;">
+                                                                <marquee behavior="scroll" scrollamount="4" direction="Up" onmouseover="this.stop();" onmouseout="this.start();">
+
+
+                                                                    <ul class="list-group list-group-flush">
+                                                                        <li class="list-group-item">
+                                                                            <div>
+                                                                                <div class="d-flex align-items-start">
+                                                                                    <div class="flex-grow-1">
+                                                                                        For, Divya Chauhan
+                                                                                    </div>
+                                                                                    <div class="flex-shrink-0">
+                                                                                        <p class="text-muted fs-13">12 Jul, 21</p>
+                                                                                    </div>
+                                                                                </div>
+
+                                                                                <p class="text-muted mb-4">It will be as simple as in fact, It will seem like simplified</p>
+                                                                                <div class="d-flex align-items-start">
+                                                                                    <div class="flex-grow-1">
+                                                                                        <h5 class="fs-13 mb-0">Admin</h5>
+                                                                                    </div>
+
+
+                                                                                </div>
+                                                                            </div>
+                                                                        </li>
+                                                                        <li class="list-group-item">
+                                                                            <div>
+                                                                                <div class="d-flex align-items-start">
+                                                                                    <div class="flex-grow-1">
+                                                                                        For, Divya Chauhan
+                                                                                    </div>
+                                                                                    <div class="flex-shrink-0">
+                                                                                        <p class="text-muted fs-13">12 Jul, 21</p>
+                                                                                    </div>
+                                                                                </div>
+
+                                                                                <p class="text-muted mb-4">It will be as simple as in fact, It will seem like simplified</p>
+                                                                                <div class="d-flex align-items-start">
+                                                                                    <div class="flex-grow-1">
+                                                                                        <h5 class="fs-13 mb-0">Admin</h5>
+                                                                                    </div>
+
+
+                                                                                </div>
+                                                                            </div>
+                                                                        </li>
+
+                                                                        <li class="list-group-item">
+                                                                            <div>
+                                                                                <div class="d-flex align-items-start">
+                                                                                    <div class="flex-grow-1">
+                                                                                        For, Divya Chauhan
+                                                                                    </div>
+                                                                                    <div class="flex-shrink-0">
+                                                                                        <p class="text-muted fs-13">12 Jul, 21</p>
+                                                                                    </div>
+                                                                                </div>
+
+                                                                                <p class="text-muted mb-4">It will be as simple as in fact, It will seem like simplified</p>
+                                                                                <div class="d-flex align-items-start">
+                                                                                    <div class="flex-grow-1">
+                                                                                        <h5 class="fs-13 mb-0">Admin</h5>
+                                                                                    </div>
+
+
+                                                                                </div>
+                                                                            </div>
+                                                                        </li>
+
+
+
+                                                                    </ul>
+                                                                </marquee>
+
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="simplebar-placeholder" style="width: 475px; height: 519px;"></div>
+                                            </div>
+                                            <div class="simplebar-track simplebar-horizontal" style="visibility: hidden;">
+                                                <div class="simplebar-scrollbar simplebar-visible" style="width: 0px; display: none;">
+                                                </div>
+                                            </div><div class="simplebar-track simplebar-vertical" style="visibility: visible;">
+                                                <div class="simplebar-scrollbar simplebar-visible" style="height: 93px; transform: translate3d(0px, 127px, 0px); display: block;">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div><!-- end card-body -->
+                            </div><!-- end card -->
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <div class="card" id="CardData">
+                                <div class="card-header align-items-center d-flex">
+                                    <h4 class="card-title mb-0 flex-grow-1">Upcoming Leaves</h4>
+                                    <div class="flex-shrink-0">
+                                        <div class="dropdown card-header-dropdown">
+                                            <a class="text-reset dropdown-btn" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <span class="text-muted fs-18"><i class="mdi mdi-dots-vertical"></i></span>
+                                            </a>
+                                            <div class="dropdown-menu dropdown-menu-end">
+                                                <a class="dropdown-item" href="#">Edit</a>
+                                                <a class="dropdown-item" href="#">Remove</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div><!-- end card header -->
+                                <div class="card-body pt-0">
+                                    <ul class="list-group list-group-flush border-dashed">
+                                        <li class="list-group-item ps-0">
+                                            <div class="row align-items-center g-3">
+                                                <div class="col-auto">
+                                                    <div class="avatar-sm p-1 py-2 h-auto bg-light rounded-3">
+                                                        <div class="text-center">
+                                                            <h5 class="mb-0">25</h5>
+                                                            <div class="text-muted">Tue</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col">
+
+                                                    <a href="#" class="text-reset fs-14 mb-0">Emergency Leaves</a>
+
+                                                </div>
+                                                <div class="col-auto">
+                                                    <div class="badge badge-label bg-dark"><i class="mdi mdi-circle-medium"></i> 10-12-2023</div>
+                                                </div>
+                                            </div>
+                                            <!-- end row -->
+                                        </li><!-- end -->
+                                        <li class="list-group-item ps-0">
+                                            <div class="row align-items-center g-3">
+                                                <div class="col-auto">
+                                                    <div class="avatar-sm p-1 py-2 h-auto bg-light rounded-3">
+                                                        <div class="text-center">
+                                                            <h5 class="mb-0">20</h5>
+                                                            <div class="text-muted">Wed</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col">
+
+                                                    <a href="#" class="text-reset fs-14 mb-0">Personal Leaves</a>
+
+                                                </div>
+                                                <div class="col-auto">
+                                                    <div class="badge badge-label bg-dark"><i class="mdi mdi-circle-medium"></i> 10-12-2023</div>
+                                                </div>
+                                            </div>
+
+
+
+
+                                        </li>
+                                        <li class="list-group-item ps-0">
+                                            <div class="row align-items-center g-3">
+                                                <div class="col-auto">
+                                                    <div class="avatar-sm p-1 py-2 h-auto bg-light rounded-3">
+                                                        <div class="text-center">
+                                                            <h5 class="mb-0">17</h5>
+                                                            <div class="text-muted">Wed</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col">
+
+                                                    <a href="#" class="text-reset fs-14 mb-0">Family Function</a>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <div class="badge badge-label bg-dark"><i class="mdi mdi-circle-medium"></i> 10-12-2023</div>
+                                                </div>
+                                            </div>
+                                            <!-- end row -->
+                                        </li><!-- end -->
+
+                                    </ul><!-- end -->
+                                    <div class="align-items-center mt-2 row g-3 text-center text-sm-start">
+                                        <div class="col-sm">
+                                            <div class="text-muted">
+                                                Showing<span class="fw-semibold">4</span> of <span class="fw-semibold">125</span> Results
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-auto">
+                                            <ul class="pagination pagination-separated pagination-sm justify-content-center justify-content-sm-start mb-0">
+                                                <li class="page-item disabled">
+                                                    <a href="#" class="page-link">←</a>
+                                                </li>
+                                                <li class="page-item">
+                                                    <a href="#" class="page-link">1</a>
+                                                </li>
+                                                <li class="page-item active">
+                                                    <a href="#" class="page-link">2</a>
+                                                </li>
+                                                <li class="page-item">
+                                                    <a href="#" class="page-link">3</a>
+                                                </li>
+                                                <li class="page-item">
+                                                    <a href="#" class="page-link">→</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div><!-- end card body -->
+                            </div><!-- end card -->
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="card" id="CardData">
+                                <div class="card-header align-items-center d-flex">
+                                    <h4 class="card-title mb-0 flex-grow-1">Upcoming Birthday</h4>
+                                    <div class="flex-shrink-0">
+                                        <div class="dropdown card-header-dropdown">
+                                            <a class="text-reset dropdown-btn" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <span class="text-muted fs-18"><i class="mdi mdi-dots-vertical"></i></span>
+                                            </a>
+                                            <div class="dropdown-menu dropdown-menu-end">
+                                                <a class="dropdown-item" href="#">Edit</a>
+                                                <a class="dropdown-item" href="#">Remove</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div><!-- end card header -->
+                                <div class="card-body pt-0">
+                                    <ul class="list-group list-group-flush border-dashed">
+                                        <li class="list-group-item ps-0">
+                                            <div class="row align-items-center g-3">
+                                                <div class="col-auto">
+                                                    <div class="avatar-sm p-1 py-2 h-auto bg-light rounded-3">
+                                                        <div class="text-center">
+                                                            <h5 class="mb-0">25</h5>
+                                                            <div class="text-muted">Tue</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col">
+
+                                                    <a href="#" class="text-reset fs-14 mb-0">Divya Chauhan</a>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <div class="badge badge-label bg-dark"><i class="mdi mdi-circle-medium"></i> 10-12-2023</div>
+                                                </div>
+
+                                            </div>
+                                            <!-- end row -->
+                                        </li><!-- end -->
+                                        <li class="list-group-item ps-0">
+                                            <div class="row align-items-center g-3">
+                                                <div class="col-auto">
+                                                    <div class="avatar-sm p-1 py-2 h-auto bg-light rounded-3">
+                                                        <div class="text-center">
+                                                            <h5 class="mb-0">20</h5>
+                                                            <div class="text-muted">Wed</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col">
+
+                                                    <a href="#" class="text-reset fs-14 mb-0">Dhruna Patel</a>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <div class="badge badge-label bg-dark"><i class="mdi mdi-circle-medium"></i> 10-12-2023</div>
+                                                </div>
+                                            </div>
+                                            <!-- end row -->
+                                        </li><!-- end -->
+                                        <li class="list-group-item ps-0">
+                                            <div class="row align-items-center g-3">
+                                                <div class="col-auto">
+                                                    <div class="avatar-sm p-1 py-2 h-auto bg-light rounded-3">
+                                                        <div class="text-center">
+                                                            <h5 class="mb-0">17</h5>
+                                                            <div class="text-muted">Wed</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col">
+
+                                                    <a href="#" class="text-reset fs-14 mb-0">Kalpesh Rathod</a>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <div class="badge badge-label bg-dark"><i class="mdi mdi-circle-medium"></i> 10-12-2023</div>
+                                                </div>
+                                            </div>
+                                            <!-- end row -->
+                                        </li><!-- end -->
+
+                                    </ul><!-- end -->
+                                    <div class="align-items-center mt-2 row g-3 text-center text-sm-start">
+                                        <div class="col-sm">
+                                            <div class="text-muted">
+                                                Showing<span class="fw-semibold">4</span> of <span class="fw-semibold">125</span> Results
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-auto">
+                                            <ul class="pagination pagination-separated pagination-sm justify-content-center justify-content-sm-start mb-0">
+                                                <li class="page-item disabled">
+                                                    <a href="#" class="page-link">←</a>
+                                                </li>
+                                                <li class="page-item">
+                                                    <a href="#" class="page-link">1</a>
+                                                </li>
+                                                <li class="page-item active">
+                                                    <a href="#" class="page-link">2</a>
+                                                </li>
+                                                <li class="page-item">
+                                                    <a href="#" class="page-link">3</a>
+                                                </li>
+                                                <li class="page-item">
+                                                    <a href="#" class="page-link">→</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div><!-- end card body -->
+                            </div><!-- end card -->
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="card" id="CardData">
+                                <div class="card-header align-items-center d-flex">
+                                    <h4 class="card-title mb-0 flex-grow-1">Upcoming Holidays</h4>
+                                    <div class="flex-shrink-0">
+                                        <div class="dropdown card-header-dropdown">
+                                            <a class="text-reset dropdown-btn" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <span class="text-muted fs-18"><i class="mdi mdi-dots-vertical"></i></span>
+                                            </a>
+                                            <div class="dropdown-menu dropdown-menu-end">
+                                                <a class="dropdown-item" href="#">Edit</a>
+                                                <a class="dropdown-item" href="#">Remove</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div><!-- end card header -->
+                                <div class="card-body pt-0">
+                                    <ul class="list-group list-group-flush border-dashed">
+                                        <li class="list-group-item ps-0">
+                                            <div class="row align-items-center g-3">
+                                                <div class="col-auto">
+                                                    <div class="avatar-sm p-1 py-2 h-auto bg-light rounded-3">
+                                                        <div class="text-center">
+                                                            <h5 class="mb-0">25</h5>
+                                                            <div class="text-muted">Tue</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col">
+
+                                                    <a href="#" class="text-reset fs-14 mb-0">Dhanteras</a>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <div class="badge badge-label bg-dark"><i class="mdi mdi-circle-medium"></i> 10-12-2023</div>
+                                                </div>
+
+                                            </div>
+                                            <!-- end row -->
+                                        </li><!-- end -->
+                                        <li class="list-group-item ps-0">
+                                            <div class="row align-items-center g-3">
+                                                <div class="col-auto">
+                                                    <div class="avatar-sm p-1 py-2 h-auto bg-light rounded-3">
+                                                        <div class="text-center">
+                                                            <h5 class="mb-0">20</h5>
+                                                            <div class="text-muted">Wed</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col">
+
+                                                    <a href="#" class="text-reset fs-14 mb-0">Diwali</a>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <div class="badge badge-label bg-dark"><i class="mdi mdi-circle-medium"></i> 10-12-2023</div>
+                                                </div>
+                                            </div>
+                                            <!-- end row -->
+                                        </li><!-- end -->
+                                        <li class="list-group-item ps-0">
+                                            <div class="row align-items-center g-3">
+                                                <div class="col-auto">
+                                                    <div class="avatar-sm p-1 py-2 h-auto bg-light rounded-3">
+                                                        <div class="text-center">
+                                                            <h5 class="mb-0">17</h5>
+                                                            <div class="text-muted">Wed</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col">
+
+                                                    <a href="#" class="text-reset fs-14 mb-0">New Year</a>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <div class="badge badge-label bg-dark"><i class="mdi mdi-circle-medium"></i> 10-12-2023</div>
+                                                </div>
+
+                                            </div>
+                                            <!-- end row -->
+                                        </li><!-- end -->
+
+                                    </ul><!-- end -->
+                                    <div class="align-items-center mt-2 row g-3 text-center text-sm-start">
+                                        <div class="col-sm">
+                                            <div class="text-muted">
+                                                Showing<span class="fw-semibold">4</span> of <span class="fw-semibold">125</span> Results
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-auto">
+                                            <ul class="pagination pagination-separated pagination-sm justify-content-center justify-content-sm-start mb-0">
+                                                <li class="page-item disabled">
+                                                    <a href="#" class="page-link">←</a>
+                                                </li>
+                                                <li class="page-item">
+                                                    <a href="#" class="page-link">1</a>
+                                                </li>
+                                                <li class="page-item active">
+                                                    <a href="#" class="page-link">2</a>
+                                                </li>
+                                                <li class="page-item">
+                                                    <a href="#" class="page-link">3</a>
+                                                </li>
+                                                <li class="page-item">
+                                                    <a href="#" class="page-link">→</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div><!-- end card body -->
+                            </div><!-- end card -->
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="card card-height-100">
+                                <div class="card-header d-flex align-items-center">
+                                    <h4 class="card-title flex-grow-1 mb-0">Upcoming Deadlines</h4>
+                                    <div class="flex-shrink-0">
+                                        <a href="javascript:void(0);" class="btn btn-soft-info btn-sm">Export Report</a>
+                                    </div>
+                                </div><!-- end cardheader -->
+                                <div class="card-body">
+                                    <div class="table-responsive table-card">
+                                        <table class="table table-nowrap table-centered align-middle">
+                                            <thead class="bg-light text-muted">
+                                                <tr>
+                                                    <th scope="col">Project Name</th>
+                                                    <th scope="col">Project Lead</th>
+                                                    <th scope="col">Progress</th>
+                                                    <th scope="col">Assignee</th>
+                                                    <th scope="col">Status</th>
+                                                    <th scope="col" style="width: 10%;">Due Date</th>
+                                                </tr><!-- end tr -->
+                                            </thead><!-- thead -->
+
+                                            <tbody>
+                                                <tr>
+                                                    <td class="fw-medium">Brand Logo Design</td>
+                                                    <td>
+                                                        <a href="javascript: void(0);" class="text-reset">
+                                                            Kaushal Patel
+                                                        </a>
+                                                    </td>
+                                                    <td>
+                                                        <div class="d-flex align-items-center">
+                                                            <div class="flex-shrink-0 me-1 text-muted fs-13">53%</div>
+                                                            <div class="progress progress-sm  flex-grow-1" style="width: 68%;">
+                                                                <div class="progress-bar bg-primary rounded" role="progressbar" style="width: 53%" aria-valuenow="53" aria-valuemin="0" aria-valuemax="100"></div>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        Divya Chauhan
+                                                    </td>
+                                                    <td><span class="badge bg-warning-subtle text-warning">Inprogress</span></td>
+                                                    <td class="text-muted">06 Sep 2021</td>
+                                                </tr><!-- end tr -->
+                                                <tr>
+                                                    <td class="fw-medium">Redesign - Landing Page</td>
+                                                    <td>
+                                                        <a href="javascript: void(0);" class="text-reset">
+                                                            Kaushal Patel
+                                                        </a>
+                                                    </td>
+                                                    <td>
+                                                        <div class="d-flex align-items-center">
+                                                            <div class="flex-shrink-0 me-1 text-muted fs-13">53%</div>
+                                                            <div class="progress progress-sm  flex-grow-1" style="width: 68%;">
+                                                                <div class="progress-bar bg-primary rounded" role="progressbar" style="width: 53%" aria-valuenow="53" aria-valuemin="0" aria-valuemax="100"></div>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        Divya Chauhan
+                                                    </td>
+                                                    <td><span class="badge bg-danger-subtle text-danger">Pending</span></td>
+                                                    <td class="text-muted">13 Nov 2021</td>
+                                                </tr><!-- end tr -->
+                                                <tr>
+                                                    <td class="fw-medium">Multipurpose Landing Template</td>
+                                                    <td>
+                                                        <a href="javascript: void(0);" class="text-reset">
+                                                            Kaushal Patel
+                                                        </a>
+                                                    </td>
+                                                    <td>
+                                                        <div class="d-flex align-items-center">
+                                                            <div class="flex-shrink-0 me-1 text-muted fs-13">53%</div>
+                                                            <div class="progress progress-sm  flex-grow-1" style="width: 68%;">
+                                                                <div class="progress-bar bg-primary rounded" role="progressbar" style="width: 53%" aria-valuenow="53" aria-valuemin="0" aria-valuemax="100"></div>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        Divya Chauhan
+                                                    </td>
+                                                    <td><span class="badge bg-success-subtle text-success">Completed</span></td>
+                                                    <td class="text-muted">26 Nov 2021</td>
+                                                </tr><!-- end tr -->
+                                                <tr>
+                                                    <td class="fw-medium">Chat Application</td>
+                                                    <td>
+                                                        <a href="javascript: void(0);" class="text-reset">
+                                                            Kaushal Patel
+                                                        </a>
+                                                    </td>
+                                                    <td>
+                                                        <div class="d-flex align-items-center">
+                                                            <div class="flex-shrink-0 me-1 text-muted fs-13">53%</div>
+                                                            <div class="progress progress-sm  flex-grow-1" style="width: 68%;">
+                                                                <div class="progress-bar bg-primary rounded" role="progressbar" style="width: 53%" aria-valuenow="53" aria-valuemin="0" aria-valuemax="100"></div>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        Divya Chauhan
+                                                    </td>
+                                                    <td><span class="badge bg-warning-subtle text-warning">Progress</span></td>
+                                                    <td class="text-muted">15 Dec 2021</td>
+                                                </tr><!-- end tr -->
+                                                <tr>
+                                                    <td class="fw-medium">Create Wireframe</td>
+                                                    <td>
+                                                        <a href="javascript: void(0);" class="text-reset">
+                                                            Kaushal Patel
+                                                        </a>
+                                                    </td>
+                                                    <td>
+                                                        <div class="d-flex align-items-center">
+                                                            <div class="flex-shrink-0 me-1 text-muted fs-13">53%</div>
+                                                            <div class="progress progress-sm  flex-grow-1" style="width: 68%;">
+                                                                <div class="progress-bar bg-primary rounded" role="progressbar" style="width: 53%" aria-valuenow="53" aria-valuemin="0" aria-valuemax="100"></div>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        Divya Chauhan
+                                                    </td>
+                                                    <td><span class="badge bg-warning-subtle text-warning">Progress</span></td>
+                                                    <td class="text-muted">21 Dec 2021</td>
+                                                </tr><!-- end tr -->
+                                            </tbody><!-- end tbody -->
+                                        </table><!-- end table -->
+                                    </div>
+
+                                    <div class="align-items-center mt-xl-3 mt-4 justify-content-between d-flex">
+                                        <div class="flex-shrink-0">
+                                            <div class="text-muted">
+                                                Showing <span class="fw-semibold">5</span> of <span class="fw-semibold">25</span> Results
+                                            </div>
+                                        </div>
+                                        <ul class="pagination pagination-separated pagination-sm mb-0">
+                                            <li class="page-item disabled">
+                                                <a href="#" class="page-link">←</a>
+                                            </li>
+                                            <li class="page-item">
+                                                <a href="#" class="page-link">1</a>
+                                            </li>
+                                            <li class="page-item active">
+                                                <a href="#" class="page-link">2</a>
+                                            </li>
+                                            <li class="page-item">
+                                                <a href="#" class="page-link">3</a>
+                                            </li>
+                                            <li class="page-item">
+                                                <a href="#" class="page-link">→</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                </div><!-- end card body -->
+                            </div><!-- end card -->
+                        </div><!-- end col -->
+
+
+                    </div>
+
+                </div>
+                <!-- container-fluid -->
+            </div>
+            <!-- End Page-content -->
+
+            <div w3-include-html="include/footer.html"> </div>
+        </div>
+        <!-- end main content-->
+    </div>
+    <!-- END layout-wrapper -->
+    <!--start back-to-top-->
+    <button onclick="topFunction()" class="btn btn-danger btn-icon" id="back-to-top">
+        <i class="ri-arrow-up-line"></i>
+    </button>
+    <!--end back-to-top-->
+    <!--preloader-->
+    <div id="preloader">
+        <div id="status">
+            <div class="spinner-border text-primary avatar-sm" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT -->
+    <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/libs/simplebar/simplebar.min.js"></script>
+    <script src="assets/libs/node-waves/waves.min.js"></script>
+    <script src="assets/libs/feather-icons/feather.min.js"></script>
+    <script src="assets/js/pages/plugins/lord-icon-2.1.0.js"></script>
+    <script src="assets/js/plugins.js"></script>
+    <!-- apexcharts -->
+    <script src="assets/libs/apexcharts/apexcharts.min.js"></script>
+    <!-- Dashboard init -->
+    <script src="assets/js/pages/dashboard-crm.init.js"></script>
+    <!-- App js -->
+    <script src="assets/js/app.js"></script>
+   
+</body>
+
+</html>

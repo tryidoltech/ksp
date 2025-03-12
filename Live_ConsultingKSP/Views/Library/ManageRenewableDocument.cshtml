@@ -1,0 +1,106 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    bool isEdit = !string.IsNullOrEmpty(Model.UUID);
+}
+@model Live_ConsultingKSP.Models.MasterManageDocument
+@section stylecss {
+}
+
+<div class="page-content">
+    <div class="container-fluid">
+        <!-- start page title -->
+        <div class="row">
+            <div class="col-12">
+                <div class="page-title-box d-sm-flex align-items-center justify-content-between">
+                    <h4 class="mb-sm-0">@((isEdit) ? "EDIT RENEWABLE DOCUMENT" : "ADD RENEWABLE DOCUMENT")</h4>
+                @*     <h4 class="mb-sm-0">Renewable Document </h4> *@
+                </div>
+            </div>
+        </div>
+        <!-- end page title -->
+
+
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="card" id="CardData">
+
+                    <div class="card-body">
+                        <div class="live-preview">
+                            <form method="post" asp-action="ManageRenewableDocument">
+                            <input type="hidden" asp-for="UUID" />
+                            <div class="row gx-3 gy-2 align-items-center">
+                                <div class="col-lg-3 col-sm-6 col-xs-12">
+                                    <label class="form-label">Document<span class="start-lable" style="color: red">*</span></label>
+                                        <span asp-validation-for="Document_Titile" class="text-danger"></span>
+                                    <input type="text" class="form-control" placeholder="eg. ">
+                                </div>
+                                <div class="col-lg-3 col-sm-6 col-xs-12" id="durationtype">
+                                    <label class="form-label">Year<span class="start-lable" style="color: red">*</span></label>
+                                        <span asp-validation-for="Year_UUID" class="text-danger"></span>
+                                    <select asp-for="Year_UUID" class="form-select2 js-example-basic-single" data-choices data-choices-sorting="true" id="duration">
+                                        <option selected>- Select Year -</option>
+                                        
+                                    </select>
+                                </div>
+                                <div class="col-lg-3 col-sm-6 col-xs-12">
+                                    <label class="form-label">Next Renew Date<span class="start-lable" style="color: red">*</span></label>
+                                        <span asp-validation-for="Next_RenewableDate" class="text-danger"></span>
+                                    <input asp-for="Next_RenewableDate" type="date" class="form-control" placeholder="">
+                                </div>
+                                <div class="col-lg-3 col-sm-6 col-xs-12">
+                                    <label class="form-label">Remind Me Before Days<span class="start-lable" style="color: red">*</span></label>
+                                        <span asp-validation-for="RemindMeBefore_Days" class="text-danger"></span>
+                                    <input asp-for="RemindMeBefore_Days" type="number" class="form-control" placeholder="eg. 4">
+                                </div>
+                                <div class="col-lg-3 col-sm-6 col-xs-12">
+                                    <label class="form-label">Next Reminder Date<span class="start-lable" style="color: red">*</span></label>
+                                        <span asp-validation-for="NextReminder_Date" class="text-danger"></span>
+                                    <input asp-for="NextReminder_Date" type="date" class="form-control" placeholder="eg. " disabled>
+                                </div>
+                                <div class="col-lg-3 col-sm-6 col-xs-12">
+                                    <label class="form-label">Upload Document<span class="start-lable" style="color: red">*</span></label>
+                                        <span asp-validation-for="Document_Upload" class="text-danger"></span>
+                                    <input asp-for="Document_Upload" type="file" class="form-control" placeholder="eg. ">
+                                </div>
+                                <div class="col-lg-3">
+                                    <div class="form-check">
+                                        <input asp-for=IsDisplay class="form-check-input" type="checkbox" id="autoSizingCheck2" >
+                                        <label class="form-check-label" for="autoSizingCheck2">
+                                            Is Display
+                                        </label>
+                                    </div>
+                                </div>
+
+
+                                <div class="col-lg-6 mt-5">
+                                        <button type="submit" class="btn btn-primary" style="float:right;">
+                                            @(isEdit ? "Update" : "Submit")
+                                        </button>
+                                        <a href="@Url.Action("ViewDocument", "Library")" class="btn btn-danger" style="float:right; margin-right:10px;">Cancel</a>
+                                </div>
+                                <!--end col-->
+                            </div>
+
+                            </form>
+                        </div>
+                        
+
+                    </div>
+                </div>
+            </div> <!-- end col -->
+        </div>
+        <!--end row-->
+
+    </div> <!-- container-fluid -->
+</div>
+
+<!-- JAVASCRIPT -->
+<script src="~/assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="~/assets/libs/simplebar/simplebar.min.js"></script>
+<script src="~/assets/libs/node-waves/waves.min.js"></script>
+<script src="~/assets/libs/feather-icons/feather.min.js"></script>
+<script src="~/assets/js/pages/plugins/lord-icon-2.1.0.js"></script>
+<script src="~/assets/js/plugins.js"></script>
+<!-- prismjs plugin -->
+<script src="~/assets/libs/prismjs/prism.js"></script>
+<script src="~/assets/js/app.js"></script>

@@ -1,0 +1,150 @@
+﻿<div class="page-content">
+	<div class="container-fluid">
+		<!-- start page title -->
+		<div class="row">
+			<div class="col-12">
+				<div class="page-title-box d-sm-flex align-items-center justify-content-between">
+					<h4 class="mb-sm-0">Manage Project Task Status</h4>
+				</div>
+			</div>
+		</div>
+		<!-- end page title -->
+
+
+		<div class="row">
+			<div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12">
+
+				<div class="card" id="CardData">
+					<div class="card-body">
+						<h5 class="card-title mb-3">Project Task Info</h5>
+						<div class="table-responsive">
+							<table class="table mb-0">
+								<tbody>
+									<tr>
+										<th class="ps-0" scope="row" style="width: 50%;">Project Name :</th>
+										<td class="text-muted">Project 1</td>
+									</tr>
+									<tr>
+										<th class="ps-0" scope="row">Project Phase Name :</th>
+										<td class="text-muted">Phase 1</td>
+									</tr>
+									<tr>
+										<th class="ps-0" scope="row">Project Step Name :</th>
+										<td class="text-muted">Step 1</td>
+									</tr>
+									<tr>
+										<th class="ps-0" scope="row">Project Task Name :</th>
+										<td class="text-muted">Step 1</td>
+									</tr>
+									<tr>
+										<th class="ps-0" scope="row">Project Task Cost :</th>
+										<td class="text-muted">$ 1,115</td>
+									</tr>
+									<tr>
+										<th class="ps-0" scope="row">Project Task Description :</th>
+										<td class="text-muted">-</td>
+									</tr>
+									<tr>
+										<th class="ps-0" scope="row">Start Date :</th>
+										<td class="text-muted">
+											05-10-2024
+										</td>
+									</tr>
+									<tr>
+										<th class="ps-0" scope="row">End Date :</th>
+										<td class="text-muted">
+											15-10-2024
+										</td>
+									</tr>
+									<tr>
+										<th class="ps-0" scope="row">Expected Total Hours :</th>
+										<td class="text-muted">
+											80
+										</td>
+									</tr>
+
+
+								</tbody>
+							</table>
+						</div>
+					</div><!-- end card body -->
+				</div><!-- end card -->
+				<!--end card-->
+			</div>
+
+			<div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12">
+
+				<div class="card" id="CardData">
+					<div class="card-body">
+						<h5 class="card-title mb-3">Update Project Task Status</h5>
+						<div class="live-preview">
+
+							<div class="row gx-3 gy-2 align-items-center">
+								<div class="col-lg-6 col-sm-6 col-xs-12">
+									<label class="form-label">Actual Start Date<span class="start-lable" style="color: red">*</span></label>
+									<input type="date" class="form-control">
+								</div>
+								<div class="col-lg-6 col-sm-6 col-xs-12">
+									<label class="form-label">Actual End Date<span class="start-lable" style="color: red">*</span></label>
+									<input type="date" class="form-control">
+								</div>
+								<div class="col-lg-6 col-sm-6 col-xs-12">
+									<label class="form-label">Task Actual Total Hours<span class="start-lable" style="color: red">*</span></label>
+									<input type="text" class="form-control">
+								</div>
+								<div class="col-lg-6 col-sm-6 col-xs-12">
+									<label class="form-label">Project Task Status<span class="start-lable" style="color: red">*</span></label>
+									<select class="form-select2 js-example-basic-single" data-choices data-choices-sorting="true" id="exp">
+										<option selected>- Select Project Task Status -</option>
+										<option value="1">Completed</option>
+										<option value="2">In Progress</option>
+
+									</select>
+								</div>
+								<div class="col-lg-12">
+									<button class="btn btn-primary" id="btn" Onclick="disablebutton()" style="float:right;">Update</button>
+
+									<!--<a href="#" class="btn btn-primary " style="float:right;"> Create</a>-->
+									<a href="#" class="btn btn-danger " style="float:right;margin-right:10px;"> Cancel</a>
+								</div>
+							</div>
+						</div>
+					</div><!-- end card body -->
+				</div><!-- end card -->
+				<!--end card-->
+			</div>
+		</div>
+	</div> <!-- container-fluid -->
+</div>
+
+<!-- JAVASCRIPT -->
+<script src="~/assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="~/assets/libs/simplebar/simplebar.min.js"></script>
+<script src="~/assets/libs/node-waves/waves.min.js"></script>
+<script src="~/assets/libs/feather-icons/feather.min.js"></script>
+<script src="~/assets/js/pages/plugins/lord-icon-2.1.0.js"></script>
+<script src="~/assets/js/plugins.js"></script>
+<!-- prismjs plugin -->
+<script src="~/assets/libs/prismjs/prism.js"></script>
+<script src="~/assets/js/jquery-3.6.0.min.js"></script>
+<!--select2 cdn-->
+<script src="~/assets/js/select2.min.js"></script>
+			 
+<script src="~/assets/js/pages/select2.init.js"></script>
+<script src="~/assets/js/app.js"></script>
+<script>
+	function disablebutton() {
+		var button = document.getElementById("btn");
+
+		// Disable the button
+		button.innerHTML = "Please Wait..";
+		button.disabled = true;
+
+		// Check if the button has the 'btn-primary' class and change it to 'btn-dark'
+		if (button.classList.contains("btn-primary")) {
+			button.classList.remove("btn-primary");
+			button.classList.add("btn-dark");
+		}
+	}
+
+</script>

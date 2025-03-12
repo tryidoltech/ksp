@@ -1,0 +1,306 @@
+﻿<div class="page-content">
+    <div class="container-fluid">
+        <!-- start page title -->
+        <div class="row">
+            <div class="col-12">
+                <div class="page-title-box d-sm-flex align-items-center justify-content-between">
+                    <h4 class="mb-sm-0">
+                        Manage Lead  Data
+                    </h4>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-7">
+                <div class="card" id="CardData">
+                    <div class="card-header" style="background:#8080802b; padding:6px 0px;">
+                        <div class="row">
+                            <div class="col-md-12" style="text-align:center;">
+                                <h5 class="card-title mb-0">Update Contact Details</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="live-preview">
+                            <div class="row gx-3 gy-2 align-items-center">
+                                <div class="col-sm-4">
+                                    <label class="form-label">
+                                        Contact Name
+                                        <span class="start-lable" style="color: red">*</span>
+                                    </label>
+                                    <input type="text" class="form-control" id="specificSizeInputName" placeholder="eg. Akash Patel">
+                                </div>
+                                <div class="col-sm-4">
+                                    <label class="form-label">
+                                        Company Name
+                                        <span class="start-lable" style="color: red">*</span>
+                                    </label>
+                                    <input type="text" class="form-control" id="specificSizeInputName" placeholder="eg. Ksp Consulting">
+                                </div>
+                                <div class="col-sm-4">
+                                    <label class="form-label">
+                                        GSTNo
+                                        <span class="start-lable" style="color: red">*</span>
+                                    </label>
+                                    <input type="text" class="form-control" id="specificSizeInputName" placeholder="eg.">
+                                </div>
+                                <div class="col-sm-4">
+                                    <label class="form-label">
+                                        Website
+                                    </label>
+                                    <input type="text" class="form-control" id="specificSizeInputName" placeholder="eg. https://">
+                                </div>
+                                <div class="col-sm-4">
+                                    <label class="form-label">Email<span class="start-lable" style="color: red">*</span></label>
+                                    <input type="text" class="form-control" id="specificSizeInputName" placeholder="eg. sales@kspconsults.com">
+                                </div>
+                                <div class="col-sm-4">
+                                    <label class="form-label">Alternate Email</label>
+                                    <input type="text" class="form-control" id="specificSizeInputName" placeholder="eg. info@kspconsults.com">
+                                </div>
+                                <div class="col-sm-4">
+                                    <label class="form-label">Mobile No<span class="start-lable" style="color: red">*</span></label>
+                                    <input type="text" class="form-control" id="specificSizeInputName" placeholder="eg. XXXXX XXXXX">
+                                </div>
+                                <div class="col-sm-4">
+                                    <label class="form-label">Alternate Mobile No.</label>
+                                    <input type="text" class="form-control" id="specificSizeInputName" placeholder="eg. XXXXX XXXXX">
+                                </div>
+                                <div class="col-sm-4">
+                                    <label class="form-label">Address<span class="start-lable" style="color: red">*</span></label>
+                                    <textarea type="text" class="form-control" id="specificSizeInputName" placeholder="eg."></textarea>
+                                </div>
+                                <div class="col-sm-4">
+                                    <label class="form-label">Select Country<span class="start-lable" style="color: red">*</span></label>
+                                    <select class="form-select2 js-example-basic-single" data-choices data-choices-sorting="true" id="Country">
+                                        <option selected>- Select Country -</option>
+                                        <option value="1">India</option>
+                                        <option value="2">UK</option>
+                                        <option value="3">Canada</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-sm-4">
+                                    <label class="form-label">Select State<span class="start-lable" style="color: red">*</span></label>
+                                    <select class="form-select2 js-example-basic-single" data-choices data-choices-sorting="true" id="State">
+                                        <option selected>- Select State -</option>
+                                        <option value="1">Gujarat</option>
+                                        <option value="2">Indore</option>
+                                        <option value="3">M.P</option>
+                                    </select>
+                                </div>
+                                <div class="col-sm-4">
+                                    <label class="form-label">Select City <span class="start-lable" style="color: red">*</span></label>
+                                    <select class="form-select2 js-example-basic-single" data-choices data-choices-sorting="true" id="City">
+                                        <option selected>-Select City-</option>
+                                        <option value="1">Vadodara</option>
+                                        <option value="2">Surat</option>
+                                        <option value="3">Rajkot</option>
+                                    </select>
+                                </div>
+                                <div class="col-sm-4">
+                                    <label class="form-label">
+                                        Pincode
+                                        <span class="start-lable" style="color: red">*</span>
+                                    </label>
+                                    <input type="text" class="form-control" id="specificSizeInputName" placeholder="eg. ">
+                                </div>
+                                <div class="col-sm-4">
+                                    <label class="form-label">Land-line Number </label>
+                                    <input type="text" class="form-control" id="specificSizeInputName" placeholder="eg. XXXXX XXXXX">
+                                </div>
+
+                                <div class="col-sm-4">
+                                    <label class="form-label">
+                                        Select Industry Sector
+                                        <span class="start-lable" style="color: red">*</span>
+                                    </label>
+                                    <select class="form-select2 js-example-basic-single" data-choices data-choices-sorting="true" id="IndustrySector">
+                                        <option selected>-Select Industry Sector-</option>
+                                        <option value="1">Manufacturing</option>
+
+                                    </select>
+                                </div>
+                                <!--end col-->
+                                <div class="col-lg-12">
+                                    <a href="#" class="btn btn-primary " style="float:right;"> Update</a>
+                                </div>
+                                <!--end col-->
+                            </div>
+
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-5">
+                <div class="card" id="CardData">
+                    <div class="card-header" style="background:#8080802b; padding:6px 0px;">
+                        <div class="row">
+                            <div class="col-md-12" style="text-align:center;">
+                                <h5 class="card-title mb-0">Add History</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="live-preview">
+                            <div class="row gx-3 gy-2 align-items-center">
+                                <div class="col-sm-6">
+                                    <label class="form-label">Select History Type<span class="start-lable" style="color: red">*</span></label>
+                                    <select class="form-select2 js-example-basic-single" data-choices data-choices-sorting="true" id="History">
+                                        <option selected>- Select History Type -</option>
+                                        <option value="1">Meeting</option>
+                                        <option value="2">Proposal</option>
+                                    </select>
+                                </div>
+                                <div class="col-sm-6">
+                                    <label class="form-label">Select Status<span class="start-lable" style="color: red">*</span></label>
+                                    <select class="form-select2 js-example-basic-single" data-choices data-choices-sorting="true" id="Status">
+                                        <option selected>- Select Status -</option>
+                                        <option value="">Positive</option>
+                                        <option value="">Negative</option>
+                                    </select>
+                                </div>
+                                <div class="col-sm-6">
+                                    <label class="form-label">
+                                        Documents
+                                        <span class="start-lable" style="color: red">*</span>
+                                    </label>
+                                    <input type="file" class="form-control" id="specificSizeInputName" placeholder="eg. ">
+
+                                </div>
+                                <div class="col-sm-6">
+                                    <label class="form-label">
+                                        Date
+                                        <span class="start-lable" style="color: red">*</span>
+                                    </label>
+                                    <input type="date" class="form-control" id="specificSizeInputName" placeholder="eg. https://">
+
+                                </div>
+                                <div class="col-sm-10">
+                                    <label class="form-label">
+                                        Remark
+                                        <span class="start-lable" style="color: red">*</span>
+                                    </label>
+                                    <textarea type="text" class="form-control" id="specificSizeInputName" placeholder="eg."></textarea>
+
+                                </div>
+                                <div class="col-sm-2" style="margin-top:37px;">
+                                    <a href="#" class="btn btn-primary float-end"> Add</a>
+                                </div>
+                            </div>
+
+
+
+                        </div>
+                    </div>
+
+                    <div class="card-body" style="padding-top:2px">
+                        <div class="card-header" style="background:#8080802b; padding: 6px 0px;">
+                            <h4 class="card-title mb-0" style="text-align:center;">View History</h4>
+                        </div><!-- end card header -->
+                        <div class="mx-n3" style="margin-right: -0.9rem !important; margin-left: -0.9rem !important;">
+                            <div data-simplebar="init" data-simplebar-auto-hide="false" data-simplebar-track="dark" style="height: 180px;" class="simplebar-scrollable-y">
+                                <div class="simplebar-wrapper" style="margin: 0px;">
+                                    <div class="simplebar-height-auto-observer-wrapper">
+                                        <div class="simplebar-height-auto-observer"></div>
+                                    </div>
+                                    <div class="simplebar-mask">
+                                        <div class="simplebar-offset" style="right: 0px; bottom: 0px;">
+                                            <div class="simplebar-content-wrapper" tabindex="0" role="region" aria-label="scrollable content" style="height: 100%; overflow: hidden scroll;">
+                                                <div class="simplebar-content" style="padding: 0px; height: 100%;">
+                                                    <!--<marquee behavior="scroll"
+                                                             scrollamount="6"
+                                                             direction="up"
+                                                             onmouseover="this.stop();"
+                                                             onmouseout="this.start();"
+                                                             style="height: 100%;">-->
+                                                    <ul class="list-group list-group-flush">
+                                                        <li class="list-group-item">
+                                                            <div style="padding: 5px; border-radius:5px; background-color:#1e195c">
+                                                                <div class="d-flex align-items-start">
+                                                                    <div class="flex-grow-1">
+                                                                        <h6 style="color:white">Calling</h6>
+                                                                    </div>
+                                                                    <div class="flex-shrink-0">
+                                                                        <a href="#" target="_blank">
+                                                                            <h5 class="fs-13 me-2 float-end">
+                                                                                <span class='badge bg-dark'>
+                                                                                    <i class="ri-attachment-2" style="font-weight:100; font-size:12px;"></i>
+                                                                                </span>
+                                                                            </h5>
+                                                                        </a>
+                                                                    </div>
+                                                                    <div class="flex-shrink-0">
+                                                                        <h5 class="fs-13 mb-0 float-end">
+                                                                            <span class='badge bg-warning'>Neutral</span>
+                                                                        </h5>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row">
+                                                                    <p class=" col-lg-12" style="font-size: 10px; margin-bottom: 0px; color:white;">
+                                                                        Currently the Descision Maker is in Meeting. He/She Will Contact Us.
+                                                                    </p>
+
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li class="list-group-item">
+                                                            <div style="padding: 5px; border-radius:5px; background-color:#2aa539">
+                                                                <div class="d-flex align-items-start">
+                                                                    <div class="flex-grow-1">
+                                                                        <h6 style="color:white">Follow-up</h6>
+                                                                    </div>
+                                                                    <div class="flex-shrink-0">
+                                                                        <a href="#" target="_blank">
+                                                                            <h5 class="fs-13 me-2 float-end">
+                                                                                <span class='badge bg-dark'>
+                                                                                    <i class="ri-attachment-2" style="font-weight:100; font-size:12px;"></i>
+                                                                                </span>
+                                                                            </h5>
+                                                                        </a>
+                                                                    </div>
+                                                                    <div class="flex-shrink-0">
+                                                                        <h5 class="fs-13 mb-0 float-end">
+                                                                            <span class='badge bg-danger'>Negative</span>
+                                                                        </h5>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row">
+                                                                    <p class="col-lg-12" style="font-size: 10px; margin-bottom: 0px; color:white">
+                                                                        Not Interested
+                                                                    </p>
+
+                                                                </div>
+                                                            </div>
+                                                        </li>
+
+
+
+                                                    </ul>
+                                                    <!--</marquee>-->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="simplebar-placeholder" style="width: 475px; height: 519px;"></div>
+                                </div>
+                                <div class="simplebar-track simplebar-horizontal" style="visibility: hidden;">
+                                    <div class="simplebar-scrollbar simplebar-visible" style="width: 0px; display: none;"></div>
+                                </div>
+                                <div class="simplebar-track simplebar-vertical" style="visibility: visible;">
+                                    <div class="simplebar-scrollbar simplebar-visible" style="height: 93px; transform: translate3d(0px, 127px, 0px); display: block;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div><!-- end card -->
+            </div>
+        </div>
+
+        <!--end row-->
+
+    </div> <!-- container-fluid -->
+</div>

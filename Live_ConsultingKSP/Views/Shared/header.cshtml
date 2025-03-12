@@ -1,0 +1,1976 @@
+﻿
+<header id="page-topbar">
+    <div class="layout-width">
+        <div class="navbar-header">
+            <div class="d-flex">
+                <!-- LOGO -->
+                <div class="navbar-brand-box horizontal-logo">
+                    <a href="index.html" class="logo logo-dark">
+                        <span class="logo-sm">
+                            <img src="/assets/images/new-logo/ksp-logo.png" style="padding: 4px 0px" alt="" height="69">
+                        </span>
+                        <span class="logo-lg">
+                            <img src="/assets/images/new-logo/ksp-logo.png" style="padding: 4px 0px" alt="" height="17">
+                        </span>
+                    </a>
+                    <a href="index.html" class="logo logo-light">
+                        <span class="logo-sm">
+                            <img src="/assets/images/new-logo/ksp-logo.png" style="padding: 4px 0px" alt="" height="69">
+                        </span>
+                        <span class="logo-lg">
+                            <img src="/assets/images/new-logo/ksp-logo.png" style="padding: 4px 0px" height="69" />
+                        </span>
+                    </a>
+                </div>
+                <button type="button" class="btn btn-sm px-3 fs-16 header-item vertical-menu-btn topnav-hamburger" id="topnav-hamburger-icon">
+                    <span class="hamburger-icon">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </span>
+                </button>
+                <!-- App Search-->
+                <form class="app-search d-none d-md-block">
+
+                    <div class="dropdown-menu dropdown-menu-lg" id="search-dropdown">
+                        <div data-simplebar style="max-height: 320px;">
+                            <!-- item-->
+                            <div class="dropdown-header">
+                                <h6 class="text-overflow text-muted mb-0 text-uppercase">Recent Searches</h6>
+                            </div>
+                            <div class="dropdown-item bg-transparent text-wrap">
+                                <a href="index.html" class="btn btn-soft-secondary btn-sm rounded-pill">how to setup <i class="mdi mdi-magnify ms-1"></i></a>
+                                <a href="index.html" class="btn btn-soft-secondary btn-sm rounded-pill">buttons <i class="mdi mdi-magnify ms-1"></i></a>
+                            </div>
+                            <!-- item-->
+                            <div class="dropdown-header mt-2">
+                                <h6 class="text-overflow text-muted mb-1 text-uppercase">Pages</h6>
+                            </div>
+                            <!-- item-->
+                            <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                <i class="ri-bubble-chart-line align-middle fs-18 text-muted me-2"></i>
+                                <span>Analytics Dashboard</span>
+                            </a>
+                            <!-- item-->
+                            <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                <i class="ri-lifebuoy-line align-middle fs-18 text-muted me-2"></i>
+                                <span>Help Center</span>
+                            </a>
+                            <!-- item-->
+                            <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                <i class="ri-user-settings-line align-middle fs-18 text-muted me-2"></i>
+                                <span>My account settings</span>
+                            </a>
+                            <!-- item-->
+                            <div class="dropdown-header mt-2">
+                                <h6 class="text-overflow text-muted mb-2 text-uppercase">Members</h6>
+                            </div>
+                            <div class="notification-list">
+                                <!-- item -->
+                                <a href="javascript:void(0);" class="dropdown-item notify-item py-2">
+                                    <div class="d-flex">
+                                        <img src="assets/images/users/avatar-2.jpg" class="me-3 rounded-circle avatar-xs" alt="user-pic">
+                                        <div class="flex-grow-1">
+                                            <h6 class="m-0">Kaushal Patel</h6>
+                                            <span class="fs-11 mb-0 text-muted">Manager</span>
+                                        </div>
+                                    </div>
+                                </a>
+                                <!-- item -->
+                                <a href="javascript:void(0);" class="dropdown-item notify-item py-2">
+                                    <div class="d-flex">
+                                        <img src="assets/images/users/avatar-3.jpg" class="me-3 rounded-circle avatar-xs" alt="user-pic">
+                                        <div class="flex-grow-1">
+                                            <h6 class="m-0">Divya Chauhan</h6>
+                                            <span class="fs-11 mb-0 text-muted">Web Designer</span>
+                                        </div>
+                                    </div>
+                                </a>
+                                <!-- item -->
+                                <a href="javascript:void(0);" class="dropdown-item notify-item py-2">
+                                    <div class="d-flex">
+                                        <img src="assets/images/users/avatar-5.jpg" class="me-3 rounded-circle avatar-xs" alt="user-pic">
+                                        <div class="flex-grow-1">
+                                            <h6 class="m-0">Kalpesh Rathod</h6>
+                                            <span class="fs-11 mb-0 text-muted">React Developer</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="text-center pt-3 pb-1">
+                            <a href="pages-search-results.html" class="btn btn-primary btn-sm">View All Results <i class="ri-arrow-right-line ms-1"></i></a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+
+            <!-- success Alert -->
+            <!-- success Alert -->
+            @if (TempData["Message"] != null)
+            {
+                <div class="alert alert-@TempData["MessageType"] alert-dismissible border-2 bg-body-secondary fade show" style="margin-bottom:0px;" id="success-alert" role="alert">
+                    <strong>@TempData["Message"]</strong>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            }
+
+
+            <div class="d-flex align-items-center">
+                <div class="dropdown d-md-none topbar-head-dropdown header-item">
+                    <button type="button" class="btn btn-icon btn-topbar btn-ghost-secondary rounded-circle" id="page-header-search-dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="bx bx-search fs-22"></i>
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end p-0" aria-labelledby="page-header-search-dropdown">
+                        <form class="p-3">
+                            <div class="form-group m-0">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="Search ..." aria-label="Recipient's username">
+                                    <button class="btn btn-primary" type="submit"><i class="mdi mdi-magnify"></i></button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <select id="drpcmp" class="form-select" style="padding: .4rem 2.4rem .4rem .6rem !important;
+    font-size: .725rem !important;">
+                </select>
+                <select id="drpenv" class="form-select" style="margin-left:5px;padding: .4rem 2.4rem .4rem .6rem !important;
+    font-size: .725rem !important;">
+                </select>
+                <div class="dropdown topbar-head-dropdown ms-1 header-item">
+                    <button type="button" class="btn btn-icon btn-topbar btn-ghost-secondary rounded-circle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class='bx bx-category-alt fs-22'></i>
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-lg p-0 dropdown-menu-end">
+                        <div class="p-3 border-top-0 border-start-0 border-end-0 border-dashed border">
+                            <div class="row align-items-center">
+                                <div class="col">
+                                    <h6 class="m-0 fw-semibold fs-15"> Shortcuts </h6>
+                                </div>
+                                <div class="col-auto">
+                                    <a href="#!" class="btn btn-sm btn-soft-info">
+                                        View All
+                                        <i class="ri-arrow-right-s-line align-middle"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-2">
+                            <div class="row g-0">
+                                <div class="col">
+                                    <a class="dropdown-icon-item" href="../ManagePositiveLead.html">
+                                        <img src="assets/images/brands/slack.png" alt="Github">
+                                        <span>Positive Leads</span>
+                                    </a>
+                                </div>
+                                <div class="col">
+                                    <a class="dropdown-icon-item" href="#">
+                                        <img src="assets/images/brands/slack.png" alt="bitbucket">
+                                        <span>Purchase</span>
+                                    </a>
+                                </div>
+                                <div class="col">
+                                    <a class="dropdown-icon-item" href="#">
+                                        <img src="assets/images/brands/slack.png" alt="dribbble">
+                                        <span>Poroject Execution</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="row g-0">
+                                <div class="col">
+                                    <a class="dropdown-icon-item" href="#">
+                                        <img src="assets/images/brands/slack.png" alt="dropbox">
+                                        <span>Working Projects</span>
+                                    </a>
+                                </div>
+                                <div class="col">
+                                    <a class="dropdown-icon-item" href="#">
+                                        <img src="assets/images/brands/slack.png" alt="mail_chimp">
+                                        <span>Work List</span>
+                                    </a>
+                                </div>
+                                <div class="col">
+                                    <a class="dropdown-icon-item" href="#!">
+                                        <img src="assets/images/brands/slack.png" alt="slack">
+                                        <span>Pending Work</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="dropdown topbar-head-dropdown ms-1 header-item" id="notificationDropdown">
+                    <button type="button" class="btn btn-icon btn-topbar btn-ghost-secondary rounded-circle" id="page-header-notifications-dropdown" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-haspopup="true" aria-expanded="false">
+                        <i class='bx bx-bell fs-22'></i>
+                        <span class="position-absolute topbar-badge fs-10 translate-middle badge rounded-pill bg-danger">3<span class="visually-hidden">unread messages</span></span>
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end p-0" aria-labelledby="page-header-notifications-dropdown">
+                        <div class="dropdown-head bg-primary bg-pattern rounded-top">
+                            <div class="p-3">
+                                <div class="row align-items-center">
+                                    <div class="col">
+                                        <h6 class="m-0 fs-16 fw-semibold text-white"> Notifications </h6>
+                                    </div>
+                                    <div class="col-auto dropdown-tabs">
+                                        <span class="badge bg-light-subtle text-body fs-13"> 4 New</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="px-2 pt-2">
+                                <ul class="nav nav-tabs dropdown-tabs nav-tabs-custom" data-dropdown-tabs="true" id="notificationItemsTab" role="tablist">
+                                    <li class="nav-item waves-effect waves-light">
+                                        <a class="nav-link active" data-bs-toggle="tab" href="#all-noti-tab" role="tab" aria-selected="true">
+                                            All
+                                        </a>
+                                    </li>
+                                    <li class="nav-item waves-effect waves-light">
+                                        <a class="nav-link" data-bs-toggle="tab" href="#alerts-tab" role="tab" aria-selected="false">
+                                            Pending Task
+                                        </a>
+                                    </li>
+                                    <li class="nav-item waves-effect waves-light">
+                                        <a class="nav-link" data-bs-toggle="tab" href="#messages-tab" role="tab" aria-selected="false">
+                                            Task List
+                                        </a>
+                                    </li>
+                                    <!--<li class="nav-item waves-effect waves-light">
+                                        <a class="nav-link" data-bs-toggle="tab" href="#alerts-tab" role="tab" aria-selected="false">
+                                            Upcoming Task
+                                        </a>
+                                    </li>-->
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="tab-content position-relative" id="notificationItemsTabContent">
+                            <div class="tab-pane fade show active py-2 ps-2" id="all-noti-tab" role="tabpanel">
+                                <div data-simplebar style="max-height: 300px;" class="pe-2">
+
+                                    <div class="text-reset notification-item d-block dropdown-item position-relative">
+                                        <div class="d-flex">
+                                            <img src="assets/images/users/avatar-2.jpg" class="me-3 rounded-circle avatar-xs flex-shrink-0" alt="user-pic">
+                                            <div class="flex-grow-1">
+                                                <a href="#!" class="stretched-link">
+                                                    <h6 class="mt-0 mb-1 fs-13 fw-semibold">Kaushal Patel</h6>
+                                                </a>
+                                                <div class="fs-13 text-muted">
+                                                    <p class="mb-1">
+                                                        Today i will arrange .net team meeting at 2.30 PM , please join to google meet.
+                                                    </p>
+                                                </div>
+                                                <p class="mb-0 fs-11 fw-medium text-uppercase text-muted">
+                                                    <span><i class="mdi mdi-clock-outline"></i> 48 min ago</span>
+                                                </p>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <!--<div class="text-reset notification-item d-block dropdown-item position-relative">
+                                        <div class="d-flex">
+                                            <div class="avatar-xs me-3 flex-shrink-0">
+                                                <span class="avatar-title bg-danger-subtle text-danger rounded-circle fs-16">
+                                                    <i class='bx bx-message-square-dots'></i>
+                                                </span>
+                                            </div>
+                                            <div class="flex-grow-1">
+                                                <a href="#!" class="stretched-link">
+                                                    <h6 class="mt-0 mb-2 fs-13 lh-base">
+                                                        You have received <b class="text-success">20</b> new messages in the conversation
+                                                    </h6>
+                                                </a>
+                                                <p class="mb-0 fs-11 fw-medium text-uppercase text-muted">
+                                                    <span><i class="mdi mdi-clock-outline"></i> 2 hrs ago</span>
+                                                </p>
+                                            </div>
+
+                                        </div>
+                                    </div>-->
+                                    <div class="text-reset notification-item d-block dropdown-item position-relative">
+                                        <div class="d-flex">
+                                            <img src="assets/images/users/avatar-8.jpg" class="me-3 rounded-circle avatar-xs flex-shrink-0" alt="user-pic">
+                                            <div class="flex-grow-1">
+                                                <a href="#!" class="stretched-link">
+                                                    <h6 class="mt-0 mb-1 fs-13 fw-semibold">Kalpesh Rathod</h6>
+                                                </a>
+                                                <div class="fs-13 text-muted">
+                                                    <p class="mb-1">We talked about a project on linkedin.</p>
+                                                </div>
+                                                <p class="mb-0 fs-11 fw-medium text-uppercase text-muted">
+                                                    <span><i class="mdi mdi-clock-outline"></i> 4 hrs ago</span>
+                                                </p>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="my-3 text-center view-all">
+                                        <button type="button" class="btn btn-soft-success waves-effect waves-light">
+                                            View
+                                            All Notifications <i class="ri-arrow-right-line align-middle"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade py-2 ps-2" id="messages-tab" role="tabpanel" aria-labelledby="messages-tab">
+                                <div data-simplebar style="max-height: 300px;" class="pe-2">
+                                    <div class="text-reset notification-item d-block dropdown-item">
+                                        <div class="d-flex">
+                                            <img src="assets/images/users/avatar-3.jpg" class="me-3 rounded-circle avatar-xs" alt="user-pic">
+                                            <div class="flex-grow-1">
+                                                <a href="#!" class="stretched-link">
+                                                    <h6 class="mt-0 mb-1 fs-13 fw-semibold">Divya Chauhan</h6>
+                                                </a>
+                                                <div class="fs-13 text-muted">
+                                                    <p class="mb-1">We talked about a project on linkedin.</p>
+                                                </div>
+                                                <p class="mb-0 fs-11 fw-medium text-uppercase text-muted">
+                                                    <span><i class="mdi mdi-clock-outline"></i> 30 min ago</span>
+                                                </p>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="text-reset notification-item d-block dropdown-item">
+                                        <div class="d-flex">
+                                            <img src="assets/images/users/avatar-2.jpg" class="me-3 rounded-circle avatar-xs" alt="user-pic">
+                                            <div class="flex-grow-1">
+                                                <a href="#!" class="stretched-link">
+                                                    <h6 class="mt-0 mb-1 fs-13 fw-semibold">Jay Patel</h6>
+                                                </a>
+                                                <div class="fs-13 text-muted">
+                                                    <p class="mb-1">
+                                                        i am working on KSP ERP.
+                                                    </p>
+                                                </div>
+                                                <p class="mb-0 fs-11 fw-medium text-uppercase text-muted">
+                                                    <span><i class="mdi mdi-clock-outline"></i> 2 hrs ago</span>
+                                                </p>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="text-reset notification-item d-block dropdown-item">
+                                        <div class="d-flex">
+                                            <img src="/assets/images/users/avatar-6.jpg" class="me-3 rounded-circle avatar-xs" alt="user-pic">
+                                            <div class="flex-grow-1">
+                                                <a href="#!" class="stretched-link">
+                                                    <h6 class="mt-0 mb-1 fs-13 fw-semibold">Kalpesh Rathod</h6>
+                                                </a>
+                                                <div class="fs-13 text-muted">
+                                                    <p class="mb-1">
+                                                        I am working on KSP CRM application.
+                                                    </p>
+                                                </div>
+                                                <p class="mb-0 fs-11 fw-medium text-uppercase text-muted">
+                                                    <span><i class="mdi mdi-clock-outline"></i> 10 hrs ago</span>
+                                                </p>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="text-reset notification-item d-block dropdown-item">
+                                        <div class="d-flex">
+                                            <img src="/assets/images/users/avatar-8.jpg" class="me-3 rounded-circle avatar-xs" alt="user-pic">
+                                            <div class="flex-grow-1">
+                                                <a href="#!" class="stretched-link">
+                                                    <h6 class="mt-0 mb-1 fs-13 fw-semibold">Dhruna Patel</h6>
+                                                </a>
+                                                <div class="fs-13 text-muted">
+                                                    <p class="mb-1">We talked about a project on linkedin.</p>
+                                                </div>
+                                                <p class="mb-0 fs-11 fw-medium text-uppercase text-muted">
+                                                    <span><i class="mdi mdi-clock-outline"></i> 3 days ago</span>
+                                                </p>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="my-3 text-center view-all">
+                                        <button type="button" class="btn btn-soft-success waves-effect waves-light">
+                                            View
+                                            All Messages <i class="ri-arrow-right-line align-middle"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade p-4" id="alerts-tab" role="tabpanel" aria-labelledby="alerts-tab">
+                                <div data-simplebar style="max-height: 300px;" class="pe-2">
+                                    <div class="text-reset notification-item d-block dropdown-item">
+                                        <div class="d-flex">
+                                            <img src="/assets/images/users/avatar-3.jpg" class="me-3 rounded-circle avatar-xs" alt="user-pic">
+                                            <div class="flex-grow-1">
+                                                <a href="#!" class="stretched-link">
+                                                    <h6 class="mt-0 mb-1 fs-13 fw-semibold">Divya Chauhan</h6>
+                                                </a>
+                                                <div class="fs-13 text-muted">
+                                                    <p class="mb-1">Today i am on leave.</p>
+                                                </div>
+                                                <p class="mb-0 fs-11 fw-medium text-uppercase text-muted">
+                                                    <span><i class="mdi mdi-clock-outline"></i> 30 min ago</span>
+                                                </p>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="text-reset notification-item d-block dropdown-item">
+                                        <div class="d-flex">
+                                            <img src="/assets/images/users/avatar-2.jpg" class="me-3 rounded-circle avatar-xs" alt="user-pic">
+                                            <div class="flex-grow-1">
+                                                <a href="#!" class="stretched-link">
+                                                    <h6 class="mt-0 mb-1 fs-13 fw-semibold">Jay Patel</h6>
+                                                </a>
+                                                <div class="fs-13 text-muted">
+                                                    <p class="mb-1">
+                                                        I am on leave on 18/12/2024 to 25/12/2024.
+                                                    </p>
+                                                </div>
+                                                <p class="mb-0 fs-11 fw-medium text-uppercase text-muted">
+                                                    <span><i class="mdi mdi-clock-outline"></i> 2 hrs ago</span>
+                                                </p>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="text-reset notification-item d-block dropdown-item">
+                                        <div class="d-flex">
+                                            <img src="/assets/images/users/avatar-6.jpg" class="me-3 rounded-circle avatar-xs" alt="user-pic">
+                                            <div class="flex-grow-1">
+                                                <a href="#!" class="stretched-link">
+                                                    <h6 class="mt-0 mb-1 fs-13 fw-semibold">Kalpesh Rathod</h6>
+                                                </a>
+                                                <div class="fs-13 text-muted">
+                                                    <p class="mb-1">
+                                                        Today and Tomorrow i am on leave.
+                                                    </p>
+                                                </div>
+                                                <p class="mb-0 fs-11 fw-medium text-uppercase text-muted">
+                                                    <span><i class="mdi mdi-clock-outline"></i> 10 hrs ago</span>
+                                                </p>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="my-3 text-center view-all">
+                                        <button type="button" class="btn btn-soft-success waves-effect waves-light">
+                                            View
+                                            All Messages <i class="ri-arrow-right-line align-middle"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="notification-actions" id="notification-actions">
+                                <div class="d-flex text-muted justify-content-center">
+                                    Select <div id="select-content" class="text-body fw-semibold px-1">0</div> Result <button type="button" class="btn btn-link link-danger p-0 ms-3" data-bs-toggle="modal" data-bs-target="#removeNotificationModal">Remove</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="dropdown ms-sm-3 header-item topbar-user">
+                    <button type="button" class="profile-btn" id="page-header-user-dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <span class="d-flex align-items-center">
+                            <img class="rounded-circle header-profile-user" src="/assets/images/users/avatar-3.jpg" alt="Header Avatar">
+                            <span class="text-start ms-xl-2">
+                                <span class="d-none d-xl-inline-block ms-1 fw-medium user-name-text">Kalpesh Patel</span>
+                                <span class="d-none d-xl-block ms-1 fs-12 user-name-sub-text">Admin</span>
+                            </span>
+                        </span>
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-end">
+                        <!-- item-->
+                        <h6 class="dropdown-header">Welcome Kalpesh !</h6>
+                        <a class="dropdown-item" href="#"><i class="mdi mdi-account-circle text-muted fs-16 align-middle me-1"></i> <span class="align-middle">Profile</span></a>
+                        <!--<a class="dropdown-item" href="apps-chat.html"><i class="mdi mdi-message-text-outline text-muted fs-16 align-middle me-1"></i> <span class="align-middle">Messages</span></a>
+                        <a class="dropdown-item" href="#"><i class="mdi mdi-calendar-check-outline text-muted fs-16 align-middle me-1"></i> <span class="align-middle">Taskboard</span></a>
+                        <a class="dropdown-item" href="#"><i class="mdi mdi-lifebuoy text-muted fs-16 align-middle me-1"></i> <span class="align-middle">Help</span></a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#"><span class="badge bg-success-subtle text-success mt-1 float-end">New</span><i class="mdi mdi-cog-outline text-muted fs-16 align-middle me-1"></i> <span class="align-middle">Settings</span></a>
+                        <a class="dropdown-item" href="#"><i class="mdi mdi-lock text-muted fs-16 align-middle me-1"></i> <span class="align-middle">Lock screen</span></a>-->
+                        <a class="dropdown-item Logoutbtn"><i class="mdi mdi-logout text-muted fs-16 align-middle me-1"></i> <span class="align-middle" data-key="t-logout">Logout</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- removeNotificationModal -->
+<div id="removeNotificationModal" class="modal fade zoomIn" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="NotificationModalbtn-close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="mt-2 text-center">
+                    <lord-icon src="https://cdn.lordicon.com/gsqxdxog.json" trigger="loop" colors="primary:#f7b84b,secondary:#f06548" style="width:100px;height:100px"></lord-icon>
+                    <div class="mt-4 pt-2 fs-15 mx-4 mx-sm-5">
+                        <h4>Are you sure ?</h4>
+                        <p class="text-muted mx-4 mb-0">Are you sure you want to remove this Notification ?</p>
+                    </div>
+                </div>
+                <div class="d-flex gap-2 justify-content-center mt-4 mb-2">
+                    <button type="button" class="btn w-sm btn-light" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn w-sm btn-danger" id="delete-notification">Yes, Delete It!</button>
+                </div>
+            </div>
+
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<!-- ========== App Menu ========== -->
+<div class="app-menu navbar-menu">
+    <!-- LOGO -->
+    <div class="navbar-brand-box">
+        <!-- Dark Logo-->
+        <a href="index.html" class="logo logo-dark">
+            <span class="logo-sm">
+                <img src="./assets/images/new-logo/ksp-logo.png" alt="" height="22">
+            </span>
+            <span class="logo-lg">
+                <img src="./assets/images/new-logo/ksp-logo.png" alt="" height="17">
+            </span>
+        </a>
+        <!-- Light Logo-->
+        <a href="index.html" class="logo logo-light">
+            <span class="logo-sm">
+                <img src="./assets/images/new-logo/ksp-logo.png" alt="" height="22">
+            </span>
+            <span class="logo-lg">
+                <img src="./assets/images/new-logo/ksp-logo.png" alt="" height="17">
+            </span>
+        </a>
+        <button type="button" class="btn btn-sm p-0 fs-20 header-item float-end btn-vertical-sm-hover" id="vertical-hover">
+            <i class="ri-record-circle-line"></i>
+        </button>
+    </div>
+    <div id="scrollbar">
+        <div class="container-fluid">
+            <div id="two-column-menu">
+            </div>
+            <ul class="navbar-nav" id="navbar-nav">
+                @* <li class="menu-title"><span data-key="t-menu">Menu</span></li>
+                <li class="nav-item">
+                    <a class="nav-link menu-link" href="#sidebarDashboards" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarDashboards">
+                        <i class="bx bxs-dashboard"></i> <span data-key="t-dashboards">Dashboards</span>
+                    </a>
+                    <div class="collapse menu-dropdown" id="sidebarDashboards">
+                        <ul class="nav nav-sm flex-column">
+                            <!--<li class="nav-item">
+                                <a href="#" class="nav-link" data-key="t-mailbox"> Daily Dashboard </a>
+                            </li>-->
+                            <li class="nav-item">
+                                <a href="@Url.Action("dashboardproject", "Dashboard")" class="nav-link" data-key="t-mailbox"> Project Dashboard</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="@Url.Action("dashboardleave", "Dashboard")" class="nav-link" data-key="t-mailbox"> Leave Dashboard</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="@Url.Action("dashboardemployee", "Dashboard")" class="nav-link" data-key="t-mailbox">
+                                    Employee Dashboard
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="@Url.Action("dashboardaccount", "Dashboard")" class="nav-link" data-key="t-mailbox">
+                                    Accounts Dashboard
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="@Url.Action("dashboardlead", "Dashboard")" class="nav-link" data-key="t-mailbox">
+                                    Leads Dashboard
+
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="@Url.Action("dashboardhr", "Dashboard")" class="nav-link" data-key="t-mailbox">
+                                    HR Dashboard
+
+                                </a>
+                            </li>
+                            <!--<li class="nav-item">
+                                <a href="#" class="nav-link" data-key="t-mailbox">
+                                    Accounts Dashboard
+
+                                </a>
+                            </li>-->
+                            <li class="nav-item">
+                                <a href="@Url.Action("dashboardexpense", "Dashboard")" class="nav-link" data-key="t-mailbox">
+                                    Expense Dashboard
+
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </li> <!-- end Dashboard Menu -->
+
+
+                <li class="nav-item">
+                    <a href="#bd" class="nav-link" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarProjects" data-key="t-projects">
+                        Business Development
+                    </a>
+                    <div class="collapse menu-dropdown" id="bd">
+                        <ul class="nav nav-sm flex-column">
+                            <li class="nav-item">
+                                <a href="#bdmasters" class="nav-link" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarEmail" data-key="t-email">
+                                    Masters
+
+                                </a>
+                                <div class="collapse menu-dropdown" id="bdmasters">
+                                    <ul class="nav nav-sm flex-column">
+                                        <li class="nav-item">
+                                            <a href="@Url.Action("ViewResearchChannelType", "BusinessDevelopment")" class="nav-link" data-key="t-mailbox">
+                                                Research Channel Type
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="@Url.Action("ViewResearchAudience", "BusinessDevelopment")" class="nav-link" data-key="t-mailbox">
+                                                Research Audience
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="@Url.Action("ViewProspectContact", "BusinessDevelopment")" class="nav-link" data-key="t-mailbox">
+                                                Prospect Master
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="@Url.Action("ViewResearchCommunicationMode", "BusinessDevelopment")" class="nav-link" data-key="t-mailbox">
+                                                Research Communication Mode
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="@Url.Action("ViewHistoryType", "BusinessDevelopment")" class="nav-link" data-key="t-mailbox">
+                                                Communication Hisoty
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="@Url.Action("ViewHistoryTypeStatus", "BusinessDevelopment")" class="nav-link" data-key="t-mailbox">
+                                                Communication Hisoty Status
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#task" class="nav-link" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarEmail" data-key="t-email">
+                                    Research
+                                </a>
+                                <div class="collapse menu-dropdown" id="task">
+                                    <ul class="nav nav-sm flex-column">
+                                        <li class="nav-item">
+                                            <a href="@Url.Action("ViewResearchGroup", "BusinessDevelopment")" class="nav-link" data-key="t-mailbox">
+                                                Manage Research Group
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="@Url.Action("ViewResearchGrpData", "BusinessDevelopment")" class="nav-link" data-key="t-mailbox">
+                                                Upload Research Data
+                                            </a>
+                                        </li>
+
+
+                                        <li class="nav-item">
+                                            <a href="@Url.Action("ViewDataFiltration", "BusinessDevelopment")" class="nav-link" data-key="t-mailbox">
+                                                Manage Filteration Data
+                                            </a>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#bdbd" class="nav-link" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarEmail" data-key="t-email">
+                                    Sales
+                                </a>
+                                <div class="collapse menu-dropdown" id="task">
+                                    <ul class="nav nav-sm flex-column">
+                                        <li class="nav-item">
+                                            <a href="@Url.Action("ManagePositiveLead", "BusinessDevelopment")" class="nav-link" data-key="t-mailbox">
+                                                Manage Positive Lead
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </li><!-- end BD Menu -->
+
+
+                <li class="nav-item">
+                    <a href="#accounts" class="nav-link" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarProjects" data-key="t-projects">
+                        Accounts
+                    </a>
+                    <div class="collapse menu-dropdown" id="accounts">
+                        <ul class="nav nav-sm flex-column">
+                            <li class="nav-item">
+                                <a href="#acproject" class="nav-link" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarEmail" data-key="t-email">
+                                    Master
+                                </a>
+                                <div class="collapse menu-dropdown" id="acproject">
+                                    <ul class="nav nav-sm flex-column">
+
+                                        <li class="nav-item">
+                                            <a href="@Url.Action("ViewUnitMaster","Account")" class="nav-link" data-key="t-mailbox">
+                                                Unit Master
+                                            </a>
+                                        </li>
+
+                                        <li class="nav-item">
+                                            <a href="@Url.Action("ViewModeofPayment","Account")" class="nav-link" data-key="t-mailbox">
+                                                Mode Of Payment
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="@Url.Action("ViewTermsofPayment","Account")" class="nav-link" data-key="t-mailbox">
+                                                Terms Of Payment
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="@Url.Action("ViewModeofDelivery","Account")" class="nav-link" data-key="t-mailbox">
+                                                Mode Of Delivery
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="@Url.Action("ViewModeofTransport","Account")" class="nav-link" data-key="t-mailbox">
+                                                Mode Of Transport
+                                            </a>
+                                        </li>
+
+                                        <li class="nav-item">
+                                            <a href="@Url.Action("ViewAllowanceType","Account")" class="nav-link" data-key="t-mailbox">
+                                                Allowance Type
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+
+                                            <a href="@Url.Action("ViewPaymentStatus","Account")" class="nav-link" data-key="t-mailbox">
+                                                Payment Status
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+
+                                            <a href="@Url.Action("ViewFinancialYear","Account")" class="nav-link" data-key="t-mailbox">
+                                                Financial Year Master
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="@Url.Action("ViewNomenClature","Account")" class="nav-link" data-key="t-mailbox">
+                                                Nomen Clature Mater
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="@Url.Action("ViewDocumentEnum","Account")" class="nav-link" data-key="t-mailbox">
+                                                Document Enum Master
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="@Url.Action("ViewLanguage","Account")" class="nav-link" data-key="t-mailbox">
+                                                Language Master
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#acsales" class="nav-link" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarEmail" data-key="t-email">
+                                    Sales
+                                </a>
+                                <div class="collapse menu-dropdown" id="acsales">
+                                    <ul class="nav nav-sm flex-column">
+                                        <li class="nav-item">
+                                            <a href="@Url.Action("ViewCustomerInquiry","Account")" class="nav-link" data-key="t-mailbox">
+                                                Manage Inquiry
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="@Url.Action("ViewSalesOrder","Account")" class="nav-link" data-key="t-mailbox">
+                                                Manage Sales Order
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="@Url.Action("ViewSaleInvoice","Account")" class="nav-link" data-key="t-mailbox">
+                                                Manage Sales Invoice
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#acpurchase" class="nav-link" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarEmail" data-key="t-email">
+                                    Purchase
+                                </a>
+                                <div class="collapse menu-dropdown" id="acpurchase">
+                                    <ul class="nav nav-sm flex-column">
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link" data-key="t-mailbox">
+                                                Manage Purchase Request *
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link" data-key="t-mailbox">
+                                                Manage Quotation *
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="@Url.Action("ViewPurchaseOrder","Account")" class="nav-link" data-key="t-mailbox">
+                                                Manage Purchase Order
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="@Url.Action("ViewPurchaseInvoice","Account")" class="nav-link" data-key="t-mailbox">
+                                                Manage Purchase Invoice
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+
+                            <li class="nav-item">
+                                <a href="#acreport" class="nav-link" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarEmail" data-key="t-email">
+                                    Reports
+                                </a>
+                                <div class="collapse menu-dropdown" id="acreport">
+                                    <ul class="nav nav-sm flex-column">
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link" data-key="t-mailbox">
+                                                Sales Journal Report *
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link" data-key="t-mailbox">
+                                                Purhcase Journal Report *
+                                            </a>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#actaxsetup" class="nav-link" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarEmail" data-key="t-email">
+                                    Tax Setup
+                                </a>
+                                <div class="collapse menu-dropdown" id="actaxsetup">
+                                    <ul class="nav nav-sm flex-column">
+                                        <li class="nav-item">
+                                            <a href="@Url.Action("ViewTaxGroup","Account")" class="nav-link" data-key="t-mailbox">
+                                                Manage Tax Group
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="@Url.Action("ViewTaxCode","Account")" class="nav-link" data-key="t-mailbox">
+                                                Manage Tax Code
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="@Url.Action("ViewTaxData","Account")" class="nav-link" data-key="t-mailbox">
+                                                Manage Tax Data
+                                            </a>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#acassetsetup" class="nav-link" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarEmail" data-key="t-email">
+                                    Asset Setup
+                                </a>
+                                <div class="collapse menu-dropdown" id="actaxsetup">
+                                    <ul class="nav nav-sm flex-column">
+                                        <li class="nav-item">
+                                            <a href="@Url.Action("Viewcustomer","Account")" class="nav-link" data-key="t-mailbox">
+                                                Customer Master
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="@Url.Action("Viewvendor","Account")" class="nav-link" data-key="t-mailbox">
+                                                Vendor Master
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="@Url.Action("ViewItemGroup","Account")" class="nav-link" data-key="t-mailbox">
+                                                Item Group
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="@Url.Action("ViewItemMaster","Account")" class="nav-link" data-key="t-mailbox">
+                                                Item Master
+                                            </a>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#acassetsetup" class="nav-link" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarEmail" data-key="t-email">
+                                    Invoices Master
+                                </a>
+                                <div class="collapse menu-dropdown" id="actaxsetup">
+                                    <ul class="nav nav-sm flex-column">
+                                        <li class="nav-item">
+                                            <a href="@Url.Action("ViewInvoiceType","Account")" class="nav-link" data-key="t-mailbox">
+                                                Invoice Type
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="@Url.Action("ViewInvoiceSubType","Account")" class="nav-link" data-key="t-mailbox">
+                                                Invoice Sub Type
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="@Url.Action("ViewInvoiceTypeCode","Account")" class="nav-link" data-key="t-mailbox">
+                                                Invoice Type Code
+                                            </a>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </li><!-- end Accounts Menu -->
+
+                <li class="nav-item">
+                    <a href="#sidebarProjects" class="nav-link" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarProjects" data-key="t-projects">
+                        Project
+                    </a>
+                    <div class="collapse menu-dropdown" id="sidebarProjects">
+                        <ul class="nav nav-sm flex-column">
+                            <li class="nav-item">
+                                <a href="#projectset" class="nav-link" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarEmail" data-key="t-email">
+                                    Project Setup
+                                </a>
+                                <div class="collapse menu-dropdown" id="projectset">
+                                    <ul class="nav nav-sm flex-column">
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link" data-key="t-mailbox">
+                                                Manage Project
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link" data-key="t-mailbox">
+                                                Manage Project Phase
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link" data-key="t-mailbox">
+                                                Manage Worklist
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link" data-key="t-mailbox">
+                                                Manage Project Meeting
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link" data-key="t-mailbox">
+                                                Manage Meeting MOM
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link" data-key="t-mailbox">
+                                                View My Meeting MOM
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#tasksetup" class="nav-link" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarEmail" data-key="t-email">
+                                    Project Execution
+                                </a>
+                                <div class="collapse menu-dropdown" id="tasksetup">
+                                    <ul class="nav nav-sm flex-column">
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link" data-key="t-mailbox">
+                                                Manage Task Day
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link" data-key="t-mailbox">
+                                                Manage Task
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link" data-key="t-mailbox">
+                                                Manage Task Transfer
+                                            </a>
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link" data-key="t-mailbox">
+                                                Manage Daybook
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link" data-key="t-mailbox">
+                                                Manage Daily WorkBook
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#tasksetup" class="nav-link" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarEmail" data-key="t-email">
+                                    Project Closure
+                                </a>
+                                <div class="collapse menu-dropdown" id="tasksetup">
+                                    <ul class="nav nav-sm flex-column">
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link" data-key="t-mailbox">
+                                                Manage Task Day
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link" data-key="t-mailbox">
+                                                Manage Task
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link" data-key="t-mailbox">
+                                                Manage Task Transfer
+                                            </a>
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link" data-key="t-mailbox">
+                                                Manage Daybook
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link" data-key="t-mailbox">
+                                                Manage Daily WorkBook
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </li><!-- end Project Menu -->
+                <li class="nav-item">
+                    <a href="#expense" class="nav-link" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarProjects" data-key="t-projects">
+                        Expense Reimbursement
+                    </a>
+                    <div class="collapse menu-dropdown" id="expense" style="width:230px;">
+                        <ul class="nav nav-sm flex-column">
+                            <li class="nav-item">
+                                <a href="#exmaster" class="nav-link" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarEmail" data-key="t-email">
+                                    Master
+                                </a>
+                                <div class="collapse menu-dropdown" id="exmaster" style="width:230px;">
+                                    <ul class="nav nav-sm flex-column">
+                                        <li class="nav-item">
+                                            <a href="@Url.Action("ViewExpenseTypeMaster", "Expense")" class="nav-link" data-key="t-mailbox">
+                                                Expense Type Master
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="@Url.Action("ViewExpenseSubTypeMaster", "Expense")" class="nav-link" data-key="t-mailbox">
+                                                Expense Sub Type Master
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="@Url.Action("ViewProfitCenter", "Expense")" class="nav-link" data-key="t-mailbox">
+                                                Profit Central
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="@Url.Action("ViewGeneralLedger", "Expense")" class="nav-link" data-key="t-mailbox">
+                                                General Ledger
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="@Url.Action("ViewRemarkTemplate", "Expense")" class="nav-link" data-key="t-mailbox">
+                                                Remark Template
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="@Url.Action("ViewSubstituteExpense", "Expense")" class="nav-link" data-key="t-mailbox">
+                                                Substitute Expense
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="@Url.Action("ViewHeadDesignation", "Expense")" class="nav-link" data-key="t-mailbox">
+                                                Head Designation
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="@Url.Action("ViewReportingDesignation", "Expense")" class="nav-link" data-key="t-mailbox">
+                                                Manage Report Designation
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="@Url.Action("ViewEmployeeMaster", "Expense")" class="nav-link" data-key="t-mailbox">
+                                                Employee Master
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="@Url.Action("ViewExpenseUnitMaster", "Expense")" class="nav-link" data-key="t-mailbox">
+                                                Expense Unit Master
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="@Url.Action("ViewExpenseDateRangeMaster", "Expense")" class="nav-link" data-key="t-mailbox">
+                                                Expense Date Range Master
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#exsetup" class="nav-link" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarEmail" data-key="t-email">
+                                    Setup
+                                </a>
+                                <div class="collapse menu-dropdown" id="exsetup">
+                                    <ul class="nav nav-sm flex-column">
+                                        <li class="nav-item">
+                                            <a href="@Url.Action("ViewWorkFlowInstanceMaster", "Expense")" class="nav-link" data-key="t-mailbox">
+                                                Work Flow Instance Master
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="@Url.Action("ViewFrequencyMaster", "Expense")" class="nav-link" data-key="t-mailbox">
+                                                Frequency Master
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="@Url.Action("ViewCostCategoryDetail", "Expense")" class="nav-link" data-key="t-mailbox">
+                                                Cost Category
+                                            </a>
+                                        <li class="nav-item">
+                                            <a href="@Url.Action("ViewCostCityDetail", "Expense")" class="nav-link" data-key="t-mailbox">
+                                                Cost City
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="@Url.Action("ViewExpenseLimitMaster", "Expense")" class="nav-link" data-key="t-mailbox">
+                                                Expense Limit
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="@Url.Action("ViewExpenseEligibilityMaster", "Expense")" class="nav-link" data-key="t-mailbox">
+                                                Expense Eligibility
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="@Url.Action("AddTimeZoneMaster", "Expense")" class="nav-link" data-key="t-mailbox">
+                                                Expense Time Zone
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="@Url.Action("ViewExpenseCurrencyMaster", "Expense")" class="nav-link" data-key="t-mailbox">
+                                                Currency Master
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#exreports" class="nav-link" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarEmail" data-key="t-email">
+                                    Reports
+                                </a>
+                                <div class="collapse menu-dropdown" id="exreports" style="width:230px;">
+                                    <ul class="nav nav-sm flex-column">
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link" data-key="t-mailbox">
+                                                Expense Report
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link" data-key="t-mailbox">
+                                                Month Wise Expense Report
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link" data-key="t-mailbox">
+                                                Process Time Report
+                                            </a>
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link" data-key="t-mailbox">
+                                                Employee Wise GL / PL Report
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#exreimbursement" class="nav-link" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarEmail" data-key="t-email">
+                                    Expense Reimbursement
+                                </a>
+                                <div class="collapse menu-dropdown" id="exreimbursement">
+                                    <ul class="nav nav-sm flex-column">
+                                        <li class="nav-item">
+                                            <a href="@Url.Action("ViewSoleExpenses", "Expense")" class="nav-link" data-key="t-mailbox">
+                                                Sole
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="@Url.Action("ViewTripExpense", "Expense")" class="nav-link" data-key="t-mailbox">
+                                                Trip
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#exapproval" class="nav-link" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarEmail" data-key="t-email">
+                                    Expense Approval
+                                </a>
+                                <div class="collapse menu-dropdown" id="exapproval">
+                                    <ul class="nav nav-sm flex-column">
+                                        <li class="nav-item">
+                                            <a href="@Url.Action("SoleExpenseApproval", "Expense")" class="nav-link" data-key="t-mailbox">
+                                                Sole
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="@Url.Action("TripExpenseApproval", "Expense")" class="nav-link" data-key="t-mailbox">
+                                                Trip
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </li><!-- end Expense Menu -->
+
+                <li class="nav-item">
+                    <a href="#hra" class="nav-link" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarEmail" data-key="t-email">
+                        HRA
+                    </a>
+                    <div class="collapse menu-dropdown" id="hra">
+                        <ul class="nav nav-sm flex-column">
+                            <li class="nav-item">
+                                <a href="#hrmaster" class="nav-link" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarEmail" data-key="t-email">
+                                    Masters
+                                </a>
+                                <div class="collapse menu-dropdown" id="hrmaster" style="width:230px;">
+                                    <ul class="nav nav-sm flex-column">
+                                        <!--<li class="nav-item">
+                                            <a href="./ViewBank.html" class="nav-link" data-key="t-mailbox">
+                                                Bank Master
+                                            </a>
+                                        </li>-->
+
+
+
+                                        <li class="nav-item">
+                                            <a href="@Url.Action("ViewProfessionalTax", "HRA")" class="nav-link" data-key="t-mailbox">
+                                                Professional Tax Master
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="@Url.Action("ViewShift", "HRA")" class="nav-link" data-key="t-mailbox">
+                                                Shift Master
+                                            </a>
+                                        </li>
+                                        <!--<li class="nav-item">
+                                            <a href="./ViewHonorific.html" class="nav-link" data-key="t-mailbox">
+                                                Honorific Master
+
+
+                                            </a>
+                                        </li>-->
+                                        <li class="nav-item">
+                                            <a href="@Url.Action("ViewWeekDay", "HRA")" class="nav-link" data-key="t-mailbox">
+                                                Week Day Master
+                                            </a>
+                                        </li>
+
+                                        <li class="nav-item">
+                                            <a href="@Url.Action("ViewNominee", "HRA")" class="nav-link" data-key="t-mailbox">
+                                                Nominee Master
+                                            </a>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#Company" class="nav-link" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarEmail" data-key="t-email">
+                                    Company
+                                </a>
+                                <div class="collapse menu-dropdown" id="Company" style="width:260px;">
+                                    <ul class="nav nav-sm flex-column">
+                                        <li class="nav-item">
+                                            <a href="@Url.Action("ViewNomineeType", "HRA")" class="nav-link" data-key="t-mailbox">
+                                                Nominee Type Master
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="@Url.Action("ViewEmployeementtype", "HRA")" class="nav-link" data-key="t-mailbox">
+                                                Employeement Type Master
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#hrEmployee" class="nav-link" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarEmail" data-key="t-email">
+                                    Employee
+                                </a>
+                                <div class="collapse menu-dropdown" id="hrEmployee" style="width:260px;">
+                                    <ul class="nav nav-sm flex-column">
+                                        <li class="nav-item">
+                                            <a href="@Url.Action("ViewEmployeeLeaveAuthorization", "HRA")" class="nav-link" data-key="t-mailbox">
+                                                Leave Authorization Master
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="@Url.Action("ViewEmployeeRelieving", "HRA")" class="nav-link" data-key="t-mailbox">
+                                                Employee Relieving Master
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="@Url.Action("ViewEmployeesWeekOff", "HRA")" class="nav-link" data-key="t-mailbox">
+                                                Employee WeekOffs Master
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#hrEmployeesalary" class="nav-link" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarEmail" data-key="t-email">
+                                    Employee Salary
+                                </a>
+                                <div class="collapse menu-dropdown" id="hrEmployeesalary" style="width:260px;">
+                                    <ul class="nav nav-sm flex-column">
+                                        <li class="nav-item">
+                                            <a href="@Url.Action("ViewSalaryParameter", "HRA")" class="nav-link" data-key="t-mailbox">
+                                                Employee Salary Parameter
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="@Url.Action("SalaryPaySlipGeneration", "HRA")" class="nav-link" data-key="t-mailbox">
+                                                Salary Pay Slip Generation
+                                            </a>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#hrincometax" class="nav-link" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarEmail" data-key="t-email">
+                                    Income Tax
+                                </a>
+                                <div class="collapse menu-dropdown" id="hrincometax" style="width:280px;">
+                                    <ul class="nav nav-sm flex-column">
+                                        <li class="nav-item">
+                                            <a href="@Url.Action("ViewIncomeTax", "HRA")" class="nav-link" data-key="t-mailbox">
+                                                Income Tax Master
+                                            </a>
+                                        </li>
+
+                                        <li class="nav-item">
+                                            <a href="@Url.Action("ViewITDeduction", "HRA")" class="nav-link" data-key="t-mailbox">
+                                                IT Deduction Master
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="@Url.Action("ViewSubITDeduction", "HRA")" class="nav-link" data-key="t-mailbox">
+                                                Sub IT Deduction Master
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="@Url.Action("ViewITEmployeeParameter", "HRA")" class="nav-link" data-key="t-mailbox">
+                                                IT Employee Parameter Master
+                                            </a>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </li>
+
+                            <li class="nav-item">
+                                <a href="@Url.Action("ManageAttendence", "HRA")" class="nav-link" role="button" aria-expanded="false" aria-controls="sidebarEmail" data-key="t-email">
+                                    Manage Attendance
+                                </a>
+
+                            </li>
+
+                            <li class="nav-item">
+                                <a href="#leave" class="nav-link" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarEmail" data-key="t-email">
+                                   Leave
+                                </a>
+                                <div class="collapse menu-dropdown" id="leave" style="width:280px;">
+                                    <ul class="nav nav-sm flex-column">
+                                        <li class="nav-item">
+                                            <a href="@Url.Action("ApplyforLeave", "HRA")" class="nav-link" data-key="t-mailbox">
+                                                Apply for Leave
+                                            </a>
+                                        </li>
+
+                                    
+                                        <li class="nav-item">
+                                            <a href="@Url.Action("LeaveApproval", "HRA")" class="nav-link" data-key="t-mailbox">
+                                                Manage Leaves
+                                            </a>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                            <li class="nav-item">
+                                <a href="#hrreports" class="nav-link" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarEmail" data-key="t-email">
+                                    Reports
+
+
+                                </a>
+                                <div class="collapse menu-dropdown" id="hrreports" style="width:300px;">
+                                    <ul class="nav nav-sm flex-column">
+                                        <li class="nav-item">
+                                            <a href="@Url.Action("CompanyWiseAttendanceReport", "HRA")" class="nav-link" data-key="t-mailbox">
+                                                Company Wise Attendance Report
+
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="@Url.Action("EmployeeWiseAttendanceReport", "HRA")" class="nav-link" data-key="t-mailbox">
+                                                Employee Wise Attendance Report
+
+                                            </a>
+                                        </li>
+
+                                        <li class="nav-item">
+                                            <a href="@Url.Action("SalarySlipReport", "HRA")" class="nav-link" data-key="t-mailbox">
+                                                Salary Slip Report
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="@Url.Action("SalaryStatementReport", "HRA")" class="nav-link" data-key="t-mailbox">
+                                                Salary Statement Report
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="@Url.Action("BankStatementReport", "HRA")" class="nav-link" data-key="t-mailbox">
+                                                Bank Statement Report
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="@Url.Action("EmployeePayrollReport", "HRA")" class="nav-link" data-key="t-mailbox">
+                                                Employee Payroll Report
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="@Url.Action("JoiningReport", "HRA")" class="nav-link" data-key="t-mailbox">
+                                                Joining Report
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="@Url.Action("FuelStatementReport", "HRA")" class="nav-link" data-key="t-mailbox">
+                                                Fuel Statement Report
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="@Url.Action("ProfesionalTaxReport", "HRA")" class="nav-link" data-key="t-mailbox">
+                                                Profesional Tax Report
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="@Url.Action("EmployeeBankDetilsReport", "HRA")" class="nav-link" data-key="t-mailbox">
+                                                Employee Bank Detils Report
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="@Url.Action("EmployeePFReport", "HRA")" class="nav-link" data-key="t-mailbox">
+                                                Employee PF Report
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="@Url.Action("ECRReport", "HRA")" class="nav-link" data-key="t-mailbox">
+                                                ECR Report
+                                            </a>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </li>
+
+                        </ul>
+                    </div>
+                </li>   <!-- HRA Menu -->
+                <li class="nav-item">
+                    <a href="#sidebarProjects" class="nav-link" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarProjects" data-key="t-projects">
+                        Company Setup
+                    </a>
+                    <div class="collapse menu-dropdown" id="sidebarEmail">
+                        <ul class="nav nav-sm flex-column">
+                            <li class="nav-item">
+                                <a href="" class="nav-link" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarEmail" data-key="t-email">
+                                    Master
+                                </a>
+                                <div class="collapse menu-dropdown" id="sidebarEmail">
+                                    <ul class="nav nav-sm flex-column">
+                                        <li class="nav-item">
+                                            <a href="@Url.Action("MasterViewYear","Master")" class="nav-link" data-key="t-mailbox">
+                                                Year Master
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="@Url.Action("MasterViewBankType","Master")" class="nav-link" data-key="t-mailbox">
+                                                Bank Type Master
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="@Url.Action("MasterViewBankAccountType","Master")" class="nav-link" data-key="t-mailbox">
+                                                Bank A/c Type Master
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="@Url.Action("MasterViewBankDetail","Master")" class="nav-link" data-key="t-mailbox">
+                                                Manage Banks Details
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="@Url.Action("MasterViewHonorific","Master")" class="nav-link" data-key="t-mailbox">
+                                                Honorofic Master
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="@Url.Action("MasterViewGender","Master")" class="nav-link" data-key="t-mailbox">
+                                                Gender Master
+                                            </a>
+                                        </li>
+
+                                        <li class="nav-item">
+                                            <a href="@Url.Action("ViewBloodGroup","Master")" class="nav-link" data-key="t-mailbox">
+                                                Blood Group Master
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="@Url.Action("ViewMaritalStatus","Master")" class="nav-link" data-key="t-mailbox">
+                                                Marital Status Master
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="@Url.Action("ViewNationality","Master")" class="nav-link" data-key="t-mailbox">
+                                                Nationality Master
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="@Url.Action("MasterViewDocumentType","Master")" class="nav-link" data-key="t-mailbox">
+                                                Document Group Master
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="@Url.Action("ViewIndustrySector","Master")" class="nav-link" data-key="t-mailbox">
+                                                Industry Sector Master
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#para" class="nav-link" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarEmail" data-key="t-email">
+                                    Parameter Setup
+                                </a>
+                                <div class="collapse menu-dropdown" id="para">
+                                    <ul class="nav nav-sm flex-column">
+                                        <li class="nav-item">
+                                            <a href="@Url.Action("MasterViewServiceGroup","Master")" class="nav-link" data-key="t-mailbox">
+                                                Service Group Master
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="@Url.Action("MasterViewEmployeeDesignation","Master")" class="nav-link" data-key="t-mailbox">
+                                                Designation Master
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="@Url.Action("MasterViewDepartment","Master")" class="nav-link" data-key="t-mailbox">
+                                                Department Master
+                                            </a>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#location" class="nav-link" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarEmail" data-key="t-email">
+                                    Location Setup
+                                </a>
+                                <div class="collapse menu-dropdown" id="location">
+                                    <ul class="nav nav-sm flex-column">
+                                        <li class="nav-item">
+                                            <a href="@Url.Action("MasterViewCountryName","Master")" class="nav-link" data-key="t-mailbox">
+                                                Country Master
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="@Url.Action("MasterViewStateName","Master")" class="nav-link" data-key="t-mailbox">
+                                                State Master
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="@Url.Action("MasterViewCityName","Master")" class="nav-link" data-key="t-mailbox">
+                                                City Master
+                                            </a>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#sidebarEmail" class="nav-link" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarEmail" data-key="t-email">
+                                    User Setup
+                                </a>
+                                <div class="collapse menu-dropdown" id="sidebarEmail">
+                                    <ul class="nav nav-sm flex-column">
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link" data-key="t-mailbox">
+                                                Manage Employee
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link" data-key="t-mailbox">
+                                                Manage Customer *
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link" data-key="t-mailbox">
+                                                Manage Vendor *
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link" data-key="t-mailbox">
+                                                Manage Employee Documents *
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#sidebarEmail" class="nav-link" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarEmail" data-key="t-email">
+                                    Configuration Setup
+                                </a>
+                                <div class="collapse menu-dropdown" id="sidebarEmail">
+                                    <ul class="nav nav-sm flex-column">
+                                        <li class="nav-item">
+                                            <a href="@Url.Action("MasterViewEmailTemplate","Master")" class="nav-link" data-key="t-mailbox">
+                                                Email Template
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="@Url.Action("MasterViewEmailCredential","Master")" class="nav-link" data-key="t-mailbox">
+                                                Email Credentials
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="@Url.Action("ViewRole","Master")" class="nav-link" data-key="t-mailbox">
+                                                User Roles Master
+                                            </a>
+                                        <li class="nav-item">
+                                            <a href="@Url.Action("ViewMenu", "Master")" class="nav-link" data-key="t-mailbox">
+                                                Menu Master
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="@Url.Action("ManageRights","Master")" class="nav-link" data-key="t-mailbox">
+                                                User Menu Rights
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </li><!-- end Company Setup Menu -->
+                <li class="nav-item">
+                    <a href="#library" class="nav-link" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarProjects" data-key="t-projects">
+                        Library
+                    </a>
+                    <div class="collapse menu-dropdown" id="library">
+                        <ul class="nav nav-sm flex-column">
+                            <li class="nav-item">
+                                <a href="#" class="nav-link" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarEmail" data-key="t-email">
+                                    Master
+                                </a>
+                                <div class="collapse menu-dropdown" id="projectsreport">
+                                    <ul class="nav nav-sm flex-column">
+                                        <li class="nav-item">
+                                            <a href="@Url.Action("ViewLibraryCategory", "Library")" class="nav-link" data-key="t-mailbox">
+                                                Library Category
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="@Url.Action("ViewLibraryCategoryTag", "Library")" class="nav-link" data-key="t-mailbox">
+                                                Library Category Tag
+                                            </a>
+                                        </li>
+
+                                        <li class="nav-item">
+                                            <a href="@Url.Action("ViewDocumentCategory", "Library")" class="nav-link" data-key="t-mailbox">
+                                                Document Category
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="@Url.Action("ViewDocumentCategoryTag", "Library")" class="nav-link" data-key="t-mailbox">
+                                                Document Category Tag
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="@Url.Action("ViewDocument", "Library")" class="nav-link" data-key="t-mailbox">
+                                                Manage Document
+                                            </a>
+                                        </li>
+                                        <!--<li class="nav-item">
+                                            <a href="#" class="nav-link" data-key="t-mailbox">
+                                                Document Category
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link" data-key="t-mailbox">
+                                                Document Category
+                                            </a>
+                                        </li>-->
+
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a href="@Url.Action("DocumentTreeView", "Library")" class="nav-link" role="button" aria-expanded="false" aria-controls="sidebarEmail" data-key="t-email">
+                                    Document Tree
+                                </a>
+
+                            </li>
+                            <li class="nav-item">
+                                <a href="@Url.Action("ManageLibrarySearch", "Library")" class="nav-link" role="button" aria-expanded="false" aria-controls="sidebarEmail" data-key="t-email">
+                                    Library Search
+                                </a>
+
+                            </li>
+                            <li class="nav-item">
+                                <a href="@Url.Action("ViewRenewableDocumentsListReminder", "Library")" class="nav-link" role="button" aria-expanded="false" aria-controls="sidebarEmail" data-key="t-email">
+                                    Renewable Documents
+                                </a>
+
+                            </li>
+
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="nav-item">
+                    <a href="#reports" class="nav-link" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarProjects" data-key="t-projects">
+                        Reports
+
+
+                    </a>
+                    <div class="collapse menu-dropdown" id="reports">
+                        <ul class="nav nav-sm flex-column">
+                            <li class="nav-item">
+                                <a href="#projectsreport" class="nav-link" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarEmail" data-key="t-email">
+                                    Project
+
+
+                                </a>
+                                <div class="collapse menu-dropdown" id="projectsreport">
+                                    <ul class="nav nav-sm flex-column">
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link" data-key="t-mailbox">
+
+                                                Project Closure Report
+
+
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link" data-key="t-mailbox">
+
+                                                Project Detail Report
+
+                                            </a>
+                                        </li>
+
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link" data-key="t-mailbox">
+
+                                                Project Utilisation Report
+
+
+                                            </a>
+                                        </li>
+
+
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#taskreport" class="nav-link" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarEmail" data-key="t-email">
+                                    Task
+
+                                </a>
+                                <div class="collapse menu-dropdown" id="taskreport">
+                                    <ul class="nav nav-sm flex-column">
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link" data-key="t-mailbox">
+                                                Task Closure Report
+
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link" data-key="t-mailbox">
+                                                Task Detail Report
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link" data-key="t-mailbox">
+                                                Task Utilisation Report
+                                            </a>
+
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#attendencereport" class="nav-link" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarEmail" data-key="t-email">
+                                    Attendance
+
+                                </a>
+                                <div class="collapse menu-dropdown" id="attendencereport">
+                                    <ul class="nav nav-sm flex-column">
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link" data-key="t-mailbox">
+                                                Attendance Detailed Report
+
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link" data-key="t-mailbox">
+                                                Attendance Summary Report
+
+
+
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link" data-key="t-mailbox">
+                                                Monthly Salary Count Report
+
+
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link" data-key="t-mailbox">
+                                                Leave Report
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link" data-key="t-mailbox">
+                                                Leave W/O Application Report
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#servicereport" class="nav-link" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarEmail" data-key="t-email">
+                                    Service
+
+                                </a>
+                                <div class="collapse menu-dropdown" id="servicereport">
+                                    <ul class="nav nav-sm flex-column">
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link" data-key="t-mailbox">
+                                                Customer Wise Service Report
+
+
+
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link" data-key="t-mailbox">
+                                                Upcoming Renewable Report
+
+
+
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link" data-key="t-mailbox">
+                                                Customer Wise Credentials Report
+
+
+
+
+                                            </a>
+
+
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#employeereport" class="nav-link" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarEmail" data-key="t-email">
+                                    Employee
+
+                                </a>
+                                <div class="collapse menu-dropdown" id="employeereport">
+                                    <ul class="nav nav-sm flex-column">
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link" data-key="t-mailbox">
+                                                Star Report
+
+
+
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link" data-key="t-mailbox">
+                                                Achivement Report
+
+
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link" data-key="t-mailbox">
+                                                Performance Report
+
+
+
+
+                                            </a>
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link" data-key="t-mailbox">
+                                                Salary Report
+
+
+
+
+                                            </a>
+                                        </li>
+
+
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </li><!-- end Reports Menu --> *@
+            </ul>
+        </div>
+        <!-- Sidebar -->
+    </div>
+    <div class="sidebar-background"></div>
+</div>
+<!-- Left Sidebar End -->
+<!-- Vertical Overlay-->
+<div class="vertical-overlay"></div>
+<!-- removeNotificationModal -->
+<!-- ========== App Menu ========== -->
+<!-- Left Sidebar End -->

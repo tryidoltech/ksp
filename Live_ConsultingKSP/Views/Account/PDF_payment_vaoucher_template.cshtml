@@ -1,0 +1,494 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sales Order Print</title>
+    <style>
+        font-face {
+            font-family: SohoGothicProBold;
+            src: url("Print/Font/SohoGothicPro-Bold.otf") format("opentype");
+        }
+
+        font-face {
+            font-family: SohoGothicProBoldItalic;
+            src: url("Print/Font/SohoGothicPro-BoldItalic.otf") format("opentype");
+        }
+
+        font-face {
+            font-family: SohoGothicProExtraBold;
+            src: url("Print/Font/SohoGothicPro-ExtraBold.otf") format("opentype");
+        }
+
+        font-face {
+            font-family: SohoGothicProExtraBoldIt;
+            src: url("Print/Font/SohoGothicPro-ExtraBoldIt.otf") format("opentype");
+        }
+
+        font-face {
+            font-family: SohoGothicProItalic;
+            src: url("Print/Font/SohoGothicPro-Italic.otf") format("opentype");
+        }
+
+        font-face {
+            font-family: SohoGothicProLight;
+            src: url("Print/Font/SohoGothicPro-Light.otf") format("opentype");
+        }
+
+        font-face {
+            font-family: SohoGothicProLightItalic;
+            src: url("Print/Font/SohoGothicPro-LightItalic.otf") format("opentype");
+        }
+
+        font-face {
+            font-family: SohoGothicProMedium;
+            src: url("Print/Font/SohoGothicPro-Medium.otf") format("opentype");
+        }
+
+        font-face {
+            font-family: SohoGothicProMediumIt;
+            src: url("Print/Font/SohoGothicPro-MediumIt.otf") format("opentype");
+        }
+
+        font-face {
+            font-family: SohoGothicProRegular;
+            src: url("Print/Font/SohoGothicPro-Regular.otf") format("opentype");
+        }
+
+        font-face {
+            font-family: SohoGothicProThin;
+            src: url("Print/Font/SohoGothicPro-Thin.otf") format("opentype");
+        }
+
+        font-face {
+            font-family: SohoGothicProThinItalic;
+            src: url("Print/Font/SohoGothicPro-ThinItalic.otf") format("opentype");
+        }
+
+        font-face {
+            font-family: SohoGothicProUltra;
+            src: url("Print/Font/SohoGothicPro-Ultra.otf") format("opentype");
+        }
+
+        font-face {
+            font-family: SohoGothicProUltraItalic;
+            src: url("Print/Font/SohoGothicPro-UltraItalic.otf") format("opentype");
+        }
+
+        .FontSGPBH1Title {
+            font-family: 'Rubik', sans-serif;
+            font-size: 12.5px;
+            color: #000000;
+        }
+
+        .FontSGPBH1Data {
+            font-family: 'Rubik', sans-serif;
+            font-size: 12.5px;
+            color: #000000;
+        }
+
+        .FontSGPBHeadTitle {
+            font-family: 'Rubik', sans-serif;
+            font-size: 15px;
+            color: #000000;
+        }
+
+        p, td {
+            margin: 0;
+            padding: 0;
+        }
+
+        .tblPay {
+            text-align: left;
+            padding-left: 5px;
+        }
+
+        .custome-bg {
+            background-color: #e6e7e9 !important;
+        }
+
+
+      
+    </style>
+
+</head>
+<body style="height: 622.519685px; width: 793.7007874px;">
+    <div id="MultiPageSO">
+
+        <table style="min-height: 622.519685px; width: 793.7007874px; /*border: 1px solid black; */">
+
+            <tr>
+                <td style="height: 50.913385827px; vertical-align: baseline;">
+                    <table style="width: 718.11023622px; margin-left: 1cm;border:1px solid #000" cellpadding="0" cellspacing="0">
+                        <tr style="height: 10.236220472px;text-align: left;width:80px;background-color:#fff">
+                            <td class="FontSGPBH1Data" colspan="2" style="padding-left:10px;">
+                                <img src="~/assets/images/new-logo/ksp-logo.png" style="width:auto;height:80px;" />
+                            </td>
+                            <td class="FontSGPBH1Data" colspan="5" style="padding-right:10px;">
+                                <h2 class="FontSGPBHeadTitle" style="text-align:right;font-size:18px;color:#000;font-weight:600;">Payment Voucher Template</h2>
+                            </td>
+                        </tr>
+                        <tr style="height: 30.236220472px;">
+                            <td class="FontSGPBH1Data" style="text-align: center;border:1px solid #000" colspan="7">
+                                <h3 class="FontSGPBHeadTitle" style="text-align:center;font-size:18px;font-weight:600;">Customer Details</h3>
+                            </td>
+                        </tr>
+                        <tr style="height: 30.236220472px;">
+                            <td class="FontSGPBH1Data" style="text-align: left; padding-left: 5px;border:1px solid #000"></td>
+                            <td class="FontSGPBH1Data" style="text-align: right; padding-right: 5px;border:1px solid #000">
+                                <strong>Name:</strong>
+                            </td>
+                            <td class="FontSGPBH1Data" style="text-align: left; padding-left: 5px;border:1px solid #000" colspan="3">
+                                KSP Consultancy
+                            </td>
+                            <td class="FontSGPBH1Data" style="text-align: right; padding-right: 5px;border:1px solid #000">
+                                <strong>POS</strong>
+                            </td>
+                            <td class="FontSGPBH1Data" style="text-align: right; padding-right: 5px;border:1px solid #000">
+                                <strong>Date</strong>
+                            </td>
+                        </tr>
+                        <tr style="height: 30.236220472px;">
+                            <td class="FontSGPBH1Data" style="text-align: left; padding-left: 5px;border:1px solid #000"></td>
+                            <td class="FontSGPBH1Data" style="text-align: right; padding-right: 5px;border:1px solid #000">
+                                <strong>Address:</strong>
+                            </td>
+                            <td class="FontSGPBH1Data" style="text-align: left; padding-left: 5px;border:1px solid #000" colspan="3">
+                                India
+                            </td>
+                            <td class="FontSGPBH1Data" style="text-align: right; padding-right: 5px;border:1px solid #000">
+                                GJ-24
+                            </td>
+                            <td class="FontSGPBH1Data" style="text-align: right; padding-right: 5px;border:1px solid #000">
+                                02/03/2022
+                            </td>
+                        </tr>
+                        <tr style="height: 30.236220472px;">
+                            <td class="FontSGPBH1Data" style="text-align: left; padding-left: 5px;border:1px solid #000"></td>
+                            <td class="FontSGPBH1Data" style="text-align: right; padding-right: 5px;border:1px solid #000;width:120px">
+                                <strong>Customer GSTIN:</strong>
+                            </td>
+                            <td class="FontSGPBH1Data" style="text-align: left; padding-left: 5px;border:1px solid #000;width:60px" colspan="2">
+                                2345623
+                            </td>
+                            <td class="FontSGPBH1Data" style="text-align: right; padding-right: 5px;border:1px solid #000;width:120px">
+                                <strong>Payment Voucher #</strong>
+                            </td>
+                            <td class="FontSGPBH1Data" style="text-align: left; padding-left: 5px;border:1px solid #000">
+                                2322
+                            </td>
+                            <td class="FontSGPBH1Data" style="text-align: right; padding-right: 5px;border:1px solid #000;width:80px">
+                                2017/GST/01
+                            </td>
+                        </tr>
+                        <tr style="height: 30.236220472px;">
+                            <td class="FontSGPBH1Data" style="text-align: left; padding-left: 5px;border:1px solid #000"></td>
+                            <td class="FontSGPBH1Data" style="text-align: right; padding-right: 5px;border:1px solid #000">
+                                <strong>Invoice Number:</strong>
+                            </td>
+                            <td class="FontSGPBH1Data" style="text-align: left; padding-left: 5px;border:1px solid #000;" colspan="2">
+                                #2342
+                            </td>
+                            <td class="FontSGPBH1Data" style="text-align: right; padding-right: 5px;border:1px solid #000">
+                                <strong>Invoice Date:</strong>
+                            </td>
+                            <td class="FontSGPBH1Data" style="text-align: left; padding-left: 5px;border:1px solid #000">
+                                10-Nov-2024
+                            </td>
+                        </tr>
+                        <tr style="height: 30.236220472px;">
+                            <td class="FontSGPBH1Data" style="text-align: left; padding-left: 5px;border:1px solid #000;border-right:none;" colspan="7"></td>
+                        </tr>
+                    </table>
+                    <table style="width: 718.11023622px; margin-left: 1cm;border: 1px solid #000000; border-top:none;" cellpadding="0" cellspacing="0">
+                        <tr style="height: 20.236220472px;background-color:#e34e25;color:#fff">
+                            <th class="FontSGPBH1Data" style="text-align: center; padding-left: 5px;border:1px solid #000;border-left:none;border-bottom:none;width:200px;border-top:none;color:#fff" rowspan="2">
+                                Sr No.
+                            </th>
+                            <th class="FontSGPBH1Data" style="text-align: center; padding-left: 5px;border:1px solid #000;border-left:none;border-bottom:none;width:200px;border-top:none;color:#fff" rowspan="2">
+                                Description of Goods and Services
+                            </th>
+                            <th class="FontSGPBH1Data" style="text-align: center; padding-right: 5px;border:1px solid #000;border-left:none;border-bottom:none;width:100px;border-top:none;color:#fff" rowspan="2">
+                                Refund Amount
+                            </th>
+                            <th class="FontSGPBH1Data" style="text-align: center; padding-right: 8px;border:1px solid #000;border-left:none;border-bottom:none;border-top:none;color:#fff" colspan="2">
+                                CGST
+                            </th>
+                            <th class="FontSGPBH1Data" style="text-align: center; padding-left: 5px;border:1px solid #000;border-left:none;border-bottom:none;border-top:none;color:#fff" colspan="2">
+                                SGST
+                            </th>
+                            <th class="FontSGPBH1Data" style="text-align: center; padding-left: 5px;border:1px solid #000;border-left:none;border-bottom:none;border-top:none;border-right:none;color:#fff" colspan="2">
+                                IGST
+                            </th>
+                        </tr>
+                        <tr style="height: 20.236220472px;background-color:#e34e25;color:#fff">
+                            <th class="FontSGPBH1Data" style="text-align: center; padding-left: 5px;border:1px solid #000;border-left:none;border-bottom:none;width:50px;color:#fff;font-weight:600">
+                                Rate %
+                            </th>
+                            <th class="FontSGPBH1Data" style="text-align: center; padding-right: 5px;border:1px solid #000;border-left:none;border-bottom:none;width:100px;color:#fff;font-weight:600">
+                                Amount
+                            </th>
+                            <th class="FontSGPBH1Data" style="text-align: center; padding-left: 5px;border:1px solid #000;border-left:none;border-bottom:none;width:50px;color:#fff;font-weight:600">
+                                Rate %
+                            </th>
+                            <th class="FontSGPBH1Data" style="text-align: center; padding-right: 5px;border:1px solid #000;border-left:none;border-bottom:none;width:100px;color:#fff;font-weight:600">
+                                Amount
+                            </th>
+                            <th class="FontSGPBH1Data" style="text-align: center; padding-left: 5px;border:1px solid #000;border-left:none;border-bottom:none;width:50px;color:#fff;font-weight:600">
+                                Rate %
+                            </th>
+                            <th class="FontSGPBH1Data" style="text-align: center; padding-right: 5px;border:1px solid #000;border-left:none;border-bottom:none;width:100px;color:#fff;font-weight:600">
+                                Amount
+                            </th>
+                        </tr>
+                        <tr style="height: 20.236220472px">
+                            <td class="FontSGPBH1Data" style="text-align: center; padding-left: 5px;border: 1px solid #000000;border-left:none;border-bottom:none;">
+                                1
+                            </td>
+                            <td class="FontSGPBH1Data" style="text-align: center; padding-left: 5px;border: 1px solid #000000;border-left:none;border-bottom:none;">
+                                Short Sleeve T-shirt
+                            </td>
+                            <td class="FontSGPBH1Data" style="text-align: center; padding-right: 8px;border: 1px solid #000000;border-left:none;border-bottom:none;">
+                                500.00
+                            </td>
+                            <td class="FontSGPBH1Data" style="text-align: center; padding-left: 5px;border: 1px solid #000000;border-left:none;border-bottom:none;">
+                                0.00%
+                            </td>
+                            <td class="FontSGPBH1Data" style="text-align: center; padding-left: 5px;text-align:center;border: 1px solid #000000;border-left:none;border-bottom:none;">
+                                0
+                            </td>
+                            <td class="FontSGPBH1Data" style="text-align: center; padding-right: 8px;text-align:center;border: 1px solid #000000;border-left:none;border-bottom:none;">
+                                0,00%
+                            </td>
+                            <td class="FontSGPBH1Data" style="text-align: center; padding-right: 8px;text-align:center;border: 1px solid #000000;border-left:none; border-right:none;border-bottom:none;">
+                                0
+                            </td>
+                            <td class="FontSGPBH1Data" style="text-align: center; padding-left: 5px;border: 1px solid #000000;">
+                                0.00%
+                            </td>
+                            <td class="FontSGPBH1Data" style="text-align: center; padding-left: 5px;border: 1px solid #000000;">
+                                0
+                            </td>
+                        </tr>
+                        <tr style="height: 20.236220472px">
+                            <td class="FontSGPBH1Data" style="text-align: center; padding-left: 5px;border: 1px solid #000000;border-left:none;border-bottom:none;">
+                                2
+                            </td>
+                            <td class="FontSGPBH1Data" style="text-align: center; padding-left: 5px;border: 1px solid #000000;border-left:none;border-bottom:none;">
+                                Short Sleeve T-shirt
+                            </td>
+                            <td class="FontSGPBH1Data" style="text-align: center; padding-right: 8px;border: 1px solid #000000;border-left:none;border-bottom:none;">
+                                500.00
+                            </td>
+                            <td class="FontSGPBH1Data" style="text-align: center; padding-left: 5px;border: 1px solid #000000;border-left:none;border-bottom:none;">
+                                0.00%
+                            </td>
+                            <td class="FontSGPBH1Data" style="text-align: center; padding-left: 5px;text-align:center;border: 1px solid #000000;border-left:none;border-bottom:none;">
+                                0
+                            </td>
+                            <td class="FontSGPBH1Data" style="text-align: center; padding-right: 8px;text-align:center;border: 1px solid #000000;border-left:none;border-bottom:none;">
+                                0,00%
+                            </td>
+                            <td class="FontSGPBH1Data" style="text-align: center; padding-right: 8px;text-align:center;border: 1px solid #000000;border-left:none; border-right:none;border-bottom:none;">
+                                0
+                            </td>
+                            <td class="FontSGPBH1Data" style="text-align: center; padding-left: 5px;border: 1px solid #000000;">
+                                0.00%
+                            </td>
+                            <td class="FontSGPBH1Data" style="text-align: center; padding-left: 5px;border: 1px solid #000000;">
+                                0
+                            </td>
+                        </tr>
+                        <tr style="height: 20.236220472px">
+                            <td class="FontSGPBH1Data" style="text-align: center; padding-left: 5px;border: 1px solid #000000;border-left:none;border-bottom:none;">
+                                3
+                            </td>
+                            <td class="FontSGPBH1Data" style="text-align: center; padding-left: 5px;border: 1px solid #000000;border-left:none;border-bottom:none;">
+                                Short Sleeve T-shirt
+                            </td>
+                            <td class="FontSGPBH1Data" style="text-align: center; padding-right: 8px;border: 1px solid #000000;border-left:none;border-bottom:none;">
+                                500.00
+                            </td>
+                            <td class="FontSGPBH1Data" style="text-align: center; padding-left: 5px;border: 1px solid #000000;border-left:none;border-bottom:none;">
+                                0.00%
+                            </td>
+                            <td class="FontSGPBH1Data" style="text-align: center; padding-left: 5px;text-align:center;border: 1px solid #000000;border-left:none;border-bottom:none;">
+                                0
+                            </td>
+                            <td class="FontSGPBH1Data" style="text-align: center; padding-right: 8px;text-align:center;border: 1px solid #000000;border-left:none;border-bottom:none;">
+                                0,00%
+                            </td>
+                            <td class="FontSGPBH1Data" style="text-align: center; padding-right: 8px;text-align:center;border: 1px solid #000000;border-left:none; border-right:none;border-bottom:none;">
+                                0
+                            </td>
+                            <td class="FontSGPBH1Data" style="text-align: center; padding-left: 5px;border: 1px solid #000000;">
+                                0.00%
+                            </td>
+                            <td class="FontSGPBH1Data" style="text-align: center; padding-left: 5px;border: 1px solid #000000;">
+                                0
+                            </td>
+                        </tr>
+                        <tr style="height: 20.236220472px">
+                            <td class="FontSGPBH1Data" style="text-align: center; padding-left: 5px;border: 1px solid #000000;border-left:none;border-bottom:none;">
+                                4
+                            </td>
+                            <td class="FontSGPBH1Data" style="text-align: center; padding-left: 5px;border: 1px solid #000000;border-left:none;border-bottom:none;">
+                                Short Sleeve T-shirt
+                            </td>
+                            <td class="FontSGPBH1Data" style="text-align: center; padding-right: 8px;border: 1px solid #000000;border-left:none;border-bottom:none;">
+                                500.00
+                            </td>
+                            <td class="FontSGPBH1Data" style="text-align: center; padding-left: 5px;border: 1px solid #000000;border-left:none;border-bottom:none;">
+                                0.00%
+                            </td>
+                            <td class="FontSGPBH1Data" style="text-align: center; padding-left: 5px;text-align:center;border: 1px solid #000000;border-left:none;border-bottom:none;">
+                                0
+                            </td>
+                            <td class="FontSGPBH1Data" style="text-align: center; padding-right: 8px;text-align:center;border: 1px solid #000000;border-left:none;border-bottom:none;">
+                                0,00%
+                            </td>
+                            <td class="FontSGPBH1Data" style="text-align: center; padding-right: 8px;text-align:center;border: 1px solid #000000;border-left:none; border-right:none;border-bottom:none;">
+                                0
+                            </td>
+                            <td class="FontSGPBH1Data" style="text-align: center; padding-left: 5px;border: 1px solid #000000;">
+                                0.00%
+                            </td>
+                            <td class="FontSGPBH1Data" style="text-align: center; padding-left: 5px;border: 1px solid #000000;">
+                                0
+                            </td>
+                        </tr>
+                        <tr style="height: 20.236220472px">
+                            <td class="FontSGPBH1Data" style="text-align: center; padding-left: 5px;border: 1px solid #000000;border-left:none;border-bottom:none;">
+                                5
+                            </td>
+                            <td class="FontSGPBH1Data" style="text-align: center; padding-left: 5px;border: 1px solid #000000;border-left:none;border-bottom:none;">
+                                Short Sleeve T-shirt
+                            </td>
+                            <td class="FontSGPBH1Data" style="text-align: center; padding-right: 8px;border: 1px solid #000000;border-left:none;border-bottom:none;">
+                                500.00
+                            </td>
+                            <td class="FontSGPBH1Data" style="text-align: center; padding-left: 5px;border: 1px solid #000000;border-left:none;border-bottom:none;">
+                                0.00%
+                            </td>
+                            <td class="FontSGPBH1Data" style="text-align: center; padding-left: 5px;text-align:center;border: 1px solid #000000;border-left:none;border-bottom:none;">
+                                0
+                            </td>
+                            <td class="FontSGPBH1Data" style="text-align: center; padding-right: 8px;text-align:center;border: 1px solid #000000;border-left:none;border-bottom:none;">
+                                0,00%
+                            </td>
+                            <td class="FontSGPBH1Data" style="text-align: center; padding-right: 8px;text-align:center;border: 1px solid #000000;border-left:none; border-right:none;border-bottom:none;">
+                                0
+                            </td>
+                            <td class="FontSGPBH1Data" style="text-align: center; padding-left: 5px;border: 1px solid #000000;">
+                                0.00%
+                            </td>
+                            <td class="FontSGPBH1Data" style="text-align: center; padding-left: 5px;border: 1px solid #000000;">
+                                0
+                            </td>
+                        </tr>
+                        <tr style="height: 20.236220472px">
+                            <td class="FontSGPBH1Data" style="text-align: right; padding-right: 5px;border: 1px solid #000000;border-left:none;border-bottom:none;">
+                                Short Sleeve T-shirt
+                            </td>
+                            <td class="FontSGPBH1Data" style="text-align: center; padding-left: 5px;border: 1px solid #000000;border-left:none;border-bottom:none;">
+                                Total
+                            </td>
+                            <td class="FontSGPBH1Data" style="text-align: center; padding-right: 8px;border: 1px solid #000000;border-left:none;border-bottom:none;">
+                                0
+                            </td>
+                            <td class="FontSGPBH1Data" style="text-align: center; padding-left: 5px;border: 1px solid #000000;border-left:none;border-bottom:none;">
+                                500.00
+                            </td>
+                            <td class="FontSGPBH1Data" style="text-align: center; padding-left: 5px;text-align:center;border: 1px solid #000000;border-left:none;border-bottom:none;">
+                                0
+                            </td>
+                            <td class="FontSGPBH1Data" style="text-align: center; padding-right: 8px;text-align:center;border: 1px solid #000000;border-left:none;border-bottom:none;"></td>
+                            <td class="FontSGPBH1Data" style="text-align: center; padding-right: 8px;text-align:center;border: 1px solid #000000;border-left:none; border-right:none;border-bottom:none;">
+                                0
+                            </td>
+                            <td class="FontSGPBH1Data" style="text-align: center; padding-right: 8px;text-align:center;border: 1px solid #000000;"></td>
+                            <td class="FontSGPBH1Data" style="text-align: center; padding-right: 8px;text-align:center;border: 1px solid #000000;">
+                                0
+                            </td>
+                        </tr>
+                        <tr style="height: 30.236220472px">
+                            <td class="FontSGPBH1Data" style="text-align: left;border: 1px solid #000000;border-left:none;border-bottom:none;padding-left:5px" colspan="4">
+                                Remarks:
+                            </td>
+                            <td class="FontSGPBH1Data" style="text-align: center; padding-right: 8px;text-align:center;border: 1px solid #000000;background-color:#e34e25;color:#fff;font-weight:600" colspan="3">
+                                Summary Amount
+                            </td>
+                            <td class="FontSGPBH1Data" style="text-align: center; padding-right: 8px;text-align:center;border: 1px solid #000000;background-color:#e34e25;color:#fff;font-weight:600" colspan="2">
+                                Amount
+                            </td>
+                        </tr>
+                        <tr style="height: 30.236220472px;">
+                            <td class="FontSGPBH1Data" style="text-align: left;width:80px;height:200px; border:1px solid #000;border-right:none;padding-left:5px;vertical-align:bottom" colspan="4" rowspan="5">
+                                <img src="assets/images/signature.png" style="width:auto;height:80px;" />
+                                <strong>Authorized Signature</strong>
+                            </td>
+                            <td class="FontSGPBH1Data" style="text-align: left;width:80px;border:1px solid #000;border-right:none;padding-left:5px;" colspan="3">
+                                <strong>Total Advance Amount</strong>
+                            </td>
+                            <td class="FontSGPBH1Data" style="text-align: center;width:80px;border:1px solid #000;border-right:none;padding-left:5px;" colspan="2">
+                                0
+                            </td>
+                        </tr>
+                        <tr style="height: 30.236220472px;">
+                            <td class="FontSGPBH1Data" style="text-align: left;width:80px;border:1px solid #000;border-right:none;padding-left:5px;" colspan="3">
+                                <strong>Total CGST</strong>
+                            </td>
+                            <td class="FontSGPBH1Data" style="text-align: center;width:80px;border:1px solid #000;border-right:none;padding-left:5px;" colspan="2">
+                                0
+                            </td>
+                        </tr>
+                        <tr style="height: 30.236220472px;">
+                            <td class="FontSGPBH1Data" style="text-align: left;width:80px;border:1px solid #000;border-right:none;padding-left:5px;" colspan="3">
+                                <strong>Total SGST</strong>
+                            </td>
+                            <td class="FontSGPBH1Data" style="text-align: center;width:80px;border:1px solid #000;border-right:none;padding-left:5px;" colspan="2">
+                                0
+                            </td>
+                        </tr>
+                        <tr style="height: 30.236220472px;">
+                            <td class="FontSGPBH1Data" style="text-align: left;width:80px;border:1px solid #000;border-right:none;padding-left:5px;" colspan="3">
+                                <strong>Total IGST</strong>
+                            </td>
+                            <td class="FontSGPBH1Data" style="text-align: center;width:80px;border:1px solid #000;border-right:none;padding-left:5px;" colspan="2">
+                                0
+                            </td>
+                        </tr>
+                        <tr style="height: 30.236220472px;">
+                            <td class="FontSGPBH1Data" style="text-align: left;width:80px;border:1px solid #000;border-right:none;padding-left:5px;" colspan="3">
+                                <strong>Grand Total</strong>
+                            </td>
+                            <td class="FontSGPBH1Data" style="text-align: center;width:80px;border:1px solid #000;border-right:none;padding-left:5px;" colspan="2">
+                                0
+                            </td>
+                        </tr>
+                        <tr style="height: 30.236220472px;">
+                            <td class="FontSGPBH1Data" style="text-align: left;width:80px;border:1px solid #000;border-right:none;padding-left:5px;" colspan="4">
+                                <h5 style="font-size:13px;margin-top:3px;margin-bottom:0px;">Name Of Signatory</h5>
+                            </td>
+                            <td class="FontSGPBH1Data" style="text-align: left;width:80px;border:1px solid #000;border-right:none;padding-left:5px;" colspan="2">
+                                <strong>Amount in Words</strong>
+                            </td>
+                            <td class="FontSGPBH1Data" style="text-align: left;width:80px;border:1px solid #000;border-right:none;padding-left:5px;" colspan="3"></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <h4 class="FontSGPBHeadTitle" style="text-align:center;">All disputes will be subject to Mumbai Jurisdiction</h4>
+        <div class="modal-footer no-print">
+            <button type="button" class="btn btn-light custome-bg" data-bs-dismiss="modal" style="margin-left:80%; margin-top:2%;   background-color: #e6e7e9 ">Close</button>
+            <button type="button" class="btn btn-primary custome-bg ">Download</button>
+        </div>
+    </div>
+</body>
+</html>

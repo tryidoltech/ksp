@@ -1,0 +1,385 @@
+﻿<head>
+
+    <meta charset="utf-8" />
+    <title>ERP || KSP Consulting</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="" name="description" />
+    <meta name="author" />
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="assets/images/new-logo/favi.png">
+    <link href="~/assets/css/select2.min.css" rel="stylesheet" />
+
+    <!-- Layout config Js -->
+    <script src="~/assets/js/layout.js"></script>
+    <!-- Bootstrap Css -->
+    <link href="~/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <!-- Icons Css -->
+    <link href="~/assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+    <!-- App Css-->
+    <link href="~/assets/css/app.min.css" rel="stylesheet" type="text/css" />
+    <!-- custom Css-->
+    <link href="~/assets/css/custom.min.css" rel="stylesheet" type="text/css" />
+    <style>
+        .tnz-chartbox.folder-view {
+            min-width: 280px;
+        }
+
+        .tnz-file-tree {
+            padding: 10px 20px;
+            label
+
+        {
+            cursor: pointer;
+            display: block;
+        }
+
+        }
+
+        .tnz-file-tree-item {
+            &.month, &.day, &.hour
+
+        {
+            margin-left: 20px;
+        }
+
+        }
+
+        .tnz-file-tree-cb {
+            visibility: hidden;
+            width: 0;
+            height: 0;
+        }
+
+        .tnz-file-tree-label {
+            vertical-align: 2px;
+            font-size: 18px;
+            font-family: sans-serif;
+            color: #5a5a5a;
+        }
+
+        .tnz-file-tree-cb:checked + .tnz-file-tree-label {
+            font-size: 18px;
+            font-weight: bold;
+            color: #0568ae;
+        }
+
+        .tnz-file-tree-branches {
+            display: none;
+        }
+
+        .tnz-file-tree-cb:checked + .tnz-file-tree-label + .tnz-file-tree-branches {
+            display: block;
+        }
+
+        .tnz-file-tree-label::before {
+            background: url('/assets/images/treeviewimage.png');
+            content: '';
+            display: inline-block;
+            height: 20px;
+            width: 20px;
+            vertical-align: -2px;
+            margin-right: 6px;
+            background-size: contain;
+        }
+
+        .tnz-file-tree-cb:checked + .tnz-file-tree-label::before {
+            background: url('/assets/images/treeviewimage.png');
+            background-size: contain;
+        }
+
+        .tnz-file-tree-item.hour .tnz-file-tree-cb + .tnz-file-tree-label::before {
+            background: url('/assets/images/document.png');
+            background-size: contain;
+        }
+
+        .tnz-file-tree-item.hour .tnz-file-tree-cb:checked + .tnz-file-tree-label::before {
+            background: url('/assets/images/document.png');
+            background-size: contain;
+        }
+    </style>
+
+</head>
+<div id="layout-wrapper">
+    <div w3-include-html="/Views/Shared/header.html"> </div>
+    <!-- Vertical Overlay-->
+    <div class="vertical-overlay"></div>
+    <!-- ============================================================== -->
+    <!-- Start right Content here -->
+    <!-- ============================================================== -->
+    <div class="main-content">
+        <div class="page-content">
+            <div class="container-fluid">
+                <!-- start page title -->
+                <div class="row">
+                    <div class="col-12">
+                        <div class="page-title-box d-sm-flex align-items-center justify-content-between">
+                            <h4 class="mb-sm-0">Document Tree View</h4>
+                            <a><i class="bx bxs-pin float-end custom-icon-color"></i></a>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- end page title -->
+
+
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="card" id="CardData">
+
+                            <div class="card-body">
+                                <div class="live-preview">
+
+                                    <div class="row gx-3 gy-2 align-items-center">
+
+                                        <div class="tnz-file-tree">
+                                            <label class="tnz-file-tree-item year">
+                                                <input class="tnz-file-tree-cb" type="checkbox" checked>
+
+                                                <span class="tnz tnz-file-tree-label">2023</span>
+
+                                                <div class="tnz-file-tree-branches">
+
+                                                    <label class="tnz-file-tree-item month">
+                                                        <input class="tnz-file-tree-cb" type="checkbox">
+
+                                                        <span class="tnz-file-tree-label">January</span>
+                                                        <div class="tnz-file-tree-branches">
+                                                            <label class="tnz-file-tree-item day">
+
+                                                                <input class="tnz-file-tree-cb" type="checkbox">
+                                                                <span class="tnz-file-tree-label">01</span>
+                                                                <div class="tnz-file-tree-branches">
+                                                                    <label class="tnz-file-tree-item hour">
+
+                                                                        <input class="tnz-file-tree-cb" type="radio" name="day">
+                                                                        <a href="#" target="_blank" class="tnz-file-tree-label"><span>Document</span></a>
+
+                                                                    </label>
+
+                                                                </div>
+                                                            </label>
+                                                            <label class="tnz-file-tree-item day">
+
+                                                                <input class="tnz-file-tree-cb" type="checkbox">
+                                                                <span class="tnz-file-tree-label">02</span>
+                                                                <div class="tnz-file-tree-branches">
+                                                                    <label class="tnz-file-tree-item hour">
+
+                                                                        <input class="tnz-file-tree-cb" type="radio" name="day">
+                                                                        <a href="#" target="_blank" class="tnz-file-tree-label"><span>Document</span></a>
+
+                                                                    </label>
+
+                                                                </div>
+                                                            </label>
+
+
+                                                        </div>
+                                                    </label>
+
+                                                    <label class="tnz-file-tree-item month">
+                                                        <input class="tnz-file-tree-cb" type="checkbox">
+
+                                                        <span class="tnz-file-tree-label">February</span>
+                                                        <div class="tnz-file-tree-branches">
+                                                            <label class="tnz-file-tree-item day">
+
+                                                                <input class="tnz-file-tree-cb" type="checkbox">
+                                                                <span class="tnz-file-tree-label">01</span>
+                                                                <div class="tnz-file-tree-branches">
+                                                                    <label class="tnz-file-tree-item hour">
+
+                                                                        <input class="tnz-file-tree-cb" type="radio" name="day">
+                                                                        <a href="#" target="_blank" class="tnz-file-tree-label"><span>Document</span></a>
+
+
+                                                                    </label>
+                                                                    <label class="tnz-file-tree-item hour">
+
+                                                                        <input class="tnz-file-tree-cb" type="radio" name="day">
+                                                                        <a href="#" target="_blank" class="tnz-file-tree-label"><span>Document</span></a>
+
+
+                                                                    </label>
+                                                                    <label class="tnz-file-tree-item hour">
+
+                                                                        <input class="tnz-file-tree-cb" type="radio" name="day">
+                                                                        <a href="#" target="_blank" class="tnz-file-tree-label"><span>Document</span></a>
+
+
+                                                                    </label>
+                                                                    <label class="tnz-file-tree-item hour">
+
+                                                                        <input class="tnz-file-tree-cb" type="radio" name="day">
+                                                                        <a href="#" target="_blank" class="tnz-file-tree-label"><span>Document</span></a>
+
+
+                                                                    </label>
+                                                                    <label class="tnz-file-tree-item hour">
+
+                                                                        <input class="tnz-file-tree-cb" type="radio" name="day">
+                                                                        <a href="#" target="_blank" class="tnz-file-tree-label"><span>Document</span></a>
+
+
+                                                                    </label>
+                                                                </div>
+                                                            </label>
+                                                            <label class="tnz-file-tree-item day">
+
+                                                                <input class="tnz-file-tree-cb" type="checkbox">
+                                                                <span class="tnz-file-tree-label">02</span>
+                                                                <div class="tnz-file-tree-branches">
+                                                                    <label class="tnz-file-tree-item hour">
+
+                                                                        <input class="tnz-file-tree-cb" type="radio" name="day">
+                                                                        <a href="#" target="_blank" class="tnz-file-tree-label"><span>Document</span></a>
+
+
+                                                                    </label>
+
+                                                                </div>
+                                                            </label>
+
+                                                        </div>
+                                                    </label>
+
+
+
+                                                </div>
+                                            </label>
+                                            <label class="tnz-file-tree-item year">
+                                                <input class="tnz-file-tree-cb" type="checkbox">
+
+                                                <span class="tnz-file-tree-label">2024</span>
+
+                                                <div class="tnz-file-tree-branches">
+                                                    <label class="tnz-file-tree-item month">
+                                                        <input class="tnz-file-tree-cb" type="checkbox">
+
+                                                        <span class="tnz-file-tree-label">January</span>
+                                                        <div class="tnz-file-tree-branches">
+                                                            <label class="tnz-file-tree-item day">
+
+                                                                <input class="tnz-file-tree-cb" type="checkbox">
+                                                                <span class="tnz-file-tree-label">01</span>
+                                                                <div class="tnz-file-tree-branches">
+                                                                    <label class="tnz-file-tree-item hour">
+
+                                                                        <input class="tnz-file-tree-cb" type="radio" name="day">
+                                                                        <a href="#" target="_blank" class="tnz-file-tree-label"><span>Document</span></a>
+
+
+                                                                    </label>
+
+                                                                </div>
+                                                            </label>
+                                                            <label class="tnz-file-tree-item day">
+
+                                                                <input class="tnz-file-tree-cb" type="checkbox">
+                                                                <span class="tnz-file-tree-label">02</span>
+                                                                <div class="tnz-file-tree-branches">
+                                                                    <label class="tnz-file-tree-item hour">
+
+                                                                        <input class="tnz-file-tree-cb" type="radio" name="day">
+                                                                        <a href="#" target="_blank" class="tnz-file-tree-label"><span>Document</span></a>
+
+
+                                                                    </label>
+
+                                                                </div>
+                                                            </label>
+
+                                                        </div>
+                                                    </label>
+
+
+
+
+
+                                                </div>
+                                            </label>
+
+                                        </div>
+                                    </div>
+
+
+                                </div>
+
+                            </div>
+
+
+                        </div>
+
+                        <div class="card" id="CardAccessDenied" style="display:none">
+                            <div class="w3-display-middle" style="margin-top:100px;">
+                                <h1 class="w3-jumbo w3-animate-top w3-center"><span style="color:#38454a">Access Denied</span></h1>
+                                <hr class="w3-border-white w3-animate-left" style="margin:auto;width:50%">
+                                <h3 class="w3-center w3-animate-right">You don't have Rights to Access this Page</h3>
+                                <h3 class="w3-center w3-animate-right">Kindly Contact Administrative</h3>
+                                <h3 class="w3-center w3-animate-zoom">🚫🚫🚫🚫</h3>
+                                <h6 class="w3-center w3-animate-zoom">error code:403 forbidden</h6>
+                            </div>
+                        </div>
+                    </div> <!-- end col -->
+                </div>
+                <!--end row-->
+
+            </div> <!-- container-fluid -->
+        </div>
+        <!-- End Page-content -->
+
+
+    </div>
+    <!-- end main content-->
+</div>
+<!-- END layout-wrapper -->
+<!--start back-to-top-->
+<button onclick="topFunction()" class="btn btn-danger btn-icon" id="back-to-top">
+    <i class="ri-arrow-up-line"></i>
+</button>
+<!--end back-to-top-->
+<!--preloader-->
+<div id="preloader">
+    <div id="status">
+        <div class="spinner-border text-primary avatar-sm" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+    </div>
+</div>
+
+<!-- prismjs plugin -->
+<script src="~/assets/libs/prismjs/prism.js"></script>
+<script src="~/assets/js/jquery-3.6.0.min.js"></script>
+<!--select2 cdn-->
+<script src="~/assets/js/select2.min.js"></script>
+
+<script src="~/assets/js/pages/select2.init.js"></script>
+<script src="~/assets/js/app.js"></script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const isrewable = document.getElementById('isrewable');
+        const nextreminderdate = document.getElementById('nextreminderdate');
+        const days = document.getElementById('days');
+        const nextrenewdate = document.getElementById('nextrenewdate');
+        const btn = document.getElementById('btn');
+
+        isrewable.addEventListener('change', function () {
+            if (this.checked) {
+                btn.classList.remove('col-lg-6');
+                btn.classList.add('col-lg-9');
+
+                nextreminderdate.style.display = 'block';
+                days.style.display = 'block';
+                nextrenewdate.style.display = 'block';
+            } else {
+                btn.classList.remove('col-lg-9');
+                btn.classList.add('col-lg-6');
+
+                nextreminderdate.style.display = 'none';
+                days.style.display = 'none';
+                nextrenewdate.style.display = 'none';
+            }
+        });
+    });
+</script>

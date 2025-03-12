@@ -1,0 +1,327 @@
+﻿<!DOCTYPE html>
+<html lang="en" data-layout="horizontal" data-topbar="dark" data-sidebar-size="lg" data-sidebar="light"
+      data-sidebar-image="none" data-preloader="disable">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Live_ConsultingKSP</title>
+    <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
+    <meta content="Themesbrand" name="author" />
+
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="~/assets/images/new-logo/ksp-logo.png" />
+
+    <!-- CSS -->
+    <link href="~/assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/assets/css/select2.min.css" rel="stylesheet" />
+    <link href="~/assets/libs/sweetalert2/sweetalert2.min.css" rel="stylesheet" />
+    <link href="~/assets/css/icons.min.css" rel="stylesheet" />
+    <link href="~/assets/css/app.min.css" rel="stylesheet" async/>
+    <link href="~/assets/css/custom.min.css" rel="stylesheet" />
+    <link href="~/assets/css/dataTables.bootstrap5.min.css" rel="stylesheet" />
+    <link href="~/assets/css/responsive.bootstrap.min.css" rel="stylesheet" />
+    <link href="~/assets/css/buttons.dataTables.min.css" rel="stylesheet" />
+    <link href="~/css/site.css" asp-append-version="true" />
+    <link href="~/Live_ConsultingKSP.styles.css" asp-append-version="true" />
+
+    <!-- JavaScript -->
+    
+    @await RenderSectionAsync("Stylecss", required: false)
+</head>
+<body>
+    
+        <!-- Include header -->
+        @await Html.PartialAsync("header")
+    <div id="layout-wrapper">
+        <div class="vertical-overlay"></div>
+        <div class="main-content">
+            @Html.AntiForgeryToken()
+        <!-- Main content -->
+        @RenderBody()
+        </div>
+
+
+
+        <button onclick="topFunction()" class="btn btn-danger btn-icon" id="back-to-top">
+            <i class="ri-arrow-up-line"></i>
+        </button>
+
+        <div id="preloader">
+            <div id="status">
+                <div class="spinner-border text-primary avatar-sm" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Include footer -->
+        @await Html.PartialAsync("Footer")
+    </div>
+   @*  <script src="~/assets/js/layout.js" async></script> *@
+    <!-- Scripts -->
+    <script src="~/assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="~/assets/libs/simplebar/simplebar.min.js"></script>
+    <script src="~/assets/libs/node-waves/waves.min.js"></script>
+    <script src="~/assets/libs/feather-icons/feather.min.js"></script>
+    <script src="~/assets/js/pages/plugins/lord-icon-2.1.0.js"></script>
+    <script src="~/assets/js/plugins.js"></script>
+    <script src="~/assets/libs/prismjs/prism.js"></script>
+
+    <script src="~/assets/js/app.js"></script>
+    <script src="~/assets/js/jquery-3.6.0.min.js"></script>
+    <script src="~/assets/js/jquery.dataTables.min.js"></script>
+    <script src="~/assets/js/dataTables.bootstrap5.min.js"></script>
+    <script src="~/assets/js/dataTables.responsive.min.js"></script>
+    <script src="~/assets/js/dataTables.buttons.min.js"></script>
+    <script src="~/assets/js/jszip.min.js"></script>
+    <script src="~/assets/js/pdfmake.min.js"></script>
+    <script src="~/assets/js/vfs_fonts.js"></script>
+
+    <script src="~/assets/js/buttons.html5.min.js"></script>
+    <script src="~/assets/js/buttons.print.min.js"></script>
+    <script src="~/assets/libs/list.js/list.min.js"></script>
+    <script src="~/assets/libs/list.pagination.js/list.pagination.min.js"></script>
+    <script src="~/assets/js/pages/tasks-list.init.js"></script>
+    <script src="~/assets/libs/sweetalert2/sweetalert2.min.js"></script>
+    <script src="~/assets/js/select2.min.js"></script>
+    <script src="~/assets/js/pages/select2.init.js"></script>
+	<script>
+			$( document ).ready(function() {
+				debugger;
+			if (localStorage.getItem("MUserMenu1") === null) {
+
+						  $.ajax({
+							  type: "GET",
+							  url: '/CompanySetup/GetMenu',
+							  data: { departmentid: 1 },
+							  success: function (data) {
+								  debugger;
+								  //console.log('Heartbeat called at ' + data);
+								  var Menu1String = data.navmenu;
+								  localStorage.setItem("MUserMenu1", Menu1String);
+								   var MenuList = data.menuRecords;
+								  localStorage.setItem("MenuLst", JSON.stringify(MenuList));
+								  $("#navbar-nav").html(Menu1String);
+
+		Checkrights();
+							  }
+						  });
+
+
+					  }
+					  else {
+						  $("#navbar-nav").html(localStorage.getItem('MUserMenu1'));
+						  Checkrights();
+					  }
+
+					if (localStorage.getItem("Cmp") === null)
+					{
+						$("#drpcmp").html('');
+						 $.ajax({
+							  type: "GET",
+							  url: '/CompanySetup/GetCompanyLst',
+							  data: { id: 0 },
+							  success: function (data)
+							  {
+
+								localStorage.setItem("Cmp",data);
+								 $("#drpcmp").html(data);
+							  }
+						  });
+					}
+					else
+					{
+						$("#drpcmp").html('');
+						var Drpvalue=localStorage.getItem("Cmp");
+						$("#drpcmp").html(Drpvalue);
+					}
+
+
+					if (localStorage.getItem("Env") === null)
+					{
+						$("#drpenv").html('');
+						 $.ajax({
+							  type: "GET",
+							  url: '/CompanySetup/GetEnvLst',
+							  data: { id: 0 },
+							  success: function (data)
+							  {
+
+								localStorage.setItem("Env",data);
+								 $("#drpenv").html(data);
+							  }
+						  });
+					}
+					else
+					{
+						$("#drpenv").html('');
+						var Drpvalue=localStorage.getItem("Env");
+						$("#drpenv").html(Drpvalue);
+					}
+
+
+		$("#drpenv").on("change", function () {
+
+					   $.ajax({
+						  type: "GET",
+						  url: '/CompanySetup/GetEnvLst',
+						  data: { id:  $("#drpenv").val() },
+						  success: function (data)
+						  {debugger;
+							  // $("#drpenv").html('');
+							  localStorage.removeItem("Env");
+							localStorage.setItem("Env",data);
+							 // $("#drpenv").html(data);
+							 location.reload();
+						  }
+					  });
+
+
+			  });
+
+
+		$("#drpcmp").on("change", function () {
+			 $.ajax({
+						  type: "GET",
+						  url: '/CompanySetup/GetCompanyLst',
+						  data: { id:  $("#drpcmp").val() },
+						  success: function (data)
+						  { debugger;
+							  // $("#drpcmp").html('');
+						   localStorage.removeItem("Cmp");
+							localStorage.setItem("Cmp",data);
+							 // $("#drpcmp").html(data);
+							  location.reload();
+						  }
+					  });
+
+
+		});
+
+
+			 function searchInJSON(value, json) {
+				var result = null;
+
+				$.each(json, function (index) {
+					// Adjust condition as needed (e.g., check 'id' or 'name')
+					if (json[index].url === value) {
+						result = json[index];
+						return false; // Break the loop
+					}
+				});
+
+				return result;
+			}
+			 function replaceWordInString(inputString, oldWord, newWord) {
+				var regex = new RegExp(oldWord, 'g'); // Create a regular expression to find the old word
+				return inputString.replace(regex, newWord); // Replace it with the new word
+			}
+
+			$(".Logoutbtn").on("click", function () {
+				 $.ajax({
+							  type: "GET",
+							  url: '/CompanySetup/Logout',
+							  data: { id:  '1' },
+							  success: function (data)
+							  {  localStorage.removeItem("Cmp");
+							   localStorage.removeItem("MenuLst");
+								localStorage.removeItem("Env");
+								 localStorage.removeItem("MUserMenu1");
+								 localStorage.clear();
+								location.reload();
+							  }
+						  });
+
+
+			});
+
+
+					function Checkrights(){
+				debugger;
+				var urlPath = window.location.pathname;
+						var MenuJson=JSON.parse(localStorage.getItem("MenuLst"));
+
+						var foundItem = searchInJSON(urlPath, MenuJson);
+						if(foundItem===null){
+								debugger;
+							var alturlPath = (urlPath.replace("Edit", "View")).replace("Add", "View");
+							var newUrl = alturlPath.replace(/\/[^\/]*$/, "");
+							
+							debugger;
+						foundItem = searchInJSON(newUrl, MenuJson);
+						// alert('Found at Second Level'+foundItem.menuName);
+						 if($("#frmCreate").length == 0) {
+
+		} else {
+		  if(foundItem.isWrite){
+								$('#frmCreate').css("display", "");
+								$('#CardAccessDenied').css("display", "none");
+
+							}
+							else{
+								$('#frmCreate').css("display", "none");
+								$('#frmCreate').empty();
+								$('#CardAccessDenied').css("display", "");
+							}
+		}
+						}
+						else{
+
+							if(foundItem.isWrite){
+								$('.btnAdd').css("display", "");
+
+							}
+							else{
+								$('.btnAdd').css("display", "none");
+
+							}
+								  if($("#frmCreate").length == 0) {
+
+		} else {
+		  if(foundItem.isWrite){
+								$('#frmCreate').css("display", "");
+								$('#CardAccessDenied').css("display", "none");
+
+							}
+							else{
+								$('#frmCreate').css("display", "none");
+								$('#CardAccessDenied').css("display", "");
+							}
+		}
+
+
+
+
+
+							if(foundItem.isDelete){
+							$('.btnDelete').css("display", "");
+
+							}
+							else{
+							$('.btnDelete').css("display", "none");
+							}
+							if(foundItem.isEdit){
+							// $('.btnEdit').attr("href", "none");
+							}
+							else{
+							$('.btnEdit').attr("href", "#");
+
+							}
+							if(foundItem.isRead){
+							$('#CardAccessDenied').css("display", "none");
+							}
+							else{
+							$('#CardData').html('');
+							$('#CardData').css("display", "none");
+							$('#CardAccessDenied').css("display", "");
+							}
+
+						}
+			}
+
+		});
+
+	</script>
+	@await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

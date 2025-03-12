@@ -1,0 +1,290 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sales Order Print</title>
+    @section Stylecss {
+    <style>
+        font-face {
+            font-family: SohoGothicProBold;
+            src: url("~/Print/Font/SohoGothicPro-Bold.otf") format("opentype");
+        }
+
+        font-face {
+            font-family: SohoGothicProBoldItalic;
+            src: url("~/Print/Font/SohoGothicPro-BoldItalic.otf") format("opentype");
+        }
+
+        font-face {
+            font-family: SohoGothicProExtraBold;
+            src: url("~/Print/Font/SohoGothicPro-ExtraBold.otf") format("opentype");
+        }
+
+        font-face {
+            font-family: SohoGothicProExtraBoldIt;
+            src: url("~/Print/Font/SohoGothicPro-ExtraBoldIt.otf") format("opentype");
+        }
+
+        font-face {
+            font-family: SohoGothicProItalic;
+            src: url("~/Print/Font/SohoGothicPro-Italic.otf") format("opentype");
+        }
+
+        font-face {
+            font-family: SohoGothicProLight;
+            src: url("~/Print/Font/SohoGothicPro-Light.otf") format("opentype");
+        }
+
+        font-face {
+            font-family: SohoGothicProLightItalic;
+            src: url("~/Print/Font/SohoGothicPro-LightItalic.otf") format("opentype");
+        }             
+        font-face {           
+            font-family: SohoGothicProMedium;
+            src: url("~/Print/Font/SohoGothicPro-Medium.otf") format("opentype");
+        }
+
+        font-face {
+            font-family: SohoGothicProMediumIt;
+            src: url("~/Print/Font/SohoGothicPro-MediumIt.otf") format("opentype");
+        }
+
+        font-face {
+            font-family: SohoGothicProRegular;
+            src: url("~/Print/Font/SohoGothicPro-Regular.otf") format("opentype");
+        }
+
+        font-face {
+            font-family: SohoGothicProThin;
+            src: url("~/Print/Font/SohoGothicPro-Thin.otf") format("opentype");
+        }
+
+        font-face {
+            font-family: SohoGothicProThinItalic;
+            src: url("~/Print/Font/SohoGothicPro-ThinItalic.otf") format("opentype");
+        }
+
+        font-face {
+            font-family: SohoGothicProUltra;
+            src: url("~/Print/Font/SohoGothicPro-Ultra.otf") format("opentype");
+        }
+
+        font-face {
+            font-family: SohoGothicProUltraItalic;
+            src: url("~/Print/Font/SohoGothicPro-UltraItalic.otf") format("opentype");
+        }
+
+        .FontSGPBH1Title {
+            font-family: 'Rubik', sans-serif;
+            font-size: 12.5px;
+            color: #000000;
+        }
+
+        .FontSGPBH1Data {
+            font-family: 'Rubik', sans-serif;
+            font-size: 12.5px;
+            color: #000000;
+        }
+
+        .FontSGPBHeadTitle {
+            font-family: 'Rubik', sans-serif;
+            font-size: 15px;
+            color: #000000;
+        }
+
+        p, td {
+            margin: 0;
+            padding: 0;
+        }
+
+        .tblPay {
+            text-align: left;
+            padding-left: 5px;
+        }
+
+        .custome-bg {
+            background-color: #e6e7e9 !important;
+        }
+
+
+   
+    </style>
+    }
+</head>
+<body style="height: 622.519685px; width: 793.7007874px;">
+    <div id="MultiPageSO">
+        <table style="min-height: 622.519685px; width: 793.7007874px; /*border: 1px solid black; */">
+            <tr>
+                <td>
+                    <table style="width: 718.11023622px; height: 50.82677165px; margin-left: 1cm; margin-top: 37.795275591px">
+                        <tr style="height: 50.82677165px">
+                            <td style="width: 1600.039370079px;" class="FontSGPBH1Title">
+                                <img src="~/assets/images/new-logo/ksp-logo.png" style="width:auto;height:120px;" />
+                            </td>
+                            <td style="width: 200.039370079px;" class="FontSGPBH1Title">
+                                <h2>Packing Slip</h2>
+                                <h5 style="margin-bottom:0px;font-size:13px;">Date:20/02/2024</h5>
+                                <h5 style="margin-bottom:0px;margin-top:0px;font-size:13px;">Carton #248694</h5>
+                                <h5 style="margin-bottom:0px;margin-top:0px;font-size:13px;">Shipment #2090509567</h5>
+                                <h5 style="margin-bottom:0px;margin-top:0px;font-size:13px;">Order #7904</h5>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr style="margin-top: 0px;">
+                <td>
+                    <table style="width: 718.11023622px; height: 50.82677165px; margin-left: 1cm;">
+                        <tr style="height: 50.82677165px">
+                            <td style="width: 1600.039370079px;" class="FontSGPBH1Title">
+                                <h4 style="background-color:#dddddd;width: 70.039370079px;padding:2px 5px;font-size:13px;">Ship From</h4>
+                                <h5 style="margin-bottom:0px;margin-top:0px;font-size:13px;">Name</h5>
+                                <h5 style="margin-bottom:0px;margin-top:0px;font-size:13px;">Address Line 1</h5>
+                                <h5 style="margin-bottom:0px;margin-top:0px;font-size:13px;">Address Line 2</h5>
+                                <h5 style="margin-bottom:0px;margin-top:0px;font-size:13px;">City, State, Zip</h5>
+                                <h5 style="margin-bottom:0px;margin-top:0px;font-size:13px;">Country</h5>
+                            </td>
+                            <td style="width: 200.039370079px;" class="FontSGPBH1Title">
+                                <h4 style="background-color:#dddddd;width: 70.039370079px;padding:2px 5px;font-size:13px;">Ship To</h4>
+                                <h5 style="margin-bottom:0px;margin-top:0px;font-size:13px;">Name</h5>
+                                <h5 style="margin-bottom:0px;margin-top:0px;font-size:13px;">Address Line 1</h5>
+                                <h5 style="margin-bottom:0px;margin-top:0px;font-size:13px;">Address Line 2</h5>
+                                <h5 style="margin-bottom:0px;margin-top:0px;font-size:13px;">City, State, Zip</h5>
+                                <h5 style="margin-bottom:0px;margin-top:0px;font-size:13px;">Country</h5>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td style="height: 50.913385827px; vertical-align: baseline;">
+                    <table style="width: 718.11023622px; margin-left: 1cm;border: 1px solid #000000;" cellpadding="0" cellspacing="0">
+                        <tr style="height: 22.677165354px; background-color: #e34e25;color:#fff" ">
+                            <th class="FontSGPBH1Title" style="text-align: left; padding-left: 5px;border: 1px solid #000000;color:#fff" ">Item No.</th>
+                            <th class="FontSGPBH1Title" style="text-align: left; padding-left: 5px;text-align:center;border: 1px solid #000000;color:#fff" ">Description</th>
+                            <th class="FontSGPBH1Title" style="text-align: left; padding-left: 5px;text-align:center;border: 1px solid #000000;color:#fff" ">QTY</th>
+                        </tr>
+                        <tr style="height: 30.236220472px">
+                            <td class="FontSGPBH1Data" style="text-align: left; padding-left: 5px;border: 1px solid #000000;">
+                                QS934785
+                            </td>
+                            <td class="FontSGPBH1Data" style="text-align: left; padding-left: 5px;text-align:center;border: 1px solid #000000;">
+                                Short Sleeve T-shirt
+                            </td>
+                            <td class="FontSGPBH1Data" style="text-align: right; padding-right: 8px;text-align:center;border: 1px solid #000000;">
+                                6
+                            </td>
+                        </tr>
+                        <tr style="height: 30.236220472px">
+                            <td class="FontSGPBH1Data" style="text-align: left; padding-left: 5px;border: 1px solid #000000;">
+                                QS934785
+                            </td>
+                            <td class="FontSGPBH1Data" style="text-align: left; padding-left: 5px;text-align:center;border: 1px solid #000000;">
+                                Short Sleeve T-shirt
+                            </td>
+                            <td class="FontSGPBH1Data" style="text-align: right; padding-right: 8px;text-align:center;border: 1px solid #000000;">
+                                4
+                            </td>
+                        </tr>
+                        <tr style="height: 30.236220472px">
+                            <td class="FontSGPBH1Data" style="text-align: left; padding-left: 5px;border: 1px solid #000000;">
+                                QS934785
+                            </td>
+                            <td class="FontSGPBH1Data" style="text-align: left; padding-left: 5px;text-align:center;border: 1px solid #000000;">
+                                Short Sleeve T-shirt
+                            </td>
+                            <td class="FontSGPBH1Data" style="text-align: right; padding-right: 8px;text-align:center;border: 1px solid #000000;">
+                                3
+                            </td>
+                        </tr>
+                        <tr style="height: 30.236220472px">
+                            <td class="FontSGPBH1Data" style="text-align: left; padding-left: 5px;border: 1px solid #000000;">
+                                QS934785
+                            </td>
+                            <td class="FontSGPBH1Data" style="text-align: left; padding-left: 5px;text-align:center;border: 1px solid #000000;">
+                                Short Sleeve T-shirt
+                            </td>
+                            <td class="FontSGPBH1Data" style="text-align: right; padding-right: 8px;text-align:center;border: 1px solid #000000;">
+                                7
+                            </td>
+                        </tr>
+                        <tr style="height: 30.236220472px">
+                            <td class="FontSGPBH1Data" style="text-align: left; padding-left: 5px;border: 1px solid #000000;">
+                                QS934785
+                            </td>
+                            <td class="FontSGPBH1Data" style="text-align: left; padding-left: 5px;text-align:center;border: 1px solid #000000;">
+                                Short Sleeve T-shirt
+                            </td>
+                            <td class="FontSGPBH1Data" style="text-align: right; padding-right: 8px;text-align:center;border: 1px solid #000000;">
+                                5
+                            </td>
+                        </tr>
+                        <tr style="height: 30.236220472px">
+                            <td class="FontSGPBH1Data" style="text-align: left; padding-left: 5px;border: 1px solid #000000;">
+                                QS934785
+                            </td>
+                            <td class="FontSGPBH1Data" style="text-align: left; padding-left: 5px;text-align:center;border: 1px solid #000000;">
+                                Short Sleeve T-shirt
+                            </td>
+                            <td class="FontSGPBH1Data" style="text-align: right; padding-right: 8px;text-align:center;border: 1px solid #000000;">
+                                8
+                            </td>
+                        </tr>
+                        <tr style="height: 30.236220472px">
+                            <td class="FontSGPBH1Data" style="text-align: left; padding-left: 5px;border: 1px solid #000000;">
+                                QS934785
+                            </td>
+                            <td class="FontSGPBH1Data" style="text-align: left; padding-left: 5px;text-align:center;border: 1px solid #000000;">
+                                Short Sleeve T-shirt
+                            </td>
+                            <td class="FontSGPBH1Data" style="text-align: right; padding-right: 8px;text-align:center;border: 1px solid #000000;">
+                                5
+                            </td>
+                        </tr>
+                        <tr style="height: 30.236220472px">
+                            <td class="FontSGPBH1Data" style="text-align: left; padding-left: 5px;border: 1px solid #000000;">
+                                QS934785
+                            </td>
+                            <td class="FontSGPBH1Data" style="text-align: left; padding-left: 5px;text-align:center;border: 1px solid #000000;">
+                                Short Sleeve T-shirt
+                            </td>
+                            <td class="FontSGPBH1Data" style="text-align: right; padding-right: 8px;text-align:center;border: 1px solid #000000;">
+                                3
+                            </td>
+                        </tr>
+                        <tr style="height: 30.236220472px">
+                            <td class="FontSGPBH1Data" style="text-align: left; padding-left: 5px;border: 1px solid #000000;">
+                                QS934785
+                            </td>
+                            <td class="FontSGPBH1Data" style="text-align: left; padding-left: 5px;text-align:center;border: 1px solid #000000;">
+                                Short Sleeve T-shirt
+                            </td>
+                            <td class="FontSGPBH1Data" style="text-align: right; padding-right: 8px;text-align:center;border: 1px solid #000000;">
+                                6
+                            </td>
+                        </tr>
+                        <tr style="height: 30.236220472px">
+                            <td class="FontSGPBH1Data" style="text-align: left; padding-right: 5px;text-align:right;border: 1px solid #000000;" colspan="2">
+                                TOTAL QTY
+                            </td>
+                            <td class="FontSGPBH1Data" style="text-align: right; padding-right: 8px;text-align:center;border: 1px solid #000000;">
+                                47
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <div class="modal-footer no-print">
+            <button type="button" class="btn btn-light custome-bg" data-bs-dismiss="modal" style="margin-left:80%; margin-top:2%;   background-color: #e6e7e9 ">Close</button>
+            <button type="button" class="btn btn-primary custome-bg ">Download</button>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,113 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    bool isEdit = !string.IsNullOrEmpty(Model.UUID);
+}
+
+@model Live_ConsultingKSP.Models.AcPaymentMeansCode
+@section Stylecss {
+
+}
+
+<div class="page-content">
+    <div class="container-fluid">
+        <!-- start page title -->
+        <div class="row">
+            <div class="col-12">
+                <div class="page-title-box d-sm-flex align-items-center justify-content-between">
+                    <h4 class="mb-sm-0">@((isEdit) ? "EDIT PAYMENT MEANS CODE" : "ADD PAYMENT MEANS CODE")</h4>
+                </div>
+            </div>
+        </div>
+        <!-- end page title -->
+
+
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="card">
+
+                    <div class="card-body">
+                        <div class="live-preview">
+                            <form asp-action="AddPaymentMeansCode" method="post">
+                                        <input type="hidden" asp-for="@Model.UUID" />
+                            <div class="row gx-3 gy-2 align-items-center">
+
+                                <div class="col-lg-3 col-sm-6 col-xs-12">
+                                    <label class="form-label">Code<span class="start-lable" style="color: red">*</span></label>
+                                        <span asp-validation-for="Code" class="text-danger"></span>
+                                    <input asp-for="Code" type="text" class="form-control" placeholder="eg.">
+                                </div>
+                                <div class="col-lg-3 col-sm-6 col-xs-12">
+                                    <label class="form-label">Payment Means Code Name<span class="start-lable" style="color: red">*</span></label>
+                                        <span asp-validation-for="PaymentMeansCode_Name" class="text-danger"></span>
+                                    <input asp-for="PaymentMeansCode_Name" class="form-control" placeholder="eg.">
+                                </div>
+
+                                <div class="col-lg-3 col-sm-6 col-xs-12">
+                                    <label class="form-label">Usage in EN16931<span class="start-lable" style="color: red">*</span></label>
+                                        <span asp-validation-for="Usage_in_EN16931" class="text-danger"></span>
+                                    <input asp-for="Usage_in_EN16931" class="form-control" placeholder="eg.Usage in EN16931">
+                                </div>
+
+
+                                <div class="col-lg-1">
+                                    <div class="form-check">
+                                        <input asp-for="IsDisplay" class="form-check-input" type="checkbox" id="autoSizingCheck2">
+                                        <label class="form-check-label" for="autoSizingCheck2">
+                                            Is Display
+                                        </label>
+                                    </div>
+                                </div>
+                                    <div class="col-lg-2 mt-5">
+                                        <button class="btn btn-primary " style="float:right;"> @(isEdit ? "Update" : "Submit")</button>
+                                        <a href="@Url.Action("ViewPaymentMeansCode","Account")" class="btn btn-danger " style="float:right;margin-right:10px;"> Cancel</a>
+                                    </div>
+                                    <!--end col-->
+                                </div>
+
+                            </form>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div> <!-- end col -->
+        </div>
+        <!--end row-->
+
+    </div> <!-- container-fluid -->
+</div>
+
+
+ <!-- JAVASCRIPT -->
+    <script src="~/assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="~/assets/libs/simplebar/simplebar.min.js"></script>
+    <script src="~/assets/libs/node-waves/waves.min.js"></script>
+    <script src="~/assets/libs/feather-icons/feather.min.js"></script>
+    <script src="~/assets/js/pages/plugins/lord-icon-2.1.0.js"></script>
+    <script src="~/assets/js/plugins.js"></script>
+    <!-- prismjs plugin -->
+    <script src="~/assets/libs/prismjs/prism.js"></script>
+                 
+    <script src="~/assets/js/jquery-3.6.0.min.js"></script>
+    <!--select2 cdn-->
+    <script src="~/assets/js/select2.min.js"></script>
+                 
+    <script src="~/assets/js/pages/select2.init.js"></script>
+    <script src="~/assets/js/app.js"></script>
+    <script>
+        function disablebutton() {
+            var button = document.getElementById("btn");
+
+            // Disable the button
+            button.innerHTML = "Please Wait..";
+            button.disabled = true;
+
+            // Check if the button has the 'btn-primary' class and change it to 'btn-dark'
+            if (button.classList.contains("btn-primary")) {
+                button.classList.remove("btn-primary");
+                button.classList.add("btn-dark");
+            }
+        }
+
+    </script>
+  

@@ -1,0 +1,371 @@
+﻿@*  {
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model IEnumerable<Live_ConsultingKSP.Models.> *@
+
+@section Stylecss {
+    <style>
+        /*  .overlay {
+                    display: none;
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-color: rgba(0, 0, 0, 0.5);
+                    z-index: 9999;
+                    justify-content: center;
+                    align-items: center;
+                    text-align: center;
+                    color: white;
+                    font-size: 24px;
+                    font-weight: bold;
+                    display: flex;
+                }
+
+                .overlay-content {
+                    background-color: rgba(0, 0, 0, 0.7);
+                    padding: 20px;
+                    border-radius: 5px;
+                    position: relative;
+                    max-width: 90%;
+                    max-height: 90%;
+                    box-sizing: border-box;
+                } */
+        #time {
+            text-align: center;
+        }
+
+        .table-th-weekday {
+            width: 8%;
+            text-align: center;
+        }
+    </style>
+}
+<div class="page-content">
+    <div class="container-fluid">
+
+
+        <!--end row-->
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="card" id="CardData">
+                    <div class="card-header">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <h5 class="card-title mb-0">Manage Time Sheet Approval</h5>
+                            </div>
+                            <!--<div class="col-md-1">
+                                <i class="bx bxs-pin float-end custom-icon-color"></i>
+                            </div>-->
+                            <div class="col-md-4">
+                                <a><i class="bx bxs-pin float-end custom-icon-color"></i></a>
+                                <!--<a id="AnchorAdd" runat="server" href="MasterAddUnitsofMeasurement.html"
+                                   class="btn btn-dark float-end custom-class">
+                                    <i class="ti-plus">&nbsp;</i>Add
+                                    Units of Measurement
+                                </a>-->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+
+                            <table id="buttons-datatables" class="display table table-bordered"
+                                   style="width:100%">
+                                <thead>
+                                    <tr>
+                                        <th>Sr.No</th>
+                                        <th>Eligibility</th>
+                                        <th>Employee Name</th>
+                                        <th>Project Name</th>
+                                        <th>Task</th>
+                                        <th>Total Hours Worked</th>
+                                        <th>From Date & To Date </th>
+
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td><i class="ri-flag-fill" style="color:red; font-size:18px;"></i><i class="ri-flag-fill" style="color:brown; font-size:18px;"></i></td>
+                                        <td>
+                                            Manan Jadav
+                                        </td>
+                                        <td>BG-01 CQV Support for BeiGene US Manufacturing Project -</td>
+@*                                         <td>Phase 1. Project Support</td>
+ *@                                        <td>Cleaning CQV Support</td>
+                                        <td>13</td>
+                                        <td>23-12-2024 To 29-12-2024</td>
+
+
+
+
+                                        <td>
+                                            <button type="button" class="btn btn-danger custombtngreen" style="padding:5px;" title="Approval" id="sa-position"><i class="bx bx-check" style="font-size:15px; font-weight:900"></i></button>
+
+
+                                            <a href="#" class="btn btn-success custombtnred" style="padding:5px;  margin-left:0px;" title="Rejected" data-bs-toggle="modal" data-bs-target="#flipModal3"><i class="bx bx-x" style="font-size:15px; font-weight:900"></i></a>
+                                            <a href="#" class="btn btn-sm btn-outline-dark" data-bs-toggle="modal" data-bs-target="#flipModal"><i class="ri-eye-fill align-middle"></i></a>
+
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td><i class="ri-flag-fill" style="color:red; font-size:18px;"></i><i class="ri-flag-fill" style="color:brown; font-size:18px;"></i></td>
+                                        <td>
+                                            Manan Jadav
+                                        </td>
+                                        <td>Merck Rahway Requalification Project</td>
+@*                                         <td>Phase 1. Protocol </td>
+ *@                                        <td>RY80B Autoclave</td>
+                                        <td>12</td>
+                                        <td>23-12-2024 To 29-12-2024</td>
+
+
+
+
+                                        <td>
+                                            <button type="button" class="btn btn-danger custombtngreen" style="padding:5px; " title="Approval" id="sa-position"><i class="bx bx-check" style="font-size:15px; font-weight:900"></i></button>
+
+
+                                            <a href="#" class="btn btn-success custombtnred" style="padding:5px; margin-left:0px;" title="Rejected" data-bs-toggle="modal" data-bs-target="#flipModal3"><i class="bx bx-x" style="font-size:15px; font-weight:900"></i></a>
+                                            <a href="#" class="btn btn-sm btn-outline-dark" data-bs-toggle="modal" data-bs-target="#flipModal2"><i class="ri-eye-fill align-middle"></i></a>
+
+                                        </td>
+                                    </tr>
+
+
+
+                                </tbody>
+                            </table>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card" id="CardAccessDenied" style="display:none">
+            <div class="w3-display-middle" style="margin-top:100px;">
+                <h1 class="w3-jumbo w3-animate-top w3-center"><span style="color:#38454a">Access Denied</span></h1>
+                <hr class="w3-border-white w3-animate-left" style="margin:auto;width:50%">
+                <h3 class="w3-center w3-animate-right">You don't have Rights to Access this Page</h3>
+                <h3 class="w3-center w3-animate-right">Kindly Contact Administrative</h3>
+                <h3 class="w3-center w3-animate-zoom">🚫🚫🚫🚫</h3>
+                <h6 class="w3-center w3-animate-zoom">error code:403 forbidden</h6>
+            </div>
+        </div>
+
+    </div>
+    <!-- container-fluid -->
+</div>
+
+<div id="flipModal" class="modal fade flip" tabindex="-1" aria-labelledby="flipModalLabel" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="flipModalLabel">Time Sheet</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="live-preview">
+                    <div class="table-responsive mt-3">
+                        <table id="buttons-datatables" class="display table table-bordered" style="width:100%;">
+                            <thead>
+                                <tr>
+
+                                    <th style="width:30%">Project . Task</th>
+                                    <th>Date</th>
+                                    <th>Total Time </th>
+                                    <th>Description</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+
+                                    <td>BG-01 CQV Support for BeiGene US Manufacturing Project - Phase 1. Project Support- Cleaning CQV Support</td>
+                                    <td>23-12-2024</td>
+                                    <td>04:00</td>
+                                    <td>Onborading, Information collection for Protocol Drafting</td>
+                                </tr>
+                                <tr>
+
+                                    <td>BG-01 CQV Support for BeiGene US Manufacturing Project - Phase 1. Project Support- Cleaning CQV Support</td>
+                                    <td>24-12-2024</td>
+                                    <td>01:00</td>
+                                    <td>Site Visit for DS and DP Areas</td>
+                                </tr>
+                                <tr>
+
+                                    <td>BG-01 CQV Support for BeiGene US Manufacturing Project - Phase 1. Project Support- Cleaning CQV Support</td>
+                                    <td>25-12-2024</td>
+                                    <td>04:00</td>
+                                    <td>Safety Orientation Training</td>
+                                </tr>
+                                <tr>
+
+                                    <td>BG-01 CQV Support for BeiGene US Manufacturing Project - Phase 1. Project Support- Cleaning CQV Support</td>
+                                    <td>26-12-2024</td>
+                                    <td>04:00</td>
+                                    <td>Information Collection, Meeting with Sukhul, Initiated draft cycle Development Protocol</td>
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+                    </div>
+
+
+
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
+
+            </div>
+
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div>
+
+<div id="flipModal2" class="modal fade flip" tabindex="-1" aria-labelledby="flipModalLabel" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="flipModalLabel">Time Sheet</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="live-preview">
+                    <div class="table-responsive mt-3">
+                        <table id="buttons-datatables" class="display table table-bordered" style="width:100%;">
+                            <thead>
+                                <tr>
+
+                                    <th style="width:30%">Project . Task</th>
+                                    <th>Date</th>
+                                    <th>Total Time </th>
+                                    <th>Description</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+
+                                    <td>Merck Rahway Requalification Project Phase - Protocol - RY80B Autoclave</td>
+                                    <td>23-12-2024</td>
+                                    <td>04:00</td>
+                                    <td>
+                                        Site Visit for DS and DP Areas
+                                    </td>
+                                </tr>
+
+                                <tr>
+
+                                    <td>Merck Rahway Requalification Project Phase - Protocol - RY80B Autoclave</td>
+                                    <td>24-12-2024</td>
+                                    <td>04:00</td>
+                                    <td>Onborading, Information collection for Protocol Drafting</td>
+                                </tr>
+                                <tr>
+
+                                    <td>Merck Rahway Requalification Project Phase - Protocol - RY80B Autoclave</td>
+                                    <td>25-12-2024</td>
+                                    <td>04:00</td>
+                                    <td>
+                                        Information Collection, Meeting with Sukhul, Initiated draft cycle Development Protocol
+                                    </td>
+                                </tr>
+                            </tbody>
+
+                        </table>
+                    </div>
+
+
+
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
+
+            </div>
+
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div>
+<div id="flipModal3" class="modal fade flip" tabindex="-1" aria-labelledby="flipModalLabel" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="flipModalLabel"> Reason</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="live-preview">
+                    <div class="row gx-3 gy-2 align-items-center">
+                        <div class="col-12">
+
+                            <textarea class="form-control" placeholder="eg."></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal" id="sa-reject">Reject</button>
+            </div>
+
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div>
+@*
+<div id="overlay" class="overlay">
+    <div class="overlay-content">Please Wait...</div>
+</div> *@
+
+<!-- JAVASCRIPT -->
+<script src="~/assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="~/assets/libs/simplebar/simplebar.min.js"></script>
+<script src="~/assets/libs/node-waves/waves.min.js"></script>
+<script src="~/assets/libs/feather-icons/feather.min.js"></script>
+<script src="~/assets/js/pages/plugins/lord-icon-2.1.0.js"></script>
+<script src="~/assets/js/plugins.js"></script>
+
+<!-- list.js min js -->
+<script src="~/assets/libs/list.js/list.min.js"></script>
+
+<!--list pagination js-->
+<script src="~/assets/libs/list.pagination.js/list.pagination.min.js"></script>
+
+<!-- titcket init js -->
+<script src="~/assets/js/pages/tasks-list.init.js"></script>
+
+<!-- Sweet Alerts js -->
+<script src="~/assets/libs/sweetalert2/sweetalert2.min.js"></script>
+
+<!-- Sweet alert init js-->
+<script src="~/assets/js/pages/sweetalerts.init.js"></script>
+
+<!-- App js -->
+<script src="~/assets/js/app.js"></script>
+
+
+<script src="~/assets/js/jquery-3.6.0.min.js"></script>
+<script src="~/assets/js/jquery.dataTables.min.js"></script>
+<script src="~/assets/js/dataTables.bootstrap5.min.js"></script>
+<script src="~/assets/js/dataTables.responsive.min.js"></script>
+<!--<script src="assets/js/dataTables.buttons.min.js"></script>
+<script src="assets/js/jszip.min.js"></script>
+<script src="assets/js/pdfmake.min.js"></script>
+<script src="assets/js/vfs_fonts.js"></script>-->
+<script src="~/assets/js/buttons.html5.min.js"></script>
+<script src="~/assets/js/buttons.print.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+        $('#buttons-datatables').DataTable({
+
+        });
+    });
+</script>

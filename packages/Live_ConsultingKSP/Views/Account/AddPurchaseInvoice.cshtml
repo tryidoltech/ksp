@@ -1,0 +1,656 @@
+﻿<div class="page-content">
+    <div class="container-fluid">
+        <!-- start page title -->
+        <div class="row">
+            <div class="col-12">
+                <div class="page-title-box d-sm-flex align-items-center justify-content-between">
+                    <h4 class="mb-sm-0">Add Purchase Invoice</h4>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+
+            <div class="col-lg-12">
+                <div class="card">
+
+                    <div class="card-body">
+
+                        <div class="card-header">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="page-title-box d-sm-flex align-items-center justify-content-between" style="padding:1rem 0rem 0rem">
+                                        <h4 class="mb-sm-0">General</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="live-preview">
+
+                            <div class="row gx-3 gy-2 align-items-center">
+                                <div class="col-lg-3 col-sm-6 col-xs-12">
+                                    <label class="form-label">UUID<span class="start-lable" style="color: red">*</span></label>
+                                    <input type="text" class="form-control" placeholder="4e4ca2a3-4939-4fad-849d-8d16dacbfe30" disabled>
+                                </div>
+                                <div class="col-lg-3 col-sm-6 col-xs-12">
+                                    <label class="form-label">Purchase Order<span class="start-lable" style="color: red">*</span></label>
+                                    <select class="form-select2 js-example-basic-single" data-choices data-choices-sorting="true" id="Purchase">
+                                        <option selected>- Select Purchase Order  -</option>
+                                        <option value="1">Purchase Order 1</option>
+                                        <option value="2">Purchase Order 2</option>
+                                    </select>
+                                </div>
+                                <div class="col-lg-3 col-sm-6 col-xs-12">
+                                    <label class="form-label">Invoice Type <span class="start-lable" style="color: red">*</span></label>
+                                    <select class="form-select2 js-example-basic-single" data-choices data-choices-sorting="true" id="type">
+                                        <option selected>- Select Invoice Type  -</option>
+                                        <option value="1">Standard Invoice</option>
+                                        <option value="2">Simplified</option>
+                                    </select>
+                                </div>
+                                <div class="col-lg-3 col-sm-6 col-xs-12">
+                                    <label class="form-label">Invoice Standard Code<span class="start-lable" style="color: red">*</span></label>
+                                    <input type="text" class="form-control" placeholder="eg.388 " disabled>
+                                </div>
+                                <div class="col-lg-3 col-sm-6 col-xs-12">
+                                    <label class="form-label">Profile Id<span class="start-lable" style="color: red">*</span></label>
+                                    <input type="text" class="form-control" placeholder="eg.reporting:1.0 " disabled>
+                                </div>
+                                <div class="col-lg-3 col-sm-6 col-xs-12">
+                                    <label class="form-label">Invoice No.<span class="start-lable" style="color: red">*</span></label>
+                                    <input type="text" class="form-control" placeholder="eg.INV001">
+                                </div>
+                                <div class="col-lg-3 col-sm-6 col-xs-12">
+                                    <label class="form-label">Invoice Date<span class="start-lable" style="color: red">*</span></label>
+                                    <input type="date" class="form-control" placeholder="eg.">
+                                </div>
+                                <div class="col-lg-3 col-sm-6 col-xs-12">
+                                    <label class="form-label">Invoice Time<span class="start-lable" style="color: red">*</span></label>
+                                    <input type="time" class="form-control" placeholder="eg.">
+                                </div>
+                                <div class="col-lg-3 col-sm-6 col-xs-12">
+                                    <label class="form-label">Invoice Type Code<span class="start-lable" style="color: red">*</span></label>
+                                    <select class="form-select2 js-example-basic-single" data-choices data-choices-sorting="true" id="typecode">
+                                        <option selected>- Select Invoice Type Code -</option>
+                                        <option value="1">Normal Invoice</option>
+                                        <option value="2">3rd Party Invoice</option>
+                                    </select>
+                                </div>
+                                <div class="col-lg-3 col-sm-6 col-xs-12">
+                                    <label class="form-label">Language<span class="start-lable" style="color: red">*</span></label>
+                                    <select class="form-select2 js-example-basic-single" data-choices data-choices-sorting="true" id="lan">
+                                        <option selected>- Select Language -</option>
+                                        <option value="1">English</option>
+
+                                    </select>
+                                </div>
+                                <div class="col-lg-3 col-sm-6 col-xs-12">
+                                    <label class="form-label">Invoice Note</label>
+                                    <input type="text" class="form-control" placeholder="eg.">
+                                </div>
+                                <div class="col-lg-3 col-sm-6 col-xs-12">
+                                    <label class="form-label">Currency<span class="start-lable" style="color: red">*</span></label>
+                                    <select class="form-select2 js-example-basic-single" data-choices data-choices-sorting="true" id="Currency">
+                                        <option selected>- Select Currency -</option>
+                                        <option value="1">INR</option>
+                                        <option value="2">US Dollar</option>
+                                    </select>
+                                </div>
+                                <div class="col-lg-3 col-sm-6 col-xs-12">
+                                    <label class="form-label">Order Reference</label>
+                                    <input type="text" class="form-control" placeholder="eg.">
+                                </div>
+                                <div class="col-lg-3 col-sm-6 col-xs-12">
+                                    <label class="form-label">Contract Document Reference</label>
+                                    <input type="text" class="form-control" placeholder="eg.">
+                                </div>
+                                <div class="col-lg-3 col-sm-6 col-xs-12">
+                                    <label class="form-label">Actual Delivery Date <span class="start-lable" style="color: red">*</span></label>
+                                    <input type="date" class="form-control" placeholder="eg.">
+                                </div>
+                                <div class="col-lg-3 col-sm-6 col-xs-12">
+                                    <label class="form-label">Latest Delivery Date<span class="start-lable" style="color: red">*</span></label>
+                                    <input type="date" class="form-control" placeholder="eg.">
+                                </div>
+                                <!--end col-->
+                            </div>
+                        </div>
+                        <!--<div class="col-md-12 bs-3 border-primary" style="padding: 10px 0px; padding-left:15px; margin-bottom: 20px; margin-top: 20px; border: 1px dotted; background-color: #f3f9ff;">
+                            <h4 style="margin:0px;">Payment Means Details</h4>
+                        </div>-->
+                        <div class="card-header">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="page-title-box d-sm-flex align-items-center justify-content-between" style="padding:3rem 0rem 0rem">
+                                        <h4 class="mb-sm-0">Payment Means Details</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="live-preview">
+                            <div class="row gx-3 gy-2 align-items-center">
+
+                                <div class="col-lg-3 col-sm-6 col-xs-12">
+                                    <label class="form-label">Code</label>
+                                    <select class="form-select2 js-example-basic-single" data-choices data-choices-sorting="true" id="Code">
+                                        <option selected>- Select Code -</option>
+                                        <option value="1">Instrument not defined</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-lg-3 col-sm-6 col-xs-12">
+                                    <label class="form-label">Instruction Note<span class="start-lable" style="color: red">*</span></label>
+                                    <input type="text" class="form-control" placeholder="eg. ">
+                                </div>
+                                <div class="col-lg-3 col-sm-6 col-xs-12">
+                                    <label class="form-label">Payment Note</label>
+                                    <input type="text" class="form-control" placeholder="eg. ">
+                                </div>
+                                <div class="col-lg-3 col-sm-6 col-xs-12">
+                                    <label class="form-label">Payee Financial Account No</label>
+                                    <input type="text" class="form-control" placeholder="eg.">
+                                </div>
+
+                                <!--end col-->
+                            </div>
+                        </div>
+                        <div class="card-header">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="page-title-box d-sm-flex align-items-center justify-content-between" style="padding:3rem 0rem 0rem">
+                                        <h4 class="mb-sm-0">Accounting Vendor Info</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="live-preview">
+                            <div class="row gx-3 gy-2 align-items-center">
+
+                                <div class="col-lg-3 col-sm-6 col-xs-12">
+                                    <label class="form-label">Vendor Name</label>
+                                    <select class="form-select2 js-example-basic-single" data-choices data-choices-sorting="true" id="Vendor">
+                                        <option selected>- Select Vendor Name -</option>
+                                        <option value="1">Kalpash</option>
+                                    </select>
+                                </div>
+                                <div class="col-lg-3 col-sm-6 col-xs-12">
+                                    <label class="form-label">Scheme ID</label>
+                                    <select class="form-select2 js-example-basic-single" data-choices data-choices-sorting="true" id="Scheme2">
+                                        <option selected>- Select Scheme ID -</option>
+                                        <option value="1">License</option>
+                                    </select>
+                                </div>
+                                <div class="col-lg-3 col-sm-6 col-xs-12">
+                                    <label class="form-label">Scheme Number<span class="start-lable" style="color: red">*</span></label>
+                                    <input type="text" class="form-control" placeholder="eg. 1010060332 ">
+                                </div>
+                                <div class="col-lg-3 col-sm-6 col-xs-12">
+                                    <label class="form-label">Registration Name</label>
+                                    <input type="text" class="form-control" placeholder="eg. test company pvt ltd">
+                                </div>
+                                <div class="col-lg-3 col-sm-6 col-xs-12">
+                                    <label class="form-label">Street Name</label>
+                                    <input type="text" class="form-control" placeholder="eg. sample street">
+                                </div>
+                                <div class="col-lg-3 col-sm-6 col-xs-12">
+                                    <label class="form-label">Additional Street Name<span class="start-lable" style="color: red">*</span></label>
+                                    <input type="text" class="form-control" placeholder="eg.  ">
+                                </div>
+                                <div class="col-lg-3 col-sm-6 col-xs-12">
+                                    <label class="form-label">Building Number</label>
+                                    <input type="text" class="form-control" placeholder="eg. 5550">
+                                </div>
+                                <div class="col-lg-3 col-sm-6 col-xs-12">
+                                    <label class="form-label">Plot Identification</label>
+                                    <input type="text" class="form-control" placeholder="eg. 8523">
+                                </div>
+                                <div class="col-lg-3 col-sm-6 col-xs-12">
+                                    <label class="form-label">Postal Zone</label>
+                                    <input type="text" class="form-control" placeholder="eg. 65782">
+                                </div>
+                                <div class="col-lg-3 col-sm-6 col-xs-12">
+                                    <label class="form-label">Country Name</label>
+                                    <select class="form-select2 js-example-basic-single" data-choices data-choices-sorting="true" id="Country">
+                                        <option selected>- Select Country -</option>
+                                        <option value="1">India</option>
+                                    </select>
+                                </div>
+                                <div class="col-lg-3 col-sm-6 col-xs-12">
+                                    <label class="form-label">State Name</label>
+                                    <select class="form-select2 js-example-basic-single" data-choices data-choices-sorting="true" id="State">
+                                        <option selected>- Select State -</option>
+                                        <option value="1">Gujrat</option>
+                                    </select>
+                                </div>
+                                <div class="col-lg-3 col-sm-6 col-xs-12">
+                                    <label class="form-label">City Name</label>
+                                    <select class="form-select2 js-example-basic-single" data-choices data-choices-sorting="true" id="City">
+                                        <option selected>- Select City -</option>
+                                        <option value="1">Vadodara</option>
+                                    </select>
+                                </div>
+                                <div class="col-lg-3 col-sm-6 col-xs-12">
+                                    <label class="form-label">City Subdivision Name<span class="start-lable" style="color: red">*</span></label>
+                                    <input type="text" class="form-control" placeholder="eg. Gotri ">
+                                </div>
+                                <div class="col-lg-3 col-sm-6 col-xs-12">
+                                    <label class="form-label">Tax Scheme ID</label>
+                                    <select class="form-select2 js-example-basic-single" data-choices data-choices-sorting="true" id="Scheme1">
+                                        <option selected>- Select Scheme ID -</option>
+                                        <option value="1">Value Add Text</option>
+                                    </select>
+                                </div>
+                                <div class="col-lg-3 col-sm-6 col-xs-12">
+                                    <label class="form-label">Tax Scheme Company ID</label>
+                                    <input type="text" class="form-control" placeholder="eg. 55505552222">
+                                </div>
+
+                                <!--end col-->
+                            </div>
+                        </div>
+                        <div class="card-header">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="page-title-box d-sm-flex align-items-center justify-content-between" style="padding:3rem 0rem 0rem">
+                                        <h4 class="mb-sm-0">Invoice Line</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="live-preview">
+                            <div class="row gx-3 gy-2 align-items-center">
+                                <div class="col-lg-3 col-sm-6 col-xs-12">
+                                    <label class="form-label">Line No<span class="start-lable" style="color: red">*</span></label>
+                                    <input type="text" class="form-control" placeholder="eg. 5 ">
+                                </div>
+                                <div class="col-lg-3 col-sm-6 col-xs-12">
+                                    <label class="form-label">Item Name</label>
+                                    <input type="text" class="form-control" placeholder="eg. Civil Work">
+                                </div>
+
+                                <div class="col-lg-3 col-sm-6 col-xs-12">
+                                    <label class="form-label">Item Price<span class="start-lable" style="color: red">*</span></label>
+                                    <input type="text" class="form-control" placeholder="eg.  ">
+                                </div>
+                                <div class="col-lg-3 col-sm-6 col-xs-12">
+                                    <label class="form-label">Allowance Amount</label>
+                                    <input type="text" class="form-control" placeholder="eg. 0.00">
+                                </div>
+                                <div class="col-lg-3 col-sm-6 col-xs-12">
+                                    <label class="form-label">Invoiced Qty</label>
+                                    <input type="text" class="form-control" placeholder="eg. 15">
+                                </div>
+                                <div class="col-lg-3 col-sm-6 col-xs-12">
+                                    <label class="form-label">Qty Unit Code</label>
+                                    <select class="form-select2 js-example-basic-single" data-choices data-choices-sorting="true" id="Scheme">
+                                        <option selected>- Select Unit Code -</option>
+                                        <option value="1">OutFit</option>
+                                    </select>
+                                </div>
+                                <div class="col-lg-3 col-sm-6 col-xs-12">
+                                    <label class="form-label">Unit Price</label>
+                                    <input type="text" class="form-control" placeholder="eg. 0.00">
+                                </div>
+                                <div class="col-lg-3 col-sm-6 col-xs-12">
+                                    <label class="form-label">Net Amount</label>
+                                    <input type="text" class="form-control" placeholder="eg. 0.00">
+                                </div>
+                                <div class="col-lg-3 col-sm-6 col-xs-12">
+                                    <label class="form-label">Line Extension Amount</label>
+                                    <input type="text" class="form-control" placeholder="eg. 0.00">
+                                </div>
+                                <div class="col-lg-3 col-sm-6 col-xs-12">
+                                    <label class="form-label">Total Tax Amount<span class="start-lable" style="color: red">*</span></label>
+                                    <input type="text" class="form-control" placeholder="eg. 0.00 ">
+                                </div>
+
+                                <div class="col-lg-3 col-sm-6 col-xs-12">
+                                    <label class="form-label">Tax Total Rounding Amount</label>
+                                    <input type="text" class="form-control" placeholder="eg. 0.00">
+                                </div>
+                                <div class="col-lg-3" style="margin-top:36px">
+                                    <a href="#" class="btn btn-primary float-end"> Add</a>
+                                </div>
+
+                                <div class="card-body">
+                                    <div class="table-responsive">
+
+                                        <table id="buttons-datatables" class="display table table-bordered"
+                                               style="width:100%;">
+                                            <thead>
+                                                <tr>
+                                                    <th>Sr.No</th>
+                                                    <th>Item Name</th>
+                                                    <th>Quantity</th>
+
+                                                    <th>Action</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>	Assembly</td>
+                                                    <td>100</td>
+                                                    <td>2</td>
+                                                    <td>100000</td>
+                                                    <td>
+                                                        <a id="AnchorAdd" runat="server" href="#"
+                                                           class="btn btn-danger custom-class">
+                                                            Edit
+                                                        </a>
+                                                        <a id="AnchorAdd" runat="server" href="#"
+                                                           class="btn btn-danger custom-class">
+                                                            Delete
+                                                        </a>
+
+                                                    </td>
+                                                </tr>
+
+
+
+                                            </tbody>
+                                        </table>
+
+                                    </div>
+                                </div>
+
+
+                                <!--end col-->
+                            </div>
+                        </div>
+                        <div class="card-header">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="page-title-box d-sm-flex align-items-center justify-content-between" style="padding:3rem 0rem 0rem">
+                                        <h4 class="mb-sm-0">Allowance Charge & Discount</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="live-preview">
+                            <div class="row gx-3 gy-2 align-items-center">
+
+                                <div class="col-lg-3 col-sm-6 col-xs-12">
+                                    <label class="form-label">Applicable Type</label>
+                                    <select class="form-select2 js-example-basic-single" data-choices data-choices-sorting="true" id="ApplicableType">
+                                        <option selected>- Select Type -</option>
+                                        <option value="1">Line level</option>
+                                    </select>
+                                </div>
+                                <div class="col-lg-3 col-sm-6 col-xs-12">
+                                    <label class="form-label">Record Type</label>
+                                    <select class="form-select2 js-example-basic-single" data-choices data-choices-sorting="true" id="ApplicableType2">
+                                        <option selected>- Select Type -</option>
+                                        <option value="1">Charge</option>
+                                    </select>
+                                </div>
+                                <div class="col-lg-3 col-sm-6 col-xs-12">
+                                    <label class="form-label">Record Reason</label>
+                                    <select class="form-select2 js-example-basic-single" data-choices data-choices-sorting="true" id="RecordReason">
+                                        <option selected>- Select Type -</option>
+                                        <option value="1">Commission</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-lg-3 col-sm-6 col-xs-12">
+                                    <label class="form-label">Applicable Amount</label>
+                                    <input type="text" class="form-control" placeholder="eg. 0.00" disabled>
+                                </div>
+                                <div class="col-lg-2 col-sm-6 col-xs-12">
+                                    <label class="form-label">Record Applicable <span class="start-lable" style="color: red">*</span></label>
+                                    <div style="padding-left:25px;">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked="">
+                                            <label class="form-check-label" for="flexRadioDefault2">
+                                                Percentage
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked="">
+                                            <label class="form-check-label" for="flexRadioDefault2">
+                                                Fixed Amount
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-2 col-sm-6 col-xs-12">
+                                    <label class="form-label">Amount</label>
+                                    <input type="text" class="form-control" placeholder="eg. 0.00">
+                                </div>
+                                <div class="col-lg-2 col-sm-6 col-xs-12">
+                                    <label class="form-label">Total Amount </label>
+                                    <input type="text" class="form-control" placeholder="eg. 0.00">
+                                </div>
+                                <div class="col-lg-2 col-sm-6 col-xs-12">
+                                    <label class="form-label">VAT Total Amount<span class="start-lable" style="color: red">*</span></label>
+                                    <input type="text" class="form-control" placeholder="eg. 0.00 ">
+                                </div>
+
+                                <div class="col-lg-2 col-sm-6 col-xs-12">
+                                    <label class="form-label">Final Total Amount </label>
+                                    <input type="text" class="form-control" placeholder="eg. 0.00" disabled>
+                                </div>
+                                <div class="col-lg-2" style="margin-top:36px">
+                                    <a href="#" class="btn btn-primary float-end"> Add</a>
+                                </div>
+
+                                <!--end col-->
+                            </div>
+                        </div>
+                        <div class="card-header">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="page-title-box d-sm-flex align-items-center justify-content-between" style="padding:3rem 0rem 0rem">
+                                        <h4 class="mb-sm-0">Invoice Tax</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="live-preview">
+                            <div class="row gx-3 gy-2 align-items-center">
+
+                                <div class="col-lg-3 col-sm-6 col-xs-12">
+                                    <label class="form-label">Tax Applicable Type </label>
+                                    <select class="form-select2 js-example-basic-single" data-choices data-choices-sorting="true" id="TaxApplicableType">
+                                        <option selected>- Select Type -</option>
+                                        <option value="1">Line level</option>
+                                    </select>
+                                </div>
+                                <div class="col-lg-3 col-sm-6 col-xs-12">
+                                    <label class="form-label">Line No</label>
+                                    <select class="form-select2 js-example-basic-single" data-choices data-choices-sorting="true" id="LineNo">
+                                        <option selected>- Select Line No -</option>
+                                        <option value="1"></option>
+                                    </select>
+                                </div>
+
+
+                                <div class="col-lg-3 col-sm-6 col-xs-12">
+                                    <label class="form-label">Total Amount</label>
+                                    <input type="text" class="form-control" placeholder="eg. 0.00" disabled>
+                                </div>
+                                <div class="col-lg-3 col-sm-6 col-xs-12">
+                                    <label class="form-label">  VAT Group</label>
+                                    <select class="form-select2 js-example-basic-single" data-choices data-choices-sorting="true" id="VATGroup">
+                                        <option selected>- Select Select VAT Group -</option>
+                                        <option value="1"></option>
+                                    </select>
+                                </div>
+
+                                <div class="col-lg-3 col-sm-6 col-xs-12">
+                                    <label class="form-label">VAT Percentage</label>
+                                    <input type="text" class="form-control" placeholder="eg. 0.00">
+                                </div>
+                                <div class="col-lg-3 col-sm-6 col-xs-12">
+                                    <label class="form-label"> VAT Category</label>
+                                    <select class="form-select2 js-example-basic-single" data-choices data-choices-sorting="true" id="VATCategory">
+                                        <option selected>- Select VAT Category -</option>
+                                        <option value="1"></option>
+                                    </select>
+                                </div>
+                                <div class="col-lg-3 col-sm-6 col-xs-12">
+                                    <label class="form-label">Tax Amount  </label>
+                                    <input type="text" class="form-control" placeholder="eg. 0.00">
+                                </div>
+                                <div class="col-lg-3 col-sm-6 col-xs-12">
+                                    <label class="form-label">Base Amount<span class="start-lable" style="color: red">*</span></label>
+                                    <input type="text" class="form-control" placeholder="eg. 0.00 " disabled>
+                                </div>
+                                <div class="col-lg-12" style="margin-top:36px">
+                                    <a href="#" class="btn btn-primary float-end"> Add</a>
+                                </div>
+
+                                <!--end col-->
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+
+                                <table id="buttons-datatables" class="display table table-bordered"
+                                       style="width:100%;">
+                                    <thead>
+                                        <tr>
+                                            <th>Sr.No</th>
+                                            <th>Tax Applicable Type</th>
+                                            <th>Tax Percentagee</th>
+                                            <th>Tax Amount</th>
+                                            <th>Base Amount</th>
+                                            <th>Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>Line</td>
+                                            <td>15</td>
+                                            <td>15000</td>
+                                            <td>100000</td>
+                                            <td>
+                                                <a id="AnchorAdd" runat="server" href="#"
+                                                   class="btn btn-danger custom-class">
+                                                    Edit
+                                                </a>
+                                                <a id="AnchorAdd" runat="server" href="#"
+                                                   class="btn btn-danger custom-class">
+                                                    Delete
+                                                </a>
+
+                                            </td>
+                                        </tr>
+
+
+
+                                    </tbody>
+                                </table>
+
+                            </div>
+                        </div>
+                        <div class="card-header">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="page-title-box d-sm-flex align-items-center justify-content-between" style="padding:3rem 0rem 0rem">
+                                        <h4 class="mb-sm-0">Legal Monetary Details</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="live-preview">
+                            <div class="row gx-3 gy-2 align-items-center">
+                                <div class="col-lg-3 col-sm-6 col-xs-12">
+                                    <label class="form-label">Line Extension Amount<span class="start-lable" style="color: red">*</span></label>
+                                    <input type="text" class="form-control" placeholder="eg. 50000.00 " disabled>
+                                </div>
+                                <div class="col-lg-3 col-sm-6 col-xs-12">
+                                    <label class="form-label">Allowance Total Amount</label>
+                                    <input type="text" class="form-control" placeholder="eg. 0.00" disabled>
+                                </div>
+
+                                <div class="col-lg-3 col-sm-6 col-xs-12">
+                                    <label class="form-label">Charge Total Amount<span class="start-lable" style="color: red">*</span></label>
+                                    <input type="text" class="form-control" placeholder="eg. 0.00 " disabled>
+                                </div>
+                                <div class="col-lg-3 col-sm-6 col-xs-12">
+                                    <label class="form-label">Tax Exclusive Amountt</label>
+                                    <input type="text" class="form-control" placeholder="eg. 10000.00">
+                                </div>
+                                <div class="col-lg-3 col-sm-6 col-xs-12">
+                                    <label class="form-label">Tax Amount</label>
+                                    <input type="text" class="form-control" placeholder="eg. 1500.00" disabled>
+                                </div>
+
+                                <div class="col-lg-3 col-sm-6 col-xs-12">
+                                    <label class="form-label">Tax Amount 1</label>
+                                    <input type="text" class="form-control" placeholder="eg. 15000.00" disabled>
+                                </div>
+                                <div class="col-lg-3 col-sm-6 col-xs-12">
+                                    <label class="form-label">Tax Inclusive Amount</label>
+                                    <input type="text" class="form-control" placeholder="eg. 15000.00" disabled>
+                                </div>
+                                <div class="col-lg-3 col-sm-6 col-xs-12">
+                                    <label class="form-label">Prepaid Amount</label>
+                                    <input type="text" class="form-control" placeholder="eg. 0.00">
+                                </div>
+                                <div class="col-lg-3 col-sm-6 col-xs-12">
+                                    <label class="form-label">Payable Amount<span class="start-lable" style="color: red">*</span></label>
+                                    <input type="text" class="form-control" placeholder="eg. 115000.00 " disabled>
+                                </div>
+
+                                <div class="col-lg-3 col-sm-6 col-xs-12">
+                                    <label class="form-label">Tax Subtotal Taxable Amount</label>
+                                    <input type="text" class="form-control" placeholder="eg. 10000.00" disabled>
+                                </div>
+                                <div class="col-lg-3 col-sm-6 col-xs-12">
+                                    <label class="form-label">Tax Subtotal Tax Amount</label>
+                                    <input type="text" class="form-control" placeholder="eg. 1000.00" disabled>
+                                </div>
+                                <div class="col-lg-6 col-sm-6 col-xs-12">
+                                    <label class="form-label">Remark / Additional Information</label>
+                                    <textarea type="text" class="form-control" placeholder="eg."></textarea>
+                                </div>
+                                <div class="col-lg-6 mt-5">
+                                    <a href="#" class="btn btn-primary " style="float:right;"> Submit</a>
+                                    <a href="#" class="btn btn-danger " style="float:right;margin-right:10px;"> Cancel</a>
+                                </div>
+
+
+                                <!--end col-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- end col -->
+        </div>
+        <!--end row-->
+
+    </div> <!-- container-fluid -->
+</div>
+
+
+    <!-- JAVASCRIPT -->
+    <script src="~/assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="~/assets/libs/simplebar/simplebar.min.js"></script>
+    <script src="~/assets/libs/node-waves/waves.min.js"></script>
+    <script src="~/assets/libs/feather-icons/feather.min.js"></script>
+    <script src="~/assets/js/pages/plugins/lord-icon-2.1.0.js"></script>
+    <script src="~/assets/js/plugins.js"></script>
+    <!-- prismjs plugin -->
+    <script src="~/assets/libs/prismjs/prism.js"></script>
+                 
+    <script src="~/assets/js/jquery-3.6.0.min.js"></script>
+    <!--select2 cdn-->
+    <script src="~/assets/js/select2.min.js"></script>
+                 
+    <script src="~/assets/js/pages/select2.init.js"></script>
+    <script src="~/assets/js/app.js"></script>
+    <script>
+        document.getElementById('hassubexpensetype').addEventListener('change', function () {
+            const multipleDiv = document.getElementById('unittype');
+            if (this.checked) {
+                multipleDiv.style.display = 'none'; // Hide the div
+            } else {
+                multipleDiv.style.display = 'block'; // Show the�div
+            }
+        });
+
+    </script>

@@ -1,0 +1,188 @@
+﻿<div class="page-content">
+    <div class="container-fluid">
+        <!-- start page title -->
+        <div class="row">
+            <div class="col-12">
+                <div class="page-title-box d-sm-flex align-items-center justify-content-between">
+                    <h4 class="mb-sm-0">Add Expense Limit</h4>
+                </div>
+            </div>
+        </div>
+        <!-- end page title -->
+
+
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="card" id="frmCreate">
+
+                    <div class="card-body">
+                        <div class="live-preview">
+
+                            <div class="row gx-3 gy-2 align-items-center">
+                                <div class="col-lg-3 col-sm-6 col-xs-12">
+                                    <label class="form-label">Expense Type<span class="start-lable" style="color: red">*</span></label>
+                                    <a href="#"><i class="bx bx-reset float-end" style="border:1px solid #000;margin-right:5px;font-size:18px;padding:2px;border-radius:5px;color:#000;font-weight:500"></i></a>
+                                    <a href="AddExpenseTypeMaster.html" target="_blank">
+                                        <i class="bx bx-plus float-end" style="border:1px solid #000;margin-right:5px;font-size:18px;padding:2px;border-radius:5px;color:#000;font-weight:500"></i>
+                                    </a>
+                                    <select class="form-select2 js-example-basic-single" data-choices data-choices-sorting="true" id="type">
+                                        <option selected>- Select Expense Type -</option>
+                                        <option value="1">Air Ticket Expense</option>
+                                        <option value="2">Food Expense</option>
+                                        <option value="3">Transportation Expense</option>
+                                    </select>
+                                </div>
+                                <div class="col-lg-3 col-sm-6 col-xs-12">
+                                    <label class="form-label">Expense Sub Type</label>
+                                    <a href="#"><i class="bx bx-reset float-end" style="border:1px solid #000;margin-right:5px;font-size:18px;padding:2px;border-radius:5px;color:#000;font-weight:500"></i></a>
+                                    <a href="AddExpenseSubTypeMaster.html" target="_blank">
+                                        <i class="bx bx-plus float-end" style="border:1px solid #000;margin-right:5px;font-size:18px;padding:2px;border-radius:5px;color:#000;font-weight:500"></i>
+                                    </a>
+                                    <select class="form-select" data-choices data-choices-sorting="true" id="expsub">
+                                        <option selected>- Select Expense Sub Type -</option>
+                                        <option>2 Wheeler</option>
+                                        <option>Fuel</option>
+                                    </select>
+                                </div>
+                                <div class="col-lg-3 col-sm-6 col-xs-12">
+                                    <label class="form-label">Expense Allocation Type<span class="start-lable" style="color: red">*</span></label>
+
+                                    <select class="form-select2 js-example-basic-single" data-choices data-choices-sorting="true" id="alloca">
+                                        <option selected>- Select Expense Allocation Type -</option>
+                                        <option value="1">With Bill</option>
+                                        <option value="2">Without Bill</option>
+                                    </select>
+                                </div>
+                                <div class="col-lg-3 col-sm-6 col-xs-12">
+                                    <label class="form-label">Expense Applicable Type<span class="start-lable" style="color: red">*</span></label>
+
+                                    <select class="form-select2 js-example-basic-single" data-choices data-choices-sorting="true" id="applicable">
+                                        <option selected>- Select Expense Applicable Type -</option>
+                                        <option value="1">Unit Based</option>
+                                        <option value="2">Amount Based</option>
+                                    </select>
+                                </div>
+                                <div class="col-lg-3 col-sm-6 col-xs-12">
+                                    <label class="form-label">Count On<span class="start-lable" style="color: red">*</span></label>
+
+                                    <select class="form-select2 js-example-basic-single" data-choices data-choices-sorting="true" id="count">
+                                        <option selected>- Select Count On -</option>
+                                        <option value="1">Total Based</option>
+                                        <option value="2">Quantity Based</option>
+                                    </select>
+                                </div>
+                                <div class="col-lg-3 col-sm-6 col-xs-12">
+                                    <label class="form-label">Cost Category<span class="start-lable" style="color: red">*</span></label>
+                                    <a href="#"><i class="bx bx-reset float-end" style="border:1px solid #000;margin-right:5px;font-size:18px;padding:2px;border-radius:5px;color:#000;font-weight:500"></i></a>
+                                    <a href="AddCostCategoryMaster.html" target="_blank">
+                                        <i class="bx bx-plus float-end" style="border:1px solid #000;margin-right:5px;font-size:18px;padding:2px;border-radius:5px;color:#000;font-weight:500"></i>
+                                    </a>
+                                    <select class="form-select2 js-example-basic-single" data-choices data-choices-sorting="true" id="cost">
+                                        <option selected>- Select Cost Category -</option>
+                                        <option value="1">Category A</option>
+                                        <option value="2">Category B</option>
+                                    </select>
+                                </div>
+                                <div class="col-lg-3 col-sm-6 col-xs-12">
+                                    <label class="form-label">Cost Cities<span class="start-lable" style="color: red">*</span></label>
+                                    <a href="#"><i class="bx bx-reset float-end" style="border:1px solid #000;margin-right:5px;font-size:18px;padding:2px;border-radius:5px;color:#000;font-weight:500"></i></a>
+                                    <a href="AddCostCityDetail.html" target="_blank">
+                                        <i class="bx bx-plus float-end" style="border:1px solid #000;margin-right:5px;font-size:18px;padding:2px;border-radius:5px;color:#000;font-weight:500"></i>
+                                    </a>
+                                    <select class="form-select2 js-example-basic-single" data-choices data-choices-sorting="true" id="cities">
+                                        <option selected>- Select Cost Cities -</option>
+                                        <option value="1">A Class Cities</option>
+                                        <option value="1">A Premium Class Cities</option>
+                                        <option value="2">B Class Cities</option>
+                                    </select>
+                                </div>
+                                <div class="col-lg-3 col-sm-6 col-xs-12">
+                                    <label class="form-label">Limit Amount<span class="start-lable" style="color: red">*</span></label>
+                                    <input type="text" class="form-control" placeholder="eg. 200">
+                                </div>
+                                <div class="col-lg-3">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="autoSizingCheck2">
+                                        <label class="form-check-label" for="autoSizingCheck2">
+                                            Is Remark Mandatory
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="autoSizingCheck2" checked>
+                                        <label class="form-check-label" for="autoSizingCheck2">
+                                            Is Display
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="autoSizingCheck2">
+                                        <label class="form-check-label" for="autoSizingCheck2">
+                                            Is Max Limit
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-sm-6 col-xs-12">
+                                    <label class="form-label">Max Amount<span class="start-lable" style="color: red">*</span></label>
+                                    <input type="text" class="form-control" placeholder="eg. 0" disabled>
+                                </div>
+                            </div>
+                            <div class="row gx-3 gy-2 align-items-center" style="margin-top:10px;">
+
+                                <div class="col-lg-12">
+                                    <a href="#" class="btn btn-primary " style="float:right;"> Submit</a>
+                                    <a href="#" class="btn btn-danger " style="float:right;margin-right:10px;"> Cancel</a>
+                                </div>
+                                <!--end col-->
+                            </div>
+
+
+                        </div>
+
+                    </div>
+                </div>
+                <div class="card" id="CardAccessDenied" style="display:none">
+                    <div class="w3-display-middle" style="margin-top:100px;">
+                        <h1 class="w3-jumbo w3-animate-top w3-center"><span style="color:#38454a">Access Denied</span></h1>
+                        <hr class="w3-border-white w3-animate-left" style="margin:auto;width:50%">
+                        <h3 class="w3-center w3-animate-right">You don't have Rights to Access this Page</h3>
+                        <h3 class="w3-center w3-animate-right">Kindly Contact Administrative</h3>
+                        <h3 class="w3-center w3-animate-zoom">🚫🚫🚫🚫</h3>
+                        <h6 class="w3-center w3-animate-zoom">error code:403 forbidden</h6>
+                    </div>
+                </div>
+            </div> <!-- end col -->
+        </div>
+        <!--end row-->
+
+    </div> <!-- container-fluid -->
+</div>
+<!-- JAVASCRIPT -->
+<script src="~/assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="~/assets/libs/simplebar/simplebar.min.js"></script>
+<script src="~/assets/libs/node-waves/waves.min.js"></script>
+<script src="~/assets/libs/feather-icons/feather.min.js"></script>
+<script src="~/assets/js/pages/plugins/lord-icon-2.1.0.js"></script>
+<script src="~/assets/js/plugins.js"></script>
+<!-- prismjs plugin -->
+<script src="~/assets/libs/prismjs/prism.js"></script>
+<script src="~/assets/js/app.js"></script>
+<script src="~/assets/js/jquery-3.6.0.min.js"></script>
+<!--select2 cdn-->
+<script src="~/assets/js/select2.min.js"></script>
+             
+<script src="~/assets/js/pages/select2.init.js"></script>
+@* <script>
+    document.getElementById('hassubexpensetype').addEventListener('change', function () {
+        const multipleDiv = document.getElementById('unittype');
+        if (this.checked) {
+            multipleDiv.style.display = 'none'; // Hide the div
+        } else {
+            multipleDiv.style.display = 'block'; // Show the div
+        }
+    });
+
+</script>
+ *@

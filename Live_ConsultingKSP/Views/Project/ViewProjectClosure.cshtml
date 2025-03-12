@@ -1,0 +1,315 @@
+﻿@model List<Live_ConsultingKSP.Models.ProjectCreateProject>
+
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section Stylecss {
+ <style >
+        .salesorder {
+            position: relative;
+            display: inline-block;
+            border-bottom: 1px dotted black;
+        }
+
+        .tooltiptext {
+            visibility: hidden;
+            width: 120px;
+            background-color: #38454a;
+            color: #fff;
+            text-align: center;
+            padding: 5px 0;
+            border-radius: 6px;
+            position: absolute;
+            z-index: 20;
+            top: 30px;
+            right: 0px;
+        }
+
+        .salesorder:hover .tooltiptext {
+            visibility: visible;
+        }
+       
+    </style>
+} 
+<div class="page-content">
+    <div class="container-fluid">
+
+
+        <!--end row-->
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="card" id="CardData">
+
+                    <div class="card-header">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <h5 class="card-title mb-0">View Project Closure</h5>
+                            </div>
+                            <!--<div class="col-md-1">
+                                <i class="bx bxs-pin float-end custom-icon-color"></i>
+                            </div>-->
+                            <div class="col-md-4">
+                                <a><i class="bx bxs-pin float-end custom-icon-color"></i></a>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="row gx-3">
+                            <div class="col-lg-3 col-sm-6 col-xs-12">
+                                <label class="form-label">Project</label>
+
+                                <select  class="form-select2 js-example-basic-single" data-choices data-choices-sorting="true" id="project">
+                                    <option value="">- Select Project Name -</option>
+                                   
+                                </select>
+                            </div>
+@*                             <div class="col-lg-3 col-sm-6 col-xs-12">
+                                <label class="form-label">Project Status</label>
+                                <select class="form-select2 js-example-basic-single" data-choices data-choices-sorting="true" id="status">
+                                    <option selected>- Select Project Status -</option>
+                                    <option value="1">Completed </option>
+                                    <option value="2">In Progress</option>
+                                </select>
+                            </div> *@
+
+                            <div class="col-lg-3 col-sm-6 col-xs-12" style="margin-top:27px;">
+                                <a class="btn btn-primary">Search</a>
+                            </div>
+                        </div>
+                        <div class="table-responsive mt-3">
+
+                            <table id="buttons-datatables" class="display table table-bordered"
+                                   style="width:100%">
+                                <thead>
+                                    <tr>
+                                        <th>Sr.No</th>
+                                        <th>UUID</th>
+                                        <th>Project Name</th>
+                                        <th>Customer Name</th>
+                                        <th>Project Manager</th>
+                                        <th>Project Progress</th>
+                                        <th>Project Status</th>
+
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                   
+                                </tbody>
+                            </table>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="card" id="CardAccessDenied" style="display:none">
+                    <div class="w3-display-middle" style="margin-top:100px;">
+                        <h1 class="w3-jumbo w3-animate-top w3-center"><span style="color:#38454a">Access Denied</span></h1>
+                        <hr class="w3-border-white w3-animate-left" style="margin:auto;width:50%">
+                        <h3 class="w3-center w3-animate-right">You don't have Rights to Access this Page</h3>
+                        <h3 class="w3-center w3-animate-right">Kindly Contact Administrative</h3>
+                        <h3 class="w3-center w3-animate-zoom">🚫🚫🚫🚫</h3>
+                        <h6 class="w3-center w3-animate-zoom">error code:403 forbidden</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    <!-- container-fluid -->
+</div>
+@* <div id="overlay" class="overlay">
+    <div class="overlay-content">Please Wait...</div>
+</div> *@
+
+<!-- JAVASCRIPT -->
+<script src="~/assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="~/assets/libs/simplebar/simplebar.min.js"></script>
+<script src="~/assets/libs/node-waves/waves.min.js"></script>
+<script src="~/assets/libs/feather-icons/feather.min.js"></script>
+<script src="~/assets/js/pages/plugins/lord-icon-2.1.0.js"></script>
+<script src="~/assets/js/plugins.js"></script>
+
+<!-- list.js min js -->
+<script src="~/assets/libs/list.js/list.min.js"></script>
+
+<!--list pagination js-->
+<script src="~/assets/libs/list.pagination.js/list.pagination.min.js"></script>
+
+<!-- titcket init js -->
+<script src="~/assets/js/pages/tasks-list.init.js"></script>
+
+<!-- Sweet Alerts js -->
+<script src="~/assets/libs/sweetalert2/sweetalert2.min.js"></script>
+<script src="~/assets/js/jquery-3.6.0.min.js"></script>
+<!-- App js -->
+<script src="~/assets/js/app.js"></script>
+
+<script src="~/assets/js/jquery-3.6.0.min.js"></script>
+<script src="~/assets/js/jquery.dataTables.min.js"></script>
+<script src="~/assets/js/dataTables.bootstrap5.min.js"></script>
+<script src="~/assets/js/dataTables.responsive.min.js"></script>
+<script src="~/assets/js/dataTables.buttons.min.js"></script>
+<script src="~/assets/js/jszip.min.js"></script>
+<script src="~/assets/js/pdfmake.min.js"></script>
+<script src="~/assets/js/vfs_fonts.js"></script>
+<script src="~/assets/js/buttons.html5.min.js"></script>
+<script src="~/assets/js/buttons.print.min.js"></script>
+
+<!--select2 cdn-->
+<script src="~/assets/js/select2.min.js"></script>
+             
+<script src="~/assets/js/pages/select2.init.js"></script>
+@section Scripts{
+
+
+<script>
+        $(document).ready(function () {
+            var table = $('#buttons-datatables').DataTable({
+
+
+                serverSide: true,
+                ajax: {
+                            url: "/Project/GetCreateProjectData",
+                    type: 'POST',
+                    beforeSend: function () {
+                        // Show overlay when the request is about to start
+                        $('#overlay').show();
+                    },
+                     complete: function () {
+                    // Hide overlay when the request completes
+                    $('#overlay').hide();
+
+                     function searchInJSON(value, json) {
+            var result = null;
+
+            $.each(json, function (index) {
+                // Adjust condition as needed (e.g., check 'id' or 'name')
+                if (json[index].url === value) {
+                    result = json[index];
+                    return false; // Break the loop
+                }
+            });
+
+            return result;
+        }
+         function replaceWordInString(inputString, oldWord, newWord) {
+            var regex = new RegExp(oldWord, 'g'); // Create a regular expression to find the old word
+            return inputString.replace(regex, newWord); // Replace it with the new word
+        }
+                            var urlPath = window.location.pathname;
+    var MenuJson = JSON.parse(localStorage.getItem("MenuLst"));
+
+    var foundItem = searchInJSON(urlPath, MenuJson);
+    if (foundItem === null) {
+        debugger;
+        var alturlPath = (urlPath.replace("Edit", "View")).replace("Add", "View");var newUrl = alturlPath.replace(/\/[^\/]*$/, "");
+        debugger;
+        foundItem = searchInJSON(alturlPath, MenuJson);
+        // alert('Found at Second Level'+foundItem.menuName);
+    }
+    else {
+        debugger;
+        if (foundItem.isWrite) {
+            $('.btnAdd').css("display", "");
+
+        }
+        else {
+            $('.btnAdd').css("display", "none");
+
+        }
+        if (foundItem.isDelete) {
+            $('.btnDelete').css("display", "");
+
+        }
+        else {
+            $('.btnDelete').css("display", "none");
+        }
+        if (foundItem.isEdit) {
+            // $('.btnEdit').attr("href", "none");
+        }
+        else {
+            $('.btnEdit').attr("href", "#");
+
+        }
+        if (foundItem.isRead) {
+            $('#CardAccessDenied').css("display", "none");
+        }
+        else {
+            $('#CardData').html('');
+            $('#CardData').css("display", "none");
+            $('#CardAccessDenied').css("display", "");
+        }
+
+    }
+                }
+                },
+
+
+            columns: [
+                { data: 'srno', orderable: false },
+                { data: 'uuid' },
+                { data: 'projectname' },
+                { data: 'customername' },
+                { data: 'projectmanager' },
+                { data: 'status', orderable: false, searchable: false },
+                { data: 'action', orderable: false, searchable: false }
+                    ]
+        });
+        $(document).on('click', '.delete-btn', function (event) {
+            event.preventDefault();
+            const button = $(this);
+            const uuid = button.data('uuid');
+
+            Swal.fire({
+                title: 'Are you sure?',
+                text: "You won't be able to revert this!",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonText: 'Yes, delete it!',
+                cancelButtonText: 'No, cancel!',
+                confirmButtonClass: 'btn btn-primary w-xs me-2 mt-2',
+                cancelButtonClass: 'btn btn-danger w-xs mt-2',
+                buttonsStyling: false,
+                showCloseButton: true
+            }).then((result) => {
+                if (result.value) {
+                    const form = $('<form>', {
+                                    action: '/Project/DeleteCreateProject',
+                                method: 'post'
+                    }).append($('<input>', {
+                        type: 'hidden',
+                        name: 'uuid',
+                        value: uuid
+                    }));
+                    $('body').append(form);
+                    form.submit();
+
+                    var row = button.closest('tr');
+                    table.row(row).remove().draw();
+
+                    Swal.fire({
+                        title: "Done",
+                        text: "The item has been deleted successfully!",
+                        icon: "success",
+                        confirmButtonClass: "btn btn-primary mt-2",
+                        buttonsStyling: false
+                    });
+                } else if (result.dismiss === Swal.DismissReason.cancel) {
+                    Swal.fire({
+                        title: "Cancelled",
+                        text: "Your data is safe :)",
+                        icon: "error",
+                        confirmButtonClass: "btn btn-primary mt-2",
+                        buttonsStyling: false
+                    });
+                }
+            });
+        });
+    });
+
+</script>
+
+}
